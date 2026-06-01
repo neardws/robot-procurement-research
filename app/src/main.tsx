@@ -23,8 +23,8 @@ type ReleaseConfidence = Confidence | "unknown";
 type Tab = "overview" | "compare" | "report" | "sources";
 type SourceFilter = "官网" | "电商" | "GitHub" | "论文" | "招投标";
 type OriginFilter = "全部" | "国产" | "进口";
-type PriceBand = "全部" | "10万以下" | "10-30万" | "30-80万" | "80万以上" | "需询价";
-type ReleaseFilter = "全部" | "近1年" | "近3年" | "2020年以后" | "待核验";
+type PriceBand = "全部" | "10万以下" | "10-30万" | "30-80万" | "80万以上" | "正式报价";
+type ReleaseFilter = "全部" | "近1年" | "近3年" | "2020年以后" | "官网未披露";
 type MarketTier = "重点候选" | "市场初筛";
 type VerificationStatus = "官网核验" | "部分核验" | "待核验";
 type ColumnKey = "formFactor" | "country" | "priceType" | "software" | "risk" | "sources" | "releaseDate" | "marketTier" | "verification" | "tags";
@@ -113,8 +113,8 @@ const categories = ["机械臂", "移动/复合机器人", "人形机器人", "�
 const shortlistGroups = ["科研平台", "教学平台", "落地项目"];
 const sourceFilters: SourceFilter[] = ["官网", "电商", "GitHub", "论文", "招投标"];
 const originFilters: OriginFilter[] = ["全部", "国产", "进口"];
-const priceBands: PriceBand[] = ["全部", "10万以下", "10-30万", "30-80万", "80万以上", "需询价"];
-const releaseFilters: ReleaseFilter[] = ["全部", "近1年", "近3年", "2020年以后", "待核验"];
+const priceBands: PriceBand[] = ["全部", "10万以下", "10-30万", "30-80万", "80万以上", "正式报价"];
+const releaseFilters: ReleaseFilter[] = ["全部", "近1年", "近3年", "2020年以后", "官网未披露"];
 const marketTiers: Array<"全部" | MarketTier> = ["全部", "重点候选", "市场初筛"];
 const categoryTags: Record<string, string[]> = {
   "机械臂": ["协作臂", "桌面机械臂", "工业臂", "轻量臂", "双臂", "开源/低成本"],
@@ -177,7 +177,7 @@ function formatPrice(robot: Robot) {
 
 function priceStatus(robot: Robot) {
   if (robot.price.amount !== null) return robot.price.confidence === "high" ? "公开价" : robot.price.confidence === "medium" ? "需复核" : "估算";
-  return robot.price.type.includes("正式报价") ? "正式报价" : "需询价";
+  return robot.price.type.includes("正式报价") ? "正式报价" : "供货确认";
 }
 
 function brandLabel(robot: Robot) {
@@ -196,7 +196,7 @@ function releaseYear(robot: Robot) {
 function matchesReleaseFilter(robot: Robot, filter: ReleaseFilter) {
   if (filter === "全部") return true;
   const year = releaseYear(robot);
-  if (filter === "待核验") return robot.releaseDate === "待核验" || robot.releaseDateConfidence === "unknown" || year === null;
+  if (filter === "官网未披露") return robot.releaseDate === "待核验" || robot.releaseDate === "官网未披露" || robot.releaseDateConfidence === "unknown" || year === null;
   if (year === null) return false;
   if (filter === "近1年") return year >= 2025;
   if (filter === "近3年") return year >= 2023;
@@ -206,7 +206,7 @@ function matchesReleaseFilter(robot: Robot, filter: ReleaseFilter) {
 function matchesPriceBand(robot: Robot, band: PriceBand) {
   const amount = robot.price.amount;
   if (band === "全部") return true;
-  if (band === "需询价") return amount === null;
+  if (band === "正式报价") return amount === null;
   if (amount === null) return false;
   if (band === "10万以下") return amount < 100000;
   if (band === "10-30万") return amount >= 100000 && amount < 300000;
@@ -431,6 +431,7 @@ function App() {
   const filteredSourceIds = new Set(filteredRobots.flatMap((robot) => robot.sourceIds));
   const rightShortlist = rankedShortlist(rightListTag);
   const knownReleaseCount = robots.filter((robot) => robot.releaseDate !== "待核验").length;
+  const undisclosedReleaseCount = robots.filter((robot) => robot.releaseDateConfidence === "unknown" || robot.releaseDate === "官网未披露" || robot.releaseDate === "待核验").length;
 
   function toggleSelected(id: string) {
     setSelectedIds((current) => {
@@ -525,7 +526,7 @@ function App() {
                 <MetricCard label="科研通用性（平均）" value={String(averageResearch)} detail="/100" status="中-高" />
                 <MetricCard label="落地适配（平均）" value={String(averageDeployment)} detail="/100" status="中" />
                 <MetricCard label="来源记录" value={String(sources.length)} detail={`高置信 ${highConfidenceSources} 条，占 ${Math.round((highConfidenceSources / sources.length) * 100)}%`} />
-                <MetricCard label="发布时间" value={String(knownReleaseCount)} detail={`已标注；${robots.length - knownReleaseCount} 个待核验`} />
+                <MetricCard label="发布时间" value={String(knownReleaseCount)} detail={`已标注；${undisclosedReleaseCount} 个官网未披露`} />
               </section>
               <CategoryOverview stats={categoryStats} onCategory={setCategory} />
               <section className="table-panel">
@@ -1124,9 +1125,9 @@ function ReportCenter({ selectedRobots, setActiveTab }: { selectedRobots: Robot[
       <div className="panel-head">
         <div>
           <h2>报告中心</h2>
-          <span>基于 v3 候选库动态汇总短名单、价格风险和采购动作</span>
+          <span>基于 {meta.version} 候选库动态汇总短名单、价格状态和采购动作</span>
         </div>
-        <button className="panel-button" onClick={() => downloadText("学校机器人采购调研摘要-v3.md", buildMarkdownReport(), "text/markdown;charset=utf-8")}><Download size={15} />导出摘要</button>
+        <button className="panel-button" onClick={() => downloadText(`学校机器人采购调研摘要-${meta.version}.md`, buildMarkdownReport(), "text/markdown;charset=utf-8")}><Download size={15} />导出摘要</button>
       </div>
       <div className="report-grid">
         <article className="report-card wide">
@@ -1234,7 +1235,7 @@ function buildMarkdownReport() {
   const focusCount = robots.filter((robot) => robot.marketTier === "重点候选").length;
   const marketCount = robots.filter((robot) => robot.marketTier === "市场初筛").length;
   const lines = [
-    "# 学校机器人采购调研摘要 v3",
+    `# 学校机器人采购调研摘要 ${meta.version}`,
     "",
     `更新时间：${meta.accessedDate}`,
     "",

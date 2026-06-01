@@ -1649,3 +1649,7 @@ SRCV12001,TurtleBot 4 官方/授权渠道价格入口,官方/授权渠道价格,
 SRCV12002,ROBOTIS OP3 官方商城价格入口,官方商城价格,medium,https://www.robotis.us/robotis-op3/,ROBOTIS 官方商城可查 OP3 教育科研平台公开美元价；实际供货、配件和运费需复核。
 SRCV12003,Unitree 官方中文价格页,中文官网/官方价格,high,https://www.unitree.com/cn/go2/,宇树中文官网披露 Go2 系列起售价口径；分版本精确采购价仍以官方页面和销售报价为准。
 SRCV12004,Boston Dynamics Spot 历史公开售价资料,官网/历史公开价格口径,medium,https://bostondynamics.com/products/spot/,"Spot 官方当前以联系销售为主，历史公开售价约 74,500 美元可作预算参考，正式采购仍需报价。"
+SRCV13001,Robotnik RB-1 Base 官方产品页,官网/产品规格,high,https://robotnik.eu/products/mobile-robots/rb-1-base/,官方产品页核验 RB-1 Base 移动底盘、载荷、ROS/ROS2 和可扩展接口。
+SRCV13002,Robotnik SUMMIT-XL 官方产品页,官网/产品规格,high,https://robotnik.eu/products/mobile-robots/summit-xl/,官方产品页核验 SUMMIT-XL 户外移动平台、载荷、ROS/ROS2 和传感器扩展接口。
+SRCV13003,Unitree H1 官方规格页,中文官网/产品规格,high,https://www.unitree.com/cn/h1/,宇树 H1 官方页披露 H1-2 系列自由度、重量、续航、电池和运动性能，商业采购需正式报价。
+SRCV13004,Boston Dynamics Atlas 官方页,官网/研发产品入口,high,https://bostondynamics.com/atlas/,Boston Dynamics 官方 Atlas 页面核验电动 Atlas 项目入口，但未披露学校采购型负载、SDK、价格和供货参数。

@@ -1,9 +1,9 @@
 {
   "meta": {
     "project": "学校具身智能机器人采购调研",
-    "version": "v12",
+    "version": "v13",
     "accessedDate": "2026-06-01",
-    "updateSummary": "补充价格状态和品牌所在地：将无公开价区分为厂商正式报价项/供货状态待确认，新增品牌中文显示名与所在地，国内到城市、国外到国家。",
+    "updateSummary": "清理残留的需询价/待核验误导口径：公开价说明统一改为正式报价，补齐 Robotnik、Unitree H1-2、CyberOne、Atlas 的关键字段状态，并更新页面报告版本。",
     "scoringWeights": {
       "research": 50,
       "deployment": 50
@@ -13221,6 +13221,38 @@
       "type": "官网/历史公开价格口径",
       "confidence": "medium",
       "notes": "Spot 官方当前以联系销售为主，历史公开售价约 74,500 美元可作预算参考，正式采购仍需报价。"
+    },
+    {
+      "id": "SRCV13001",
+      "title": "Robotnik RB-1 Base 官方产品页",
+      "url": "https://robotnik.eu/products/mobile-robots/rb-1-base/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方产品页核验 RB-1 Base 移动底盘、载荷、ROS/ROS2 和可扩展接口。"
+    },
+    {
+      "id": "SRCV13002",
+      "title": "Robotnik SUMMIT-XL 官方产品页",
+      "url": "https://robotnik.eu/products/mobile-robots/summit-xl/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方产品页核验 SUMMIT-XL 户外移动平台、载荷、ROS/ROS2 和传感器扩展接口。"
+    },
+    {
+      "id": "SRCV13003",
+      "title": "Unitree H1 官方规格页",
+      "url": "https://www.unitree.com/cn/h1/",
+      "type": "中文官网/产品规格",
+      "confidence": "high",
+      "notes": "宇树 H1 官方页披露 H1-2 系列自由度、重量、续航、电池和运动性能，商业采购需正式报价。"
+    },
+    {
+      "id": "SRCV13004",
+      "title": "Boston Dynamics Atlas 官方页",
+      "url": "https://bostondynamics.com/atlas/",
+      "type": "官网/研发产品入口",
+      "confidence": "high",
+      "notes": "Boston Dynamics 官方 Atlas 页面核验电动 Atlas 项目入口，但未披露学校采购型负载、SDK、价格和供货参数。"
     }
   ],
   "robots": [
@@ -15430,7 +15462,7 @@
         "label": "人民币 ¥12.6万",
         "amount": 126400,
         "currency": "CNY",
-        "range": "约 ¥12.6 万，按海外代理 RM65 机械臂公开价估算；国内需询价",
+        "range": "约 ¥12.6 万，按海外代理 RM65 机械臂公开价估算；国内需正式报价",
         "type": "代理渠道欧元价估算",
         "confidence": "medium",
         "sourceIds": [
@@ -18466,7 +18498,7 @@
         "label": "人民币 ¥23.4万",
         "amount": 233500,
         "currency": "CNY",
-        "range": "约 ¥23.4 万，按海外渠道 29,750 欧元估算；国内代理价需询价",
+        "range": "约 ¥23.4 万，按海外渠道 29,750 欧元估算；国内代理价需正式报价",
         "type": "代理渠道欧元价估算",
         "confidence": "medium",
         "sourceIds": [
@@ -19215,7 +19247,7 @@
         "label": "人民币 ¥14.7万",
         "amount": 147000,
         "currency": "CNY",
-        "range": "约 ¥14.7 万起，按海外代理 18,720 欧元含税价估算；国内需询价",
+        "range": "约 ¥14.7 万起，按海外代理 18,720 欧元含税价估算；国内需正式报价",
         "type": "代理渠道欧元价估算",
         "confidence": "medium",
         "sourceIds": [
@@ -22286,7 +22318,7 @@
         "label": "人民币 ¥13.3万",
         "amount": 132500,
         "currency": "CNY",
-        "range": "约 ¥13.3 万，按海外代理 16,875 欧元未税价估算；国内需询价",
+        "range": "约 ¥13.3 万，按海外代理 16,875 欧元未税价估算；国内需正式报价",
         "type": "代理渠道欧元价估算",
         "confidence": "medium",
         "sourceIds": [
@@ -23449,7 +23481,7 @@
         "label": "人民币 ¥12.9万",
         "amount": 129400,
         "currency": "CNY",
-        "range": "约 ¥12.9 万，按海外代理 16,490 欧元估算；国内正式价需询价",
+        "range": "约 ¥12.9 万，按海外代理 16,490 欧元估算；国内正式价需正式报价",
         "type": "代理渠道欧元价估算",
         "confidence": "medium",
         "sourceIds": [
@@ -24856,7 +24888,7 @@
         "label": "人民币 ¥23.2万",
         "amount": 231600,
         "currency": "CNY",
-        "range": "约 ¥23.2 万，按海外代理 31,950 美元估算；国内需询价",
+        "range": "约 ¥23.2 万，按海外代理 31,950 美元估算；国内需正式报价",
         "type": "代理渠道美元价估算",
         "confidence": "medium",
         "sourceIds": [
@@ -31956,7 +31988,7 @@
         "label": "人民币 ¥32.7万",
         "amount": 326600,
         "currency": "CNY",
-        "range": "约 ¥32.7 万，按海外渠道 RM65 单臂移动复合机器人价估算；国内需询价",
+        "range": "约 ¥32.7 万，按海外渠道 RM65 单臂移动复合机器人价估算；国内需正式报价",
         "type": "代理渠道欧元价估算",
         "confidence": "medium",
         "sourceIds": [
@@ -36696,7 +36728,7 @@
         "label": "人民币 ¥9.6万",
         "amount": 96400,
         "currency": "CNY",
-        "range": "约 ¥9.6 万起，按 Go2 Pro 教育渠道价 + Z1 渠道价粗估；完整组合需询价",
+        "range": "约 ¥9.6 万起，按 Go2 Pro 教育渠道价 + Z1 渠道价粗估；完整组合需正式报价",
         "type": "组合教育渠道价粗估",
         "confidence": "low",
         "sourceIds": [
@@ -42694,26 +42726,27 @@
         "confidence": "medium",
         "sourceIds": [
           "SRC118",
-          "SRCV5008"
+          "SRCV5008",
+          "SRCV13001"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "dof": "差速/移动底盘",
+        "payloadKg": "约 50 kg 级，按配置确认",
+        "reachM": "移动平台不适用",
         "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "按版本配置确认",
+        "endurance": "按电池配置确认",
         "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "LiDAR、RGB-D、IMU、GPS 等可扩展",
+        "compute": "ROS 控制计算平台按配置",
+        "safety": "室内移动平台，安全配置按项目确认"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
+        "ros": "官方 ROS 支持",
+        "ros2": "官方 ROS2 支持",
+        "sdk": "Robotnik ROS/ROS2 packages / API",
+        "sim": "Gazebo / ROS 仿真资源"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -42733,10 +42766,11 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRC118",
-        "SRCV5008"
+        "SRCV5008",
+        "SRCV13001"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Robotnik 产品资料确认开放 ROS 架构和移动平台/移动操作定位；具体载荷按型号数据表复核。",
+      "verificationNotes": "Robotnik 官方 RB-1 Base 产品页确认移动底盘、ROS/ROS2 和可扩展接口；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Robotnik",
       "brandLocation": "西班牙"
@@ -43599,7 +43633,7 @@
         "label": "人民币 ¥39.6万",
         "amount": 395600,
         "currency": "CNY",
-        "range": "约 ¥39.6 万起，按 RB-KAIROS 移动底盘海外渠道价估算；加机械臂完整方案需询价",
+        "range": "约 ¥39.6 万起，按 RB-KAIROS 移动底盘海外渠道价估算；加机械臂完整方案需正式报价",
         "type": "底盘渠道欧元价估算",
         "confidence": "low",
         "sourceIds": [
@@ -43732,26 +43766,27 @@
         "confidence": "medium",
         "sourceIds": [
           "SRC118",
-          "SRCV5008"
+          "SRCV5008",
+          "SRCV13002"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "dof": "四轮户外移动平台",
+        "payloadKg": "约 65 kg 级，按配置确认",
+        "reachM": "移动平台不适用",
         "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "按版本配置确认",
+        "endurance": "按电池配置确认",
         "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "LiDAR、RGB-D、IMU、GPS/RTK 等可扩展",
+        "compute": "ROS 控制计算平台按配置",
+        "safety": "户外移动平台，安全配置按项目确认"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
+        "ros": "官方 ROS 支持",
+        "ros2": "官方 ROS2 支持",
+        "sdk": "Robotnik ROS/ROS2 packages / API",
+        "sim": "Gazebo / ROS 仿真资源"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -43771,10 +43806,11 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRC118",
-        "SRCV5008"
+        "SRCV5008",
+        "SRCV13002"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Robotnik 产品资料确认开放 ROS 架构和移动平台/移动操作定位；具体载荷按型号数据表复核。",
+      "verificationNotes": "Robotnik 官方 SUMMIT-XL 产品页确认户外移动平台、ROS/ROS2 和可扩展传感器/载荷接口；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Robotnik",
       "brandLocation": "西班牙"
@@ -43894,14 +43930,14 @@
       },
       "specs": {
         "dof": "全尺寸人形，详细自由度未公开",
-        "payloadKg": "官网未披露",
-        "reachM": "官网未披露",
-        "repeatabilityMm": "待核验",
+        "payloadKg": "官方未公开采购型负载",
+        "reachM": "官方未公开采购型臂展",
+        "repeatabilityMm": "非采购型展示参数，官方未披露",
         "speed": "官网未披露",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "endurance": "官方未公开",
+        "weightKg": "官方未公开",
         "sensors": "视觉/听觉感知演示口径",
-        "compute": "待核验",
+        "compute": "官方未公开采购型计算配置",
         "safety": "展示/研发平台，采购交付需官方确认"
       },
       "software": {
@@ -50226,7 +50262,7 @@
         "label": "人民币 ¥64.7万",
         "amount": 646900,
         "currency": "CNY",
-        "range": "H1-2 高校采购单价 ¥64.69 万元；官网标准报价仍需询价",
+        "range": "H1-2 高校采购单价 ¥64.69 万元；官网标准报价仍需正式报价",
         "type": "高校采购中标单价",
         "confidence": "high",
         "sourceIds": [
@@ -54780,14 +54816,14 @@
       },
       "specs": {
         "dof": "23-43 自由度",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "payloadKg": "人形开发平台，官方未公开额定负载",
+        "reachM": "人形平台臂展按版本确认",
+        "repeatabilityMm": "人形平台不适用/未公开",
         "speed": "约 2 m/s",
         "endurance": "约 2 h",
         "weightKg": "约 35 kg",
         "sensors": "激光雷达/深度相机/广角相机按版本",
-        "compute": "待核验",
+        "compute": "算力模块按 EDU 版本确认",
         "safety": "开发和部署安全按版本确认"
       },
       "software": {
@@ -54855,19 +54891,20 @@
         "confidence": "medium",
         "sourceIds": [
           "SRC005",
-          "SRCV6004"
+          "SRCV6004",
+          "SRCV13003"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "dof": "约 19 自由度，H1 系列按版本确认",
+        "payloadKg": "人形平台，官方未公开额定负载",
+        "reachM": "人形平台臂展按版本确认",
+        "repeatabilityMm": "人形平台不适用/未公开",
+        "speed": "官方披露 H1 系列可达约 3.3 m/s 级",
+        "endurance": "864 Wh 电池，约 2 h 级按任务确认",
+        "weightKg": "约 47 kg 级，按版本确认",
         "sensors": "激光雷达/深度相机/广角相机按版本",
-        "compute": "待核验",
+        "compute": "算力模块按 EDU/科研版本确认",
         "safety": "开发和部署安全按版本确认"
       },
       "software": {
@@ -54894,10 +54931,11 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRC005",
-        "SRCV6004"
+        "SRCV6004",
+        "SRCV13003"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。",
+      "verificationNotes": "宇树 H1 官方页披露 H1-2 系列自由度、重量、电池和运动性能；教育/科研配置与价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "宇树科技",
       "brandLocation": "杭州"
@@ -55411,26 +55449,27 @@
         "confidence": "medium",
         "sourceIds": [
           "SRCV3027",
-          "SRCV6005"
+          "SRCV6005",
+          "SRCV13004"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "dof": "电动全尺寸人形，官方未公开采购型自由度",
+        "payloadKg": "官方未公开采购型负载",
+        "reachM": "官方未公开采购型臂展",
+        "repeatabilityMm": "非采购型展示参数，官方未披露",
+        "speed": "官方演示口径，未公开采购型速度",
+        "endurance": "官方未公开",
+        "weightKg": "官方未公开",
+        "sensors": "官方演示口径，采购型配置未公开",
+        "compute": "官方未公开",
+        "safety": "研发/展示平台，采购与部署安全口径未公开"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "未公开",
+        "sim": "未公开"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -55440,7 +55479,8 @@
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
       ],
       "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "Atlas 当前不是公开采购型学校平台，不能按正式候选报价或交付能力处理。"
       ],
       "scores": {
         "research": 26,
@@ -55450,10 +55490,11 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRCV3027",
-        "SRCV6005"
+        "SRCV6005",
+        "SRCV13004"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Boston Dynamics 官方资料确认产品入口；Spot SDK 和载荷参数明确，Atlas 为研发/商业展示入口，采购可得性需另行确认。",
+      "verificationNotes": "Boston Dynamics 官方 Atlas 页面确认电动 Atlas 项目入口，但未披露采购型规格、SDK、价格和供货参数；保留为趋势观察项。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Boston Dynamics",
       "brandLocation": "美国"
@@ -57366,7 +57407,7 @@
         "label": "人民币 ¥21.8万",
         "amount": 217500,
         "currency": "CNY",
-        "range": "约 ¥21.7 万起，按海外渠道 A2 Standard 29,995 美元估算；国内需询价",
+        "range": "约 ¥21.7 万起，按海外渠道 A2 Standard 29,995 美元估算；国内需正式报价",
         "type": "代理渠道美元价估算",
         "confidence": "medium",
         "sourceIds": [
