@@ -655,6 +655,24 @@ th {
   color: var(--teal-strong);
 }
 
+.verify-pill {
+  display: inline-flex;
+  border: 1px solid #f2d59a;
+  border-radius: 999px;
+  background: var(--amber-soft);
+  color: var(--amber);
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.verify-pill.official {
+  border-color: #b8e2c2;
+  background: var(--green-soft);
+  color: var(--green);
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;

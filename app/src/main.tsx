@@ -26,7 +26,8 @@ type OriginFilter = "全部" | "国产" | "进口";
 type PriceBand = "全部" | "10万以下" | "10-30万" | "30-80万" | "80万以上" | "需询价";
 type ReleaseFilter = "全部" | "近1年" | "近3年" | "2020年以后" | "待核验";
 type MarketTier = "重点候选" | "市场初筛";
-type ColumnKey = "formFactor" | "country" | "priceType" | "software" | "risk" | "sources" | "releaseDate" | "marketTier" | "tags";
+type VerificationStatus = "官网核验" | "部分核验" | "待核验";
+type ColumnKey = "formFactor" | "country" | "priceType" | "software" | "risk" | "sources" | "releaseDate" | "marketTier" | "verification" | "tags";
 
 type Robot = {
   id: string;
@@ -42,6 +43,9 @@ type Robot = {
   releaseDate: string;
   releaseDateConfidence: ReleaseConfidence;
   marketTier: MarketTier;
+  verificationStatus?: VerificationStatus;
+  verificationNotes?: string;
+  verifiedAt?: string;
   brandNormalized: string;
   tags: string[];
   purchaseChannels?: string[];
@@ -121,6 +125,7 @@ const optionalColumns: Array<{ key: ColumnKey; label: string }> = [
   { key: "country", label: "地区" },
   { key: "releaseDate", label: "发布时间" },
   { key: "marketTier", label: "市场层级" },
+  { key: "verification", label: "核验状态" },
   { key: "tags", label: "标签" },
   { key: "priceType", label: "价格口径" },
   { key: "software", label: "软件生态" },
@@ -244,7 +249,7 @@ function csvEscape(value: unknown) {
 
 function exportRobots(items: Robot[]) {
   const rows = [
-    ["型号", "类别", "厂商", "品牌", "国产/进口", "市场层级", "发布时间", "发布时间置信度", "标签", "人民币价格", "价格置信度", "负载/能力", "科研评分", "落地评分", "来源ID", "官网"],
+    ["型号", "类别", "厂商", "品牌", "国产/进口", "市场层级", "核验状态", "核验备注", "发布时间", "发布时间置信度", "标签", "人民币价格", "价格置信度", "负载/能力", "科研评分", "落地评分", "来源ID", "官网"],
     ...items.map((robot) => [
       robot.name,
       robot.category,
@@ -252,6 +257,8 @@ function exportRobots(items: Robot[]) {
       robot.brandNormalized,
       robot.domesticPriority ? "国产" : "进口",
       robot.marketTier,
+      robot.verificationStatus || "未标注",
+      robot.verificationNotes || "",
       robot.releaseDate,
       confidenceLabel(robot.releaseDateConfidence),
       robot.tags.join(";"),
@@ -285,7 +292,7 @@ function App() {
   const [activeTab, setActiveTab] = useState<Tab>("overview");
   const [rightListTag, setRightListTag] = useState("科研平台");
   const [enabledSourceFilters, setEnabledSourceFilters] = useState<SourceFilter[]>(sourceFilters);
-  const [visibleColumns, setVisibleColumns] = useState<ColumnKey[]>(["formFactor", "releaseDate", "marketTier", "priceType", "software", "risk", "sources"]);
+  const [visibleColumns, setVisibleColumns] = useState<ColumnKey[]>(["formFactor", "releaseDate", "marketTier", "verification", "priceType", "software", "risk", "sources"]);
   const [showColumns, setShowColumns] = useState(false);
   const [detailRobotId, setDetailRobotId] = useState<string | null>(null);
   const columnMenuRef = useRef<HTMLDivElement | null>(null);
@@ -345,6 +352,8 @@ function App() {
           robot.price.label,
           robot.price.type,
           robot.marketTier,
+          robot.verificationStatus || "",
+          robot.verificationNotes || "",
           robot.releaseDate,
           robot.tags.join(" "),
           robot.software.ros,
@@ -836,6 +845,7 @@ function RobotTable({
             {visibleColumns.includes("country") && <th>地区</th>}
             {visibleColumns.includes("releaseDate") && <th>发布时间</th>}
             {visibleColumns.includes("marketTier") && <th>层级</th>}
+            {visibleColumns.includes("verification") && <th>核验</th>}
             {visibleColumns.includes("tags") && <th>标签</th>}
             <th>人民币价格</th>
             {visibleColumns.includes("priceType") && <th>价格口径</th>}
@@ -869,6 +879,7 @@ function RobotTable({
               {visibleColumns.includes("country") && <td>{robot.country}</td>}
               {visibleColumns.includes("releaseDate") && <td><span className="release-cell">{robot.releaseDate}<small>{confidenceLabel(robot.releaseDateConfidence)}</small></span></td>}
               {visibleColumns.includes("marketTier") && <td><span className={`tier-pill ${robot.marketTier === "重点候选" ? "focus" : ""}`}>{robot.marketTier}</span></td>}
+              {visibleColumns.includes("verification") && <td><span className={`verify-pill ${robot.verificationStatus === "官网核验" ? "official" : ""}`}>{robot.verificationStatus || "未标注"}</span></td>}
               {visibleColumns.includes("tags") && <td><TagList tags={robot.tags.slice(0, 3)} /></td>}
               <td>
                 <div className="price-cell">
@@ -1009,6 +1020,7 @@ function CompareGrid({ robots }: { robots: Robot[] }) {
   const rows = [
     { label: "类别", value: (robot: Robot) => robot.category },
     { label: "市场层级", value: (robot: Robot) => robot.marketTier },
+    { label: "核验状态", value: (robot: Robot) => `${robot.verificationStatus || "未标注"}：${robot.verificationNotes || "无备注"}` },
     { label: "发布时间", value: (robot: Robot) => `${robot.releaseDate}（${confidenceLabel(robot.releaseDateConfidence)}）` },
     { label: "标签", value: (robot: Robot) => robot.tags.join("、") },
     { label: "人民币价格", value: (robot: Robot) => formatPrice(robot) },
@@ -1076,6 +1088,7 @@ function ReportCenter({ selectedRobots, setActiveTab }: { selectedRobots: Robot[
   const deploymentLeaders = rankedShortlist("落地项目", 4).map((robot) => robot.name).join("、");
   const focusCount = robots.filter((robot) => robot.marketTier === "重点候选").length;
   const marketCount = robots.filter((robot) => robot.marketTier === "市场初筛").length;
+  const verifiedCount = robots.filter((robot) => robot.verificationStatus === "官网核验").length;
 
   return (
     <section className="report-panel">
@@ -1089,7 +1102,7 @@ function ReportCenter({ selectedRobots, setActiveTab }: { selectedRobots: Robot[
       <div className="report-grid">
         <article className="report-card wide">
           <h3>本轮结论</h3>
-          <p>已形成 {robots.length} 个候选，其中重点候选 {focusCount} 个、市场初筛 {marketCount} 个，并保留 {sources.length} 条可追溯来源。科研平台优先比较 {researchLeaders}；教学平台优先看 {teachingLeaders}；落地项目重点核验 {deploymentLeaders} 的正式报价、售后和场地约束。</p>
+          <p>已形成 {robots.length} 个候选，其中重点候选 {focusCount} 个、市场初筛 {marketCount} 个，官网核验 {verifiedCount} 个，并保留 {sources.length} 条可追溯来源。科研平台优先比较 {researchLeaders}；教学平台优先看 {teachingLeaders}；落地项目重点核验 {deploymentLeaders} 的正式报价、售后和场地约束。</p>
           <div className="report-actions">
             <button onClick={() => setActiveTab("sources")}><Database size={15} />查看来源</button>
             <button onClick={() => setActiveTab("compare")}><BarChart3 size={15} />查看对比</button>
@@ -1196,7 +1209,7 @@ function buildMarkdownReport() {
     "",
     `更新时间：${meta.accessedDate}`,
     "",
-    `候选设备：${robots.length} 个；重点候选：${focusCount} 个；市场初筛：${marketCount} 个；来源记录：${sources.length} 条；公开人民币价/估算价：${robots.filter((robot) => robot.price.amount !== null).length} 个。`,
+    `候选设备：${robots.length} 个；重点候选：${focusCount} 个；市场初筛：${marketCount} 个；官网核验：${robots.filter((robot) => robot.verificationStatus === "官网核验").length} 个；来源记录：${sources.length} 条；公开人民币价/估算价：${robots.filter((robot) => robot.price.amount !== null).length} 个。`,
     "",
     "## 推荐短名单",
     ...shortlistGroups.flatMap((tag) => [
@@ -1256,6 +1269,7 @@ function RobotDetail({ robot, onClose }: { robot: Robot; onClose: () => void }) 
 
         <div className="detail-grid">
           <DetailItem label="市场层级" value={robot.marketTier} />
+          <DetailItem label="核验状态" value={robot.verificationStatus || "未标注"} />
           <DetailItem label="国产/进口" value={robot.domesticPriority ? "国产" : "进口"} />
           <DetailItem label="发布时间" value={`${robot.releaseDate}（${confidenceLabel(robot.releaseDateConfidence)}）`} />
           <DetailItem label="价格口径" value={`${formatPrice(robot)} · ${robot.price.type}`} />
@@ -1281,6 +1295,7 @@ function RobotDetail({ robot, onClose }: { robot: Robot; onClose: () => void }) 
 
         <section className="detail-section">
           <h3>证据和风险</h3>
+          {robot.verificationNotes && <p>{robot.verificationNotes}</p>}
           <p>{robot.researchEvidence[0]}</p>
           <p>{robot.deploymentEvidence[0]}</p>
           <ul>
