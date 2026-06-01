@@ -1592,3 +1592,20 @@ SRCV7004,KUKA KMP 600-S 官方产品页,官网/产品规格,high,https://www.kuk
 SRCV7005,Techman Robot 官方规格资料,官网/产品规格,high,https://www.tm-robot.com/en/products/,Techman 官方产品页和下载资料可核验 TM5/TM12 负载、臂展、TMflow、SDK 与 ROS 驱动口径。
 SRCV7006,ABB 协作机器人官方产品页,官网/产品规格,high,https://new.abb.com/products/robotics/robots/collaborative-robots,ABB 官方协作机器人页可核验 GoFa、YuMi 系列产品定位、RobotStudio/RAPID 软件生态和型号规格入口。
 SRCV7007,FANUC CRX 协作机器人官方产品资料,官网/产品规格,high,https://www.fanucamerica.com/products/robots/series/collaborative-robots,FANUC 官方 CRX 系列资料可核验 CRX-10iA/L、CRX-25iA 负载、臂展和 ROBOGUIDE/控制器生态。
+SRCV8001,DOBOT CR20A 官方规格页,官网/产品规格,high,https://www.dobot-robots.com/products/cra-series/cr20a.html,官方页核验 CR20A 20 kg 负载、1700 mm 工作半径、±0.05 mm 重复定位精度、IP54 和工业协作臂定位。
+SRCV8002,DOBOT CRA 系列官方规格页,官网/产品规格,high,https://www.dobot-robots.com/products/cra-series/cra.html?lang=en%3Ftype%3D57,官方系列页核验 CR5A 等 CRA 型号、负载、工作半径、速度、重复定位精度和 DobotStudio Pro 软件口径。
+SRCV8003,DOBOT Nova 2 官方规格页,官网/产品规格,high,https://www.dobot-robots.com/products/nova-series/nova2.html,官方页核验 Nova 2 的 2 kg 负载、625 mm 工作半径、1.6 m/s TCP 速度、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口。
+SRCV8004,DOBOT Nova 5 官方规格页,官网/产品规格,high,https://www.dobot-robots.com/products/nova-series/nova5.html,官方页核验 Nova 5 的 5 kg 负载、850 mm 工作半径、2 m/s TCP 速度、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口。
+SRCV8005,RealMan RML63 官方规格页,官网/产品规格,high,https://realman-robotics.com/en/products/rml63.html,官方页核验 RML63 6 自由度、3 kg 负载、900-917 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本。
+SRCV8006,RealMan RM75 官方规格页,官网/产品规格,high,https://www.realman-robotics.com/en/products/rm75.html,官方页核验 RM75 7 自由度、5 kg 负载、610-627 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本。
+SRCV8007,OMRON LD 系列官方规格页,官网/产品规格,high,https://robotics.omron.com/products/mobile-robots/ld-series/,官方页核验 LD-60、LD-90 负载、速度、续航、安全传感器、MobilePlanner 控制接口和 AMR 定位。
+SRCV8008,TurtleBot 4 官方用户手册,官网/用户手册,high,https://turtlebot.github.io/turtlebot4-user-manual/,官方手册核验 TurtleBot 4 / Lite 为教育科研开源平台，搭载 iRobot Create 3 底盘、Raspberry Pi 4、ROS 2、OAK-D、2D LiDAR 和仿真/教程资源。
+SRCV8009,LimX Dynamics 官方网站,官网/产品入口,high,https://www.limxdynamics.com/en,官网核验 LimX 当前产品组合和新闻；旧款 W1/P1 官方规格入口未在当前站点公开，需要询价确认。
+SRCV8010,LimX Oli 官方规格页,官网/产品规格,high,https://limxdynamics.com/en/oli/spec,官方规格页核验 LimX Oli 31 自由度、约 55 kg、约 2 h 续航、单臂 3 kg 负载、控制器/传感器 API 和开发工具。
+SRCV8011,Ghost Robotics Vision 60 官方规格页,官网/产品规格,high,https://www.ghostrobotics.io/vision-60,官方页核验 Vision 60 10 kg 载荷、3 h 级连续行走、IP67、NVIDIA Xavier、接口和 Mission Control/开放架构口径。
+SRCV8012,Xiaomi CyberDog 官方参数页,官网/产品规格,high,https://www.mi.com/cyberdog/specs,小米官方参数页核验 CyberDog 工程探索版官方入口；具体采购可得性需按当前渠道确认。
+SRCV8013,Xiaomi CyberOne 官方文章,官网/发布文章,medium,https://www.mi.com/global/discover/article?id=2700,小米官方文章核验 CyberOne 发布和人形机器人定位；当前量产、售价和采购交付信息未公开。
+SRCV8014,EngineAI SA01 官方规格页,官网/产品规格,high,https://www.engineai.com.cn/product-sa01.html,官方页核验 SA01 全开源双足平台、12 自由度、15Ah 快拆电池、2 h 级续航和教育/开发定位。
+SRCV8015,EngineAI SE01 官方规格页,官网/产品规格,high,https://www.engineai.com.cn/product-se01,官方页核验 SE01 全尺寸人形、拟人步态、视听感知、灵巧手、快拆电池和接口定位。
+SRCV8016,Galbot G1 官方规格页,官网/产品规格,high,https://www.galbot.com/g1,官方页核验 Galbot G1 1730 mm 身高、双臂总 10 kg 负载、0-2.4 m 操作覆盖、10 h 续航、IP54 和 AGX Orin 计算平台。
+SRCV8017,Galaxea R1 Pro 官方文档,官网/产品文档,high,https://docs.galaxea-ai.com/Guide/R1Pro/hardware_introduction/R1Pro_Hardware_Introduction/,官方文档核验 Galaxea R1 Pro 26 自由度、双臂移动平台、3.5 kg 额定单臂负载、5 kg 最大单臂负载、1680 Wh 电池和科研平台适用边界。

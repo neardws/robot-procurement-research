@@ -1,9 +1,9 @@
 {
   "meta": {
     "project": "学校具身智能机器人采购调研",
-    "version": "v7",
+    "version": "v8",
     "accessedDate": "2026-06-01",
-    "updateSummary": "继续按品牌批次核验：AgileX、ANYbotics、DEEPRobotics、KUKA、Techman、ABB、FANUC 等候选补充官方规格和软件生态，并升级可确认候选。",
+    "updateSummary": "第四批继续核验 DOBOT、RealMan、OMRON、TurtleBot、LimX、Ghost、Xiaomi、EngineAI、Galbot/Galaxea 等剩余市场初筛；能由官网规格确认的升级为重点候选，旧款或采购信息不足的保留市场初筛并写明缺口。",
     "scoringWeights": {
       "research": 50,
       "deployment": 50
@@ -12765,6 +12765,142 @@
       "type": "官网/产品规格",
       "confidence": "high",
       "notes": "FANUC 官方 CRX 系列资料可核验 CRX-10iA/L、CRX-25iA 负载、臂展和 ROBOGUIDE/控制器生态。"
+    },
+    {
+      "id": "SRCV8001",
+      "title": "DOBOT CR20A 官方规格页",
+      "url": "https://www.dobot-robots.com/products/cra-series/cr20a.html",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 CR20A 20 kg 负载、1700 mm 工作半径、±0.05 mm 重复定位精度、IP54 和工业协作臂定位。"
+    },
+    {
+      "id": "SRCV8002",
+      "title": "DOBOT CRA 系列官方规格页",
+      "url": "https://www.dobot-robots.com/products/cra-series/cra.html?lang=en%3Ftype%3D57",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方系列页核验 CR5A 等 CRA 型号、负载、工作半径、速度、重复定位精度和 DobotStudio Pro 软件口径。"
+    },
+    {
+      "id": "SRCV8003",
+      "title": "DOBOT Nova 2 官方规格页",
+      "url": "https://www.dobot-robots.com/products/nova-series/nova2.html",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 Nova 2 的 2 kg 负载、625 mm 工作半径、1.6 m/s TCP 速度、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口。"
+    },
+    {
+      "id": "SRCV8004",
+      "title": "DOBOT Nova 5 官方规格页",
+      "url": "https://www.dobot-robots.com/products/nova-series/nova5.html",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 Nova 5 的 5 kg 负载、850 mm 工作半径、2 m/s TCP 速度、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口。"
+    },
+    {
+      "id": "SRCV8005",
+      "title": "RealMan RML63 官方规格页",
+      "url": "https://realman-robotics.com/en/products/rml63.html",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 RML63 6 自由度、3 kg 负载、900-917 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本。"
+    },
+    {
+      "id": "SRCV8006",
+      "title": "RealMan RM75 官方规格页",
+      "url": "https://www.realman-robotics.com/en/products/rm75.html",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 RM75 7 自由度、5 kg 负载、610-627 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本。"
+    },
+    {
+      "id": "SRCV8007",
+      "title": "OMRON LD 系列官方规格页",
+      "url": "https://robotics.omron.com/products/mobile-robots/ld-series/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 LD-60、LD-90 负载、速度、续航、安全传感器、MobilePlanner 控制接口和 AMR 定位。"
+    },
+    {
+      "id": "SRCV8008",
+      "title": "TurtleBot 4 官方用户手册",
+      "url": "https://turtlebot.github.io/turtlebot4-user-manual/",
+      "type": "官网/用户手册",
+      "confidence": "high",
+      "notes": "官方手册核验 TurtleBot 4 / Lite 为教育科研开源平台，搭载 iRobot Create 3 底盘、Raspberry Pi 4、ROS 2、OAK-D、2D LiDAR 和仿真/教程资源。"
+    },
+    {
+      "id": "SRCV8009",
+      "title": "LimX Dynamics 官方网站",
+      "url": "https://www.limxdynamics.com/en",
+      "type": "官网/产品入口",
+      "confidence": "high",
+      "notes": "官网核验 LimX 当前产品组合和新闻；旧款 W1/P1 官方规格入口未在当前站点公开，需要询价确认。"
+    },
+    {
+      "id": "SRCV8010",
+      "title": "LimX Oli 官方规格页",
+      "url": "https://limxdynamics.com/en/oli/spec",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方规格页核验 LimX Oli 31 自由度、约 55 kg、约 2 h 续航、单臂 3 kg 负载、控制器/传感器 API 和开发工具。"
+    },
+    {
+      "id": "SRCV8011",
+      "title": "Ghost Robotics Vision 60 官方规格页",
+      "url": "https://www.ghostrobotics.io/vision-60",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 Vision 60 10 kg 载荷、3 h 级连续行走、IP67、NVIDIA Xavier、接口和 Mission Control/开放架构口径。"
+    },
+    {
+      "id": "SRCV8012",
+      "title": "Xiaomi CyberDog 官方参数页",
+      "url": "https://www.mi.com/cyberdog/specs",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "小米官方参数页核验 CyberDog 工程探索版官方入口；具体采购可得性需按当前渠道确认。"
+    },
+    {
+      "id": "SRCV8013",
+      "title": "Xiaomi CyberOne 官方文章",
+      "url": "https://www.mi.com/global/discover/article?id=2700",
+      "type": "官网/发布文章",
+      "confidence": "medium",
+      "notes": "小米官方文章核验 CyberOne 发布和人形机器人定位；当前量产、售价和采购交付信息未公开。"
+    },
+    {
+      "id": "SRCV8014",
+      "title": "EngineAI SA01 官方规格页",
+      "url": "https://www.engineai.com.cn/product-sa01.html",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 SA01 全开源双足平台、12 自由度、15Ah 快拆电池、2 h 级续航和教育/开发定位。"
+    },
+    {
+      "id": "SRCV8015",
+      "title": "EngineAI SE01 官方规格页",
+      "url": "https://www.engineai.com.cn/product-se01",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 SE01 全尺寸人形、拟人步态、视听感知、灵巧手、快拆电池和接口定位。"
+    },
+    {
+      "id": "SRCV8016",
+      "title": "Galbot G1 官方规格页",
+      "url": "https://www.galbot.com/g1",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 Galbot G1 1730 mm 身高、双臂总 10 kg 负载、0-2.4 m 操作覆盖、10 h 续航、IP54 和 AGX Orin 计算平台。"
+    },
+    {
+      "id": "SRCV8017",
+      "title": "Galaxea R1 Pro 官方文档",
+      "url": "https://docs.galaxea-ai.com/Guide/R1Pro/hardware_introduction/R1Pro_Hardware_Introduction/",
+      "type": "官网/产品文档",
+      "confidence": "high",
+      "notes": "官方文档核验 Galaxea R1 Pro 26 自由度、双臂移动平台、3.5 kg 额定单臂负载、5 kg 最大单臂负载、1680 Wh 电池和科研平台适用边界。"
     }
   ],
   "robots": [
@@ -12835,303 +12971,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRC025"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "dobot-cr20a",
-      "name": "DOBOT CR20A",
-      "vendor": "越疆 DOBOT",
-      "category": "机械臂",
-      "formFactor": "20 kg 级协作机械臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.dobot.cn/products/cr-series/dobot-cr-series.html?lang=cn",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "DOBOT",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC022",
-          "SRCV5001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v5 部分核验：官方系列页确认型号存在和 CR 系列定位；CR20A/CR5A 详细规格仍需单页规格书或厂商确认。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC022",
-        "SRCV5001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "官方系列页确认型号存在和 CR 系列定位；CR20A/CR5A 详细规格仍需单页规格书或厂商确认。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "dobot-cr5a",
-      "name": "DOBOT CR5A",
-      "vendor": "越疆 DOBOT",
-      "category": "机械臂",
-      "formFactor": "5 kg 级协作机械臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.dobot.cn/products/cr-series/dobot-cr-series.html?lang=cn",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "DOBOT",
-      "tags": [
-        "协作臂",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC022",
-          "SRCV5001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "5 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "DOBOT API / SDK",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v5 部分核验：官方系列页确认型号存在和 CR 系列定位；CR20A/CR5A 详细规格仍需单页规格书或厂商确认。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC022",
-        "SRCV5001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "官方系列页确认型号存在和 CR 系列定位；CR20A/CR5A 详细规格仍需单页规格书或厂商确认。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "dobot-nova2",
-      "name": "DOBOT Nova 2",
-      "vendor": "越疆 DOBOT",
-      "category": "机械臂",
-      "formFactor": "轻量商用协作臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.dobot-robots.com/products/nova-series/nova2.html",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "DOBOT",
-      "tags": [
-        "协作臂",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "dobot-nova5",
-      "name": "DOBOT Nova 5",
-      "vendor": "越疆 DOBOT",
-      "category": "机械臂",
-      "formFactor": "商用协作臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.dobot-robots.com/products/nova-series/nova5.html",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "DOBOT",
-      "tags": [
-        "协作臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3002"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3002"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -13499,152 +13338,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRCV4003"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "realman-rm63",
-      "name": "RealMan RM63",
-      "vendor": "睿尔曼 RealMan",
-      "category": "机械臂",
-      "formFactor": "轻量 6 自由度机械臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.realman-robotics.com/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "RealMan",
-      "tags": [
-        "轻量臂",
-        "协作臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC028"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "RealMan SDK / API",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC028"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "realman-rm75",
-      "name": "RealMan RM75",
-      "vendor": "睿尔曼 RealMan",
-      "category": "机械臂",
-      "formFactor": "轻量 7 自由度机械臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.realman-robotics.com/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "RealMan",
-      "tags": [
-        "轻量臂",
-        "协作臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC028"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC028"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -23541,6 +23234,86 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "dobot-cr20a",
+      "name": "DOBOT CR20A",
+      "vendor": "越疆 DOBOT",
+      "category": "机械臂",
+      "formFactor": "20 kg 级协作机械臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.dobot-robots.com/products/cra-series/cr20a.html",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "DOBOT",
+      "tags": [
+        "协作臂",
+        "工业臂",
+        "重载协作臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC022",
+          "SRCV5001",
+          "SRCV8001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "20 kg",
+        "reachM": "1.7 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "TCP 最高 2.0 m/s",
+        "endurance": "待核验",
+        "weightKg": "73 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "IP54，碰撞/过载保护按官方配置"
+      },
+      "software": {
+        "ros": "第三方/社区适配需项目确认",
+        "ros2": "第三方/社区适配需项目确认",
+        "sdk": "DobotStudio Pro / TCP-IP / Modbus TCP / Profinet / EtherNet/IP",
+        "sim": "官方软件与第三方仿真需项目确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v5 部分核验：官方系列页确认型号存在和 CR 系列定位；CR20A/CR5A 详细规格仍需单页规格书或厂商确认。",
+        "v8 官网核验：DOBOT CR20A 官方规格页确认 20 kg 负载、1700 mm 工作半径、±0.05 mm 重复定位精度、IP54 和工业接口；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC022",
+        "SRCV5001",
+        "SRCV8001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "DOBOT CR20A 官方规格页确认 20 kg 负载、1700 mm 工作半径、±0.05 mm 重复定位精度、IP54 和工业接口；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "dobot-cr3",
       "name": "DOBOT CR3",
       "vendor": "越疆 DOBOT",
@@ -24372,6 +24145,85 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "dobot-cr5a",
+      "name": "DOBOT CR5A",
+      "vendor": "越疆 DOBOT",
+      "category": "机械臂",
+      "formFactor": "5 kg 级协作机械臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.dobot-robots.com/products/cra-series/cra.html?lang=en%3Ftype%3D57",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "DOBOT",
+      "tags": [
+        "协作臂",
+        "轻量臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC022",
+          "SRCV5001",
+          "SRCV8002"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "5 kg",
+        "reachM": "0.9 m",
+        "repeatabilityMm": "±0.02 mm",
+        "speed": "TCP 最高 2.0 m/s",
+        "endurance": "待核验",
+        "weightKg": "25 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "IP54，碰撞检测和协作安全按官方配置"
+      },
+      "software": {
+        "ros": "第三方/社区适配需项目确认",
+        "ros2": "第三方/社区适配需项目确认",
+        "sdk": "DobotStudio Pro / 控制器接口 / Modbus TCP",
+        "sim": "官方软件与第三方仿真需项目确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v5 部分核验：官方系列页确认型号存在和 CR 系列定位；CR20A/CR5A 详细规格仍需单页规格书或厂商确认。",
+        "v8 官网核验：DOBOT CRA 官方系列页确认 CR5A 型号、5 kg 负载、900 mm 工作半径、±0.02 mm 重复定位精度和 DobotStudio Pro 口径；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC022",
+        "SRCV5001",
+        "SRCV8002"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "DOBOT CRA 官方系列页确认 CR5A 型号、5 kg 负载、900 mm 工作半径、±0.02 mm 重复定位精度和 DobotStudio Pro 口径；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "dobot-cr7",
       "name": "DOBOT CR7",
       "vendor": "越疆 DOBOT",
@@ -24444,6 +24296,159 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "DOBOT 中文官方规格表已确认 CR 系列核心参数；发布时间和正式采购价仍未公开。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "dobot-nova2",
+      "name": "DOBOT Nova 2",
+      "vendor": "越疆 DOBOT",
+      "category": "机械臂",
+      "formFactor": "轻量商用协作臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.dobot-robots.com/products/nova-series/nova2.html",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "DOBOT",
+      "tags": [
+        "协作臂",
+        "轻量臂",
+        "商用协作臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3001",
+          "SRCV8003"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "2 kg",
+        "reachM": "0.625 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "TCP 最高 1.6 m/s",
+        "endurance": "待核验",
+        "weightKg": "11 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "IP54，轻量商业协作臂"
+      },
+      "software": {
+        "ros": "第三方/社区适配需项目确认",
+        "ros2": "第三方/社区适配需项目确认",
+        "sdk": "DobotStudio Pro / CRStudio App / TCP-IP / Modbus TCP",
+        "sim": "官方软件与第三方仿真需项目确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：DOBOT Nova 2 官方规格页确认 2 kg 负载、625 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3001",
+        "SRCV8003"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "DOBOT Nova 2 官方规格页确认 2 kg 负载、625 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "dobot-nova5",
+      "name": "DOBOT Nova 5",
+      "vendor": "越疆 DOBOT",
+      "category": "机械臂",
+      "formFactor": "商用协作臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.dobot-robots.com/products/nova-series/nova5.html",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "DOBOT",
+      "tags": [
+        "协作臂",
+        "商用协作臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3002",
+          "SRCV8004"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "5 kg",
+        "reachM": "0.85 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "TCP 最高 2.0 m/s",
+        "endurance": "待核验",
+        "weightKg": "14 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "IP54，轻量商业协作臂"
+      },
+      "software": {
+        "ros": "第三方/社区适配需项目确认",
+        "ros2": "第三方/社区适配需项目确认",
+        "sdk": "DobotStudio Pro / CRStudio App / TCP-IP / Modbus TCP",
+        "sim": "官方软件与第三方仿真需项目确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：DOBOT Nova 5 官方规格页确认 5 kg 负载、850 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3002",
+        "SRCV8004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "DOBOT Nova 5 官方规格页确认 5 kg 负载、850 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需询价。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -26682,6 +26687,159 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "realman-rm63",
+      "name": "RealMan RM63",
+      "vendor": "睿尔曼 RealMan",
+      "category": "机械臂",
+      "formFactor": "轻量 6 自由度机械臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://realman-robotics.com/en/products/rml63.html",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "RealMan",
+      "tags": [
+        "轻量臂",
+        "协作臂",
+        "长臂展"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC028",
+          "SRCV8005"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "3 kg",
+        "reachM": "0.9-0.917 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "TCP 最高 2.8 m/s",
+        "endurance": "待核验",
+        "weightKg": "10-10.1 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "轻量仿人构型，可选六维力版本"
+      },
+      "software": {
+        "ros": "官方/社区资源需项目确认",
+        "ros2": "官方/社区资源需项目确认",
+        "sdk": "RealMan SDK / API / 开发文档",
+        "sim": "官方模型与仿真资源需按版本确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：RealMan 官方 RML63 规格页确认 6 自由度、3 kg 负载、900-917 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC028",
+        "SRCV8005"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "RealMan 官方 RML63 规格页确认 6 自由度、3 kg 负载、900-917 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "realman-rm75",
+      "name": "RealMan RM75",
+      "vendor": "睿尔曼 RealMan",
+      "category": "机械臂",
+      "formFactor": "轻量 7 自由度机械臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.realman-robotics.com/en/products/rm75.html",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "RealMan",
+      "tags": [
+        "轻量臂",
+        "协作臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC028",
+          "SRCV8006"
+        ]
+      },
+      "specs": {
+        "dof": "7 轴",
+        "payloadKg": "5 kg",
+        "reachM": "0.61-0.627 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "TCP 最高 1.8 m/s",
+        "endurance": "待核验",
+        "weightKg": "7.8-7.9 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "轻量仿人构型，可选六维力版本"
+      },
+      "software": {
+        "ros": "官方/社区资源需项目确认",
+        "ros2": "官方/社区资源需项目确认",
+        "sdk": "RealMan SDK / API / 开发文档",
+        "sim": "官方模型与仿真资源需按版本确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：RealMan 官方 RM75 规格页确认 7 自由度、5 kg 负载、610-627 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC028",
+        "SRCV8006"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "RealMan 官方 RM75 规格页确认 7 自由度、5 kg 负载、610-627 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "techman-tm12",
       "name": "Techman TM12",
       "vendor": "达明 Techman Robot",
@@ -27543,79 +27701,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "id": "galaxea-r1",
-      "name": "Galaxea R1",
-      "vendor": "银河通用 Galbot",
-      "category": "移动/复合机器人",
-      "formFactor": "双臂移动操作平台",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.galbot.com/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "银河通用",
-      "tags": [
-        "移动操作",
-        "双臂移动平台"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC058"
-        ]
-      },
-      "specs": {
-        "dof": "双臂移动平台，待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "开发接口需询价",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC058"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "id": "limx-w1",
       "name": "LimX Dynamics W1",
       "vendor": "逐际动力 LimX Dynamics",
@@ -27623,7 +27708,7 @@
       "formFactor": "轮足机器人平台",
       "country": "中国",
       "domesticPriority": true,
-      "officialUrl": "https://www.limxdynamics.com/",
+      "officialUrl": "https://www.limxdynamics.com/en",
       "image": "/assets/robots/mobile-manipulator.png",
       "lastChecked": "2026-06-01",
       "releaseDate": "官网未披露",
@@ -27646,7 +27731,8 @@
         "type": "需询价",
         "confidence": "low",
         "sourceIds": [
-          "SRC017"
+          "SRC017",
+          "SRCV8009"
         ]
       },
       "specs": {
@@ -27668,89 +27754,15 @@
         "sim": "待核验"
       },
       "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC017"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "turtlebot4-lite",
-      "name": "TurtleBot 4 Lite",
-      "vendor": "Robotis / Clearpath",
-      "category": "移动/复合机器人",
-      "formFactor": "ROS2 教学移动平台",
-      "country": "韩国/加拿大",
-      "domesticPriority": false,
-      "officialUrl": "https://turtlebot.github.io/turtlebot4-user-manual/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2022",
-      "releaseDateConfidence": "low",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Clearpath",
-      "tags": [
-        "教学移动平台",
-        "轮式底盘",
-        "移动操作"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC350",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "轻载教学平台",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 0.3 m/s",
-        "endurance": "约 2.5 h",
-        "weightKg": "待核验",
-        "sensors": "RPLIDAR / OAK-D Lite / IMU",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS 生态",
-        "ros2": "官方 ROS2 支持",
-        "sdk": "TurtleBot 4 ROS2 包",
-        "sim": "Gazebo / Ignition"
-      },
-      "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
+        "v8 部分核验：LimX 官网可确认厂商和产品线，W1/P1 旧款详细规格需厂商确认。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
       ],
       "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "W1/P1 当前官网规格入口不完整，适合保留为市场覆盖项，采购前必须确认可供货状态。"
       ],
       "scores": {
         "research": 26,
@@ -27759,88 +27771,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRC350",
-        "SRCV4001"
+        "SRC017",
+        "SRCV8009"
       ],
       "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "turtlebot4-standard",
-      "name": "TurtleBot 4 Standard",
-      "vendor": "Robotis / Clearpath",
-      "category": "移动/复合机器人",
-      "formFactor": "ROS2 教学移动平台",
-      "country": "韩国/加拿大",
-      "domesticPriority": false,
-      "officialUrl": "https://turtlebot.github.io/turtlebot4-user-manual/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2022",
-      "releaseDateConfidence": "low",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Clearpath",
-      "tags": [
-        "教学移动平台",
-        "轮式底盘",
-        "移动操作"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC350",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "轻载教学平台",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 0.3 m/s",
-        "endurance": "约 2.5 h",
-        "weightKg": "待核验",
-        "sensors": "RPLIDAR / OAK-D / IMU",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS 生态",
-        "ros2": "官方 ROS2 支持",
-        "sdk": "TurtleBot 4 ROS2 包",
-        "sim": "Gazebo / Ignition"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC350",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationNotes": "LimX 官网确认公司和当前产品线，但 W1/P1 旧款官方规格页在当前站点未公开；采购前需由厂商确认是否仍可供货、正式参数和开发接口。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -28276,152 +28211,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRCV3037"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "omron-ld60",
-      "name": "OMRON LD-60",
-      "vendor": "OMRON Robotics",
-      "category": "移动/复合机器人",
-      "formFactor": "室内 AMR 平台",
-      "country": "日本",
-      "domesticPriority": false,
-      "officialUrl": "https://automation.omron.com/en/us/products/family/LD",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "OMRON",
-      "tags": [
-        "轮式底盘",
-        "服务/巡检"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3035"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3035"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "omron-ld90",
-      "name": "OMRON LD-90",
-      "vendor": "OMRON Robotics",
-      "category": "移动/复合机器人",
-      "formFactor": "室内 AMR 平台",
-      "country": "日本",
-      "domesticPriority": false,
-      "officialUrl": "https://automation.omron.com/en/us/products/family/LD",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "OMRON",
-      "tags": [
-        "轮式底盘",
-        "服务/巡检"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3035"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3035"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -39600,6 +39389,82 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "galaxea-r1",
+      "name": "Galaxea R1",
+      "vendor": "银河通用 Galbot",
+      "category": "移动/复合机器人",
+      "formFactor": "双臂移动操作平台",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://docs.galaxea-ai.com/Guide/R1Pro/hardware_introduction/R1Pro_Hardware_Introduction/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "银河通用",
+      "tags": [
+        "移动操作",
+        "双臂移动平台"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC058",
+          "SRCV8017"
+        ]
+      },
+      "specs": {
+        "dof": "26 自由度",
+        "payloadKg": "单臂额定 3.5 kg@0.5 m，最大 5 kg@0.5 m",
+        "reachM": "垂直 0-2.0 m，水平 0.716 m/带夹爪 0.861 m",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "1680 Wh 电池，实际续航按任务",
+        "weightKg": "96 kg 含电池",
+        "sensors": "双目相机、腕部相机、底盘相机、360° LiDAR",
+        "compute": "NVIDIA Jetson AGX Orin 32GB",
+        "safety": "官方文档声明面向有经验的科研用户，非普通消费家用"
+      },
+      "software": {
+        "ros": "官方文档/用户指南支持",
+        "ros2": "官方文档/用户指南支持",
+        "sdk": "Galaxea 文档、遥操作、导航和开发指南",
+        "sim": "官方文档/仿真资源需按版本确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：Galaxea R1 Pro 官方文档确认科研双臂移动平台硬件规格和使用边界。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC058",
+        "SRCV8017"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Galaxea R1 Pro 官方文档确认 26 自由度、双臂移动平台、3.5 kg 额定单臂负载、5 kg 最大单臂负载、1680 Wh 电池和科研使用边界；价格按渠道确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "agilex-bunker-mini",
       "name": "AgileX Bunker Mini",
       "vendor": "松灵 AgileX",
@@ -40527,6 +40392,166 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "turtlebot4-lite",
+      "name": "TurtleBot 4 Lite",
+      "vendor": "Robotis / Clearpath",
+      "category": "移动/复合机器人",
+      "formFactor": "ROS2 教学移动平台",
+      "country": "韩国/加拿大",
+      "domesticPriority": false,
+      "officialUrl": "https://turtlebot.github.io/turtlebot4-user-manual/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2022",
+      "releaseDateConfidence": "low",
+      "marketTier": "重点候选",
+      "brandNormalized": "Clearpath",
+      "tags": [
+        "教学移动平台",
+        "轮式底盘",
+        "移动操作"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC350",
+          "SRCV4001",
+          "SRCV8008"
+        ]
+      },
+      "specs": {
+        "dof": "差速移动底盘",
+        "payloadKg": "轻载教学/科研平台",
+        "reachM": "移动平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "约 0.3 m/s",
+        "endurance": "约 2.5 h",
+        "weightKg": "待核验",
+        "sensors": "OAK-D / 2D LiDAR / IMU / Create 3 底盘传感",
+        "compute": "Raspberry Pi 4",
+        "safety": "教学科研平台，非工业安全 AMR"
+      },
+      "software": {
+        "ros": "ROS 生态",
+        "ros2": "官方 ROS 2 支持",
+        "sdk": "TurtleBot 4 ROS 2 包 / 教程 / GitHub 资源",
+        "sim": "Gazebo / Ignition / RViz2"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v8 官网核验：TurtleBot 4 官方手册确认 ROS 2、传感器、仿真和教程资源，适合教学科研采购比较。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC350",
+        "SRCV4001",
+        "SRCV8008"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "TurtleBot 4 官方手册确认 Lite/Standard 两款为教育科研开源平台，搭载 ROS 2、Create 3、Raspberry Pi 4、OAK-D 和 2D LiDAR；采购价格按渠道确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "turtlebot4-standard",
+      "name": "TurtleBot 4 Standard",
+      "vendor": "Robotis / Clearpath",
+      "category": "移动/复合机器人",
+      "formFactor": "ROS2 教学移动平台",
+      "country": "韩国/加拿大",
+      "domesticPriority": false,
+      "officialUrl": "https://turtlebot.github.io/turtlebot4-user-manual/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2022",
+      "releaseDateConfidence": "low",
+      "marketTier": "重点候选",
+      "brandNormalized": "Clearpath",
+      "tags": [
+        "教学移动平台",
+        "轮式底盘",
+        "移动操作"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC350",
+          "SRCV4001",
+          "SRCV8008"
+        ]
+      },
+      "specs": {
+        "dof": "差速移动底盘",
+        "payloadKg": "轻载教学/科研平台",
+        "reachM": "移动平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "约 0.3 m/s",
+        "endurance": "约 2.5 h",
+        "weightKg": "待核验",
+        "sensors": "OAK-D / 2D LiDAR / IMU / Create 3 底盘传感",
+        "compute": "Raspberry Pi 4",
+        "safety": "教学科研平台，非工业安全 AMR"
+      },
+      "software": {
+        "ros": "ROS 生态",
+        "ros2": "官方 ROS 2 支持",
+        "sdk": "TurtleBot 4 ROS 2 包 / 教程 / GitHub 资源",
+        "sim": "Gazebo / Ignition / RViz2"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v8 官网核验：TurtleBot 4 官方手册确认 ROS 2、传感器、仿真和教程资源，适合教学科研采购比较。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC350",
+        "SRCV4001",
+        "SRCV8008"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "TurtleBot 4 官方手册确认 Lite/Standard 两款为教育科研开源平台，搭载 ROS 2、Create 3、Raspberry Pi 4、OAK-D 和 2D LiDAR；采购价格按渠道确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "husarion-panther",
       "name": "Husarion Panther",
       "vendor": "Husarion",
@@ -40913,6 +40938,158 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "MiR 官方产品资料确认 AMR 负载、速度、续航和 Fleet/API 口径；发布时间和价格未公开。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "omron-ld60",
+      "name": "OMRON LD-60",
+      "vendor": "OMRON Robotics",
+      "category": "移动/复合机器人",
+      "formFactor": "室内 AMR 平台",
+      "country": "日本",
+      "domesticPriority": false,
+      "officialUrl": "https://robotics.omron.com/products/mobile-robots/ld-series/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "OMRON",
+      "tags": [
+        "轮式底盘",
+        "服务/巡检"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3035",
+          "SRCV8007"
+        ]
+      },
+      "specs": {
+        "dof": "AMR 移动底盘",
+        "payloadKg": "60 kg",
+        "reachM": "移动平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "最高 1.8 m/s",
+        "endurance": "15 h 空载 / 12 h 满载",
+        "weightKg": "待核验",
+        "sensors": "前安全激光、后声呐、前保险杠、障碍物避让",
+        "compute": "待核验",
+        "safety": "EN/ANSI/UL 等安全合规口径，按地区确认"
+      },
+      "software": {
+        "ros": "工业接口/集成商支持",
+        "ros2": "工业接口/集成商支持",
+        "sdk": "MobilePlanner / AMR 控制接口",
+        "sim": "OMRON 工业仿真与集成工具需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3035",
+        "SRCV8007"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "omron-ld90",
+      "name": "OMRON LD-90",
+      "vendor": "OMRON Robotics",
+      "category": "移动/复合机器人",
+      "formFactor": "室内 AMR 平台",
+      "country": "日本",
+      "domesticPriority": false,
+      "officialUrl": "https://robotics.omron.com/products/mobile-robots/ld-series/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "OMRON",
+      "tags": [
+        "轮式底盘",
+        "服务/巡检"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3035",
+          "SRCV8007"
+        ]
+      },
+      "specs": {
+        "dof": "AMR 移动底盘",
+        "payloadKg": "90 kg",
+        "reachM": "移动平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "最高 1.35 m/s",
+        "endurance": "15 h 空载 / 12 h 满载",
+        "weightKg": "待核验",
+        "sensors": "前安全激光、后声呐、前保险杠、障碍物避让",
+        "compute": "待核验",
+        "safety": "EN/ANSI/UL 等安全合规口径，按地区确认"
+      },
+      "software": {
+        "ros": "工业接口/集成商支持",
+        "ros2": "工业接口/集成商支持",
+        "sdk": "MobilePlanner / AMR 控制接口",
+        "sim": "OMRON 工业仿真与集成工具需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3035",
+        "SRCV8007"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需询价。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -43141,79 +43318,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "id": "xiaomi-cyberone",
-      "name": "Xiaomi CyberOne",
-      "vendor": "小米 Xiaomi",
-      "category": "人形机器人",
-      "formFactor": "全尺寸人形机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.mi.com/global/discover/article?id=2700",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2022",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "小米",
-      "tags": [
-        "全尺寸",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3031"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3031"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "id": "robotera-xhand1",
       "name": "RobotEra XHand1",
       "vendor": "星动纪元 RobotEra",
@@ -43281,79 +43385,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRC059"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "galbot-g1",
-      "name": "Galbot G1",
-      "vendor": "银河通用 Galbot",
-      "category": "人形机器人",
-      "formFactor": "轮式/人形移动操作平台",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.galbot.com/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "银河通用",
-      "tags": [
-        "工业/商用",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC058"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC058"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -43500,153 +43531,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRC051"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "engineai-sa01",
-      "name": "EngineAI SA01",
-      "vendor": "众擎机器人 EngineAI",
-      "category": "人形机器人",
-      "formFactor": "小型人形机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.engineai.com.cn/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "众擎机器人",
-      "tags": [
-        "小型人形",
-        "教育版",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC053"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC053"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "engineai-se01",
-      "name": "EngineAI SE01",
-      "vendor": "众擎机器人 EngineAI",
-      "category": "人形机器人",
-      "formFactor": "全尺寸人形机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.engineai.com.cn/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "众擎机器人",
-      "tags": [
-        "全尺寸",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC053"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC053"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -44251,6 +44135,83 @@
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "xiaomi-cyberone",
+      "name": "Xiaomi CyberOne",
+      "vendor": "小米 Xiaomi",
+      "category": "人形机器人",
+      "formFactor": "全尺寸人形机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.mi.com/global/discover/article?id=2700",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2022-08",
+      "releaseDateConfidence": "medium",
+      "marketTier": "市场初筛",
+      "brandNormalized": "小米",
+      "tags": [
+        "全尺寸",
+        "科研开发套件"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3031",
+          "SRCV8013"
+        ]
+      },
+      "specs": {
+        "dof": "全尺寸人形，详细自由度未公开",
+        "payloadKg": "官网未披露",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "待核验",
+        "speed": "官网未披露",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "视觉/听觉感知演示口径",
+        "compute": "待核验",
+        "safety": "展示/研发平台，采购交付需官方确认"
+      },
+      "software": {
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "未公开",
+        "sim": "未公开"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：小米官方文章确认 CyberOne 发布，但采购型规格与交付仍未公开。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "CyberOne 暂无公开量产采购参数，学校采购不宜作为近期主选。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3031",
+        "SRCV8013"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "小米官方文章确认 CyberOne 发布和人形机器人定位，但未提供面向采购的量产规格、售价和交付信息；保留市场覆盖项。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -54395,6 +54356,237 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "galbot-g1",
+      "name": "Galbot G1",
+      "vendor": "银河通用 Galbot",
+      "category": "人形机器人",
+      "formFactor": "轮式/人形移动操作平台",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.galbot.com/g1",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "银河通用",
+      "tags": [
+        "工业/商用",
+        "科研开发套件",
+        "移动操作",
+        "双臂移动平台"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC058",
+          "SRCV8016"
+        ]
+      },
+      "specs": {
+        "dof": "腿部/腰部/颈部 6 + 双臂 14 + 四轮底盘",
+        "payloadKg": "单臂 5 kg，总 10 kg",
+        "reachM": "水平约 1.9 m，垂直 0-2.1/2.4 m 覆盖",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "满电约 10 h",
+        "weightKg": "约 80 kg",
+        "sensors": "头部双目、腕部深度相机、RGB 相机、IMU、3D LiDAR、超声波",
+        "compute": "NVIDIA AGX Orin 64GB / 275 TOPS",
+        "safety": "IP54，结构化场景为主"
+      },
+      "software": {
+        "ros": "官方接口需询价",
+        "ros2": "官方接口需询价",
+        "sdk": "Embosar/官方开发接口需询价",
+        "sim": "仿真和数据接口需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：Galbot G1 官方规格页确认双臂移动操作、续航、传感器和计算平台。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC058",
+        "SRCV8016"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Galbot G1 官方规格页确认 1730 mm 身高、双臂总 10 kg 负载、0-2.4 m 操作覆盖、10 h 续航、IP54 和 AGX Orin 计算平台；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "engineai-sa01",
+      "name": "EngineAI SA01",
+      "vendor": "众擎机器人 EngineAI",
+      "category": "人形机器人",
+      "formFactor": "小型人形机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.engineai.com.cn/product-sa01.html",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2024-07",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "众擎机器人",
+      "tags": [
+        "小型人形",
+        "教育版",
+        "科研开发套件"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC053",
+          "SRCV8014"
+        ]
+      },
+      "specs": {
+        "dof": "12 自由度",
+        "payloadKg": "双足平台，负载需询价",
+        "reachM": "无上肢/按版本确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "超过 2 h",
+        "weightKg": "待核验",
+        "sensors": "IMU 等，具体传感器按版本确认",
+        "compute": "待核验",
+        "safety": "开发/教育双足平台，场地安全需另行评估"
+      },
+      "software": {
+        "ros": "开源软件框架，ROS/ROS2 需按发布包确认",
+        "ros2": "开源软件框架，ROS/ROS2 需按发布包确认",
+        "sdk": "全栈开源/开发接口",
+        "sim": "运动算法与仿真资源需按官方发布包确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：EngineAI SA01 官方页确认开源双足平台定位和关键硬件信息。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC053",
+        "SRCV8014"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "EngineAI SA01 官方页确认全开源双足平台、12 自由度、15Ah 快拆电池、2 h 级续航和教育/开发定位；价格和交付需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "engineai-se01",
+      "name": "EngineAI SE01",
+      "vendor": "众擎机器人 EngineAI",
+      "category": "人形机器人",
+      "formFactor": "全尺寸人形机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.engineai.com.cn/product-se01",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2024-10",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "众擎机器人",
+      "tags": [
+        "全尺寸",
+        "科研开发套件"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC053",
+          "SRCV8015"
+        ]
+      },
+      "specs": {
+        "dof": "全尺寸人形，详细自由度按官方规格确认",
+        "payloadKg": "灵巧手/上肢负载需询价",
+        "reachM": "真人比例，精确臂展需询价",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "约 2 h 级口径，按版本确认",
+        "weightKg": "待核验",
+        "sensors": "激光雷达、深度摄像头、红外摄像头、IMU、力控传感器",
+        "compute": "待核验",
+        "safety": "全尺寸人形平台，教学演示需隔离和急停方案"
+      },
+      "software": {
+        "ros": "开发接口需询价",
+        "ros2": "开发接口需询价",
+        "sdk": "官方接口/开发支持需询价",
+        "sim": "仿真与训练工具需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：EngineAI SE01 官方页确认全尺寸人形、感知和灵巧手定位。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC053",
+        "SRCV8015"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "EngineAI SE01 官方页确认全尺寸人形、拟人步态、视听感知、灵巧手、快拆电池和接口定位；精确采购参数和报价需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "boston-atlas-electric",
       "name": "Boston Dynamics Atlas",
       "vendor": "Boston Dynamics",
@@ -54702,152 +54894,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "id": "xiaomi-cyberdog",
-      "name": "Xiaomi CyberDog",
-      "vendor": "小米 Xiaomi",
-      "category": "机器狗",
-      "formFactor": "开源四足机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.mi.com/cyberdog",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2021",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "小米",
-      "tags": [
-        "消费级",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC016"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC016"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "limx-ollie",
-      "name": "LimX Dynamics OLI",
-      "vendor": "逐际动力 LimX Dynamics",
-      "category": "机器狗",
-      "formFactor": "轮足机器人平台",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.limxdynamics.com/",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "逐际动力",
-      "tags": [
-        "科研开发",
-        "轮足/足式"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC017"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "开发接口需询价",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC017"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "id": "limx-p1",
       "name": "LimX Dynamics P1",
       "vendor": "逐际动力 LimX Dynamics",
@@ -54855,7 +54901,7 @@
       "formFactor": "足式/轮足开发平台",
       "country": "中国",
       "domesticPriority": true,
-      "officialUrl": "https://www.limxdynamics.com/",
+      "officialUrl": "https://www.limxdynamics.com/en",
       "image": "/assets/robots/robot-dog.png",
       "lastChecked": "2026-06-01",
       "releaseDate": "官网未披露",
@@ -54877,7 +54923,8 @@
         "type": "需询价",
         "confidence": "low",
         "sourceIds": [
-          "SRC017"
+          "SRC017",
+          "SRCV8009"
         ]
       },
       "specs": {
@@ -54899,13 +54946,15 @@
         "sim": "待核验"
       },
       "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 部分核验：LimX 官网可确认厂商和产品线，W1/P1 旧款详细规格需厂商确认。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
       ],
       "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "W1/P1 当前官网规格入口不完整，适合保留为市场覆盖项，采购前必须确认可供货状态。"
       ],
       "scores": {
         "research": 27,
@@ -54914,10 +54963,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRC017"
+        "SRC017",
+        "SRCV8009"
       ],
       "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationNotes": "LimX 官网确认公司和当前产品线，但 W1/P1 旧款官方规格页在当前站点未公开；采购前需由厂商确认是否仍可供货、正式参数和开发接口。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -54950,7 +55000,8 @@
         "type": "需询价",
         "confidence": "low",
         "sourceIds": [
-          "SRCV4008"
+          "SRCV4008",
+          "SRCV8011"
         ]
       },
       "specs": {
@@ -54972,13 +55023,15 @@
         "sim": "待核验"
       },
       "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 部分核验：Ghost 官网可核验厂商和 Vision 60 当前平台，Spirit/SPUR 需继续向厂商确认。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
       ],
       "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "Spirit/SPUR 当前官方规格入口不足，建议采购比较以 Vision 60 当前官方规格为主。"
       ],
       "scores": {
         "research": 27,
@@ -54987,84 +55040,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRCV4008"
+        "SRCV4008",
+        "SRCV8011"
       ],
       "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ghost-vision-60",
-      "name": "Ghost Robotics Vision 60",
-      "vendor": "Ghost Robotics",
-      "category": "机器狗",
-      "formFactor": "户外四足机器人",
-      "country": "美国",
-      "domesticPriority": false,
-      "officialUrl": "https://www.ghostrobotics.io/robots/vision-60",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Ghost",
-      "tags": [
-        "工业巡检",
-        "负载型",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3006"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3006"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationNotes": "Ghost 官网当前重点公开 Vision 60，Spirit/SPUR 旧款规格入口不完整；保留为历史/市场覆盖项，采购前应以 Vision 60 或厂商确认型号为准。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -62680,6 +62660,161 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "xiaomi-cyberdog",
+      "name": "Xiaomi CyberDog",
+      "vendor": "小米 Xiaomi",
+      "category": "机器狗",
+      "formFactor": "开源四足机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.mi.com/cyberdog/specs",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2021-08",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "小米",
+      "tags": [
+        "消费级",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC016",
+          "SRCV8012"
+        ]
+      },
+      "specs": {
+        "dof": "四足平台",
+        "payloadKg": "轻载开发平台，按官方参数/实物确认",
+        "reachM": "足式平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "公开发布资料约 3.2 m/s，需以官方参数页核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "摄像头、超声波、触摸、GPS/定位等多传感器",
+        "compute": "NVIDIA Jetson Xavier NX 口径，需以官方参数页确认",
+        "safety": "开发者探索版，非工业巡检安全平台"
+      },
+      "software": {
+        "ros": "开源/社区资源需项目确认",
+        "ros2": "开源/社区资源需项目确认",
+        "sdk": "小米开源社区/开发者资源需确认当前可用性",
+        "sim": "社区仿真资源需确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：小米官方 CyberDog 参数页确认工程探索版官方入口；现货采购和开发资源需复核。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC016",
+        "SRCV8012"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "小米官方参数页确认 CyberDog 工程探索版入口；公开资料显示为早期开发者探索机型，当前采购可得性需渠道确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "limx-ollie",
+      "name": "LimX Dynamics OLI",
+      "vendor": "逐际动力 LimX Dynamics",
+      "category": "机器狗",
+      "formFactor": "轮足机器人平台",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://limxdynamics.com/en/oli/spec",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2025-07",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "逐际动力",
+      "tags": [
+        "科研开发",
+        "轮足/足式",
+        "全尺寸",
+        "科研开发套件",
+        "工业/商用"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC017",
+          "SRCV8010"
+        ]
+      },
+      "specs": {
+        "dof": "31 自由度",
+        "payloadKg": "单臂最高 3 kg",
+        "reachM": "臂长约 0.7 m",
+        "repeatabilityMm": "待核验",
+        "speed": "最高 5 km/h",
+        "endurance": "约 2 h",
+        "weightKg": "≤55 kg",
+        "sensors": "IMU、头部/胸部/腕部/髋部深度相机、LiDAR 按版本",
+        "compute": "RK3588 + Orin NX/AGX Orin 背包按版本",
+        "safety": "手持急停，具体认证按版本确认"
+      },
+      "software": {
+        "ros": "开发接口需版本确认",
+        "ros2": "开发接口需版本确认",
+        "sdk": "Controller API / Sensor API / 低级运动控制 API / 高级运动控制 API",
+        "sim": "Studio 可选包，一键仿真验证"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：LimX Oli 官方规格页确认全尺寸人形硬件、传感器、API 和开发工具。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC017",
+        "SRCV8010"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "LimX Oli 官方规格页确认 31 自由度、约 55 kg、约 2 h 续航、单臂 3 kg 负载、传感器/API/开发工具；价格按版本询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "anybotics-anymal-c",
       "name": "ANYbotics ANYmal C",
       "vendor": "ANYbotics",
@@ -63144,6 +63279,83 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "云深处 Lite3 官方产品页确认 Lite3 Motion/Pro 形态、教育/开发平台定位和开发接口入口；详细配置需按 SKU 确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "ghost-vision-60",
+      "name": "Ghost Robotics Vision 60",
+      "vendor": "Ghost Robotics",
+      "category": "机器狗",
+      "formFactor": "户外四足机器人",
+      "country": "美国",
+      "domesticPriority": false,
+      "officialUrl": "https://www.ghostrobotics.io/vision-60",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Ghost",
+      "tags": [
+        "工业巡检",
+        "负载型",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3006",
+          "SRCV8011"
+        ]
+      },
+      "specs": {
+        "dof": "四足平台，12 电机",
+        "payloadKg": "10 kg",
+        "reachM": "足式平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "标准 0.9 m/s，冲刺约 2.4 m/s",
+        "endurance": "约 3.15 h 连续行走 / 21 h 待机",
+        "weightKg": "51 kg",
+        "sensors": "RGB 相机、D435 深度相机、RTK GPS、外部载荷接口",
+        "compute": "NVIDIA Xavier 32GB / 2TB NVMe",
+        "safety": "IP67，-40 至 55 摄氏度工作口径，按地区和场景确认"
+      },
+      "software": {
+        "ros": "开放架构/集成接口需项目确认",
+        "ros2": "开放架构/集成接口需项目确认",
+        "sdk": "Mission Control / end-user integration architecture",
+        "sim": "企业仿真接口需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v8 官网核验：Ghost Robotics Vision 60 官方规格页确认 10 kg 载荷、3 h 级连续行走、IP67、NVIDIA Xavier 和 Mission Control/开放架构口径；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3006",
+        "SRCV8011"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Ghost Robotics Vision 60 官方规格页确认 10 kg 载荷、3 h 级连续行走、IP67、NVIDIA Xavier 和 Mission Control/开放架构口径；价格需询价。",
       "verifiedAt": "2026-06-01"
     },
     {
