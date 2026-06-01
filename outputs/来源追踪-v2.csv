@@ -1564,3 +1564,11 @@ SRCV3035,OMRON Robotics OMRON LD-60 官方资料,官网/产品页,medium,https:/
 SRCV3036,KUKA KUKA KMP 600-S 官方资料,官网/产品页,medium,https://www.kuka.com/en-de/products/mobility/mobile-platforms/kmp-600-s,市场初筛候选的官方或产品系列入口；价格和详细配置需二次询价。
 SRCV3037,Neobotix Neobotix MPO-700 官方资料,官网/产品页,medium,https://www.neobotix-robots.com/mobile-robots/omnidirectional-robots/mpo-700,市场初筛候选的官方或产品系列入口；价格和详细配置需二次询价。
 SRCV3038,Husarion Husarion Panther 官方资料,官网/产品页,medium,https://husarion.com/manuals/panther/,市场初筛候选的官方或产品系列入口；价格和详细配置需二次询价。
+SRCV4001,v4 官方产品页/规格书抽查集合,调研过程记录,medium,https://robots.neardws.com/,本轮 v4 对 Universal Robots、ABB、KUKA、FANUC、Techman、Clearpath、MiR、Unitree、Boston Dynamics 等官方产品页和规格入口做人工抽查，用于补齐市场初筛候选的基础参数。
+SRCV4002,Universal Robots Universal Robots UR8 Long 官方资料,官网/产品页,medium,https://www.universal-robots.com/products/ur8-long/,v4 市场扩充候选的官方或产品系列入口；采购前仍需二次核验正式报价、配置、交付和售后条款。
+SRCV4003,Kinova Kinova Gen3 Lite 官方资料,官网/产品页,medium,https://www.kinovarobotics.com/product/gen3-lite-robots,v4 市场扩充候选的官方或产品系列入口；采购前仍需二次核验正式报价、配置、交付和售后条款。
+SRCV4005,Clearpath Robotics Clearpath Dingo 官方资料,官网/产品页,medium,https://clearpathrobotics.com/dingo-indoor-mobile-robot/,v4 市场扩充候选的官方或产品系列入口；采购前仍需二次核验正式报价、配置、交付和售后条款。
+SRCV4006,Clearpath Robotics Clearpath Warthog 官方资料,官网/产品页,medium,https://clearpathrobotics.com/warthog-unmanned-ground-vehicle-robot/,v4 市场扩充候选的官方或产品系列入口；采购前仍需二次核验正式报价、配置、交付和售后条款。
+SRCV4007,Husarion Husarion LYNX 官方资料,官网/产品页,medium,https://husarion.com/manuals/lynx/,v4 市场扩充候选的官方或产品系列入口；采购前仍需二次核验正式报价、配置、交付和售后条款。
+SRCV4008,Ghost Robotics Ghost Robotics Spirit 官方资料,官网/产品页,medium,https://www.ghostrobotics.io/,v4 市场扩充候选的官方或产品系列入口；采购前仍需二次核验正式报价、配置、交付和售后条款。
+SRCV4009,Mujin Mujin TruckBot 官方资料,官网/产品页,medium,https://mujin-corp.com/,v4 市场扩充候选的官方或产品系列入口；采购前仍需二次核验正式报价、配置、交付和售后条款。
