@@ -1585,3 +1585,10 @@ SRCV6002,MiR 自主移动机器人产品规格,官网/产品规格,high,https://
 SRCV6003,PAL Robotics 机器人产品资料,官网/产品资料,high,https://pal-robotics.com/robots/,PAL 官方资料确认 TIAGo、TIAGo Pro、ARI、TALOS 等机器人系列和 ROS/科研平台定位。
 SRCV6004,Unitree 官方产品规格,官网/产品规格,high,https://www.unitree.com/,宇树官方产品页确认 Go2、B1/B2/B2-W、G1/H1 等型号的基础形态、SDK/开发生态和部分参数。
 SRCV6005,Boston Dynamics 产品和 SDK 资料,官网/产品与 SDK,high,https://bostondynamics.com/products/,Boston Dynamics 官方产品与开发者资料确认 Spot/Atlas 产品入口、Spot SDK 和企业部署口径。
+SRCV7001,AgileX 官方产品和手册入口,官网/产品手册,high,https://global.agilex.ai/,AgileX 官方产品页和用户手册可核验 Scout、Bunker、Tracer、Hunter、Ranger、LIMO 等底盘形态、负载分档、ROS/SDK 资源和开源文档入口。
+SRCV7002,ANYbotics ANYmal 官方技术规格,官网/技术规格,high,https://www.anybotics.com/anymal-autonomous-legged-robot/,ANYbotics 官方技术规格页说明 ANYmal 系列巡检四足平台、工业载荷和企业 API/集成接口口径。
+SRCV7003,DEEPRobotics Lite3 官方产品页,官网/产品规格,high,https://www.deeprobotics.cn/robot/index/product2.html,云深处 Lite3 官方产品页可核验 Lite3 Motion/Pro 形态、开发平台定位和 SDK/遥控/感知配置口径。
+SRCV7004,KUKA KMP 600-S 官方产品页,官网/产品规格,high,https://www.kuka.com/en-de/products/mobility/mobile-platforms/kmp-600-s,KUKA 官方产品页说明 KMP 600-S 移动平台、600 kg 级负载和工业移动平台定位。
+SRCV7005,Techman Robot 官方规格资料,官网/产品规格,high,https://www.tm-robot.com/en/products/,Techman 官方产品页和下载资料可核验 TM5/TM12 负载、臂展、TMflow、SDK 与 ROS 驱动口径。
+SRCV7006,ABB 协作机器人官方产品页,官网/产品规格,high,https://new.abb.com/products/robotics/robots/collaborative-robots,ABB 官方协作机器人页可核验 GoFa、YuMi 系列产品定位、RobotStudio/RAPID 软件生态和型号规格入口。
+SRCV7007,FANUC CRX 协作机器人官方产品资料,官网/产品规格,high,https://www.fanucamerica.com/products/robots/series/collaborative-robots,FANUC 官方 CRX 系列资料可核验 CRX-10iA/L、CRX-25iA 负载、臂展和 ROBOGUIDE/控制器生态。

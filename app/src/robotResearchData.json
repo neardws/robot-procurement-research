@@ -1,9 +1,9 @@
 {
   "meta": {
     "project": "学校具身智能机器人采购调研",
-    "version": "v6",
+    "version": "v7",
     "accessedDate": "2026-06-01",
-    "updateSummary": "继续按品牌批次核验：Universal Robots、MiR、PAL Robotics、Unitree、Boston Dynamics 等型号补充官方参数、SDK/ROS 口径，并升级可确认候选。",
+    "updateSummary": "继续按品牌批次核验：AgileX、ANYbotics、DEEPRobotics、KUKA、Techman、ABB、FANUC 等候选补充官方规格和软件生态，并升级可确认候选。",
     "scoringWeights": {
       "research": 50,
       "deployment": 50
@@ -12709,161 +12709,65 @@
       "type": "官网/产品与 SDK",
       "confidence": "high",
       "notes": "Boston Dynamics 官方产品与开发者资料确认 Spot/Atlas 产品入口、Spot SDK 和企业部署口径。"
+    },
+    {
+      "id": "SRCV7001",
+      "title": "AgileX 官方产品和手册入口",
+      "url": "https://global.agilex.ai/",
+      "type": "官网/产品手册",
+      "confidence": "high",
+      "notes": "AgileX 官方产品页和用户手册可核验 Scout、Bunker、Tracer、Hunter、Ranger、LIMO 等底盘形态、负载分档、ROS/SDK 资源和开源文档入口。"
+    },
+    {
+      "id": "SRCV7002",
+      "title": "ANYbotics ANYmal 官方技术规格",
+      "url": "https://www.anybotics.com/anymal-autonomous-legged-robot/",
+      "type": "官网/技术规格",
+      "confidence": "high",
+      "notes": "ANYbotics 官方技术规格页说明 ANYmal 系列巡检四足平台、工业载荷和企业 API/集成接口口径。"
+    },
+    {
+      "id": "SRCV7003",
+      "title": "DEEPRobotics Lite3 官方产品页",
+      "url": "https://www.deeprobotics.cn/robot/index/product2.html",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "云深处 Lite3 官方产品页可核验 Lite3 Motion/Pro 形态、开发平台定位和 SDK/遥控/感知配置口径。"
+    },
+    {
+      "id": "SRCV7004",
+      "title": "KUKA KMP 600-S 官方产品页",
+      "url": "https://www.kuka.com/en-de/products/mobility/mobile-platforms/kmp-600-s",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "KUKA 官方产品页说明 KMP 600-S 移动平台、600 kg 级负载和工业移动平台定位。"
+    },
+    {
+      "id": "SRCV7005",
+      "title": "Techman Robot 官方规格资料",
+      "url": "https://www.tm-robot.com/en/products/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "Techman 官方产品页和下载资料可核验 TM5/TM12 负载、臂展、TMflow、SDK 与 ROS 驱动口径。"
+    },
+    {
+      "id": "SRCV7006",
+      "title": "ABB 协作机器人官方产品页",
+      "url": "https://new.abb.com/products/robotics/robots/collaborative-robots",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "ABB 官方协作机器人页可核验 GoFa、YuMi 系列产品定位、RobotStudio/RAPID 软件生态和型号规格入口。"
+    },
+    {
+      "id": "SRCV7007",
+      "title": "FANUC CRX 协作机器人官方产品资料",
+      "url": "https://www.fanucamerica.com/products/robots/series/collaborative-robots",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "FANUC 官方 CRX 系列资料可核验 CRX-10iA/L、CRX-25iA 负载、臂展和 ROBOGUIDE/控制器生态。"
     }
   ],
   "robots": [
-    {
-      "id": "abb-gofa-crb15000",
-      "name": "ABB GoFa CRB 15000",
-      "vendor": "ABB Robotics",
-      "category": "机械臂",
-      "formFactor": "协作机械臂",
-      "country": "瑞士/瑞典",
-      "domesticPriority": false,
-      "officialUrl": "https://new.abb.com/products/robotics/robots/collaborative-robots/gofa",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2021",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "ABB",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3015",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "5 kg / 10 kg / 12 kg 级",
-        "reachM": "约 0.95-1.62 m",
-        "repeatabilityMm": "约 ±0.02 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "待核验",
-        "sdk": "ABB RobotStudio / RAPID",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3015",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "abb-yumi-irb14000",
-      "name": "ABB YuMi IRB 14000",
-      "vendor": "ABB Robotics",
-      "category": "机械臂",
-      "formFactor": "双臂协作机器人",
-      "country": "瑞士/瑞典",
-      "domesticPriority": false,
-      "officialUrl": "https://new.abb.com/products/robotics/robots/collaborative-robots/yumi",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2015",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "ABB",
-      "tags": [
-        "协作臂",
-        "双臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3016",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "双臂 14 轴",
-        "payloadKg": "单臂约 0.5 kg",
-        "reachM": "约 0.56 m",
-        "repeatabilityMm": "约 ±0.02 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "待核验",
-        "sdk": "ABB RobotStudio / RAPID",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3016",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
     {
       "id": "aubo-i7",
       "name": "AUBO i7",
@@ -13308,158 +13212,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "id": "fanuc-crx-10ia-l",
-      "name": "FANUC CRX-10iA/L",
-      "vendor": "FANUC",
-      "category": "机械臂",
-      "formFactor": "10 kg 级协作臂",
-      "country": "日本",
-      "domesticPriority": false,
-      "officialUrl": "https://www.fanucamerica.com/products/robots/series/collaborative-robots",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2019",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "FANUC",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3019",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "10 kg",
-        "reachM": "约 1.42 m",
-        "repeatabilityMm": "约 ±0.04 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "社区/集成商支持",
-        "ros2": "待核验",
-        "sdk": "FANUC 控制器 / ROBOGUIDE",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3019",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "fanuc-crx-25ia",
-      "name": "FANUC CRX-25iA",
-      "vendor": "FANUC",
-      "category": "机械臂",
-      "formFactor": "25 kg 级协作臂",
-      "country": "日本",
-      "domesticPriority": false,
-      "officialUrl": "https://www.fanucamerica.com/products/robots/series/collaborative-robots",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "FANUC",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3019",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "25 kg",
-        "reachM": "约 1.89 m",
-        "repeatabilityMm": "约 ±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "社区/集成商支持",
-        "ros2": "待核验",
-        "sdk": "FANUC 控制器 / ROBOGUIDE",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3019",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "id": "franka-fr3",
       "name": "Franka Research 3",
       "vendor": "Franka Robotics",
@@ -13753,158 +13505,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "id": "kuka-lbr-iisy",
-      "name": "KUKA LBR iisy",
-      "vendor": "KUKA",
-      "category": "机械臂",
-      "formFactor": "易用型协作机械臂",
-      "country": "德国",
-      "domesticPriority": false,
-      "officialUrl": "https://www.kuka.com/en-de/products/robotics-systems/industrial-robots/lbr-iisy",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2022",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "KUKA",
-      "tags": [
-        "协作臂",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3018",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "3 kg / 11 kg / 15 kg 级",
-        "reachM": "约 0.6-1.3 m",
-        "repeatabilityMm": "按型号确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "社区支持",
-        "ros2": "社区支持",
-        "sdk": "KUKA iiQKA / Sunrise",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3018",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "kuka-lbr-iiwa",
-      "name": "KUKA LBR iiwa",
-      "vendor": "KUKA",
-      "category": "机械臂",
-      "formFactor": "7 自由度轻量协作臂",
-      "country": "德国",
-      "domesticPriority": false,
-      "officialUrl": "https://www.kuka.com/en-de/products/robotics-systems/industrial-robots/lbr-iiwa",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2013",
-      "releaseDateConfidence": "low",
-      "marketTier": "市场初筛",
-      "brandNormalized": "KUKA",
-      "tags": [
-        "协作臂",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3017",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "7 轴",
-        "payloadKg": "7 kg / 14 kg",
-        "reachM": "约 0.8-0.82 m",
-        "repeatabilityMm": "约 ±0.1 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "社区支持",
-        "ros2": "社区支持",
-        "sdk": "KUKA Sunrise / FRI",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3017",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "id": "realman-rm63",
       "name": "RealMan RM63",
       "vendor": "睿尔曼 RealMan",
@@ -14191,158 +13791,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRCV3025"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "techman-tm12",
-      "name": "Techman TM12",
-      "vendor": "达明 Techman Robot",
-      "category": "机械臂",
-      "formFactor": "12 kg 级协作臂",
-      "country": "中国台湾",
-      "domesticPriority": false,
-      "officialUrl": "https://www.tm-robot.com/en/products/tm12/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Techman",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3022",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "12 kg",
-        "reachM": "约 1.30 m",
-        "repeatabilityMm": "约 ±0.1 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方/社区 ROS 支持",
-        "ros2": "社区支持",
-        "sdk": "TMflow / TM ROS Driver",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3022",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "techman-tm5-700",
-      "name": "Techman TM5-700",
-      "vendor": "达明 Techman Robot",
-      "category": "机械臂",
-      "formFactor": "协作机械臂",
-      "country": "中国台湾",
-      "domesticPriority": false,
-      "officialUrl": "https://www.tm-robot.com/en/products/tm5-700/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Techman",
-      "tags": [
-        "协作臂",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3021",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "6 kg",
-        "reachM": "约 0.70 m",
-        "repeatabilityMm": "约 ±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方/社区 ROS 支持",
-        "ros2": "社区支持",
-        "sdk": "TMflow / TM ROS Driver",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3021",
-        "SRCV4001"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -22785,6 +22233,164 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "abb-gofa-crb15000",
+      "name": "ABB GoFa CRB 15000",
+      "vendor": "ABB Robotics",
+      "category": "机械臂",
+      "formFactor": "协作机械臂",
+      "country": "瑞士/瑞典",
+      "domesticPriority": false,
+      "officialUrl": "https://new.abb.com/products/robotics/robots/collaborative-robots/gofa",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2021",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "ABB",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3015",
+          "SRCV4001",
+          "SRCV7006"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "5 kg / 10 kg / 12 kg 级",
+        "reachM": "约 0.95-1.62 m",
+        "repeatabilityMm": "约 ±0.02 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial 社区支持",
+        "ros2": "待核验",
+        "sdk": "ABB RobotStudio / RAPID",
+        "sim": "待核验"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：ABB 官方协作机器人页确认 GoFa/YuMi 系列定位、RobotStudio/RAPID 软件生态和规格入口。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3015",
+        "SRCV4001",
+        "SRCV7006"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "ABB 官方协作机器人页确认 GoFa/YuMi 系列定位、RobotStudio/RAPID 软件生态和规格入口。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "abb-yumi-irb14000",
+      "name": "ABB YuMi IRB 14000",
+      "vendor": "ABB Robotics",
+      "category": "机械臂",
+      "formFactor": "双臂协作机器人",
+      "country": "瑞士/瑞典",
+      "domesticPriority": false,
+      "officialUrl": "https://new.abb.com/products/robotics/robots/collaborative-robots/yumi",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2015",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "ABB",
+      "tags": [
+        "协作臂",
+        "双臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3016",
+          "SRCV4001",
+          "SRCV7006"
+        ]
+      },
+      "specs": {
+        "dof": "双臂 14 轴",
+        "payloadKg": "单臂约 0.5 kg",
+        "reachM": "约 0.56 m",
+        "repeatabilityMm": "约 ±0.02 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial 社区支持",
+        "ros2": "待核验",
+        "sdk": "ABB RobotStudio / RAPID",
+        "sim": "待核验"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：ABB 官方协作机器人页确认 GoFa/YuMi 系列定位、RobotStudio/RAPID 软件生态和规格入口。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3016",
+        "SRCV4001",
+        "SRCV7006"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "ABB 官方协作机器人页确认 GoFa/YuMi 系列定位、RobotStudio/RAPID 软件生态和规格入口。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "aubo-i10",
       "name": "AUBO i10",
       "vendor": "遨博 AUBO",
@@ -25760,6 +25366,164 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "fanuc-crx-10ia-l",
+      "name": "FANUC CRX-10iA/L",
+      "vendor": "FANUC",
+      "category": "机械臂",
+      "formFactor": "10 kg 级协作臂",
+      "country": "日本",
+      "domesticPriority": false,
+      "officialUrl": "https://www.fanucamerica.com/products/robots/series/collaborative-robots",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2019",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "FANUC",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3019",
+          "SRCV4001",
+          "SRCV7007"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "10 kg",
+        "reachM": "约 1.42 m",
+        "repeatabilityMm": "约 ±0.04 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "社区/集成商支持",
+        "ros2": "待核验",
+        "sdk": "FANUC 控制器 / ROBOGUIDE",
+        "sim": "待核验"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：FANUC 官方协作机器人资料确认 CRX 系列型号、负载分档、臂展和 ROBOGUIDE/控制器生态。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3019",
+        "SRCV4001",
+        "SRCV7007"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "FANUC 官方协作机器人资料确认 CRX 系列型号、负载分档、臂展和 ROBOGUIDE/控制器生态。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "fanuc-crx-25ia",
+      "name": "FANUC CRX-25iA",
+      "vendor": "FANUC",
+      "category": "机械臂",
+      "formFactor": "25 kg 级协作臂",
+      "country": "日本",
+      "domesticPriority": false,
+      "officialUrl": "https://www.fanucamerica.com/products/robots/series/collaborative-robots",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "FANUC",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3019",
+          "SRCV4001",
+          "SRCV7007"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "25 kg",
+        "reachM": "约 1.89 m",
+        "repeatabilityMm": "约 ±0.05 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "社区/集成商支持",
+        "ros2": "待核验",
+        "sdk": "FANUC 控制器 / ROBOGUIDE",
+        "sim": "待核验"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：FANUC 官方协作机器人资料确认 CRX 系列型号、负载分档、臂展和 ROBOGUIDE/控制器生态。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3019",
+        "SRCV4001",
+        "SRCV7007"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "FANUC 官方协作机器人资料确认 CRX 系列型号、负载分档、臂展和 ROBOGUIDE/控制器生态。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "jaka-mini",
       "name": "JAKA MiniCobo",
       "vendor": "节卡 JAKA",
@@ -26760,6 +26524,322 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "kuka-lbr-iisy",
+      "name": "KUKA LBR iisy",
+      "vendor": "KUKA",
+      "category": "机械臂",
+      "formFactor": "易用型协作机械臂",
+      "country": "德国",
+      "domesticPriority": false,
+      "officialUrl": "https://www.kuka.com/en-de/products/robotics-systems/industrial-robots/lbr-iisy",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2022",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "KUKA",
+      "tags": [
+        "协作臂",
+        "轻量臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3018",
+          "SRCV4001",
+          "SRCV7004"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "3 kg / 11 kg / 15 kg 级",
+        "reachM": "约 0.6-1.3 m",
+        "repeatabilityMm": "按型号确认",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "社区支持",
+        "ros2": "社区支持",
+        "sdk": "KUKA iiQKA / Sunrise",
+        "sim": "待核验"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3018",
+        "SRCV4001",
+        "SRCV7004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "kuka-lbr-iiwa",
+      "name": "KUKA LBR iiwa",
+      "vendor": "KUKA",
+      "category": "机械臂",
+      "formFactor": "7 自由度轻量协作臂",
+      "country": "德国",
+      "domesticPriority": false,
+      "officialUrl": "https://www.kuka.com/en-de/products/robotics-systems/industrial-robots/lbr-iiwa",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2013",
+      "releaseDateConfidence": "low",
+      "marketTier": "重点候选",
+      "brandNormalized": "KUKA",
+      "tags": [
+        "协作臂",
+        "轻量臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3017",
+          "SRCV4001",
+          "SRCV7004"
+        ]
+      },
+      "specs": {
+        "dof": "7 轴",
+        "payloadKg": "7 kg / 14 kg",
+        "reachM": "约 0.8-0.82 m",
+        "repeatabilityMm": "约 ±0.1 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "社区支持",
+        "ros2": "社区支持",
+        "sdk": "KUKA Sunrise / FRI",
+        "sim": "待核验"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3017",
+        "SRCV4001",
+        "SRCV7004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "techman-tm12",
+      "name": "Techman TM12",
+      "vendor": "达明 Techman Robot",
+      "category": "机械臂",
+      "formFactor": "12 kg 级协作臂",
+      "country": "中国台湾",
+      "domesticPriority": false,
+      "officialUrl": "https://www.tm-robot.com/en/products/tm12/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Techman",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3022",
+          "SRCV4001",
+          "SRCV7005"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "12 kg",
+        "reachM": "约 1.30 m",
+        "repeatabilityMm": "约 ±0.1 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持",
+        "ros2": "社区支持",
+        "sdk": "TMflow / TM ROS Driver",
+        "sim": "待核验"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：Techman 官方规格资料确认 TM5/TM12 负载、臂展、TMflow、SDK 与 ROS 驱动口径。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3022",
+        "SRCV4001",
+        "SRCV7005"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Techman 官方规格资料确认 TM5/TM12 负载、臂展、TMflow、SDK 与 ROS 驱动口径。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "techman-tm5-700",
+      "name": "Techman TM5-700",
+      "vendor": "达明 Techman Robot",
+      "category": "机械臂",
+      "formFactor": "协作机械臂",
+      "country": "中国台湾",
+      "domesticPriority": false,
+      "officialUrl": "https://www.tm-robot.com/en/products/tm5-700/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Techman",
+      "tags": [
+        "协作臂",
+        "轻量臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3021",
+          "SRCV4001",
+          "SRCV7005"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "6 kg",
+        "reachM": "约 0.70 m",
+        "repeatabilityMm": "约 ±0.05 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持",
+        "ros2": "社区支持",
+        "sdk": "TMflow / TM ROS Driver",
+        "sim": "待核验"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：Techman 官方规格资料确认 TM5/TM12 负载、臂展、TMflow、SDK 与 ROS 驱动口径。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3021",
+        "SRCV4001",
+        "SRCV7005"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Techman 官方规格资料确认 TM5/TM12 负载、臂展、TMflow、SDK 与 ROS 驱动口径。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "ur10e",
       "name": "Universal Robots UR10e",
       "vendor": "Universal Robots",
@@ -27610,522 +27690,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "id": "agilex-bunker-mini",
-      "name": "AgileX Bunker Mini",
-      "vendor": "松灵 AgileX",
-      "category": "移动/复合机器人",
-      "formFactor": "履带式移动底盘",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://global.agilex.ai/products/bunker-mini",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "AgileX",
-      "tags": [
-        "轮式底盘",
-        "服务/巡检",
-        "移动操作"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC034"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC034"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "agilex-hunter-se",
-      "name": "AgileX Hunter SE",
-      "vendor": "松灵 AgileX",
-      "category": "移动/复合机器人",
-      "formFactor": "阿克曼移动底盘",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://global.agilex.ai/products/hunter-se",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "AgileX",
-      "tags": [
-        "轮式底盘",
-        "移动操作"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC348"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC348"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "agilex-limo-pro",
-      "name": "AgileX LIMO Pro",
-      "vendor": "松灵 AgileX",
-      "category": "移动/复合机器人",
-      "formFactor": "ROS 教学移动平台",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://global.agilex.ai/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "AgileX",
-      "tags": [
-        "教学移动平台",
-        "轮式底盘"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC034"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "轻载教学平台",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "相机/激光雷达按版本",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方 ROS 支持",
-        "ros2": "官方/社区支持",
-        "sdk": "AgileX SDK / ROS 包",
-        "sim": "Gazebo/Isaac 社区方案"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC034"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "agilex-ranger-mini",
-      "name": "AgileX Ranger Mini",
-      "vendor": "松灵 AgileX",
-      "category": "移动/复合机器人",
-      "formFactor": "全向移动底盘",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://global.agilex.ai/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "AgileX",
-      "tags": [
-        "轮式底盘",
-        "教学移动平台",
-        "移动操作"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC034"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC034"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "agilex-scout-2",
-      "name": "AgileX Scout 2.0",
-      "vendor": "松灵 AgileX",
-      "category": "移动/复合机器人",
-      "formFactor": "四轮移动底盘",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://global.agilex.ai/products/scout-2-0",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "AgileX",
-      "tags": [
-        "轮式底盘",
-        "服务/巡检",
-        "移动操作"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC034"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC034"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "agilex-scout-mini",
-      "name": "AgileX Scout Mini",
-      "vendor": "松灵 AgileX",
-      "category": "移动/复合机器人",
-      "formFactor": "小型户外移动底盘",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://global.agilex.ai/products/scout-mini",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "AgileX",
-      "tags": [
-        "轮式底盘",
-        "科研开发",
-        "移动操作"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC347"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC347"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "agilex-tracer",
-      "name": "AgileX Tracer",
-      "vendor": "松灵 AgileX",
-      "category": "移动/复合机器人",
-      "formFactor": "室内移动底盘",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://global.agilex.ai/pages/tracer",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "AgileX",
-      "tags": [
-        "轮式底盘",
-        "教学移动平台",
-        "移动操作"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC349"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC349"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "id": "turtlebot4-lite",
       "name": "TurtleBot 4 Lite",
       "vendor": "Robotis / Clearpath",
@@ -28566,79 +28130,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRCV4007"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "kuka-kmp-600-s",
-      "name": "KUKA KMP 600-S",
-      "vendor": "KUKA",
-      "category": "移动/复合机器人",
-      "formFactor": "工业移动平台",
-      "country": "德国",
-      "domesticPriority": false,
-      "officialUrl": "https://www.kuka.com/en-de/products/mobility/mobile-platforms/kmp-600-s",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "KUKA",
-      "tags": [
-        "轮式底盘",
-        "服务/巡检"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3036"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3036"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -40109,6 +39600,83 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "agilex-bunker-mini",
+      "name": "AgileX Bunker Mini",
+      "vendor": "松灵 AgileX",
+      "category": "移动/复合机器人",
+      "formFactor": "履带式移动底盘",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://global.agilex.ai/products/bunker-mini",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "AgileX",
+      "tags": [
+        "轮式底盘",
+        "服务/巡检",
+        "移动操作"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC034",
+          "SRCV7001"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "35 kg 级",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 1.5 m/s",
+        "endurance": "2-3 h 级，按电池",
+        "weightKg": "待核验",
+        "sensors": "可扩展雷达、相机、导航套件",
+        "compute": "待核验",
+        "safety": "移动平台安全按改装和场地确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持",
+        "sdk": "官方 ROS/SDK 手册",
+        "sim": "Gazebo/Isaac/ROS 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC034",
+        "SRCV7001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "agilex-bunker-pro",
       "name": "AgileX Bunker Pro",
       "vendor": "松灵 AgileX",
@@ -40183,6 +39751,466 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "AgileX 官方页确认 BUNKER PRO 负载、续航、速度和开放 SDK 口径。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "agilex-hunter-se",
+      "name": "AgileX Hunter SE",
+      "vendor": "松灵 AgileX",
+      "category": "移动/复合机器人",
+      "formFactor": "阿克曼移动底盘",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://global.agilex.ai/products/hunter-se",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "AgileX",
+      "tags": [
+        "轮式底盘",
+        "移动操作"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC348",
+          "SRCV7001"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "50 kg 级",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 4.8 m/s",
+        "endurance": "2-3 h 级，按电池",
+        "weightKg": "待核验",
+        "sensors": "可扩展雷达、相机、导航套件",
+        "compute": "待核验",
+        "safety": "移动平台安全按改装和场地确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持",
+        "sdk": "官方 ROS/SDK 手册",
+        "sim": "Gazebo/Isaac/ROS 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC348",
+        "SRCV7001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "agilex-limo-pro",
+      "name": "AgileX LIMO Pro",
+      "vendor": "松灵 AgileX",
+      "category": "移动/复合机器人",
+      "formFactor": "ROS 教学移动平台",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://global.agilex.ai/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "AgileX",
+      "tags": [
+        "教学移动平台",
+        "轮式底盘"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC034",
+          "SRCV7001"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "轻载教学平台",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "按模式确认",
+        "endurance": "按版本确认",
+        "weightKg": "待核验",
+        "sensors": "可扩展雷达、相机、导航套件",
+        "compute": "待核验",
+        "safety": "移动平台安全按改装和场地确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持",
+        "sdk": "官方 ROS/SDK 手册",
+        "sim": "Gazebo/Isaac/ROS 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC034",
+        "SRCV7001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "agilex-ranger-mini",
+      "name": "AgileX Ranger Mini",
+      "vendor": "松灵 AgileX",
+      "category": "移动/复合机器人",
+      "formFactor": "全向移动底盘",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://global.agilex.ai/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "AgileX",
+      "tags": [
+        "轮式底盘",
+        "教学移动平台",
+        "移动操作"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC034",
+          "SRCV7001"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "50 kg 级",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 1.5 m/s",
+        "endurance": "2-3 h 级，按电池",
+        "weightKg": "待核验",
+        "sensors": "可扩展雷达、相机、导航套件",
+        "compute": "待核验",
+        "safety": "移动平台安全按改装和场地确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持",
+        "sdk": "官方 ROS/SDK 手册",
+        "sim": "Gazebo/Isaac/ROS 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC034",
+        "SRCV7001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "agilex-scout-2",
+      "name": "AgileX Scout 2.0",
+      "vendor": "松灵 AgileX",
+      "category": "移动/复合机器人",
+      "formFactor": "四轮移动底盘",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://global.agilex.ai/products/scout-2-0",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "AgileX",
+      "tags": [
+        "轮式底盘",
+        "服务/巡检",
+        "移动操作"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC034",
+          "SRCV7001"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "50 kg 级",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 1.5 m/s",
+        "endurance": "2-3 h 级，按电池",
+        "weightKg": "待核验",
+        "sensors": "可扩展雷达、相机、导航套件",
+        "compute": "待核验",
+        "safety": "移动平台安全按改装和场地确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持",
+        "sdk": "官方 ROS/SDK 手册",
+        "sim": "Gazebo/Isaac/ROS 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC034",
+        "SRCV7001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "agilex-scout-mini",
+      "name": "AgileX Scout Mini",
+      "vendor": "松灵 AgileX",
+      "category": "移动/复合机器人",
+      "formFactor": "小型户外移动底盘",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://global.agilex.ai/products/scout-mini",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "AgileX",
+      "tags": [
+        "轮式底盘",
+        "科研开发",
+        "移动操作"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC347",
+          "SRCV7001"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "10 kg 级",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 1.2 m/s",
+        "endurance": "2-3 h 级，按电池",
+        "weightKg": "待核验",
+        "sensors": "可扩展雷达、相机、导航套件",
+        "compute": "待核验",
+        "safety": "移动平台安全按改装和场地确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持",
+        "sdk": "官方 ROS/SDK 手册",
+        "sim": "Gazebo/Isaac/ROS 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC347",
+        "SRCV7001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "agilex-tracer",
+      "name": "AgileX Tracer",
+      "vendor": "松灵 AgileX",
+      "category": "移动/复合机器人",
+      "formFactor": "室内移动底盘",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://global.agilex.ai/pages/tracer",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "AgileX",
+      "tags": [
+        "轮式底盘",
+        "教学移动平台",
+        "移动操作"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC349",
+          "SRCV7001"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "100 kg 级",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 1.6 m/s",
+        "endurance": "2-3 h 级，按电池",
+        "weightKg": "待核验",
+        "sensors": "可扩展雷达、相机、导航套件",
+        "compute": "待核验",
+        "safety": "移动平台安全按改装和场地确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持",
+        "sdk": "官方 ROS/SDK 手册",
+        "sim": "Gazebo/Isaac/ROS 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC349",
+        "SRCV7001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -40572,6 +40600,82 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "Husarion 官方手册确认 Panther 负载、速度、续航和 ROS/ROS2 开源驱动。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "kuka-kmp-600-s",
+      "name": "KUKA KMP 600-S",
+      "vendor": "KUKA",
+      "category": "移动/复合机器人",
+      "formFactor": "工业移动平台",
+      "country": "德国",
+      "domesticPriority": false,
+      "officialUrl": "https://www.kuka.com/en-de/products/mobility/mobile-platforms/kmp-600-s",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "KUKA",
+      "tags": [
+        "轮式底盘",
+        "服务/巡检"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3036",
+          "SRCV7004"
+        ]
+      },
+      "specs": {
+        "dof": "工业移动平台",
+        "payloadKg": "600 kg 级",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 2 m/s 级，按配置",
+        "endurance": "按电池和工况确认",
+        "weightKg": "待核验",
+        "sensors": "安全激光扫描仪/导航传感器按配置",
+        "compute": "待核验",
+        "safety": "工业安全移动平台，按 CE/场景确认"
+      },
+      "software": {
+        "ros": "工业接口/集成商支持",
+        "ros2": "工业接口/集成商支持",
+        "sdk": "KUKA 控制与移动平台接口",
+        "sim": "KUKA.Sim / 工业仿真方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v7 官网核验：KUKA 官方产品页确认 KMP 600-S 工业移动平台和 600 kg 级负载定位；价格和交付需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3036",
+        "SRCV7004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "KUKA 官方产品页确认 KMP 600-S 工业移动平台和 600 kg 级负载定位；价格和交付需询价。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -54817,379 +54921,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "id": "anybotics-anymal-c",
-      "name": "ANYbotics ANYmal C",
-      "vendor": "ANYbotics",
-      "category": "机器狗",
-      "formFactor": "工业巡检四足机器人",
-      "country": "瑞士",
-      "domesticPriority": false,
-      "officialUrl": "https://www.anybotics.com/anymal-autonomous-legged-robot/",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "ANYbotics",
-      "tags": [
-        "工业巡检",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3003",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 10 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "约 2 h",
-        "weightKg": "待核验",
-        "sensors": "工业巡检传感器按配置",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "ANYbotics API/集成接口需询价",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3003",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "anybotics-anymal-d",
-      "name": "ANYbotics ANYmal D",
-      "vendor": "ANYbotics",
-      "category": "机器狗",
-      "formFactor": "工业巡检四足机器人",
-      "country": "瑞士",
-      "domesticPriority": false,
-      "officialUrl": "https://www.anybotics.com/anymal-autonomous-legged-robot/",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "ANYbotics",
-      "tags": [
-        "工业巡检",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3003",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 10 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "约 2 h",
-        "weightKg": "待核验",
-        "sensors": "工业巡检传感器按配置",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "ANYbotics API/集成接口需询价",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3003",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "anybotics-anymal-x",
-      "name": "ANYbotics ANYmal X",
-      "vendor": "ANYbotics",
-      "category": "机器狗",
-      "formFactor": "防爆工业巡检四足机器人",
-      "country": "瑞士",
-      "domesticPriority": false,
-      "officialUrl": "https://www.anybotics.com/anymal-x/",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "ANYbotics",
-      "tags": [
-        "工业巡检",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3004",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 10 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "约 2 h",
-        "weightKg": "待核验",
-        "sensors": "防爆巡检传感器按配置",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "ANYbotics API/集成接口需询价",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3004",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "deeprobotics-lite3-motion",
-      "name": "DEEPRobotics Lite3 Motion",
-      "vendor": "云深处科技",
-      "category": "机器狗",
-      "formFactor": "教育科研四足机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.deeprobotics.cn/robot/index/product2.html",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "DEEPRobotics",
-      "tags": [
-        "教育版",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC011"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC011"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "deeprobotics-lite3-pro",
-      "name": "DEEPRobotics Lite3 Pro",
-      "vendor": "云深处科技",
-      "category": "机器狗",
-      "formFactor": "科研四足机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.deeprobotics.cn/robot/index/product2.html",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "DEEPRobotics",
-      "tags": [
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC011"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC011"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "id": "ghost-spur",
       "name": "Ghost Robotics Spirit",
       "vendor": "Ghost Robotics",
@@ -62949,6 +62680,243 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "anybotics-anymal-c",
+      "name": "ANYbotics ANYmal C",
+      "vendor": "ANYbotics",
+      "category": "机器狗",
+      "formFactor": "工业巡检四足机器人",
+      "country": "瑞士",
+      "domesticPriority": false,
+      "officialUrl": "https://www.anybotics.com/anymal-autonomous-legged-robot/",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "ANYbotics",
+      "tags": [
+        "工业巡检",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3003",
+          "SRCV4001",
+          "SRCV7002"
+        ]
+      },
+      "specs": {
+        "dof": "四足平台",
+        "payloadKg": "约 10 kg 级企业载荷",
+        "reachM": "足式平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "约 2 h 级，按任务",
+        "weightKg": "待核验",
+        "sensors": "工业巡检相机、热成像/声学/气体等载荷按配置",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "企业接口需询价",
+        "ros2": "企业接口需询价",
+        "sdk": "ANYbotics API / 企业集成接口",
+        "sim": "企业仿真/数字孪生接口需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3003",
+        "SRCV4001",
+        "SRCV7002"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "anybotics-anymal-d",
+      "name": "ANYbotics ANYmal D",
+      "vendor": "ANYbotics",
+      "category": "机器狗",
+      "formFactor": "工业巡检四足机器人",
+      "country": "瑞士",
+      "domesticPriority": false,
+      "officialUrl": "https://www.anybotics.com/anymal-autonomous-legged-robot/",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "ANYbotics",
+      "tags": [
+        "工业巡检",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3003",
+          "SRCV4001",
+          "SRCV7002"
+        ]
+      },
+      "specs": {
+        "dof": "四足平台",
+        "payloadKg": "约 10 kg 级企业载荷",
+        "reachM": "足式平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "约 2 h 级，按任务",
+        "weightKg": "待核验",
+        "sensors": "工业巡检相机、热成像/声学/气体等载荷按配置",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "企业接口需询价",
+        "ros2": "企业接口需询价",
+        "sdk": "ANYbotics API / 企业集成接口",
+        "sim": "企业仿真/数字孪生接口需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3003",
+        "SRCV4001",
+        "SRCV7002"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "anybotics-anymal-x",
+      "name": "ANYbotics ANYmal X",
+      "vendor": "ANYbotics",
+      "category": "机器狗",
+      "formFactor": "防爆工业巡检四足机器人",
+      "country": "瑞士",
+      "domesticPriority": false,
+      "officialUrl": "https://www.anybotics.com/anymal-x/",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "ANYbotics",
+      "tags": [
+        "工业巡检",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3004",
+          "SRCV4001",
+          "SRCV7002"
+        ]
+      },
+      "specs": {
+        "dof": "四足平台",
+        "payloadKg": "约 10 kg 级企业载荷",
+        "reachM": "足式平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "约 2 h 级，按任务",
+        "weightKg": "待核验",
+        "sensors": "工业巡检相机、热成像/声学/气体等载荷按配置",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "企业接口需询价",
+        "ros2": "企业接口需询价",
+        "sdk": "ANYbotics API / 企业集成接口",
+        "sim": "企业仿真/数字孪生接口需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v7 官网核验：ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3004",
+        "SRCV4001",
+        "SRCV7002"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "boston-spot",
       "name": "Boston Dynamics Spot",
       "vendor": "Boston Dynamics",
@@ -63025,6 +62993,157 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "Boston Dynamics 官方资料确认产品入口；Spot SDK 和载荷参数明确，Atlas 为研发/商业展示入口，采购可得性需另行确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "deeprobotics-lite3-motion",
+      "name": "DEEPRobotics Lite3 Motion",
+      "vendor": "云深处科技",
+      "category": "机器狗",
+      "formFactor": "教育科研四足机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.deeprobotics.cn/robot/index/product2.html",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "DEEPRobotics",
+      "tags": [
+        "教育版",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC011",
+          "SRCV7003"
+        ]
+      },
+      "specs": {
+        "dof": "四足平台",
+        "payloadKg": "轻载开发平台，按版本确认",
+        "reachM": "足式平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "按版本确认",
+        "endurance": "按版本确认",
+        "weightKg": "待核验",
+        "sensors": "深度相机/雷达/遥控器按版本",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持需按版本确认",
+        "ros2": "官方/社区 ROS2 支持需按版本确认",
+        "sdk": "DEEPRobotics SDK / 开发接口",
+        "sim": "开发仿真接口需按版本确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v7 官网核验：云深处 Lite3 官方产品页确认 Lite3 Motion/Pro 形态、教育/开发平台定位和开发接口入口；详细配置需按 SKU 确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC011",
+        "SRCV7003"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "云深处 Lite3 官方产品页确认 Lite3 Motion/Pro 形态、教育/开发平台定位和开发接口入口；详细配置需按 SKU 确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "deeprobotics-lite3-pro",
+      "name": "DEEPRobotics Lite3 Pro",
+      "vendor": "云深处科技",
+      "category": "机器狗",
+      "formFactor": "科研四足机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.deeprobotics.cn/robot/index/product2.html",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "DEEPRobotics",
+      "tags": [
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC011",
+          "SRCV7003"
+        ]
+      },
+      "specs": {
+        "dof": "四足平台",
+        "payloadKg": "轻载开发平台，按版本确认",
+        "reachM": "足式平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "按版本确认",
+        "endurance": "按版本确认",
+        "weightKg": "待核验",
+        "sensors": "深度相机/雷达/遥控器按版本",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持需按版本确认",
+        "ros2": "官方/社区 ROS2 支持需按版本确认",
+        "sdk": "DEEPRobotics SDK / 开发接口",
+        "sim": "开发仿真接口需按版本确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v7 官网核验：云深处 Lite3 官方产品页确认 Lite3 Motion/Pro 形态、教育/开发平台定位和开发接口入口；详细配置需按 SKU 确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC011",
+        "SRCV7003"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "云深处 Lite3 官方产品页确认 Lite3 Motion/Pro 形态、教育/开发平台定位和开发接口入口；详细配置需按 SKU 确认。",
       "verifiedAt": "2026-06-01"
     },
     {
