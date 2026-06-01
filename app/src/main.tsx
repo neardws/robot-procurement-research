@@ -47,6 +47,8 @@ type Robot = {
   verificationNotes?: string;
   verifiedAt?: string;
   brandNormalized: string;
+  brandDisplayName?: string;
+  brandLocation?: string;
   tags: string[];
   purchaseChannels?: string[];
   price: {
@@ -168,9 +170,22 @@ function formatCny(amount: number) {
 
 function formatPrice(robot: Robot) {
   if (robot.price.amount === null) {
-    return robot.price.label || "需询价";
+    return robot.price.label || "需正式报价";
   }
   return robot.price.label || `人民币 ${formatCny(robot.price.amount)}`;
+}
+
+function priceStatus(robot: Robot) {
+  if (robot.price.amount !== null) return robot.price.confidence === "high" ? "公开价" : robot.price.confidence === "medium" ? "需复核" : "估算";
+  return robot.price.type.includes("正式报价") ? "正式报价" : "需询价";
+}
+
+function brandLabel(robot: Robot) {
+  return robot.brandDisplayName || robot.brandNormalized;
+}
+
+function brandPlace(robot: Robot) {
+  return robot.brandLocation || robot.country;
 }
 
 function releaseYear(robot: Robot) {
@@ -249,12 +264,13 @@ function csvEscape(value: unknown) {
 
 function exportRobots(items: Robot[]) {
   const rows = [
-    ["型号", "类别", "厂商", "品牌", "国产/进口", "市场层级", "核验状态", "核验备注", "发布时间", "发布时间置信度", "标签", "人民币价格", "价格置信度", "负载/能力", "科研评分", "落地评分", "来源ID", "官网"],
+    ["型号", "类别", "厂商", "品牌", "品牌所在地", "国产/进口", "市场层级", "核验状态", "核验备注", "发布时间", "发布时间置信度", "标签", "人民币价格", "价格口径", "价格置信度", "负载/能力", "科研评分", "落地评分", "来源ID", "官网"],
     ...items.map((robot) => [
       robot.name,
       robot.category,
       robot.vendor,
-      robot.brandNormalized,
+      brandLabel(robot),
+      brandPlace(robot),
       robot.domesticPriority ? "国产" : "进口",
       robot.marketTier,
       robot.verificationStatus || "未标注",
@@ -263,6 +279,7 @@ function exportRobots(items: Robot[]) {
       confidenceLabel(robot.releaseDateConfidence),
       robot.tags.join(";"),
       formatPrice(robot),
+      robot.price.type,
       confidenceLabel(robot.price.confidence),
       robot.category === "机器狗" ? robot.specs.speed : robot.specs.payloadKg,
       `${robot.scores.research}/50`,
@@ -309,9 +326,16 @@ function App() {
 
   const countsBySourceType = useMemo(sourceFilterCounts, []);
   const brandOptions = useMemo(() => {
-    const counts = new Map<string, number>();
-    robots.forEach((robot) => counts.set(robot.brandNormalized, (counts.get(robot.brandNormalized) || 0) + 1));
-    return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "zh-CN"));
+    const counts = new Map<string, { label: string; count: number; place: string }>();
+    robots.forEach((robot) => {
+      const current = counts.get(robot.brandNormalized);
+      counts.set(robot.brandNormalized, {
+        label: brandLabel(robot),
+        count: (current?.count || 0) + 1,
+        place: brandPlace(robot)
+      });
+    });
+    return Array.from(counts.entries()).sort((a, b) => b[1].count - a[1].count || a[1].label.localeCompare(b[1].label, "zh-CN"));
   }, []);
   const visibleTagOptions = useMemo(() => {
     if (category !== "全部") return categoryTags[category] || [];
@@ -346,6 +370,8 @@ function App() {
           robot.name,
           robot.vendor,
           robot.brandNormalized,
+          brandLabel(robot),
+          brandPlace(robot),
           robot.category,
           robot.formFactor,
           robot.country,
@@ -395,6 +421,8 @@ function App() {
 
   const selectedRobots = selectedIds.map((id) => robots.find((robot) => robot.id === id)).filter((robot): robot is Robot => Boolean(robot));
   const knownPrices = robots.filter((robot) => robot.price.amount !== null);
+  const formalQuoteCount = robots.filter((robot) => robot.price.amount === null && robot.price.type.includes("正式报价")).length;
+  const unpricedCount = robots.filter((robot) => robot.price.amount === null).length;
   const priceLow = Math.min(...knownPrices.map((robot) => robot.price.amount ?? 0));
   const priceHigh = Math.max(...knownPrices.map((robot) => robot.price.amount ?? 0));
   const averageResearch = Math.round((robots.reduce((sum, robot) => sum + robot.scores.research, 0) / robots.length) * 2);
@@ -493,7 +521,7 @@ function App() {
               </div>
               <section className="summary-grid" aria-label="调研概览">
                 <MetricCard label="候选数量（当前筛选）" value={String(filteredRobots.length)} detail={`总计 ${robots.length} 个`} />
-                <MetricCard label="人民币价格区间" value={`${formatCny(priceLow)} - ${formatCny(priceHigh)}`} detail={`${robots.length - knownPrices.length} 个型号需询价/待核验`} warn />
+                <MetricCard label="公开价格区间" value={`${formatCny(priceLow)} - ${formatCny(priceHigh)}`} detail={`已收录 ${knownPrices.length} 个；${formalQuoteCount} 个需厂商正式报价`} warn={unpricedCount > 0} />
                 <MetricCard label="科研通用性（平均）" value={String(averageResearch)} detail="/100" status="中-高" />
                 <MetricCard label="落地适配（平均）" value={String(averageDeployment)} detail="/100" status="中" />
                 <MetricCard label="来源记录" value={String(sources.length)} detail={`高置信 ${highConfidenceSources} 条，占 ${Math.round((highConfidenceSources / sources.length) * 100)}%`} />
@@ -642,7 +670,7 @@ function FilterSidebar({
   setCategory: (value: string) => void;
   shortlist: string;
   setShortlist: (value: string) => void;
-  brandOptions: Array<[string, number]>;
+  brandOptions: Array<[string, { label: string; count: number; place: string }]>;
   selectedBrands: string[];
   toggleBrand: (value: string) => void;
   originFilter: OriginFilter;
@@ -690,11 +718,11 @@ function FilterSidebar({
       <section className="filter-section">
         <h3>品牌</h3>
         <div className="brand-list">
-          {brandOptions.slice(0, 24).map(([brand, count]) => (
+          {brandOptions.slice(0, 24).map(([brand, item]) => (
             <label className="check-row" key={brand}>
               <input type="checkbox" checked={selectedBrands.includes(brand)} onChange={() => toggleBrand(brand)} />
-              <span>{brand}</span>
-              <b>{count}</b>
+              <span>{item.label}<small>{item.place}</small></span>
+              <b>{item.count}</b>
             </label>
           ))}
         </div>
@@ -769,7 +797,7 @@ function FilterSidebar({
       <section className="filter-section">
         <h3>快速条件</h3>
         <label className="check-row"><input type="checkbox" checked={rosOnly} onChange={(event) => setRosOnly(event.target.checked)} />ROS/ROS2 生态明确</label>
-        <label className="check-row"><input type="checkbox" checked={knownPriceOnly} onChange={(event) => setKnownPriceOnly(event.target.checked)} />仅看公开人民币价</label>
+        <label className="check-row"><input type="checkbox" checked={knownPriceOnly} onChange={(event) => setKnownPriceOnly(event.target.checked)} />仅看已收录公开价</label>
       </section>
 
       <section className="filter-section">
@@ -840,7 +868,7 @@ function RobotTable({
             <th>选择</th>
             <th>型号</th>
             <th>类别</th>
-            <th>厂商</th>
+            <th>品牌</th>
             {visibleColumns.includes("formFactor") && <th>形态</th>}
             {visibleColumns.includes("country") && <th>地区</th>}
             {visibleColumns.includes("releaseDate") && <th>发布时间</th>}
@@ -874,9 +902,9 @@ function RobotTable({
                 </div>
               </td>
               <td><span className={`tag ${categoryClass(robot.category)}`}>{robot.category}</span></td>
-              <td>{robot.vendor}</td>
+              <td><span className="brand-cell">{brandLabel(robot)}<small>{brandPlace(robot)}</small></span></td>
               {visibleColumns.includes("formFactor") && <td>{robot.formFactor}</td>}
-              {visibleColumns.includes("country") && <td>{robot.country}</td>}
+              {visibleColumns.includes("country") && <td>{brandPlace(robot)}</td>}
               {visibleColumns.includes("releaseDate") && <td><span className="release-cell">{robot.releaseDate}<small>{confidenceLabel(robot.releaseDateConfidence)}</small></span></td>}
               {visibleColumns.includes("marketTier") && <td><span className={`tier-pill ${robot.marketTier === "重点候选" ? "focus" : ""}`}>{robot.marketTier}</span></td>}
               {visibleColumns.includes("verification") && <td><span className={`verify-pill ${robot.verificationStatus === "官网核验" ? "official" : ""}`}>{robot.verificationStatus || "未标注"}</span></td>}
@@ -884,7 +912,7 @@ function RobotTable({
               <td>
                 <div className="price-cell">
                   <span>{formatPrice(robot)}</span>
-                  {robot.price.amount === null && <small>需询价</small>}
+                  {robot.price.amount === null && <small>{priceStatus(robot)}</small>}
                   {robot.price.amount !== null && robot.price.confidence !== "high" && <small>{robot.price.confidence === "medium" ? "需复核" : "估算"}</small>}
                 </div>
               </td>
@@ -1082,6 +1110,7 @@ function ReportCenter({ selectedRobots, setActiveTab }: { selectedRobots: Robot[
   const groupItems = (tag: string) => rankedShortlist(tag);
   const lowConfidencePrices = robots.filter((robot) => robot.price.confidence === "low").length;
   const unpriced = robots.filter((robot) => robot.price.amount === null).length;
+  const formalQuote = robots.filter((robot) => robot.price.amount === null && robot.price.type.includes("正式报价")).length;
   const knownPriceCount = robots.filter((robot) => robot.price.amount !== null).length;
   const researchLeaders = rankedShortlist("科研平台", 4).map((robot) => robot.name).join("、");
   const teachingLeaders = rankedShortlist("教学平台", 3).map((robot) => robot.name).join("、");
@@ -1111,7 +1140,7 @@ function ReportCenter({ selectedRobots, setActiveTab }: { selectedRobots: Robot[
         <article className="report-card">
           <h3>价格风险</h3>
           <strong>{unpriced}</strong>
-          <p>个型号缺少可靠公开价，需要正式询价；{lowConfidencePrices} 个价格为低置信估算或电商线索。</p>
+          <p>个型号没有公开价，其中 {formalQuote} 个已归类为厂商正式报价项；{lowConfidencePrices} 个价格为低置信估算或电商线索。</p>
         </article>
         <article className="report-card">
           <h3>当前对比</h3>
@@ -1209,7 +1238,7 @@ function buildMarkdownReport() {
     "",
     `更新时间：${meta.accessedDate}`,
     "",
-    `候选设备：${robots.length} 个；重点候选：${focusCount} 个；市场初筛：${marketCount} 个；官网核验：${robots.filter((robot) => robot.verificationStatus === "官网核验").length} 个；来源记录：${sources.length} 条；公开人民币价/估算价：${robots.filter((robot) => robot.price.amount !== null).length} 个。`,
+    `候选设备：${robots.length} 个；重点候选：${focusCount} 个；市场初筛：${marketCount} 个；官网核验：${robots.filter((robot) => robot.verificationStatus === "官网核验").length} 个；来源记录：${sources.length} 条；已收录公开价/估算价：${robots.filter((robot) => robot.price.amount !== null).length} 个；厂商正式报价项：${robots.filter((robot) => robot.price.amount === null && robot.price.type.includes("正式报价")).length} 个。`,
     "",
     "## 推荐短名单",
     ...shortlistGroups.flatMap((tag) => [
@@ -1262,7 +1291,7 @@ function RobotDetail({ robot, onClose }: { robot: Robot; onClose: () => void }) 
           <div>
             <span className={`tag ${categoryClass(robot.category)}`}>{robot.category}</span>
             <h2>{robot.name}</h2>
-            <p>{robot.vendor} · {robot.brandNormalized}</p>
+            <p>{brandLabel(robot)} · {brandPlace(robot)}</p>
           </div>
           <button onClick={onClose} aria-label="关闭详情"><X size={18} /></button>
         </div>
@@ -1270,7 +1299,7 @@ function RobotDetail({ robot, onClose }: { robot: Robot; onClose: () => void }) 
         <div className="detail-grid">
           <DetailItem label="市场层级" value={robot.marketTier} />
           <DetailItem label="核验状态" value={robot.verificationStatus || "未标注"} />
-          <DetailItem label="国产/进口" value={robot.domesticPriority ? "国产" : "进口"} />
+          <DetailItem label="品牌所在地" value={`${robot.domesticPriority ? "国产" : "进口"} · ${brandPlace(robot)}`} />
           <DetailItem label="发布时间" value={`${robot.releaseDate}（${confidenceLabel(robot.releaseDateConfidence)}）`} />
           <DetailItem label="价格口径" value={`${formatPrice(robot)} · ${robot.price.type}`} />
           <DetailItem label="科研评分" value={`${robot.scores.research}/50`} />

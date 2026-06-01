@@ -1645,3 +1645,7 @@ SRCV10015,Sony aibo 官方产品页,官网/产品规格/价格,high,https://us.a
 SRCV10016,Unitree Laikago 官方历史资料,官网/产品入口,medium,https://www.unitree.com/,宇树官网当前主推 Go2/B2/A2 等新款，Laikago 作为早期历史平台需确认存量和支持状态。
 SRCV11001,LimX Dynamics 官方历史新闻与产品入口,官网/历史新闻/产品入口,medium,https://www.limxdynamics.com/en,LimX 官方网站可核验 W1/P1 历史发布和当前产品线；W1/P1 旧款规格页当前未公开，采购需按厂商确认。
 SRCV11002,Ghost Robotics 官方当前产品入口,官网/产品入口,medium,https://www.ghostrobotics.io/vision-60,Ghost 官方当前公开产品以 Vision 60 为主；Spirit/SPUR 旧款或别名规格入口不足，采购应以 Vision 60 或厂商确认为准。
+SRCV12001,TurtleBot 4 官方/授权渠道价格入口,官方/授权渠道价格,medium,https://www.robotis.us/turtlebot-4/,ROBOTIS/Clearpath 渠道可查 TurtleBot 4 系列公开美元价；不同套件、地区税费和教育折扣需以采购时渠道为准。
+SRCV12002,ROBOTIS OP3 官方商城价格入口,官方商城价格,medium,https://www.robotis.us/robotis-op3/,ROBOTIS 官方商城可查 OP3 教育科研平台公开美元价；实际供货、配件和运费需复核。
+SRCV12003,Unitree 官方中文价格页,中文官网/官方价格,high,https://www.unitree.com/cn/go2/,宇树中文官网披露 Go2 系列起售价口径；分版本精确采购价仍以官方页面和销售报价为准。
+SRCV12004,Boston Dynamics Spot 历史公开售价资料,官网/历史公开价格口径,medium,https://bostondynamics.com/products/spot/,"Spot 官方当前以联系销售为主，历史公开售价约 74,500 美元可作预算参考，正式采购仍需报价。"
