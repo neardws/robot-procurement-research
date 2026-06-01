@@ -1,0 +1,71 @@
+{
+  "id": "",
+  "name": "",
+  "vendor": "",
+  "category": "",
+  "form_factor": "",
+  "official_url": "",
+  "country_or_region": "",
+  "procurement_status": "",
+  "price": {
+    "amount": null,
+    "currency": "",
+    "range_text": "",
+    "price_type": "",
+    "source_id": "",
+    "confidence": ""
+  },
+  "research_fit": {
+    "paper_adoption_level": "",
+    "representative_papers": [],
+    "lab_or_project_examples": [],
+    "open_source_ecosystem": [],
+    "supported_research_topics": []
+  },
+  "specs": {
+    "degrees_of_freedom": null,
+    "payload_kg": null,
+    "reach_m": null,
+    "repeatability_mm": null,
+    "max_speed": "",
+    "mobile_base": "",
+    "endurance": "",
+    "battery": "",
+    "weight_kg": null,
+    "sensors": [],
+    "compute": [],
+    "safety_features": []
+  },
+  "software": {
+    "ros": "",
+    "ros2": "",
+    "sdk_languages": [],
+    "simulators": [],
+    "api_notes": ""
+  },
+  "extensions": {
+    "dexterous_hands": [],
+    "grippers": [],
+    "cameras": [],
+    "lidar": [],
+    "other_accessories": []
+  },
+  "deployment": {
+    "best_use_cases": [],
+    "lab_requirements": [],
+    "maintenance_notes": "",
+    "training_support": "",
+    "risks": []
+  },
+  "scores": {
+    "research_value": null,
+    "software_ecosystem": null,
+    "performance": null,
+    "deployment_readiness": null,
+    "procurement_feasibility": null,
+    "teaching_fit": null,
+    "overall": null
+  },
+  "source_ids": []
+}
+

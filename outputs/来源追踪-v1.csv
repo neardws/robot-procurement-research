@@ -1,0 +1,45 @@
+source_id,title,url,type,confidence,notes
+S001,Unitree Go2 product page,https://www.unitree.com/go2,official,high,Official product page for Go2 positioning and feature claims.
+S002,Unitree Store,https://shop.unitree.com/,official-price,high,Official online store for Unitree public pricing where available.
+S003,Unitree B2 product page,https://www.unitree.com/b2,official,high,Official product page for B2 industrial quadruped specifications.
+S004,Unitree H1 product page,https://www.unitree.com/h1,official,high,Official H1 humanoid product page.
+S005,Unitree G1 product page,https://www.unitree.com/g1,official,high,Official G1 humanoid page and public pricing references.
+S006,Unitree R1 product page,https://www.unitree.com/r1,official,high,Official low-cost humanoid page and public pricing references.
+S007,Franka Research 3 product page,https://franka.de/research,official,high,Official research robot page for Franka Research 3.
+S008,Franka World documentation,https://franka.world/,official-docs,high,Official documentation and ecosystem portal.
+S009,Universal Robots UR5e product page,https://www.universal-robots.com/products/ur5-robot/,official,high,Official UR5e product and specifications page.
+S010,Universal Robots ROS driver,https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver,github,medium,Official ROS 2 driver repository for UR robots.
+S011,Kinova Gen3 product page,https://www.kinovarobotics.com/product/gen3-robots,official,high,Official Kinova Gen3 page and specifications.
+S012,Kinova Kortex GitHub,https://github.com/Kinovarobotics/ros_kortex,github,medium,Official ROS package for Kinova Kortex API.
+S013,UFACTORY xArm 6 product page,https://www.ufactory.cc/xarm-collaborative-robot/,official,high,Official xArm collaborative robot page.
+S014,UFACTORY xArm store,https://store.ufactory.cc/,official-price,high,Official store for public xArm pricing where visible.
+S015,xArm ROS GitHub,https://github.com/xArm-Developer/xarm_ros,github,medium,Official ROS package for xArm.
+S016,Dobot CR5 product page,https://www.dobot-robots.com/products/cr-series/cr5.html,official,high,Official Dobot CR5 specifications.
+S017,AUBO i5 product page,https://www.aubo-robotics.cn/en/products/i5,official,high,Official AUBO i5 product information.
+S018,Elite Robots EC66 product page,https://www.elibot.com/en/products/ec66,official,high,Official Elite Robots EC66 page.
+S019,Elephant Robotics myCobot 280,https://www.elephantrobotics.com/en/mycobot-280/,official,high,Official myCobot 280 product page.
+S020,Elephant Robotics store,https://shop.elephantrobotics.com/,official-price,high,Official store for myCobot public pricing.
+S021,Interbotix ViperX 300 6DOF,https://www.trossenrobotics.com/viperx-300-robot-arm-6dof.aspx,official-price,high,Official Trossen product page with pricing and specs.
+S022,Mobile ALOHA project,https://mobile-aloha.github.io/,research-project,high,Research project showing low-cost whole-body teleoperation and mobile manipulation.
+S023,Hello Robot Stretch 3,https://hello-robot.com/stretch-3-product,official,high,Official Stretch 3 product and specifications.
+S024,Hello Robot shop,https://hello-robot.com/stretch-3-shop,official-price,high,Official Stretch 3 price and purchasing page where available.
+S025,HomeRobot project,https://github.com/facebookresearch/home-robot,github,medium,Research codebase using Stretch for home mobile manipulation.
+S026,PAL Robotics TIAGo,https://pal-robotics.com/robots/tiago/,official,high,Official TIAGo mobile manipulator page.
+S027,Robotnik RB-KAIROS+,https://robotnik.eu/products/mobile-manipulators/rb-kairos/,official,high,Official Robotnik mobile manipulator page.
+S028,AgileX Robotics,https://global.agilex.ai/,official,high,Official AgileX robotics product portal.
+S029,AgileX Cobot Magic,https://global.agilex.ai/products/cobot-magic,official,high,Official AgileX mobile ALOHA-style platform page.
+S030,DEEPRobotics Lite3,https://www.deeprobotics.cn/en/index/product1.html,official,high,Official Lite3 quadruped page.
+S031,DEEPRobotics X30,https://www.deeprobotics.cn/en/index/product2.html,official,high,Official X30 quadruped page.
+S032,ANYbotics ANYmal,https://www.anybotics.com/anymal/,official,high,Official ANYmal industrial quadruped page.
+S033,Boston Dynamics Spot,https://bostondynamics.com/products/spot/,official,high,Official Spot product page.
+S034,Boston Dynamics Spot pricing announcement,https://bostondynamics.com/blog/spot-on-sale/,official-price,medium,Public Spot pricing reference; current quotes may vary by configuration.
+S035,Fourier GR-1,https://www.fftai.com/gr1,official,high,Official Fourier GR-1 humanoid page.
+S036,Booster Robotics T1,https://www.boosterobotics.com/,official,medium,Official Booster Robotics site for T-series humanoid robot.
+S037,AgiBot official site,https://www.agibot.com/,official,medium,Official site for Zhiyuan/AgiBot product family.
+S038,UBTECH Walker,https://www.ubtrobot.com/,official,medium,Official UBTECH site for Walker family information.
+S039,Aldebaran NAO,https://www.aldebaran.com/en/nao,official,high,Official NAO education/research robot page.
+S040,RobotLAB NAO listing,https://www.robotlab.com/store/nao-power-v6-educator-pack,reseller-price,medium,Reseller pricing reference for NAO education packs.
+S041,iCub project,https://icub.iit.it/,research-project,high,Long-running open research humanoid platform.
+S042,Review of robotic platforms for research,https://robotsguide.com/,database,medium,Robot platform database for cross-checking research robots.
+S043,ALOHA Unleashed / Open X-Embodiment style research evidence,https://aloha-unleashed.github.io/,research-project,medium,Evidence that low-cost bimanual manipulation platforms have become important for embodied AI datasets and imitation learning.
+S044,LeRobot,https://github.com/huggingface/lerobot,github,medium,Open-source robotics learning stack relevant to low-cost manipulation arms and data collection.

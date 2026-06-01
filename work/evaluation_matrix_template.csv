@@ -1,0 +1,17 @@
+Dimension,Sub-dimension,What To Check,Possible Evidence,Score Notes
+Category Fit,Robot type,Robotic arm humanoid quadruped mobile manipulator or end effector,Official product page,
+Research Value,Paper adoption,How often the model or product family appears in papers preprints lab projects or benchmarks,Google Scholar arXiv papers lab pages GitHub,
+Research Value,Reproducibility,Availability of SDK ROS ROS 2 simulator examples datasets and documentation,Official docs GitHub examples,
+Research Value,Research breadth,Can it support multiple research directions such as manipulation navigation locomotion embodied AI HRI or RL,Papers project pages docs,
+Performance,Core specs,DOF payload reach precision speed mobility endurance sensors compute and safety features,Official spec sheet,
+Performance,Expandability,Support for cameras LiDAR force sensors dexterous hands grippers quick-change tools and external compute,Official docs accessory catalog,
+Software,Developer ecosystem,SDK language support APIs ROS packages simulator support community activity,Official docs GitHub forums,
+AI Readiness,Data collection,Can it support teleoperation logging synchronized sensors and learning pipelines,Docs project examples,
+AI Readiness,Embodied model fit,Can it support VLA imitation learning RL or language-driven control workflows,Papers GitHub demos,
+Deployment,Practical reliability,Stability maintainability spare parts vendor response and known field deployments,Case studies references user reports,
+Deployment,Safety,Emergency stop collision detection force control protective modes certification and lab safety fit,Official safety docs,
+Procurement,Price and availability,Public price education price quote channel lead time import constraints and warranty,Official pricing quote dealer page tender data,
+Procurement,TCO,Robot body accessories software licenses shipping tax maintenance training and integration cost,Quotes price pages internal estimate,
+Teaching,Student usability,Documentation course materials ease of setup multi-user workflows and resetability,Docs course pages lab reports,
+Recommendation,Overall fit,Best fit for research teaching deployment or demonstration based on evidence,Synthesized from scored evidence,
+
