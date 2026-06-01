@@ -1,9 +1,9 @@
 {
   "meta": {
     "project": "学校具身智能机器人采购调研",
-    "version": "v10",
+    "version": "v11",
     "accessedDate": "2026-06-01",
-    "updateSummary": "第六批核验剩余人形机器人、机器狗和历史平台：1X、Kepler、RobotEra、UBTECH、AgiBot、Agility、Apptronik、Booster、Figure、NEURA、ROBOTIS、Sanctuary、Tesla、Rainbow、Sony、Unitree 等。",
+    "updateSummary": "完成剩余市场初筛审计：LimX W1/P1 和 Ghost Spirit 已从部分核验改为官网核验的历史/供货风险项，剩余市场初筛均有明确保留原因。",
     "scoringWeights": {
       "research": 50,
       "deployment": 50
@@ -13173,6 +13173,22 @@
       "type": "官网/产品入口",
       "confidence": "medium",
       "notes": "宇树官网当前主推 Go2/B2/A2 等新款，Laikago 作为早期历史平台需确认存量和支持状态。"
+    },
+    {
+      "id": "SRCV11001",
+      "title": "LimX Dynamics 官方历史新闻与产品入口",
+      "url": "https://www.limxdynamics.com/en",
+      "type": "官网/历史新闻/产品入口",
+      "confidence": "medium",
+      "notes": "LimX 官方网站可核验 W1/P1 历史发布和当前产品线；W1/P1 旧款规格页当前未公开，采购需按厂商确认。"
+    },
+    {
+      "id": "SRCV11002",
+      "title": "Ghost Robotics 官方当前产品入口",
+      "url": "https://www.ghostrobotics.io/vision-60",
+      "type": "官网/产品入口",
+      "confidence": "medium",
+      "notes": "Ghost 官方当前公开产品以 Vision 60 为主；Spirit/SPUR 旧款或别名规格入口不足，采购应以 Vision 60 或厂商确认为准。"
     }
   ],
   "robots": [
@@ -28036,37 +28052,40 @@
         "confidence": "low",
         "sourceIds": [
           "SRC017",
-          "SRCV8009"
+          "SRCV8009",
+          "SRCV11001"
         ]
       },
       "specs": {
         "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "payloadKg": "历史型号，当前采购规格需厂商确认",
+        "reachM": "足式/轮足平台不适用",
         "repeatabilityMm": "待核验",
         "speed": "待核验",
         "endurance": "待核验",
         "weightKg": "待核验",
-        "sensors": "待核验",
+        "sensors": "历史配置需厂商确认",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "历史/早期平台，新采购建议优先比较 LimX Oli/TRON1 等当前公开型号"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
+        "ros": "历史/开发接口需厂商确认",
+        "ros2": "历史/开发接口需厂商确认",
+        "sdk": "开发接口需询价",
+        "sim": "需厂商确认"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v8 部分核验：LimX 官网可确认厂商和产品线，W1/P1 旧款详细规格需厂商确认。"
+        "v8 部分核验：LimX 官网可确认厂商和产品线，W1/P1 旧款详细规格需厂商确认。",
+        "v11 完成审计：LimX 官网可确认 W1/P1 历史产品线，但当前规格页不完整，因此保留市场初筛并明确历史/供货风险。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
       ],
       "risks": [
         "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
-        "W1/P1 当前官网规格入口不完整，适合保留为市场覆盖项，采购前必须确认可供货状态。"
+        "W1/P1 当前官网规格入口不完整，适合保留为市场覆盖项，采购前必须确认可供货状态。",
+        "W1/P1 当前官网规格入口不完整，不能作为近期学校重点采购项；如需采购应要求厂商出具现行规格书和售后承诺。"
       ],
       "scores": {
         "research": 26,
@@ -28076,10 +28095,11 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRC017",
-        "SRCV8009"
+        "SRCV8009",
+        "SRCV11001"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "LimX 官网确认公司和当前产品线，但 W1/P1 旧款官方规格页在当前站点未公开；采购前需由厂商确认是否仍可供货、正式参数和开发接口。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "LimX 官网和历史资料可确认 W1/P1 属于逐际动力早期足式/轮足产品线；当前官网未公开可采购规格页，采购前需由厂商确认是否仍供货、正式参数和开发接口。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -55297,37 +55317,40 @@
         "confidence": "low",
         "sourceIds": [
           "SRC017",
-          "SRCV8009"
+          "SRCV8009",
+          "SRCV11001"
         ]
       },
       "specs": {
         "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "payloadKg": "历史型号，当前采购规格需厂商确认",
+        "reachM": "足式/轮足平台不适用",
         "repeatabilityMm": "待核验",
         "speed": "待核验",
         "endurance": "待核验",
         "weightKg": "待核验",
-        "sensors": "待核验",
+        "sensors": "历史配置需厂商确认",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "历史/早期平台，新采购建议优先比较 LimX Oli/TRON1 等当前公开型号"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
+        "ros": "历史/开发接口需厂商确认",
+        "ros2": "历史/开发接口需厂商确认",
         "sdk": "开发接口需询价",
-        "sim": "待核验"
+        "sim": "需厂商确认"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v8 部分核验：LimX 官网可确认厂商和产品线，W1/P1 旧款详细规格需厂商确认。"
+        "v8 部分核验：LimX 官网可确认厂商和产品线，W1/P1 旧款详细规格需厂商确认。",
+        "v11 完成审计：LimX 官网可确认 W1/P1 历史产品线，但当前规格页不完整，因此保留市场初筛并明确历史/供货风险。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
       ],
       "risks": [
         "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
-        "W1/P1 当前官网规格入口不完整，适合保留为市场覆盖项，采购前必须确认可供货状态。"
+        "W1/P1 当前官网规格入口不完整，适合保留为市场覆盖项，采购前必须确认可供货状态。",
+        "W1/P1 当前官网规格入口不完整，不能作为近期学校重点采购项；如需采购应要求厂商出具现行规格书和售后承诺。"
       ],
       "scores": {
         "research": 27,
@@ -55337,10 +55360,11 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRC017",
-        "SRCV8009"
+        "SRCV8009",
+        "SRCV11001"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "LimX 官网确认公司和当前产品线，但 W1/P1 旧款官方规格页在当前站点未公开；采购前需由厂商确认是否仍可供货、正式参数和开发接口。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "LimX 官网和历史资料可确认 W1/P1 属于逐际动力早期足式/轮足产品线；当前官网未公开可采购规格页，采购前需由厂商确认是否仍供货、正式参数和开发接口。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -55374,30 +55398,32 @@
         "confidence": "low",
         "sourceIds": [
           "SRCV4008",
-          "SRCV8011"
+          "SRCV8011",
+          "SRCV11002"
         ]
       },
       "specs": {
         "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "payloadKg": "历史型号，当前采购规格需厂商确认",
+        "reachM": "足式平台不适用",
         "repeatabilityMm": "待核验",
         "speed": "待核验",
         "endurance": "待核验",
         "weightKg": "待核验",
-        "sensors": "待核验",
+        "sensors": "历史配置需厂商确认",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "当前采购建议以 Vision 60 公开规格和厂商正式确认替代"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
+        "ros": "企业接口需询价",
+        "ros2": "企业接口需询价",
         "sdk": "企业接口需询价",
-        "sim": "待核验"
+        "sim": "企业仿真接口需询价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v8 部分核验：Ghost 官网可核验厂商和 Vision 60 当前平台，Spirit/SPUR 需继续向厂商确认。"
+        "v8 部分核验：Ghost 官网可核验厂商和 Vision 60 当前平台，Spirit/SPUR 需继续向厂商确认。",
+        "v11 完成审计：Ghost 官网当前以 Vision 60 为公开规格主体，Spirit/SPUR 保留为历史覆盖项并明确不作为重点采购。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -55414,10 +55440,11 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRCV4008",
-        "SRCV8011"
+        "SRCV8011",
+        "SRCV11002"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "Ghost 官网当前重点公开 Vision 60，Spirit/SPUR 旧款规格入口不完整；保留为历史/市场覆盖项，采购前应以 Vision 60 或厂商确认型号为准。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Ghost 官方当前公开产品以 Vision 60 为主；Spirit/SPUR 作为旧款或历史别名缺少当前官方规格页，采购前应以 Vision 60 当前规格或厂商正式确认为准。",
       "verifiedAt": "2026-06-01"
     },
     {

@@ -1643,3 +1643,5 @@ SRCV10013,Tesla AI 官方页面,官网/产品入口,medium,https://www.tesla.com
 SRCV10014,Rainbow Robotics 官方产品页,官网/产品入口,medium,https://www.rainbow-robotics.com/,Rainbow 官方入口核验四足/机器人产品线；RBQ/RBQ-10 当前公开规格和采购页需厂商确认。
 SRCV10015,Sony aibo 官方产品页,官网/产品规格/价格,high,https://us.aibo.com/,官方页核验 aibo ERS-1000 消费级机器狗、订购/配件、娱乐和教育展示边界；科研 SDK 和工业能力有限。
 SRCV10016,Unitree Laikago 官方历史资料,官网/产品入口,medium,https://www.unitree.com/,宇树官网当前主推 Go2/B2/A2 等新款，Laikago 作为早期历史平台需确认存量和支持状态。
+SRCV11001,LimX Dynamics 官方历史新闻与产品入口,官网/历史新闻/产品入口,medium,https://www.limxdynamics.com/en,LimX 官方网站可核验 W1/P1 历史发布和当前产品线；W1/P1 旧款规格页当前未公开，采购需按厂商确认。
+SRCV11002,Ghost Robotics 官方当前产品入口,官网/产品入口,medium,https://www.ghostrobotics.io/vision-60,Ghost 官方当前公开产品以 Vision 60 为主；Spirit/SPUR 旧款或别名规格入口不足，采购应以 Vision 60 或厂商确认为准。
