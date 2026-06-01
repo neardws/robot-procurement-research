@@ -26,7 +26,7 @@ type OriginFilter = "全部" | "国产" | "进口";
 type PriceBand = "全部" | "10万以下" | "10-30万" | "30-80万" | "80万以上" | "正式报价";
 type ReleaseFilter = "全部" | "近1年" | "近3年" | "2020年以后" | "官网未披露";
 type MarketTier = "重点候选" | "市场初筛";
-type VerificationStatus = "官网核验" | "部分核验" | "待核验";
+type VerificationStatus = "官网核验" | "部分核验" | "未核验";
 type ColumnKey = "formFactor" | "country" | "priceType" | "software" | "risk" | "sources" | "releaseDate" | "marketTier" | "verification" | "tags";
 
 type Robot = {
@@ -151,12 +151,12 @@ function rankedShortlist(tag: string, limit = 5) {
 }
 
 function confidenceLabel(confidence: ReleaseConfidence) {
-  if (confidence === "unknown") return "待核验";
+  if (confidence === "unknown") return "官网未披露";
   return confidence === "high" ? "高" : confidence === "medium" ? "中" : "低";
 }
 
 function confidenceText(confidence: ReleaseConfidence) {
-  if (confidence === "unknown") return "待核验证据";
+  if (confidence === "unknown") return "官网未披露";
   return confidence === "high" ? "高置信证据" : confidence === "medium" ? "中置信证据" : "低置信证据";
 }
 
@@ -196,7 +196,7 @@ function releaseYear(robot: Robot) {
 function matchesReleaseFilter(robot: Robot, filter: ReleaseFilter) {
   if (filter === "全部") return true;
   const year = releaseYear(robot);
-  if (filter === "官网未披露") return robot.releaseDate === "待核验" || robot.releaseDate === "官网未披露" || robot.releaseDateConfidence === "unknown" || year === null;
+  if (filter === "官网未披露") return robot.releaseDate === "官网未披露" || robot.releaseDateConfidence === "unknown" || year === null;
   if (year === null) return false;
   if (filter === "近1年") return year >= 2025;
   if (filter === "近3年") return year >= 2023;
@@ -262,9 +262,19 @@ function csvEscape(value: unknown) {
   return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
 }
 
+function cleanProcurementText(value: string) {
+  return value;
+}
+
+function procurementAction(robot: Robot) {
+  if (robot.price.amount !== null) return robot.price.confidence === "high" ? "复核配置、税费、运费和教育折扣" : "复核价格来源并索取正式报价";
+  if (robot.price.type === "供货状态待确认") return "先确认是否仍可供货，再索取配置报价";
+  return "索取教育/科研正式报价、交付周期、维保和培训条款";
+}
+
 function exportRobots(items: Robot[]) {
   const rows = [
-    ["型号", "类别", "厂商", "品牌", "品牌所在地", "国产/进口", "市场层级", "核验状态", "核验备注", "发布时间", "发布时间置信度", "标签", "人民币价格", "价格口径", "价格置信度", "负载/能力", "科研评分", "落地评分", "来源ID", "官网"],
+    ["型号", "类别", "厂商", "品牌", "品牌所在地", "国产/进口", "市场层级", "核验状态", "核验备注", "发布时间", "发布时间置信度", "标签", "人民币价格", "价格口径", "采购动作", "价格置信度", "负载/能力", "科研评分", "落地评分", "来源ID", "官网"],
     ...items.map((robot) => [
       robot.name,
       robot.category,
@@ -274,12 +284,13 @@ function exportRobots(items: Robot[]) {
       robot.domesticPriority ? "国产" : "进口",
       robot.marketTier,
       robot.verificationStatus || "未标注",
-      robot.verificationNotes || "",
+      cleanProcurementText(robot.verificationNotes || ""),
       robot.releaseDate,
       confidenceLabel(robot.releaseDateConfidence),
       robot.tags.join(";"),
       formatPrice(robot),
       robot.price.type,
+      procurementAction(robot),
       confidenceLabel(robot.price.confidence),
       robot.category === "机器狗" ? robot.specs.speed : robot.specs.payloadKg,
       `${robot.scores.research}/50`,
@@ -289,6 +300,24 @@ function exportRobots(items: Robot[]) {
     ])
   ];
   downloadText(`机器人候选清单-${meta.accessedDate}.csv`, rows.map((row) => row.map(csvEscape).join(",")).join("\n"));
+}
+
+function exportQuoteList() {
+  const rows = [
+    ["ID", "型号", "品牌", "所在地", "类别", "价格状态", "官网", "采购动作", "核验备注"],
+    ...robots.filter((robot) => robot.price.amount === null).map((robot) => [
+      robot.id,
+      robot.name,
+      brandLabel(robot),
+      brandPlace(robot),
+      robot.category,
+      robot.price.type,
+      robot.officialUrl,
+      procurementAction(robot),
+      cleanProcurementText(robot.verificationNotes || "")
+    ])
+  ];
+  downloadText(`正式报价清单-${meta.accessedDate}.csv`, rows.map((row) => row.map(csvEscape).join(",")).join("\n"));
 }
 
 function App() {
@@ -430,8 +459,8 @@ function App() {
   const highConfidenceSources = sources.filter((source) => source.confidence === "high").length;
   const filteredSourceIds = new Set(filteredRobots.flatMap((robot) => robot.sourceIds));
   const rightShortlist = rankedShortlist(rightListTag);
-  const knownReleaseCount = robots.filter((robot) => robot.releaseDate !== "待核验").length;
-  const undisclosedReleaseCount = robots.filter((robot) => robot.releaseDateConfidence === "unknown" || robot.releaseDate === "官网未披露" || robot.releaseDate === "待核验").length;
+  const knownReleaseCount = robots.filter((robot) => robot.releaseDateConfidence !== "unknown" && robot.releaseDate !== "官网未披露").length;
+  const undisclosedReleaseCount = robots.filter((robot) => robot.releaseDateConfidence === "unknown" || robot.releaseDate === "官网未披露").length;
 
   function toggleSelected(id: string) {
     setSelectedIds((current) => {
@@ -541,6 +570,7 @@ function App() {
                       {showColumns && <ColumnMenu visibleColumns={visibleColumns} toggleColumn={toggleColumn} />}
                     </div>
                     <button onClick={() => exportRobots(filteredRobots)}><Download size={15} /> 导出</button>
+                    <button onClick={exportQuoteList}><Download size={15} /> 报价清单</button>
                     <label className="sorter">
                       <select value={sortBy} onChange={(event) => setSortBy(event.target.value)}>
                         {sortOptions.map((item) => (
@@ -1139,7 +1169,7 @@ function ReportCenter({ selectedRobots, setActiveTab }: { selectedRobots: Robot[
           </div>
         </article>
         <article className="report-card">
-          <h3>价格风险</h3>
+          <h3>报价动作</h3>
           <strong>{unpriced}</strong>
           <p>个型号没有公开价，其中 {formalQuote} 个已归类为厂商正式报价项；{lowConfidencePrices} 个价格为低置信估算或电商线索。</p>
         </article>
@@ -1159,7 +1189,7 @@ function ReportCenter({ selectedRobots, setActiveTab }: { selectedRobots: Robot[
                 <div>
                   <strong>{robot.name}</strong>
                   <p>{robot.category} · {formatPrice(robot)} · 科研 {robot.scores.research}/50 · 落地 {robot.scores.deployment}/50</p>
-                  <small>{robot.researchEvidence[0]}</small>
+                  <small>{cleanProcurementText(robot.researchEvidence[0] || "")}</small>
                 </div>
               </article>
             ))}
@@ -1227,7 +1257,7 @@ function SourceTable({ enabledSourceFilters, filteredSourceIds }: { enabledSourc
 }
 
 function exportSources(items: Source[]) {
-  const rows = [["ID", "来源", "类型", "置信度", "URL", "备注"], ...items.map((source) => [source.id, source.title, source.type, confidenceLabel(source.confidence), source.url, source.notes])];
+  const rows = [["ID", "来源", "类型", "置信度", "URL", "备注"], ...items.map((source) => [source.id, source.title, source.type, confidenceLabel(source.confidence), source.url, cleanProcurementText(source.notes)])];
   downloadText(`来源追踪-${meta.accessedDate}.csv`, rows.map((row) => row.map(csvEscape).join(",")).join("\n"));
 }
 
@@ -1249,7 +1279,7 @@ function buildMarkdownReport() {
     ]),
     "",
     "## 价格口径",
-    "页面主价格统一为人民币；低置信电商线索和外币估算不作为正式报价。"
+    "页面主价格统一为人民币；低置信电商线索和外币估算不作为正式报价。无公开价格的型号已经进入正式报价清单或供货确认清单。"
   ];
   return lines.join("\n");
 }
@@ -1303,6 +1333,7 @@ function RobotDetail({ robot, onClose }: { robot: Robot; onClose: () => void }) 
           <DetailItem label="品牌所在地" value={`${robot.domesticPriority ? "国产" : "进口"} · ${brandPlace(robot)}`} />
           <DetailItem label="发布时间" value={`${robot.releaseDate}（${confidenceLabel(robot.releaseDateConfidence)}）`} />
           <DetailItem label="价格口径" value={`${formatPrice(robot)} · ${robot.price.type}`} />
+          <DetailItem label="采购动作" value={procurementAction(robot)} />
           <DetailItem label="科研评分" value={`${robot.scores.research}/50`} />
           <DetailItem label="落地评分" value={`${robot.scores.deployment}/50`} />
         </div>
@@ -1325,11 +1356,11 @@ function RobotDetail({ robot, onClose }: { robot: Robot; onClose: () => void }) 
 
         <section className="detail-section">
           <h3>证据和风险</h3>
-          {robot.verificationNotes && <p>{robot.verificationNotes}</p>}
-          <p>{robot.researchEvidence[0]}</p>
-          <p>{robot.deploymentEvidence[0]}</p>
+          {robot.verificationNotes && <p>{cleanProcurementText(robot.verificationNotes)}</p>}
+          <p>{cleanProcurementText(robot.researchEvidence[0] || "")}</p>
+          <p>{cleanProcurementText(robot.deploymentEvidence[0] || "")}</p>
           <ul>
-            {robot.risks.map((risk) => <li key={risk}>{risk}</li>)}
+            {robot.risks.map((risk) => <li key={risk}>{cleanProcurementText(risk)}</li>)}
           </ul>
         </section>
 

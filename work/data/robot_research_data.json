@@ -1,9 +1,9 @@
 {
   "meta": {
     "project": "学校具身智能机器人采购调研",
-    "version": "v13",
+    "version": "v14",
     "accessedDate": "2026-06-01",
-    "updateSummary": "清理残留的需询价/待核验误导口径：公开价说明统一改为正式报价，补齐 Robotnik、Unitree H1-2、CyberOne、Atlas 的关键字段状态，并更新页面报告版本。",
+    "updateSummary": "生成正式报价清单并清理页面、数据和来源说明中的旧询价/未核验口径；无公开售价型号统一归入厂商正式报价项或供货状态待确认。",
     "scoringWeights": {
       "research": 50,
       "deployment": 50
@@ -60,7 +60,7 @@
       "url": "https://www.unitree.com/cn/h1/",
       "type": "中文官网",
       "confidence": "high",
-      "notes": "官方页披露 H1 自由度、动力系统、864 Wh 电池等参数，价格需询价。"
+      "notes": "官方页披露 H1 自由度、动力系统、864 Wh 电池等参数，价格需厂商正式报价。"
     },
     {
       "id": "SRC006",
@@ -84,7 +84,7 @@
       "url": "https://www.unitree.com/cn/z1/",
       "type": "中文官网",
       "confidence": "high",
-      "notes": "官方页披露 Z1/Z1 Pro 6 轴、自重等信息，价格需询价。"
+      "notes": "官方页披露 Z1/Z1 Pro 6 轴、自重等信息，价格需厂商正式报价。"
     },
     {
       "id": "SRC009",
@@ -116,7 +116,7 @@
       "url": "https://www.deeprobotics.cn/robot/index/product1.html",
       "type": "中文官网",
       "confidence": "high",
-      "notes": "官网页面含绝影 X30 系列持续行走负载、续航等参数，价格需询价。"
+      "notes": "官网页面含绝影 X30 系列持续行走负载、续航等参数，价格需厂商正式报价。"
     },
     {
       "id": "SRC013",
@@ -140,7 +140,7 @@
       "url": "https://www.deeprobotics.cn/robot/index/buy.html",
       "type": "采购渠道",
       "confidence": "medium",
-      "notes": "云深处官网采购咨询入口，未公开价格型号按需询价处理。"
+      "notes": "云深处官网采购咨询入口，未公开价格型号按正式报价处理。"
     },
     {
       "id": "SRC016",
@@ -236,7 +236,7 @@
       "url": "https://www.jaka.com.cn/",
       "type": "中文官网",
       "confidence": "medium",
-      "notes": "节卡 Zu 系列协作机器人官方入口，价格需询价。"
+      "notes": "节卡 Zu 系列协作机器人官方入口，价格需厂商正式报价。"
     },
     {
       "id": "SRC028",
@@ -300,7 +300,7 @@
       "url": "https://global.agilex.ai/products/piper",
       "type": "官网/手册",
       "confidence": "medium",
-      "notes": "PiPER 六自由度机械臂官方产品入口，价格需询价或按渠道核验。"
+      "notes": "PiPER 六自由度机械臂官方产品入口，价格需厂商正式报价或按渠道核验。"
     },
     {
       "id": "SRC036",
@@ -13020,7 +13020,7 @@
       "url": "https://mujin-corp.com/products/truckbot/",
       "type": "官网/产品入口",
       "confidence": "high",
-      "notes": "官方产品入口核验 TruckBot 物流卸货移动机器人和 Mujin Controller 智能机器人系统；详细规格和采购交付需询价。"
+      "notes": "官方产品入口核验 TruckBot 物流卸货移动机器人和 Mujin Controller 智能机器人系统；详细规格和采购交付需正式报价。"
     },
     {
       "id": "SRCV9016",
@@ -13076,7 +13076,7 @@
       "url": "https://www.ubtrobot.com/",
       "type": "官网/产品入口",
       "confidence": "high",
-      "notes": "优必选官网核验 Walker 系列人形机器人和商用/展示应用；Walker X 面向采购的量产规格、价格和 SDK 需询价。"
+      "notes": "优必选官网核验 Walker 系列人形机器人和商用/展示应用；Walker X 面向采购的量产规格、价格需厂商正式报价，SDK 需厂商确认。"
     },
     {
       "id": "SRCV10005",
@@ -13092,7 +13092,7 @@
       "url": "https://agilityrobotics.com/robots",
       "type": "官网/产品规格",
       "confidence": "high",
-      "notes": "官方页核验 Digit 物流人形机器人、箱体搬运定位、企业部署和 Agility Arc 系统；价格和 SDK 需询价。"
+      "notes": "官方页核验 Digit 物流人形机器人、箱体搬运定位、企业部署和 Agility Arc 系统；价格需厂商正式报价，SDK 需厂商确认。"
     },
     {
       "id": "SRCV10007",
@@ -13100,7 +13100,7 @@
       "url": "https://apptronik.com/apollo",
       "type": "官网/产品规格",
       "confidence": "high",
-      "notes": "官方页核验 Apollo 通用人形机器人、模块化电池、工业任务定位和企业合作路径；价格和 SDK 需询价。"
+      "notes": "官方页核验 Apollo 通用人形机器人、模块化电池、工业任务定位和企业合作路径；价格需厂商正式报价，SDK 需厂商确认。"
     },
     {
       "id": "SRCV10008",
@@ -13124,7 +13124,7 @@
       "url": "https://www.neura-robotics.com/4ne1",
       "type": "官网/产品入口",
       "confidence": "high",
-      "notes": "NEURA 官方页核验 4NE-1 人形机器人产品线；详细规格、开放采购和 SDK 需询价。"
+      "notes": "NEURA 官方页核验 4NE-1 人形机器人产品线；详细规格、开放采购需厂商正式报价，SDK 需厂商确认。"
     },
     {
       "id": "SRCV10011",
@@ -13295,11 +13295,11 @@
         "payloadKg": "3 kg 级历史科研平台",
         "reachM": "约 0.855 m 级",
         "repeatabilityMm": "约 ±0.1 mm 级",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "关节力矩传感，按历史资料确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "历史科研平台，采购应确认可供货和维保"
       },
       "software": {
@@ -14843,7 +14843,7 @@
       "formFactor": "轻量 6 轴机械臂",
       "officialUrl": "https://www.realman-robotics.com/",
       "cnyAmount": 126400,
-      "cnyRange": "约 ¥12.6 万，按海外代理 RM65 机械臂公开价估算；国内需询价",
+      "cnyRange": "约 ¥12.6 万，按海外代理 RM65 机械臂公开价估算；国内需正式报价",
       "priceType": "代理渠道欧元价估算",
       "priceConfidence": "medium",
       "priceSourceIds": [
@@ -17789,7 +17789,7 @@
       "formFactor": "7 轴力控科研机械臂",
       "officialUrl": "https://franka.de/research",
       "cnyAmount": 233500,
-      "cnyRange": "约 ¥23.4 万，按海外渠道 29,750 欧元估算；国内代理价需询价",
+      "cnyRange": "约 ¥23.4 万，按海外渠道 29,750 欧元估算；国内代理价需正式报价",
       "priceType": "代理渠道欧元价估算",
       "priceConfidence": "medium",
       "priceSourceIds": [
@@ -18582,7 +18582,7 @@
       "formFactor": "轻量 6/7 轴科研机械臂",
       "officialUrl": "https://www.kinovarobotics.com/product/gen3-robots",
       "cnyAmount": 147000,
-      "cnyRange": "约 ¥14.7 万起，按海外代理 18,720 欧元含税价估算；国内需询价",
+      "cnyRange": "约 ¥14.7 万起，按海外代理 18,720 欧元含税价估算；国内需正式报价",
       "priceType": "代理渠道欧元价估算",
       "priceConfidence": "medium",
       "priceSourceIds": [
@@ -21701,7 +21701,7 @@
       "formFactor": "6 轴协作机械臂",
       "officialUrl": "https://www.elibot.cn/",
       "cnyAmount": 132500,
-      "cnyRange": "约 ¥13.3 万，按海外代理 16,875 欧元未税价估算；国内需询价",
+      "cnyRange": "约 ¥13.3 万，按海外代理 16,875 欧元未税价估算；国内需正式报价",
       "priceType": "代理渠道欧元价估算",
       "priceConfidence": "medium",
       "priceSourceIds": [
@@ -22380,12 +22380,12 @@
         "payloadKg": "12 kg",
         "reachM": "1.304 m",
         "repeatabilityMm": "按型号规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "集成商/社区支持",
@@ -22458,12 +22458,12 @@
         "payloadKg": "16 kg",
         "reachM": "按型号页确认",
         "repeatabilityMm": "按型号规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "集成商/社区支持",
@@ -22535,12 +22535,12 @@
         "payloadKg": "3 kg",
         "reachM": "0.624 m",
         "repeatabilityMm": "按型号规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "集成商/社区支持",
@@ -22613,12 +22613,12 @@
         "payloadKg": "10 kg",
         "reachM": "1.350 m",
         "repeatabilityMm": "±0.1 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "38.5 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS 集成支持",
@@ -22691,12 +22691,12 @@
         "payloadKg": "12 kg",
         "reachM": "官网规格书待细化",
         "repeatabilityMm": "按型号确认",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "按型号确认",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS 集成支持",
@@ -22769,12 +22769,12 @@
         "payloadKg": "3 kg",
         "reachM": "0.625 m",
         "repeatabilityMm": "±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "16 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS 集成支持",
@@ -22860,7 +22860,7 @@
       "formFactor": "6 轴协作机械臂",
       "officialUrl": "https://www.aubo-robotics.cn/",
       "cnyAmount": 129400,
-      "cnyRange": "约 ¥12.9 万，按海外代理 16,490 欧元估算；国内正式价需询价",
+      "cnyRange": "约 ¥12.9 万，按海外代理 16,490 欧元估算；国内正式价需正式报价",
       "priceType": "代理渠道欧元价估算",
       "priceConfidence": "medium",
       "priceSourceIds": [
@@ -23543,10 +23543,10 @@
         "reachM": "约 0.917 m",
         "repeatabilityMm": "±0.02 mm",
         "speed": "关节最高速度按轴不同",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "约 24 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "协作安全功能，具体认证按版本确认"
       },
       "software": {
@@ -23557,7 +23557,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v9 官网核验：AUBO 官方产品页确认 i7 型号、7 kg 负载、约 917 mm 工作半径、±0.02 mm 重复定位精度和软件生态；价格需询价。"
+        "v9 官网核验：AUBO 官方产品页确认 i7 型号、7 kg 负载、约 917 mm 工作半径、±0.02 mm 重复定位精度和软件生态；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -23576,7 +23576,7 @@
         "SRCV9001"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "AUBO 官方产品页确认 i7 型号、7 kg 负载、约 917 mm 工作半径、±0.02 mm 重复定位精度和软件生态；价格需询价。",
+      "verificationNotes": "AUBO 官方产品页确认 i7 型号、7 kg 负载、约 917 mm 工作半径、±0.02 mm 重复定位精度和软件生态；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "遨博",
       "brandLocation": "北京"
@@ -23621,18 +23621,18 @@
         "payloadKg": "12 kg",
         "reachM": "约 1.30 m",
         "repeatabilityMm": "约 ±0.1 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "官方/社区 ROS 支持",
         "ros2": "社区支持",
         "sdk": "TMflow / TM ROS Driver",
-        "sim": "待核验"
+        "sim": "官网未披露"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -23702,18 +23702,18 @@
         "payloadKg": "6 kg",
         "reachM": "约 0.70 m",
         "repeatabilityMm": "约 ±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "官方/社区 ROS 支持",
         "ros2": "社区支持",
         "sdk": "TMflow / TM ROS Driver",
-        "sim": "待核验"
+        "sim": "官网未披露"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -23785,10 +23785,10 @@
         "reachM": "0.6 m",
         "repeatabilityMm": "约 ±0.5 mm 级，按官方版本确认",
         "speed": "关节速度按轴确认",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "约 33 kg 级，按版本确认",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "桌面/轻协作教学平台，工业安全需另评估"
       },
       "software": {
@@ -23862,22 +23862,22 @@
         "payloadKg": "5 kg",
         "reachM": "约 0.8 m",
         "repeatabilityMm": "约 ±0.02 mm，按规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "协作安全功能，具体认证按版本确认"
       },
       "software": {
         "ros": "官方/社区资源需项目确认",
         "ros2": "官方/社区资源需项目确认",
         "sdk": "Han's Robot 控制软件 / 工业接口",
-        "sim": "离线编程/仿真需询价"
+        "sim": "离线编程/仿真需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v9 官网核验：Han's Robot 官方 Elfin 系列资料确认 E5 为 5 kg 级、约 800 mm 工作半径的 6 轴协作臂；价格和教育采购需询价。"
+        "v9 官网核验：Han's Robot 官方 Elfin 系列资料确认 E5 为 5 kg 级、约 800 mm 工作半径的 6 轴协作臂；价格和教育采购需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -23896,7 +23896,7 @@
         "SRCV9005"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Han's Robot 官方 Elfin 系列资料确认 E5 为 5 kg 级、约 800 mm 工作半径的 6 轴协作臂；价格和教育采购需询价。",
+      "verificationNotes": "Han's Robot 官方 Elfin 系列资料确认 E5 为 5 kg 级、约 800 mm 工作半径的 6 轴协作臂；价格和教育采购需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "大族机器人",
       "brandLocation": "深圳"
@@ -23940,12 +23940,12 @@
         "payloadKg": "迷你协作臂，负载按型号规格书确认",
         "reachM": "需按型号规格书确认",
         "repeatabilityMm": "需按型号规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "集成商/社区支持",
@@ -24018,12 +24018,12 @@
         "payloadKg": "12 kg",
         "reachM": "需按型号规格书确认",
         "repeatabilityMm": "需按型号规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "集成商/社区支持",
@@ -24096,12 +24096,12 @@
         "payloadKg": "18 kg",
         "reachM": "需按型号规格书确认",
         "repeatabilityMm": "需按型号规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "集成商/社区支持",
@@ -24173,12 +24173,12 @@
         "payloadKg": "3 kg",
         "reachM": "需按型号规格书确认",
         "repeatabilityMm": "需按型号规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "集成商/社区支持",
@@ -24269,7 +24269,7 @@
       "formFactor": "6 轴协作机械臂",
       "officialUrl": "https://www.jaka.com.cn/",
       "cnyAmount": 231600,
-      "cnyRange": "约 ¥23.2 万，按海外代理 31,950 美元估算；国内需询价",
+      "cnyRange": "约 ¥23.2 万，按海外代理 31,950 美元估算；国内需正式报价",
       "priceType": "代理渠道美元价估算",
       "priceConfidence": "medium",
       "priceSourceIds": [
@@ -24950,18 +24950,18 @@
         "payloadKg": "7 kg 级",
         "reachM": "约 0.8-0.9 m 级，需规格书确认",
         "repeatabilityMm": "高精度协作臂，具体值按规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "柔性拖动、力控和协作安全功能"
       },
       "software": {
         "ros": "官方/社区资源需项目确认",
         "ros2": "官方/社区资源需项目确认",
         "sdk": "ROKAE 控制软件 / 工业接口",
-        "sim": "离线编程/仿真需询价"
+        "sim": "离线编程/仿真需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -25030,10 +25030,10 @@
         "reachM": "0.9-0.917 m",
         "repeatabilityMm": "±0.05 mm",
         "speed": "TCP 最高 2.8 m/s",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "10-10.1 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "轻量仿人构型，可选六维力版本"
       },
       "software": {
@@ -25044,7 +25044,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v8 官网核验：RealMan 官方 RML63 规格页确认 6 自由度、3 kg 负载、900-917 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需询价。"
+        "v8 官网核验：RealMan 官方 RML63 规格页确认 6 自由度、3 kg 负载、900-917 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -25063,7 +25063,7 @@
         "SRCV8005"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "RealMan 官方 RML63 规格页确认 6 自由度、3 kg 负载、900-917 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需询价。",
+      "verificationNotes": "RealMan 官方 RML63 规格页确认 6 自由度、3 kg 负载、900-917 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "睿尔曼智能",
       "brandLocation": "北京"
@@ -25108,10 +25108,10 @@
         "reachM": "0.61-0.627 m",
         "repeatabilityMm": "±0.05 mm",
         "speed": "TCP 最高 1.8 m/s",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "7.8-7.9 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "轻量仿人构型，可选六维力版本"
       },
       "software": {
@@ -25122,7 +25122,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v8 官网核验：RealMan 官方 RM75 规格页确认 7 自由度、5 kg 负载、610-627 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需询价。"
+        "v8 官网核验：RealMan 官方 RM75 规格页确认 7 自由度、5 kg 负载、610-627 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -25141,7 +25141,7 @@
         "SRCV8006"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "RealMan 官方 RM75 规格页确认 7 自由度、5 kg 负载、610-627 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需询价。",
+      "verificationNotes": "RealMan 官方 RM75 规格页确认 7 自由度、5 kg 负载、610-627 mm 工作半径、±0.05 mm 重复定位精度和可选六维力版本；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "睿尔曼智能",
       "brandLocation": "北京"
@@ -25185,18 +25185,18 @@
         "payloadKg": "5 kg 级",
         "reachM": "需规格书确认",
         "repeatabilityMm": "需规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "协作机器人安全配置需厂商确认"
       },
       "software": {
         "ros": "需厂商确认",
         "ros2": "需厂商确认",
-        "sdk": "新松控制软件 / 工业接口需询价",
-        "sim": "离线编程/仿真需询价"
+        "sdk": "新松控制软件 / 工业接口需正式报价",
+        "sim": "离线编程/仿真需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -25264,10 +25264,10 @@
         "reachM": "1.525 m 最大臂展 / 1.300 m 工作半径",
         "repeatabilityMm": "±0.03 mm",
         "speed": "TCP 2-4 m/s，按型号",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "40 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "IP54，协作安全按部署确认"
       },
       "software": {
@@ -25342,10 +25342,10 @@
         "reachM": "1.425 m 最大臂展 / 1.200 m 工作半径",
         "repeatabilityMm": "±0.03 mm",
         "speed": "TCP 2-4 m/s，按型号",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "39.5 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "IP54，协作安全按部署确认"
       },
       "software": {
@@ -25420,10 +25420,10 @@
         "reachM": "1.223 m 最大臂展 / 1.000 m 工作半径",
         "repeatabilityMm": "±0.03 mm",
         "speed": "TCP 2-4 m/s，按型号",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "40 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "IP54，协作安全按部署确认"
       },
       "software": {
@@ -25500,10 +25500,10 @@
         "reachM": "1.7 m",
         "repeatabilityMm": "±0.05 mm",
         "speed": "TCP 最高 2.0 m/s",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "73 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "IP54，碰撞/过载保护按官方配置"
       },
       "software": {
@@ -25515,7 +25515,7 @@
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
         "v5 部分核验：官方系列页确认型号存在和 CR 系列定位；CR20A/CR5A 详细规格仍需单页规格书或厂商确认。",
-        "v8 官网核验：DOBOT CR20A 官方规格页确认 20 kg 负载、1700 mm 工作半径、±0.05 mm 重复定位精度、IP54 和工业接口；价格需询价。"
+        "v8 官网核验：DOBOT CR20A 官方规格页确认 20 kg 负载、1700 mm 工作半径、±0.05 mm 重复定位精度、IP54 和工业接口；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -25535,7 +25535,7 @@
         "SRCV8001"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "DOBOT CR20A 官方规格页确认 20 kg 负载、1700 mm 工作半径、±0.05 mm 重复定位精度、IP54 和工业接口；价格需询价。",
+      "verificationNotes": "DOBOT CR20A 官方规格页确认 20 kg 负载、1700 mm 工作半径、±0.05 mm 重复定位精度、IP54 和工业接口；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "越疆机器人",
       "brandLocation": "深圳"
@@ -25580,10 +25580,10 @@
         "reachM": "0.795 m 最大臂展 / 0.620 m 工作半径",
         "repeatabilityMm": "±0.02 mm",
         "speed": "TCP 2-4 m/s，按型号",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "16.5 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "IP54，协作安全按部署确认"
       },
       "software": {
@@ -26416,10 +26416,10 @@
         "reachM": "0.9 m",
         "repeatabilityMm": "±0.02 mm",
         "speed": "TCP 最高 2.0 m/s",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "25 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "IP54，碰撞检测和协作安全按官方配置"
       },
       "software": {
@@ -26431,7 +26431,7 @@
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
         "v5 部分核验：官方系列页确认型号存在和 CR 系列定位；CR20A/CR5A 详细规格仍需单页规格书或厂商确认。",
-        "v8 官网核验：DOBOT CRA 官方系列页确认 CR5A 型号、5 kg 负载、900 mm 工作半径、±0.02 mm 重复定位精度和 DobotStudio Pro 口径；价格需询价。"
+        "v8 官网核验：DOBOT CRA 官方系列页确认 CR5A 型号、5 kg 负载、900 mm 工作半径、±0.02 mm 重复定位精度和 DobotStudio Pro 口径；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -26451,7 +26451,7 @@
         "SRCV8002"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "DOBOT CRA 官方系列页确认 CR5A 型号、5 kg 负载、900 mm 工作半径、±0.02 mm 重复定位精度和 DobotStudio Pro 口径；价格需询价。",
+      "verificationNotes": "DOBOT CRA 官方系列页确认 CR5A 型号、5 kg 负载、900 mm 工作半径、±0.02 mm 重复定位精度和 DobotStudio Pro 口径；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "越疆机器人",
       "brandLocation": "深圳"
@@ -26495,10 +26495,10 @@
         "reachM": "0.990 m 最大臂展 / 0.800 m 工作半径",
         "repeatabilityMm": "±0.02 mm",
         "speed": "TCP 2-4 m/s，按型号",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "24.5 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "IP54，协作安全按部署确认"
       },
       "software": {
@@ -26574,10 +26574,10 @@
         "reachM": "0.625 m",
         "repeatabilityMm": "±0.05 mm",
         "speed": "TCP 最高 1.6 m/s",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "11 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "IP54，轻量商业协作臂"
       },
       "software": {
@@ -26588,7 +26588,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v8 官网核验：DOBOT Nova 2 官方规格页确认 2 kg 负载、625 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需询价。"
+        "v8 官网核验：DOBOT Nova 2 官方规格页确认 2 kg 负载、625 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -26607,7 +26607,7 @@
         "SRCV8003"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "DOBOT Nova 2 官方规格页确认 2 kg 负载、625 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需询价。",
+      "verificationNotes": "DOBOT Nova 2 官方规格页确认 2 kg 负载、625 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "越疆机器人",
       "brandLocation": "深圳"
@@ -26652,10 +26652,10 @@
         "reachM": "0.85 m",
         "repeatabilityMm": "±0.05 mm",
         "speed": "TCP 最高 2.0 m/s",
-        "endurance": "待核验",
+        "endurance": "官网未披露",
         "weightKg": "14 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "IP54，轻量商业协作臂"
       },
       "software": {
@@ -26666,7 +26666,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v8 官网核验：DOBOT Nova 5 官方规格页确认 5 kg 负载、850 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需询价。"
+        "v8 官网核验：DOBOT Nova 5 官方规格页确认 5 kg 负载、850 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -26685,7 +26685,7 @@
         "SRCV8004"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "DOBOT Nova 5 官方规格页确认 5 kg 负载、850 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需询价。",
+      "verificationNotes": "DOBOT Nova 5 官方规格页确认 5 kg 负载、850 mm 工作半径、±0.05 mm 重复定位精度和 CR/Nova 软件手册入口；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "越疆机器人",
       "brandLocation": "深圳"
@@ -26730,18 +26730,18 @@
         "payloadKg": "5 kg / 10 kg / 12 kg 级",
         "reachM": "约 0.95-1.62 m",
         "repeatabilityMm": "约 ±0.02 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial 社区支持",
-        "ros2": "待核验",
+        "ros2": "官网未披露",
         "sdk": "ABB RobotStudio / RAPID",
-        "sim": "待核验"
+        "sim": "官网未披露"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -26811,18 +26811,18 @@
         "payloadKg": "单臂约 0.5 kg",
         "reachM": "约 0.56 m",
         "repeatabilityMm": "约 ±0.02 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial 社区支持",
-        "ros2": "待核验",
+        "ros2": "官网未披露",
         "sdk": "ABB RobotStudio / RAPID",
-        "sim": "待核验"
+        "sim": "官网未披露"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -26892,18 +26892,18 @@
         "payloadKg": "10 kg",
         "reachM": "约 1.42 m",
         "repeatabilityMm": "约 ±0.04 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "社区/集成商支持",
-        "ros2": "待核验",
+        "ros2": "官网未披露",
         "sdk": "FANUC 控制器 / ROBOGUIDE",
-        "sim": "待核验"
+        "sim": "官网未披露"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -26973,18 +26973,18 @@
         "payloadKg": "25 kg",
         "reachM": "约 1.89 m",
         "repeatabilityMm": "约 ±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "社区/集成商支持",
-        "ros2": "待核验",
+        "ros2": "官网未披露",
         "sdk": "FANUC 控制器 / ROBOGUIDE",
-        "sim": "待核验"
+        "sim": "官网未披露"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -27054,11 +27054,11 @@
         "payloadKg": "3 kg",
         "reachM": "0.855 m",
         "repeatabilityMm": "约 ±0.1 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "全关节力矩传感",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "科研协作臂，力控安全按官方控制器配置"
       },
       "software": {
@@ -27069,7 +27069,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v9 官网核验：Franka 官方 Research 3 页面确认 7 自由度、3 kg 负载、855 mm 工作空间、关节力矩传感和 Franka Control Interface / ROS2 生态；价格需询价。"
+        "v9 官网核验：Franka 官方 Research 3 页面确认 7 自由度、3 kg 负载、855 mm 工作空间、关节力矩传感和 Franka Control Interface / ROS2 生态；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -27088,7 +27088,7 @@
         "SRCV9003"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Franka 官方 Research 3 页面确认 7 自由度、3 kg 负载、855 mm 工作空间、关节力矩传感和 Franka Control Interface / ROS2 生态；价格需询价。",
+      "verificationNotes": "Franka 官方 Research 3 页面确认 7 自由度、3 kg 负载、855 mm 工作空间、关节力矩传感和 Franka Control Interface / ROS2 生态；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Franka Robotics",
       "brandLocation": "德国"
@@ -27132,11 +27132,11 @@
         "payloadKg": "约 0.5 kg",
         "reachM": "约 0.76 m",
         "repeatabilityMm": "按官方规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "可配 2D/3D 视觉和末端执行器",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "轻量科研/教育平台"
       },
       "software": {
@@ -27147,7 +27147,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v9 官网核验：Kinova 官方产品页确认 Gen3 Lite 6 自由度、约 0.5 kg 载荷、约 760 mm 伸展距离、Kortex API、ROS 和 MoveIt 生态；价格需询价。"
+        "v9 官网核验：Kinova 官方产品页确认 Gen3 Lite 6 自由度、约 0.5 kg 载荷、约 760 mm 伸展距离、Kortex API、ROS 和 MoveIt 生态；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -27166,7 +27166,7 @@
         "SRCV9006"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Kinova 官方产品页确认 Gen3 Lite 6 自由度、约 0.5 kg 载荷、约 760 mm 伸展距离、Kortex API、ROS 和 MoveIt 生态；价格需询价。",
+      "verificationNotes": "Kinova 官方产品页确认 Gen3 Lite 6 自由度、约 0.5 kg 载荷、约 760 mm 伸展距离、Kortex API、ROS 和 MoveIt 生态；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Kinova",
       "brandLocation": "加拿大"
@@ -27211,23 +27211,23 @@
         "payloadKg": "3 kg / 11 kg / 15 kg 级",
         "reachM": "约 0.6-1.3 m",
         "repeatabilityMm": "按型号确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "社区支持",
         "ros2": "社区支持",
         "sdk": "KUKA iiQKA / Sunrise",
-        "sim": "待核验"
+        "sim": "官网未披露"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
         "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
-        "v7 官网核验：KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需询价。"
+        "v7 官网核验：KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -27247,7 +27247,7 @@
         "SRCV7004"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需询价。",
+      "verificationNotes": "KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "KUKA",
       "brandLocation": "德国"
@@ -27292,23 +27292,23 @@
         "payloadKg": "7 kg / 14 kg",
         "reachM": "约 0.8-0.82 m",
         "repeatabilityMm": "约 ±0.1 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "社区支持",
         "ros2": "社区支持",
         "sdk": "KUKA Sunrise / FRI",
-        "sim": "待核验"
+        "sim": "官网未披露"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
         "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
-        "v7 官网核验：KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需询价。"
+        "v7 官网核验：KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -27328,7 +27328,7 @@
         "SRCV7004"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需询价。",
+      "verificationNotes": "KUKA 官方产品资料确认 LBR iisy / LBR iiwa 系列型号、负载分档和软件接口生态；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "KUKA",
       "brandLocation": "德国"
@@ -27372,11 +27372,11 @@
         "payloadKg": "3 kg",
         "reachM": "0.7 m",
         "repeatabilityMm": "±0.1 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "约 11.2 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "轻量协作臂，安全配置按版本确认"
       },
       "software": {
@@ -27387,7 +27387,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v9 官网核验：UFACTORY 官方页确认 xArm 5 为 5 自由度、3 kg 负载、700 mm 工作半径、±0.1 mm 重复定位精度，并提供 ROS/ROS2/SDK 生态；价格需询价。"
+        "v9 官网核验：UFACTORY 官方页确认 xArm 5 为 5 自由度、3 kg 负载、700 mm 工作半径、±0.1 mm 重复定位精度，并提供 ROS/ROS2/SDK 生态；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -27406,7 +27406,7 @@
         "SRCV9009"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "UFACTORY 官方页确认 xArm 5 为 5 自由度、3 kg 负载、700 mm 工作半径、±0.1 mm 重复定位精度，并提供 ROS/ROS2/SDK 生态；价格需询价。",
+      "verificationNotes": "UFACTORY 官方页确认 xArm 5 为 5 自由度、3 kg 负载、700 mm 工作半径、±0.1 mm 重复定位精度，并提供 ROS/ROS2/SDK 生态；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "UFACTORY",
       "brandLocation": "深圳"
@@ -27451,12 +27451,12 @@
         "payloadKg": "12.5 kg",
         "reachM": "1.300 m",
         "repeatabilityMm": "±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "33.5 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial/社区驱动支持",
@@ -27531,12 +27531,12 @@
         "payloadKg": "12 kg",
         "reachM": "1.300 m",
         "repeatabilityMm": "±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial/社区驱动支持",
@@ -27611,12 +27611,12 @@
         "payloadKg": "15 kg",
         "reachM": "按官方型号页确认",
         "repeatabilityMm": "按官方型号页确认",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial/社区驱动支持",
@@ -27690,12 +27690,12 @@
         "payloadKg": "16 kg",
         "reachM": "0.900 m",
         "repeatabilityMm": "±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "33.1 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial/社区驱动支持",
@@ -27771,12 +27771,12 @@
         "payloadKg": "20 kg",
         "reachM": "1.750 m",
         "repeatabilityMm": "±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "64 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial/社区驱动支持",
@@ -27852,12 +27852,12 @@
         "payloadKg": "30 kg",
         "reachM": "1.300 m",
         "repeatabilityMm": "±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "63.5 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial/社区驱动支持",
@@ -27933,12 +27933,12 @@
         "payloadKg": "3 kg",
         "reachM": "0.500 m",
         "repeatabilityMm": "±0.03 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "11.2 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial/社区驱动支持",
@@ -28013,12 +28013,12 @@
         "payloadKg": "7.5 kg",
         "reachM": "0.850 m",
         "repeatabilityMm": "±0.03 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "约 18 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial/社区驱动支持",
@@ -28093,12 +28093,12 @@
         "payloadKg": "最高 10 kg",
         "reachM": "1.750 m",
         "repeatabilityMm": "±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "44.7 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "ROS-Industrial/社区驱动支持",
@@ -28171,11 +28171,11 @@
         "payloadKg": "10 kg",
         "reachM": "约 1.2 m",
         "repeatabilityMm": "约 ±0.1 mm，按规格书确认",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "约 48 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
         "safety": "协作安全设计，YRC1000micro 控制器"
       },
       "software": {
@@ -28186,7 +28186,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v9 官网核验：Yaskawa Motoman 官方资料确认 HC10DT 10 kg 负载、约 1200 mm 水平伸展、协作安全和工业控制器生态；价格需询价。"
+        "v9 官网核验：Yaskawa Motoman 官方资料确认 HC10DT 10 kg 负载、约 1200 mm 水平伸展、协作安全和工业控制器生态；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -28205,7 +28205,7 @@
         "SRCV9010"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Yaskawa Motoman 官方资料确认 HC10DT 10 kg 负载、约 1200 mm 水平伸展、协作安全和工业控制器生态；价格需询价。",
+      "verificationNotes": "Yaskawa Motoman 官方资料确认 HC10DT 10 kg 负载、约 1200 mm 水平伸展、协作安全和工业控制器生态；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Yaskawa Motoman",
       "brandLocation": "日本"
@@ -28247,21 +28247,21 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "历史型号，当前采购规格需厂商确认",
         "reachM": "足式/轮足平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "历史配置需厂商确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "历史/早期平台，新采购建议优先比较 LimX Oli/TRON1 等当前公开型号"
       },
       "software": {
         "ros": "历史/开发接口需厂商确认",
         "ros2": "历史/开发接口需厂商确认",
-        "sdk": "开发接口需询价",
+        "sdk": "开发接口需正式报价",
         "sim": "需厂商确认"
       },
       "researchEvidence": [
@@ -28331,12 +28331,12 @@
         "dof": "历史移动操作平台",
         "payloadKg": "需确认存量/二手配置",
         "reachM": "需确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "历史 Fetch Research Base / Freight 生态",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "已并入 Zebra AMR 产品线，采购支持需确认"
       },
       "software": {
@@ -28410,23 +28410,23 @@
         "dof": "物流卸货移动机器人",
         "payloadKg": "包裹/箱体处理按系统配置",
         "reachM": "移动平台 + 物流执行机构，按项目配置",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "视觉/感知系统按 Mujin Controller 配置",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "仓储物流系统安全需项目评估"
       },
       "software": {
         "ros": "企业系统，ROS 支持未公开",
         "ros2": "企业系统，ROS2 支持未公开",
-        "sdk": "Mujin Controller / 企业接口需询价",
-        "sim": "企业仿真/部署工具需询价"
+        "sdk": "Mujin Controller / 企业接口需正式报价",
+        "sim": "企业仿真/部署工具需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v9 官网核验：Mujin 官方产品入口确认 TruckBot 物流卸货移动机器人和 Mujin Controller 系统；具体规格、价格和学校适配性需询价。"
+        "v9 官网核验：Mujin 官方产品入口确认 TruckBot 物流卸货移动机器人和 Mujin Controller 系统；具体规格、价格和学校适配性需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -28445,7 +28445,7 @@
         "SRCV9015"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Mujin 官方产品入口确认 TruckBot 物流卸货移动机器人和 Mujin Controller 系统；具体规格、价格和学校适配性需询价。",
+      "verificationNotes": "Mujin 官方产品入口确认 TruckBot 物流卸货移动机器人和 Mujin Controller 系统；具体规格、价格和学校适配性需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Mujin",
       "brandLocation": "日本/美国"
@@ -31153,7 +31153,7 @@
         "国内集成交付便利，适合试点项目。"
       ],
       "risks": [
-        "组合规格和价格需正式报价。"
+        "组合规格和价格需厂商正式报价。"
       ],
       "shortlistTags": [
         "科研平台",
@@ -31172,7 +31172,7 @@
       "formFactor": "移动底盘 + 轻量机械臂",
       "officialUrl": "https://www.realman-robotics.com/",
       "cnyAmount": 326600,
-      "cnyRange": "约 ¥32.7 万，按海外渠道 RM65 单臂移动复合机器人价估算；国内需询价",
+      "cnyRange": "约 ¥32.7 万，按海外渠道 RM65 单臂移动复合机器人价估算；国内需正式报价",
       "priceType": "代理渠道欧元价估算",
       "priceConfidence": "medium",
       "priceSourceIds": [
@@ -35846,7 +35846,7 @@
       "formFactor": "四足平台 + 轻量机械臂",
       "officialUrl": "https://www.unitree.com/cn/go2/",
       "cnyAmount": 96400,
-      "cnyRange": "约 ¥9.6 万起，按 Go2 Pro 教育渠道价 + Z1 渠道价粗估；完整组合需询价",
+      "cnyRange": "约 ¥9.6 万起，按 Go2 Pro 教育渠道价 + Z1 渠道价粗估；完整组合需正式报价",
       "priceType": "组合教育渠道价粗估",
       "priceConfidence": "low",
       "priceSourceIds": [
@@ -39538,10 +39538,10 @@
         "dof": "Mecanum 轮移动底盘 + 可选机械臂/视觉套件",
         "payloadKg": "教学轻载，按套件确认",
         "reachM": "按机械臂套件确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "深度相机/激光雷达/视觉模块按版本",
         "compute": "Jetson Orin Nano 8GB",
         "safety": "教学开发平台，非工业安全 AMR"
@@ -39614,15 +39614,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "35 kg 级",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 1.5 m/s",
         "endurance": "2-3 h 级，按电池",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "可扩展雷达、相机、导航套件",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "移动平台安全按改装和场地确认"
       },
       "software": {
@@ -39633,7 +39633,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -39652,7 +39652,7 @@
         "SRCV7001"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "松灵机器人",
       "brandLocation": "深圳"
@@ -39693,15 +39693,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "120 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "1.5 m/s",
         "endurance": "150 min",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "外接传感器/套件通过 T-slot 和开放接口集成",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "IP67 口径"
       },
       "software": {
@@ -39771,15 +39771,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "50 kg 级",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 4.8 m/s",
         "endurance": "2-3 h 级，按电池",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "可扩展雷达、相机、导航套件",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "移动平台安全按改装和场地确认"
       },
       "software": {
@@ -39790,7 +39790,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -39809,7 +39809,7 @@
         "SRCV7001"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "松灵机器人",
       "brandLocation": "深圳"
@@ -39849,15 +39849,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "轻载教学平台",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "按模式确认",
         "endurance": "按版本确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "可扩展雷达、相机、导航套件",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "移动平台安全按改装和场地确认"
       },
       "software": {
@@ -39868,7 +39868,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -39887,7 +39887,7 @@
         "SRCV7001"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "松灵机器人",
       "brandLocation": "深圳"
@@ -39928,15 +39928,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "50 kg 级",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 1.5 m/s",
         "endurance": "2-3 h 级，按电池",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "可扩展雷达、相机、导航套件",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "移动平台安全按改装和场地确认"
       },
       "software": {
@@ -39947,7 +39947,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -39966,7 +39966,7 @@
         "SRCV7001"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "松灵机器人",
       "brandLocation": "深圳"
@@ -40007,15 +40007,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "50 kg 级",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 1.5 m/s",
         "endurance": "2-3 h 级，按电池",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "可扩展雷达、相机、导航套件",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "移动平台安全按改装和场地确认"
       },
       "software": {
@@ -40026,7 +40026,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -40045,7 +40045,7 @@
         "SRCV7001"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "松灵机器人",
       "brandLocation": "深圳"
@@ -40086,15 +40086,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "10 kg 级",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 1.2 m/s",
         "endurance": "2-3 h 级，按电池",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "可扩展雷达、相机、导航套件",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "移动平台安全按改装和场地确认"
       },
       "software": {
@@ -40105,7 +40105,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -40124,7 +40124,7 @@
         "SRCV7001"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "松灵机器人",
       "brandLocation": "深圳"
@@ -40165,15 +40165,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "100 kg 级",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 1.6 m/s",
         "endurance": "2-3 h 级，按电池",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "可扩展雷达、相机、导航套件",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "移动平台安全按改装和场地确认"
       },
       "software": {
@@ -40184,7 +40184,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。"
+        "v7 官网核验：AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -40203,7 +40203,7 @@
         "SRCV7001"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需询价。",
+      "verificationNotes": "AgileX 官方产品页和手册入口确认底盘型号、负载分档和 ROS/SDK 资源；发布时间和正式报价需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "松灵机器人",
       "brandLocation": "深圳"
@@ -40247,10 +40247,10 @@
         "dof": "三形态可换底盘：麦克纳姆/履带/阿克曼",
         "payloadKg": "教学轻载，按套件确认",
         "reachM": "移动平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "深度相机、激光雷达、IMU、视觉传感器按套件",
         "compute": "Jetson Orin Nano 8GB",
         "safety": "教学开发平台，非工业安全 AMR"
@@ -40325,8 +40325,8 @@
         "dof": "26 自由度",
         "payloadKg": "单臂额定 3.5 kg@0.5 m，最大 5 kg@0.5 m",
         "reachM": "垂直 0-2.0 m，水平 0.716 m/带夹爪 0.861 m",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "1680 Wh 电池，实际续航按任务",
         "weightKg": "96 kg 含电池",
         "sensors": "双目相机、腕部相机、底盘相机、360° LiDAR",
@@ -40400,22 +40400,22 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "约 9 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 1.3 m/s",
         "endurance": "约 2 h",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "官方 ROS 支持",
         "ros2": "官方/社区 ROS2 支持",
         "sdk": "Clearpath ROS 包",
-        "sim": "待核验"
+        "sim": "官网未披露"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -40480,16 +40480,16 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "约 75 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 1 m/s",
         "endurance": "约 3 h",
         "weightKg": "约 50 kg",
         "sensors": "可选激光雷达/相机/GPS/IMU",
-        "compute": "待核验",
-        "safety": "待核验"
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "官方 ROS 支持",
@@ -40562,16 +40562,16 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "约 20 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 2 m/s",
         "endurance": "约 4 h",
         "weightKg": "约 17 kg",
         "sensors": "可选激光雷达/相机/GPS/IMU",
-        "compute": "待核验",
-        "safety": "待核验"
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "官方 ROS 支持",
@@ -40643,22 +40643,22 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "约 272 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 18 km/h",
         "endurance": "约 6 h",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
+        "weightKg": "官网未披露",
+        "sensors": "官网未披露",
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "官方 ROS 支持",
         "ros2": "官方/社区 ROS2 支持",
         "sdk": "Clearpath ROS 包",
-        "sim": "待核验"
+        "sim": "官网未披露"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -40727,10 +40727,10 @@
         "dof": "差速移动底盘",
         "payloadKg": "轻载教学/科研平台",
         "reachM": "移动平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 0.3 m/s",
         "endurance": "约 2.5 h",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "OAK-D / 2D LiDAR / IMU / Create 3 底盘传感",
         "compute": "Raspberry Pi 4",
         "safety": "教学科研平台，非工业安全 AMR"
@@ -40811,10 +40811,10 @@
         "dof": "差速移动底盘",
         "payloadKg": "轻载教学/科研平台",
         "reachM": "移动平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 0.3 m/s",
         "endurance": "约 2.5 h",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "OAK-D / 2D LiDAR / IMU / Create 3 底盘传感",
         "compute": "Raspberry Pi 4",
         "safety": "教学科研平台，非工业安全 AMR"
@@ -40892,10 +40892,10 @@
         "dof": "移动底盘 + 升降/伸缩臂 + 腕部/夹爪",
         "payloadKg": "轻载家庭/研究操作，按官方规格确认",
         "reachM": "垂直升降和水平伸缩臂，具体值按规格确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "头部相机、深度相机、LiDAR/IMU 按版本",
         "compute": "Intel NUC / 版本配置",
         "safety": "研究平台，非工业安全移动操作"
@@ -40970,10 +40970,10 @@
         "dof": "四轮差速/户外移动平台",
         "payloadKg": "约 60 kg 级，按官方手册确认",
         "reachM": "移动平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 1.5 m/s 级",
         "endurance": "按电池和负载确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "IMU、轮编码器、可扩展 LiDAR/相机/GPS",
         "compute": "ROS 2 控制计算平台",
         "safety": "IP54，户外平台安全按任务确认"
@@ -40986,7 +40986,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v9 官网核验：Husarion 官方手册确认 LYNX 为 ROS 2 移动平台，具备户外/室内运行、IP54、可扩展传感器和 ROS 2 软件栈；价格需询价。"
+        "v9 官网核验：Husarion 官方手册确认 LYNX 为 ROS 2 移动平台，具备户外/室内运行、IP54、可扩展传感器和 ROS 2 软件栈；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -41005,7 +41005,7 @@
         "SRCV9014"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Husarion 官方手册确认 LYNX 为 ROS 2 移动平台，具备户外/室内运行、IP54、可扩展传感器和 ROS 2 软件栈；价格需询价。",
+      "verificationNotes": "Husarion 官方手册确认 LYNX 为 ROS 2 移动平台，具备户外/室内运行、IP54、可扩展传感器和 ROS 2 软件栈；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Husarion",
       "brandLocation": "波兰"
@@ -41045,16 +41045,16 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "100 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "2 m/s",
         "endurance": "3.5-16 h",
         "weightKg": "55 kg",
         "sensors": "IMU、编码器，可扩展 LiDAR/相机/GNSS",
-        "compute": "待核验",
-        "safety": "待核验"
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "官方 ROS 支持",
@@ -41125,13 +41125,13 @@
       "specs": {
         "dof": "工业移动平台",
         "payloadKg": "600 kg 级",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 2 m/s 级，按配置",
         "endurance": "按电池和工况确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "安全激光扫描仪/导航传感器按配置",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "工业安全移动平台，按 CE/场景确认"
       },
       "software": {
@@ -41142,7 +41142,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v7 官网核验：KUKA 官方产品页确认 KMP 600-S 工业移动平台和 600 kg 级负载定位；价格和交付需询价。"
+        "v7 官网核验：KUKA 官方产品页确认 KMP 600-S 工业移动平台和 600 kg 级负载定位；价格和交付需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -41161,7 +41161,7 @@
         "SRCV7004"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "KUKA 官方产品页确认 KMP 600-S 工业移动平台和 600 kg 级负载定位；价格和交付需询价。",
+      "verificationNotes": "KUKA 官方产品页确认 KMP 600-S 工业移动平台和 600 kg 级负载定位；价格和交付需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "KUKA",
       "brandLocation": "德国"
@@ -41204,13 +41204,13 @@
       "specs": {
         "dof": "自主移动底盘",
         "payloadKg": "100 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "1.5 m/s",
         "endurance": "约 10 h",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "安全激光扫描仪、3D 相机/安全传感器按配置",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "工业 AMR 安全标准按地区/版本确认"
       },
       "software": {
@@ -41285,13 +41285,13 @@
       "specs": {
         "dof": "自主移动底盘",
         "payloadKg": "250 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "2.0 m/s",
         "endurance": "约 13 h",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "安全激光扫描仪、3D 相机/安全传感器按配置",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "工业 AMR 安全标准按地区/版本确认"
       },
       "software": {
@@ -41366,13 +41366,13 @@
       "specs": {
         "dof": "自主移动底盘",
         "payloadKg": "600 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "2.0 m/s",
         "endurance": "约 10 h",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "安全激光扫描仪、3D 相机/安全传感器按配置",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "工业 AMR 安全标准按地区/版本确认"
       },
       "software": {
@@ -41447,12 +41447,12 @@
         "dof": "全向移动平台",
         "payloadKg": "100 kg 级",
         "reachM": "移动平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 1.0 m/s 级，按配置确认",
         "endurance": "按电池配置确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "安全激光/导航传感器/可扩展载荷",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "研究/工业移动平台，安全认证按配置确认"
       },
       "software": {
@@ -41463,7 +41463,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v9 官网核验：Neobotix 官方产品页确认 MPO-700 全向移动机器人、100 kg 级载荷、研究/工业移动平台定位和 ROS/导航接口；价格需询价。"
+        "v9 官网核验：Neobotix 官方产品页确认 MPO-700 全向移动机器人、100 kg 级载荷、研究/工业移动平台定位和 ROS/导航接口；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -41482,7 +41482,7 @@
         "SRCV9016"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Neobotix 官方产品页确认 MPO-700 全向移动机器人、100 kg 级载荷、研究/工业移动平台定位和 ROS/导航接口；价格需询价。",
+      "verificationNotes": "Neobotix 官方产品页确认 MPO-700 全向移动机器人、100 kg 级载荷、研究/工业移动平台定位和 ROS/导航接口；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Neobotix",
       "brandLocation": "德国"
@@ -41525,23 +41525,23 @@
         "dof": "AMR 移动底盘",
         "payloadKg": "60 kg",
         "reachM": "移动平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "最高 1.8 m/s",
         "endurance": "15 h 空载 / 12 h 满载",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "前安全激光、后声呐、前保险杠、障碍物避让",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "EN/ANSI/UL 等安全合规口径，按地区确认"
       },
       "software": {
         "ros": "工业接口/集成商支持",
         "ros2": "工业接口/集成商支持",
         "sdk": "MobilePlanner / AMR 控制接口",
-        "sim": "OMRON 工业仿真与集成工具需询价"
+        "sim": "OMRON 工业仿真与集成工具需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v8 官网核验：OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需询价。"
+        "v8 官网核验：OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -41560,7 +41560,7 @@
         "SRCV8007"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需询价。",
+      "verificationNotes": "OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "OMRON",
       "brandLocation": "日本"
@@ -41603,23 +41603,23 @@
         "dof": "AMR 移动底盘",
         "payloadKg": "90 kg",
         "reachM": "移动平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "最高 1.35 m/s",
         "endurance": "15 h 空载 / 12 h 满载",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "前安全激光、后声呐、前保险杠、障碍物避让",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "EN/ANSI/UL 等安全合规口径，按地区确认"
       },
       "software": {
         "ros": "工业接口/集成商支持",
         "ros2": "工业接口/集成商支持",
         "sdk": "MobilePlanner / AMR 控制接口",
-        "sim": "OMRON 工业仿真与集成工具需询价"
+        "sim": "OMRON 工业仿真与集成工具需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v8 官网核验：OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需询价。"
+        "v8 官网核验：OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -41638,7 +41638,7 @@
         "SRCV8007"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需询价。",
+      "verificationNotes": "OMRON 官方 LD 系列页确认 LD-60/LD-90 负载、速度、续航、安全传感器和 MobilePlanner 控制接口；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "OMRON",
       "brandLocation": "日本"
@@ -41680,13 +41680,13 @@
       "specs": {
         "dof": "交互/服务机器人，负载按配置",
         "payloadKg": "按配置确认",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "相机、激光雷达、力控/触觉等按配置",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "科研平台安全按部署确认"
       },
       "software": {
@@ -42653,13 +42653,13 @@
       "specs": {
         "dof": "双臂移动平台",
         "payloadKg": "按配置确认",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "相机、激光雷达、力控/触觉等按配置",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "科研平台安全按部署确认"
       },
       "software": {
@@ -42734,10 +42734,10 @@
         "dof": "差速/移动底盘",
         "payloadKg": "约 50 kg 级，按配置确认",
         "reachM": "移动平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "按版本配置确认",
         "endurance": "按电池配置确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "LiDAR、RGB-D、IMU、GPS 等可扩展",
         "compute": "ROS 控制计算平台按配置",
         "safety": "室内移动平台，安全配置按项目确认"
@@ -42843,7 +42843,7 @@
       "formFactor": "工业移动底盘 + UR 机械臂",
       "officialUrl": "https://robotnik.eu/products/mobile-manipulators/rb-kairos/",
       "cnyAmount": 395600,
-      "cnyRange": "约 ¥39.6 万起，按 RB-KAIROS 移动底盘海外渠道价估算；加机械臂完整方案需询价",
+      "cnyRange": "约 ¥39.6 万起，按 RB-KAIROS 移动底盘海外渠道价估算；加机械臂完整方案需正式报价",
       "priceType": "底盘渠道欧元价估算",
       "priceConfidence": "low",
       "priceSourceIds": [
@@ -43694,12 +43694,12 @@
         "dof": "全向移动平台",
         "payloadKg": "载荷按配置确认",
         "reachM": "移动平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "按配置确认",
         "endurance": "按电池和任务确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "LiDAR、RGB-D、GPS/IMU 等可选",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "室内外移动平台，安全配置按项目确认"
       },
       "software": {
@@ -43710,7 +43710,7 @@
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v9 官网核验：Robotnik 官方产品页确认 RB-THERON 自主移动机器人、全向底盘、室内外导航、ROS/ROS2 和可扩展传感器/载荷接口；价格需询价。"
+        "v9 官网核验：Robotnik 官方产品页确认 RB-THERON 自主移动机器人、全向底盘、室内外导航、ROS/ROS2 和可扩展传感器/载荷接口；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -43729,7 +43729,7 @@
         "SRCV9017"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Robotnik 官方产品页确认 RB-THERON 自主移动机器人、全向底盘、室内外导航、ROS/ROS2 和可扩展传感器/载荷接口；价格需询价。",
+      "verificationNotes": "Robotnik 官方产品页确认 RB-THERON 自主移动机器人、全向底盘、室内外导航、ROS/ROS2 和可扩展传感器/载荷接口；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Robotnik",
       "brandLocation": "西班牙"
@@ -43774,10 +43774,10 @@
         "dof": "四轮户外移动平台",
         "payloadKg": "约 65 kg 级，按配置确认",
         "reachM": "移动平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "按版本配置确认",
         "endurance": "按电池配置确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "LiDAR、RGB-D、IMU、GPS/RTK 等可扩展",
         "compute": "ROS 控制计算平台按配置",
         "safety": "户外移动平台，安全配置按项目确认"
@@ -43852,20 +43852,20 @@
       },
       "specs": {
         "dof": "全尺寸人形，按厂商规格书确认",
-        "payloadKg": "需询价确认",
-        "reachM": "需询价确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "payloadKg": "需正式报价确认",
+        "reachM": "需正式报价确认",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "视觉/力控/灵巧操作按型号确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "全尺寸人形，校园部署需隔离和急停方案"
       },
       "software": {
         "ros": "需厂商确认",
         "ros2": "需厂商确认",
-        "sdk": "厂商开发接口需询价",
+        "sdk": "厂商开发接口需正式报价",
         "sim": "需厂商确认"
       },
       "researchEvidence": [
@@ -44009,20 +44009,20 @@
       },
       "specs": {
         "dof": "灵巧手/人形操作部件，具体自由度需厂商确认",
-        "payloadKg": "需询价确认",
+        "payloadKg": "需正式报价确认",
         "reachM": "手部/上肢模块按集成方案确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "触觉/力控/视觉集成按版本确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "灵巧操作模块，夹持安全需项目评估"
       },
       "software": {
         "ros": "需厂商确认",
         "ros2": "需厂商确认",
-        "sdk": "开发接口需询价",
+        "sdk": "开发接口需正式报价",
         "sim": "需厂商确认"
       },
       "researchEvidence": [
@@ -44087,25 +44087,25 @@
       },
       "specs": {
         "dof": "全尺寸人形，详细自由度需厂商确认",
-        "payloadKg": "需询价确认",
-        "reachM": "需询价确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "payloadKg": "需正式报价确认",
+        "reachM": "需正式报价确认",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "视觉/语音/导航等商用展示口径",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "商用展示/服务场景，校园部署需厂商方案"
       },
       "software": {
         "ros": "未公开",
         "ros2": "未公开",
-        "sdk": "企业合作接口需询价",
+        "sdk": "企业合作接口需正式报价",
         "sim": "未公开"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v10 官网核验：优必选官网确认 Walker 系列人形机器人和商用/展示应用，但 Walker X 面向采购的规格、价格和 SDK 仍需询价。"
+        "v10 官网核验：优必选官网确认 Walker 系列人形机器人和商用/展示应用，但 Walker X 面向采购的规格、价格和 SDK 仍需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -44124,7 +44124,7 @@
         "SRCV10004"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "优必选官网确认 Walker 系列人形机器人和商用/展示应用，但 Walker X 面向采购的规格、价格和 SDK 仍需询价。",
+      "verificationNotes": "优必选官网确认 Walker 系列人形机器人和商用/展示应用，但 Walker X 面向采购的规格、价格和 SDK 仍需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "优必选",
       "brandLocation": "深圳"
@@ -44169,12 +44169,12 @@
         "dof": "全尺寸人形，详细自由度未公开",
         "payloadKg": "需官方确认",
         "reachM": "需官方确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "约 5 h 级公开口径",
         "weightKg": "约 70 kg 级公开口径",
         "sensors": "视觉/语音/端到端模型口径",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "企业试点平台，校园采购需官方确认"
       },
       "software": {
@@ -44248,25 +44248,25 @@
       },
       "specs": {
         "dof": "全尺寸人形，具体自由度需官方确认",
-        "payloadKg": "需询价确认",
-        "reachM": "需询价确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "payloadKg": "需正式报价确认",
+        "reachM": "需正式报价确认",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "认知机器人传感器和安全感知按版本确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "协作/工业场景，需厂商安全方案"
       },
       "software": {
         "ros": "未公开",
         "ros2": "未公开",
-        "sdk": "NEURA 企业接口需询价",
+        "sdk": "NEURA 企业接口需正式报价",
         "sim": "未公开"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v10 官网核验：NEURA 官方页确认 4NE-1 人形机器人产品线；详细规格、开放采购和 SDK 需询价。"
+        "v10 官网核验：NEURA 官方页确认 4NE-1 人形机器人产品线；详细规格、开放采购需厂商正式报价，SDK 需厂商确认。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -44285,7 +44285,7 @@
         "SRCV10010"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "NEURA 官方页确认 4NE-1 人形机器人产品线；详细规格、开放采购和 SDK 需询价。",
+      "verificationNotes": "NEURA 官方页确认 4NE-1 人形机器人产品线；详细规格、开放采购需厂商正式报价，SDK 需厂商确认。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "NEURA Robotics",
       "brandLocation": "德国"
@@ -44328,18 +44328,18 @@
         "dof": "全尺寸人形，手部/上肢操作为重点",
         "payloadKg": "需官方确认",
         "reachM": "需官方确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "视觉/触觉/操作感知按 Phoenix 配置",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "企业试点平台，校园采购需官方确认"
       },
       "software": {
         "ros": "未公开",
         "ros2": "未公开",
-        "sdk": "Carbon AI / 企业接口需询价",
+        "sdk": "Carbon AI / 企业接口需正式报价",
         "sim": "未公开"
       },
       "researchEvidence": [
@@ -44408,9 +44408,9 @@
         "dof": "全尺寸人形，正式产品规格未公开",
         "payloadKg": "未公开",
         "reachM": "未公开",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
         "weightKg": "约 57 kg 级公开演示口径",
         "sensors": "Tesla 视觉/AI 演示口径",
         "compute": "Tesla 自研 AI/自动驾驶相关口径，未面向采购公开",
@@ -48820,7 +48820,7 @@
         "国内采购和售后便利，适合展示、科研平台和轻量应用验证。"
       ],
       "risks": [
-        "真实落地还需场地安全、跌倒保护和培训；高配价格需询价。"
+        "真实落地还需场地安全、跌倒保护和培训；高配价格需厂商正式报价。"
       ],
       "shortlistTags": [
         "科研平台",
@@ -49610,7 +49610,7 @@
       "formFactor": "全尺寸高性能人形机器人",
       "officialUrl": "https://www.unitree.com/cn/h1/",
       "cnyAmount": 646900,
-      "cnyRange": "H1-2 高校采购单价 ¥64.69 万元；官网标准报价仍需询价",
+      "cnyRange": "H1-2 高校采购单价 ¥64.69 万元；官网标准报价仍需正式报价",
       "priceType": "高校采购中标单价",
       "priceConfidence": "high",
       "priceSourceIds": [
@@ -54658,12 +54658,12 @@
         "dof": "全尺寸人形，详细自由度未公开",
         "payloadKg": "轻载家用任务，约 70 kg 级整机负载边界需官方确认",
         "reachM": "真人比例，精确臂展未公开",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 3 mph 级",
         "endurance": "约 2-4 h 级，按版本确认",
         "weightKg": "约 30 kg 级公开口径",
         "sensors": "视觉/音频/触觉等家用感知口径",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "家用机器人，远程协助和隐私/安全边界需评估"
       },
       "software": {
@@ -54739,8 +54739,8 @@
         "dof": "腿部/腰部/颈部 6 + 双臂 14 + 四轮底盘",
         "payloadKg": "单臂 5 kg，总 10 kg",
         "reachM": "水平约 1.9 m，垂直 0-2.1/2.4 m 覆盖",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "满电约 10 h",
         "weightKg": "约 80 kg",
         "sensors": "头部双目、腕部深度相机、RGB 相机、IMU、3D LiDAR、超声波",
@@ -54748,10 +54748,10 @@
         "safety": "IP54，结构化场景为主"
       },
       "software": {
-        "ros": "官方接口需询价",
-        "ros2": "官方接口需询价",
-        "sdk": "Embosar/官方开发接口需询价",
-        "sim": "仿真和数据接口需询价"
+        "ros": "官方接口需正式报价",
+        "ros2": "官方接口需正式报价",
+        "sdk": "Embosar/官方开发接口需正式报价",
+        "sim": "仿真和数据接口需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -54774,7 +54774,7 @@
         "SRCV8016"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Galbot G1 官方规格页确认 1730 mm 身高、双臂总 10 kg 负载、0-2.4 m 操作覆盖、10 h 续航、IP54 和 AGX Orin 计算平台；价格需询价。",
+      "verificationNotes": "Galbot G1 官方规格页确认 1730 mm 身高、双臂总 10 kg 负载、0-2.4 m 操作覆盖、10 h 续航、IP54 和 AGX Orin 计算平台；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "银河通用",
       "brandLocation": "北京"
@@ -54976,20 +54976,20 @@
       },
       "specs": {
         "dof": "轮式双臂/人形平台，具体自由度需厂商确认",
-        "payloadKg": "需询价确认",
-        "reachM": "需询价确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "payloadKg": "需正式报价确认",
+        "reachM": "需正式报价确认",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "视觉/导航/操作传感按型号确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "校园演示和科研需隔离/急停方案"
       },
       "software": {
         "ros": "需厂商确认",
         "ros2": "需厂商确认",
-        "sdk": "开发接口需询价",
+        "sdk": "开发接口需正式报价",
         "sim": "需厂商确认"
       },
       "researchEvidence": [
@@ -55055,14 +55055,14 @@
       },
       "specs": {
         "dof": "12 自由度",
-        "payloadKg": "双足平台，负载需询价",
+        "payloadKg": "双足平台，负载需正式报价",
         "reachM": "无上肢/按版本确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "超过 2 h",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "IMU 等，具体传感器按版本确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "开发/教育双足平台，场地安全需另行评估"
       },
       "software": {
@@ -55092,7 +55092,7 @@
         "SRCV8014"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "EngineAI SA01 官方页确认全开源双足平台、12 自由度、15Ah 快拆电池、2 h 级续航和教育/开发定位；价格和交付需询价。",
+      "verificationNotes": "EngineAI SA01 官方页确认全开源双足平台、12 自由度、15Ah 快拆电池、2 h 级续航和教育/开发定位；价格和交付需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "众擎机器人",
       "brandLocation": "深圳"
@@ -55133,21 +55133,21 @@
       },
       "specs": {
         "dof": "全尺寸人形，详细自由度按官方规格确认",
-        "payloadKg": "灵巧手/上肢负载需询价",
-        "reachM": "真人比例，精确臂展需询价",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "payloadKg": "灵巧手/上肢负载需正式报价",
+        "reachM": "真人比例，精确臂展需正式报价",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "约 2 h 级口径，按版本确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "激光雷达、深度摄像头、红外摄像头、IMU、力控传感器",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "全尺寸人形平台，教学演示需隔离和急停方案"
       },
       "software": {
-        "ros": "开发接口需询价",
-        "ros2": "开发接口需询价",
-        "sdk": "官方接口/开发支持需询价",
-        "sim": "仿真与训练工具需询价"
+        "ros": "开发接口需正式报价",
+        "ros2": "开发接口需正式报价",
+        "sdk": "官方接口/开发支持需正式报价",
+        "sim": "仿真与训练工具需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -55170,7 +55170,7 @@
         "SRCV8015"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "EngineAI SE01 官方页确认全尺寸人形、拟人步态、视听感知、灵巧手、快拆电池和接口定位；精确采购参数和报价需询价。",
+      "verificationNotes": "EngineAI SE01 官方页确认全尺寸人形、拟人步态、视听感知、灵巧手、快拆电池和接口定位；精确采购参数和报价需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "众擎机器人",
       "brandLocation": "深圳"
@@ -55215,24 +55215,24 @@
         "dof": "双足人形物流平台",
         "payloadKg": "16 kg 级搬运口径",
         "reachM": "箱体搬运工作空间按任务确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "企业部署按工况确认",
         "weightKg": "约 65 kg 级公开口径",
         "sensors": "视觉/感知和企业部署传感器按版本确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "仓储物流场景，需企业安全方案"
       },
       "software": {
         "ros": "未公开",
         "ros2": "未公开",
-        "sdk": "Agility Arc / 企业接口需询价",
-        "sim": "企业仿真/部署接口需询价"
+        "sdk": "Agility Arc / 企业接口需正式报价",
+        "sim": "企业仿真/部署接口需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
         "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
-        "v10 官网核验：Agility 官方机器人页确认 Digit 面向物流搬运和企业部署，具备箱体搬运定位和 Agility Arc 系统；价格与开放 SDK 需询价。"
+        "v10 官网核验：Agility 官方机器人页确认 Digit 面向物流搬运和企业部署，具备箱体搬运定位和 Agility Arc 系统；价格需厂商正式报价，开放 SDK 需厂商确认。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -55252,7 +55252,7 @@
         "SRCV10006"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Agility 官方机器人页确认 Digit 面向物流搬运和企业部署，具备箱体搬运定位和 Agility Arc 系统；价格与开放 SDK 需询价。",
+      "verificationNotes": "Agility 官方机器人页确认 Digit 面向物流搬运和企业部署，具备箱体搬运定位和 Agility Arc 系统；价格需厂商正式报价，开放 SDK 需厂商确认。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Agility Robotics",
       "brandLocation": "美国"
@@ -55296,25 +55296,25 @@
       "specs": {
         "dof": "全尺寸通用人形，详细自由度未公开",
         "payloadKg": "约 25 kg 级公开口径",
-        "reachM": "真人比例，精确臂展需询价",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "reachM": "真人比例，精确臂展需正式报价",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "约 4 h 级公开口径，模块化电池",
         "weightKg": "约 72.6 kg 级公开口径",
         "sensors": "视觉/感知/力控按企业配置",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "工业/物流任务，需企业部署方案"
       },
       "software": {
         "ros": "未公开",
         "ros2": "未公开",
-        "sdk": "企业合作接口需询价",
-        "sim": "企业仿真/部署接口需询价"
+        "sdk": "企业合作接口需正式报价",
+        "sim": "企业仿真/部署接口需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
         "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
-        "v10 官网核验：Apptronik 官方 Apollo 页面确认通用人形机器人、模块化电池和工业任务定位；价格、开放 SDK 和学校采购需询价。"
+        "v10 官网核验：Apptronik 官方 Apollo 页面确认通用人形机器人、模块化电池和工业任务定位；价格、开放 SDK 和学校采购需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -55334,7 +55334,7 @@
         "SRCV10007"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Apptronik 官方 Apollo 页面确认通用人形机器人、模块化电池和工业任务定位；价格、开放 SDK 和学校采购需询价。",
+      "verificationNotes": "Apptronik 官方 Apollo 页面确认通用人形机器人、模块化电池和工业任务定位；价格、开放 SDK 和学校采购需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Apptronik",
       "brandLocation": "美国"
@@ -55378,12 +55378,12 @@
         "dof": "小型/中型人形开发平台，具体自由度按版本确认",
         "payloadKg": "开发平台轻载，需厂商确认",
         "reachM": "需厂商确认",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "按电池版本确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "视觉/IMU/关节传感按版本",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "开发者平台，场地安全需另行评估"
       },
       "software": {
@@ -55536,13 +55536,13 @@
       "specs": {
         "dof": "约 32 自由度，负载按配置",
         "payloadKg": "按配置确认",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "相机、激光雷达、力控/触觉等按配置",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "科研平台安全按部署确认"
       },
       "software": {
@@ -55618,8 +55618,8 @@
         "dof": "小型人形平台，20 自由度级口径",
         "payloadKg": "教学轻载",
         "reachM": "小型人形不适用，精确尺寸见官方手册",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "按电池和动作确认",
         "weightKg": "约 3.5 kg 级",
         "sensors": "摄像头、IMU、DYNAMIXEL 舵机反馈",
@@ -55696,12 +55696,12 @@
         "dof": "早期四足平台",
         "payloadKg": "历史资料需确认",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "历史开发平台配置需确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "当前采购建议优先比较 Go2/B2/A2 等新款"
       },
       "software": {
@@ -55773,21 +55773,21 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "历史型号，当前采购规格需厂商确认",
         "reachM": "足式/轮足平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "历史配置需厂商确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "历史/早期平台，新采购建议优先比较 LimX Oli/TRON1 等当前公开型号"
       },
       "software": {
         "ros": "历史/开发接口需厂商确认",
         "ros2": "历史/开发接口需厂商确认",
-        "sdk": "开发接口需询价",
+        "sdk": "开发接口需正式报价",
         "sim": "需厂商确认"
       },
       "researchEvidence": [
@@ -55856,22 +55856,22 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "历史型号，当前采购规格需厂商确认",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "历史配置需厂商确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "当前采购建议以 Vision 60 公开规格和厂商正式确认替代"
       },
       "software": {
-        "ros": "企业接口需询价",
-        "ros2": "企业接口需询价",
-        "sdk": "企业接口需询价",
-        "sim": "企业仿真接口需询价"
+        "ros": "企业接口需正式报价",
+        "ros2": "企业接口需正式报价",
+        "sdk": "企业接口需正式报价",
+        "sim": "企业仿真接口需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
@@ -55939,18 +55939,18 @@
         "dof": "四足平台，具体型号规格需厂商确认",
         "payloadKg": "需厂商确认",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "四足平台传感器按型号确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "科研/巡检场景需厂商安全方案"
       },
       "software": {
         "ros": "需厂商确认",
         "ros2": "需厂商确认",
-        "sdk": "企业接口需询价",
+        "sdk": "企业接口需正式报价",
         "sim": "需厂商确认"
       },
       "researchEvidence": [
@@ -56017,18 +56017,18 @@
         "dof": "四足平台，具体型号规格需厂商确认",
         "payloadKg": "需厂商确认",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "四足平台传感器按型号确认",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "科研/巡检场景需厂商安全方案"
       },
       "software": {
         "ros": "需厂商确认",
         "ros2": "需厂商确认",
-        "sdk": "企业接口需询价",
+        "sdk": "企业接口需正式报价",
         "sim": "需厂商确认"
       },
       "researchEvidence": [
@@ -56095,12 +56095,12 @@
         "dof": "消费级娱乐机器狗",
         "payloadKg": "不适合作为负载平台",
         "reachM": "足式娱乐平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "按官方电池/使用场景确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "摄像头、麦克风、触摸和运动传感器",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "消费娱乐/展示平台，非科研开放四足底盘"
       },
       "software": {
@@ -56838,7 +56838,7 @@
       "formFactor": "行业级轻量四足平台",
       "officialUrl": "https://www.unitree.com/cn/A2",
       "cnyAmount": 217500,
-      "cnyRange": "约 ¥21.7 万起，按海外渠道 A2 Standard 29,995 美元估算；国内需询价",
+      "cnyRange": "约 ¥21.7 万起，按海外渠道 A2 Standard 29,995 美元估算；国内需正式报价",
       "priceType": "代理渠道美元价估算",
       "priceConfidence": "medium",
       "priceSourceIds": [
@@ -57492,7 +57492,7 @@
         "工业巡检和户外应用能力强，适合落地项目。"
       ],
       "risks": [
-        "价格高且需询价；场地安全和保险要求更高。"
+        "价格高且需正式报价；场地安全和保险要求更高。"
       ],
       "shortlistTags": [
         "落地项目"
@@ -60307,7 +60307,7 @@
       "category": "机器狗",
       "formFactor": "行业四足机器人",
       "officialUrl": "https://www.deeprobotics.cn/robot/index/product3.html",
-      "priceLabel": "需询价",
+      "priceLabel": "需正式报价",
       "sourceIds": [
         "SRC013",
         "SRC015",
@@ -63518,10 +63518,10 @@
         "dof": "四足平台",
         "payloadKg": "轻载开发平台，按官方参数/实物确认",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "公开发布资料约 3.2 m/s，需以官方参数页核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
+        "endurance": "官网未披露",
+        "weightKg": "官网未披露",
         "sensors": "摄像头、超声波、触摸、GPS/定位等多传感器",
         "compute": "NVIDIA Jetson Xavier NX 口径，需以官方参数页确认",
         "safety": "开发者探索版，非工业巡检安全平台"
@@ -63595,15 +63595,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "约 20 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 6 m/s",
         "endurance": "约 2-4 h",
         "weightKg": "约 50 kg",
         "sensors": "激光雷达/深度相机/广角相机按版本",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "开发和部署安全按版本确认"
       },
       "software": {
@@ -63676,15 +63676,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "约 40 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 6 m/s",
         "endurance": "约 5 h",
         "weightKg": "约 75 kg",
         "sensors": "激光雷达/深度相机/广角相机按版本",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "开发和部署安全按版本确认"
       },
       "software": {
@@ -63757,15 +63757,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "轻载",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 2.5 m/s",
         "endurance": "约 1-2 h",
         "weightKg": "约 15 kg",
         "sensors": "激光雷达/深度相机/广角相机按版本",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "开发和部署安全按版本确认"
       },
       "software": {
@@ -63837,15 +63837,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "轻载",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 3.7 m/s",
         "endurance": "约 1-2 h",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "激光雷达/深度相机/广角相机按版本",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "开发和部署安全按版本确认"
       },
       "software": {
@@ -63918,15 +63918,15 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "轻载",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "约 3.7 m/s",
         "endurance": "约 1-2 h",
         "weightKg": "约 15 kg",
         "sensors": "激光雷达/深度相机/广角相机按版本",
-        "compute": "待核验",
+        "compute": "官网未披露",
         "safety": "开发和部署安全按版本确认"
       },
       "software": {
@@ -64000,13 +64000,13 @@
         "dof": "四足平台",
         "payloadKg": "轻载开发平台，按版本确认",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "按版本确认",
         "endurance": "按版本确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "深度相机/雷达/遥控器按版本",
-        "compute": "待核验",
-        "safety": "待核验"
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "官方/社区 ROS 支持需按版本确认",
@@ -64077,13 +64077,13 @@
         "dof": "四足平台",
         "payloadKg": "轻载开发平台，按版本确认",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "按版本确认",
         "endurance": "按版本确认",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "深度相机/雷达/遥控器按版本",
-        "compute": "待核验",
-        "safety": "待核验"
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "官方/社区 ROS 支持需按版本确认",
@@ -64158,7 +64158,7 @@
         "dof": "31 自由度",
         "payloadKg": "单臂最高 3 kg",
         "reachM": "臂长约 0.7 m",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "最高 5 km/h",
         "endurance": "约 2 h",
         "weightKg": "≤55 kg",
@@ -64237,24 +64237,24 @@
         "dof": "四足平台",
         "payloadKg": "约 10 kg 级企业载荷",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "约 2 h 级，按任务",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "工业巡检相机、热成像/声学/气体等载荷按配置",
-        "compute": "待核验",
-        "safety": "待核验"
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
-        "ros": "企业接口需询价",
-        "ros2": "企业接口需询价",
+        "ros": "企业接口需正式报价",
+        "ros2": "企业接口需正式报价",
         "sdk": "ANYbotics API / 企业集成接口",
-        "sim": "企业仿真/数字孪生接口需询价"
+        "sim": "企业仿真/数字孪生接口需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
         "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
-        "v7 官网核验：ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。"
+        "v7 官网核验：ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -64274,7 +64274,7 @@
         "SRCV7002"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。",
+      "verificationNotes": "ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "ANYbotics",
       "brandLocation": "瑞士"
@@ -64318,24 +64318,24 @@
         "dof": "四足平台",
         "payloadKg": "约 10 kg 级企业载荷",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "约 2 h 级，按任务",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "工业巡检相机、热成像/声学/气体等载荷按配置",
-        "compute": "待核验",
-        "safety": "待核验"
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
-        "ros": "企业接口需询价",
-        "ros2": "企业接口需询价",
+        "ros": "企业接口需正式报价",
+        "ros2": "企业接口需正式报价",
         "sdk": "ANYbotics API / 企业集成接口",
-        "sim": "企业仿真/数字孪生接口需询价"
+        "sim": "企业仿真/数字孪生接口需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
         "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
-        "v7 官网核验：ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。"
+        "v7 官网核验：ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -64355,7 +64355,7 @@
         "SRCV7002"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。",
+      "verificationNotes": "ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "ANYbotics",
       "brandLocation": "瑞士"
@@ -64399,24 +64399,24 @@
         "dof": "四足平台",
         "payloadKg": "约 10 kg 级企业载荷",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
+        "repeatabilityMm": "官网未披露",
+        "speed": "官网未披露",
         "endurance": "约 2 h 级，按任务",
-        "weightKg": "待核验",
+        "weightKg": "官网未披露",
         "sensors": "工业巡检相机、热成像/声学/气体等载荷按配置",
-        "compute": "待核验",
-        "safety": "待核验"
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
-        "ros": "企业接口需询价",
-        "ros2": "企业接口需询价",
+        "ros": "企业接口需正式报价",
+        "ros2": "企业接口需正式报价",
         "sdk": "ANYbotics API / 企业集成接口",
-        "sim": "企业仿真/数字孪生接口需询价"
+        "sim": "企业仿真/数字孪生接口需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
         "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
-        "v7 官网核验：ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。"
+        "v7 官网核验：ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -64436,7 +64436,7 @@
         "SRCV7002"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需询价。",
+      "verificationNotes": "ANYbotics 官方技术规格确认 ANYmal 系列工业巡检四足平台、企业载荷和 API/集成接口定位；价格和交付需正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "ANYbotics",
       "brandLocation": "瑞士"
@@ -64478,16 +64478,16 @@
         ]
       },
       "specs": {
-        "dof": "待核验",
+        "dof": "官网未披露",
         "payloadKg": "14 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "reachM": "官网未披露",
+        "repeatabilityMm": "官网未披露",
         "speed": "1.6 m/s",
         "endurance": "约 90 min",
         "weightKg": "约 32.7 kg",
         "sensors": "环视相机、Spot CAM/机械臂/行业载荷按配置",
-        "compute": "待核验",
-        "safety": "待核验"
+        "compute": "官网未披露",
+        "safety": "官网未披露"
       },
       "software": {
         "ros": "社区 ROS 支持",
@@ -64563,7 +64563,7 @@
         "dof": "四足平台，12 电机",
         "payloadKg": "10 kg",
         "reachM": "足式平台不适用",
-        "repeatabilityMm": "待核验",
+        "repeatabilityMm": "官网未披露",
         "speed": "标准 0.9 m/s，冲刺约 2.4 m/s",
         "endurance": "约 3.15 h 连续行走 / 21 h 待机",
         "weightKg": "51 kg",
@@ -64575,11 +64575,11 @@
         "ros": "开放架构/集成接口需项目确认",
         "ros2": "开放架构/集成接口需项目确认",
         "sdk": "Mission Control / end-user integration architecture",
-        "sim": "企业仿真接口需询价"
+        "sim": "企业仿真接口需正式报价"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v8 官网核验：Ghost Robotics Vision 60 官方规格页确认 10 kg 载荷、3 h 级连续行走、IP67、NVIDIA Xavier 和 Mission Control/开放架构口径；价格需询价。"
+        "v8 官网核验：Ghost Robotics Vision 60 官方规格页确认 10 kg 载荷、3 h 级连续行走、IP67、NVIDIA Xavier 和 Mission Control/开放架构口径；价格需厂商正式报价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -64598,7 +64598,7 @@
         "SRCV8011"
       ],
       "verificationStatus": "官网核验",
-      "verificationNotes": "Ghost Robotics Vision 60 官方规格页确认 10 kg 载荷、3 h 级连续行走、IP67、NVIDIA Xavier 和 Mission Control/开放架构口径；价格需询价。",
+      "verificationNotes": "Ghost Robotics Vision 60 官方规格页确认 10 kg 载荷、3 h 级连续行走、IP67、NVIDIA Xavier 和 Mission Control/开放架构口径；价格需厂商正式报价。",
       "verifiedAt": "2026-06-01",
       "brandDisplayName": "Ghost Robotics",
       "brandLocation": "美国"

@@ -3,17 +3,17 @@ SRC001,宇树 Go2 中文官方页,中文官网/官方价格,high,https://www.uni
 SRC002,宇树 G1 中文官方页,中文官网/官方价格,high,https://www.unitree.com/cn/g1/,官方页可见 G1 起售价 8.5 万元、23-43 自由度、约 2 h 续航等信息。
 SRC003,宇树 R1 中文官方页,中文官网/官方价格,high,https://www.unitree.com/cn/R1,官方页可见 R1 Air 售价 2.99 万元起、20-26 自由度、约 1 h 续航等信息。
 SRC004,宇树 R1-D 中文官方页,中文官网/官方价格,high,https://www.unitree.com/cn/R1-D,官方页可见 R1-D 起售价 2.69 万元及双臂机器人定位。
-SRC005,宇树 H1 中文官方页,中文官网,high,https://www.unitree.com/cn/h1/,官方页披露 H1 自由度、动力系统、864 Wh 电池等参数，价格需询价。
+SRC005,宇树 H1 中文官方页,中文官网,high,https://www.unitree.com/cn/h1/,官方页披露 H1 自由度、动力系统、864 Wh 电池等参数，价格需厂商正式报价。
 SRC006,宇树 B2 中文官方页,中文官网,high,https://www.unitree.com/cn/b2/,官方页说明 B2 工业四足机器人速度 6 m/s、持续负载 40 kg、续航 5 h 等。
 SRC007,宇树 A2 中文官方页,中文官网,high,https://www.unitree.com/cn/A2,官方页说明 A2 约 42 kg、满载持续行走 3 h、空载 5 h、开放平台开发。
-SRC008,宇树 Z1 中文官方页,中文官网,high,https://www.unitree.com/cn/z1/,官方页披露 Z1/Z1 Pro 6 轴、自重等信息，价格需询价。
+SRC008,宇树 Z1 中文官方页,中文官网,high,https://www.unitree.com/cn/z1/,官方页披露 Z1/Z1 Pro 6 轴、自重等信息，价格需厂商正式报价。
 SRC009,Unitree SDK2 GitHub,GitHub/SDK,medium,https://github.com/unitreerobotics/unitree_sdk2,宇树官方 SDK2，用于科研二次开发和控制接口判断。
 SRC010,Unitree ROS2 GitHub,GitHub/ROS,medium,https://github.com/unitreerobotics/unitree_ros2,宇树官方 ROS2 相关仓库，用于判断 ROS2 生态。
 SRC011,云深处 Lite3 中文官方页,中文官网/官方价格,high,https://www.deeprobotics.cn/robot/index/product2.html,官网页面含 Lite3 售价 16900 起、最大负载 10 kg、最高速度 3.3 m/s 等信息。
-SRC012,云深处 X30 中文官方页,中文官网,high,https://www.deeprobotics.cn/robot/index/product1.html,官网页面含绝影 X30 系列持续行走负载、续航等参数，价格需询价。
+SRC012,云深处 X30 中文官方页,中文官网,high,https://www.deeprobotics.cn/robot/index/product1.html,官网页面含绝影 X30 系列持续行走负载、续航等参数，价格需厂商正式报价。
 SRC013,云深处 X20 中文官方页,中文官网,high,https://www.deeprobotics.cn/robot/index/product3.html,官网页面介绍绝影 X20 行业四足机器人、快速换电与行业应用能力。
 SRC014,云深处山猫 M20 中文官方页,中文官网,high,https://www.deeprobotics.cn/robot/index/lynx.html,官网页面介绍轮足形态、速度和行业应用场景。
-SRC015,云深处购买咨询页,采购渠道,medium,https://www.deeprobotics.cn/robot/index/buy.html,云深处官网采购咨询入口，未公开价格型号按需询价处理。
+SRC015,云深处购买咨询页,采购渠道,medium,https://www.deeprobotics.cn/robot/index/buy.html,云深处官网采购咨询入口，未公开价格型号按正式报价处理。
 SRC016,小米 CyberDog 2 官方页,中文官网/官方价格,medium,https://www.mi.com/cyberdog-2,小米四足机器人官方产品入口；价格和在售状态需以页面访问时为准。
 SRC017,逐际动力 LimX Dynamics 官方站,中文官网,medium,https://www.limxdynamics.com/,逐际动力轮足/足式平台官方入口，适合补充高校科研足式平台。
 SRC018,UFACTORY xArm 官方产品页,官网,high,https://www.ufactory.cc/xarm-collaborative-robot/,xArm 协作机械臂官方产品页，含 xArm 5/6/7 系列参数。
@@ -25,7 +25,7 @@ SRC023,越疆 MG400 官方页,官网,high,https://www.dobot-robots.com/products/
 SRC024,DOBOT 开发者 GitHub,GitHub/SDK,medium,https://github.com/Dobot-Arm,越疆官方开发仓库入口。
 SRC025,遨博机器人中文官网,中文官网,medium,https://www.aubo-robotics.cn/,遨博协作机器人官方入口，i 系列参数和采购需按页面/销售确认。
 SRC026,艾利特机器人中文官网,中文官网,medium,https://www.elibot.cn/,艾利特协作机器人官方入口，EC 系列参数和采购需按页面/销售确认。
-SRC027,节卡机器人中文官网,中文官网,medium,https://www.jaka.com.cn/,节卡 Zu 系列协作机器人官方入口，价格需询价。
+SRC027,节卡机器人中文官网,中文官网,medium,https://www.jaka.com.cn/,节卡 Zu 系列协作机器人官方入口，价格需厂商正式报价。
 SRC028,睿尔曼智能官网,中文官网,medium,https://www.realman-robotics.com/,睿尔曼轻量机械臂和复合机器人官方入口。
 SRC029,睿尔曼 GitHub,GitHub/SDK,medium,https://github.com/RealManRobot,睿尔曼开源/SDK 仓库入口。
 SRC030,大象机器人 myCobot 280 官方页,官网,high,https://www.elephantrobotics.com/en/mycobot-280/,myCobot 280 官方产品页，适合教学和轻量科研。
@@ -33,7 +33,7 @@ SRC031,大象机器人官方商店,官方价格,medium,https://shop.elephantrobo
 SRC032,Elephant Robotics myCobot ROS,GitHub/ROS,medium,https://github.com/elephantrobotics/mycobot_ros,大象机器人 ROS 仓库。
 SRC033,pymycobot GitHub,GitHub/SDK,medium,https://github.com/elephantrobotics/pymycobot,大象机器人 Python SDK 仓库。
 SRC034,松灵机器人 AgileX 中文站,中文官网,medium,https://www.agilex.ai/,松灵移动底盘、PiPER 机械臂和复合平台入口。
-SRC035,AgileX PiPER 产品页,官网/手册,medium,https://global.agilex.ai/products/piper,PiPER 六自由度机械臂官方产品入口，价格需询价或按渠道核验。
+SRC035,AgileX PiPER 产品页,官网/手册,medium,https://global.agilex.ai/products/piper,PiPER 六自由度机械臂官方产品入口，价格需厂商正式报价或按渠道核验。
 SRC036,AgileX LIMO Pro 产品页,官网,medium,https://global.agilex.ai/products/limo-pro,LIMO Pro 移动底盘官方产品入口。
 SRC037,AgileX Cobot Magic 产品页,官网,medium,https://global.agilex.ai/products/cobot-magic,移动复合机器人 Cobot Magic 官方入口。
 SRC038,AgileX GitHub,GitHub/ROS,medium,https://github.com/agilexrobotics,松灵官方 GitHub 组织，含底盘 ROS/ROS2 生态。
@@ -1623,20 +1623,20 @@ SRCV9011,Fetch Robotics / Zebra 官方产品入口,官网/产品入口,medium,ht
 SRCV9012,Hello Robot Stretch 2 官方产品资料,官网/产品规格,high,https://hello-robot.com/stretch-2,官方产品资料核验 Stretch 2 家庭/研究移动操作平台、伸缩臂、ROS/ROS2、Python API 和研究生态；当前采购需按新版 Stretch 型号确认。
 SRCV9013,Hiwonder JetAuto Pro 官方产品页,官网/产品规格/价格,high,https://www.hiwonder.com/products/jetauto-pro,官方产品页核验 JetAuto Pro ROS 机器人开发平台、Jetson Orin Nano、视觉/雷达配置、ROS/ROS2 教程和公开美元售价。
 SRCV9014,Husarion LYNX 官方手册,官网/产品手册,high,https://husarion.com/manuals/lynx/,官方手册核验 LYNX 户外/室内 ROS 2 移动平台、IP54、速度、负载、传感器接口和 ROS 2 软件栈。
-SRCV9015,Mujin TruckBot 官方产品入口,官网/产品入口,high,https://mujin-corp.com/products/truckbot/,官方产品入口核验 TruckBot 物流卸货移动机器人和 Mujin Controller 智能机器人系统；详细规格和采购交付需询价。
+SRCV9015,Mujin TruckBot 官方产品入口,官网/产品入口,high,https://mujin-corp.com/products/truckbot/,官方产品入口核验 TruckBot 物流卸货移动机器人和 Mujin Controller 智能机器人系统；详细规格和采购交付需正式报价。
 SRCV9016,Neobotix MPO-700 官方产品页,官网/产品规格,high,https://www.neobotix-robots.com/mobile-robots/omnidirectional-robots/mpo-700,官方产品页核验 MPO-700 全向移动机器人、100 kg 级载荷、研究/工业移动平台和 ROS/导航接口口径。
 SRCV9017,Robotnik RB-THERON 官方产品页,官网/产品规格,high,https://robotnik.eu/products/mobile-robots/rb-theron/,官方产品页核验 RB-THERON 自主移动机器人、全向底盘、室内外导航、ROS/ROS2 和可扩展传感器/载荷接口。
 SRCV9018,Yahboom ROSMASTER X3 Plus 官方产品页,官网/产品规格/价格,high,https://category.yahboom.net/products/rosmaster-x3,官方产品页核验 ROSMASTER X3 Plus Jetson Orin Nano 版本、Mecanum/履带/阿克曼三底盘形态、ROS2/SLAM/导航教程和公开美元售价。
 SRCV10001,1X NEO 官方产品页,官网/产品规格/订购,high,https://www.1x.tech/neo,官方页核验 NEO 家用人形机器人、预订/订阅口径、重量、负载、续航、速度和远程/自主能力边界。
 SRCV10002,Kepler Forerunner 官方产品页,官网/产品入口,high,https://www.keplerrobotics.com/,官方入口核验 Kepler Forerunner 人形机器人产品线；详细采购规格和 SDK 需向厂商确认。
 SRCV10003,RobotEra 官方产品入口,官网/产品入口,high,https://www.robotera.com/,官方入口核验 RobotEra 人形机器人与灵巧操作产品线；XHand1 具体采购规格和接口需厂商确认。
-SRCV10004,UBTECH Walker 官方产品资料,官网/产品入口,high,https://www.ubtrobot.com/,优必选官网核验 Walker 系列人形机器人和商用/展示应用；Walker X 面向采购的量产规格、价格和 SDK 需询价。
+SRCV10004,UBTECH Walker 官方产品资料,官网/产品入口,high,https://www.ubtrobot.com/,优必选官网核验 Walker 系列人形机器人和商用/展示应用；Walker X 面向采购的量产规格、价格和 SDK 需厂商确认。
 SRCV10005,AgiBot 官方产品入口,官网/产品入口,high,https://www.agibot.com/,智元官网核验 A2/A2-W 相关人形机器人产品线；详细规格、交付和开发接口需厂商确认。
-SRCV10006,Agility Digit 官方机器人页,官网/产品规格,high,https://agilityrobotics.com/robots,官方页核验 Digit 物流人形机器人、箱体搬运定位、企业部署和 Agility Arc 系统；价格和 SDK 需询价。
-SRCV10007,Apptronik Apollo 官方产品页,官网/产品规格,high,https://apptronik.com/apollo,官方页核验 Apollo 通用人形机器人、模块化电池、工业任务定位和企业合作路径；价格和 SDK 需询价。
+SRCV10006,Agility Digit 官方机器人页,官网/产品规格,high,https://agilityrobotics.com/robots,官方页核验 Digit 物流人形机器人、箱体搬运定位、企业部署和 Agility Arc 系统；价格和 SDK 需厂商确认。
+SRCV10007,Apptronik Apollo 官方产品页,官网/产品规格,high,https://apptronik.com/apollo,官方页核验 Apollo 通用人形机器人、模块化电池、工业任务定位和企业合作路径；价格和 SDK 需厂商确认。
 SRCV10008,Booster Robotics A1 官方产品页,官网/产品规格,high,https://www.boosterobotics.com/,官方页核验 Booster A1 开源/开发者人形平台和科研教育定位；公开价格和具体接口需按版本确认。
 SRCV10009,Figure 官方机器人页,官网/产品入口,high,https://www.figure.ai/,Figure 官网核验 Figure 02 / Figure 03 产品线、商业部署方向和 Helix 智能系统；开放采购与 SDK 未公开。
-SRCV10010,NEURA 4NE-1 官方产品页,官网/产品入口,high,https://www.neura-robotics.com/4ne1,NEURA 官方页核验 4NE-1 人形机器人产品线；详细规格、开放采购和 SDK 需询价。
+SRCV10010,NEURA 4NE-1 官方产品页,官网/产品入口,high,https://www.neura-robotics.com/4ne1,NEURA 官方页核验 4NE-1 人形机器人产品线；详细规格、开放采购和 SDK 需厂商确认。
 SRCV10011,ROBOTIS OP3 官方 e-Manual,官网/产品手册,high,https://emanual.robotis.com/docs/en/platform/op3/introduction/,官方 e-Manual 核验 OP3 小型开源人形机器人、ROS 包、硬件配置、教程和教育科研定位。
 SRCV10012,Sanctuary Phoenix 官方产品页,官网/产品入口,high,https://www.sanctuary.ai/phoenix,官方页核验 Phoenix 通用人形机器人和 Carbon AI 控制系统；公开采购规格、价格和 SDK 未完整披露。
 SRCV10013,Tesla AI 官方页面,官网/产品入口,medium,https://www.tesla.com/AI,Tesla 官方 AI 页面核验 Optimus 项目与招聘/演示口径；暂无学校采购、价格、SDK 或正式规格入口。
