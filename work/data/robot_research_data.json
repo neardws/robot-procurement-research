@@ -1,9 +1,9 @@
 {
   "meta": {
     "project": "学校具身智能机器人采购调研",
-    "version": "v5",
+    "version": "v6",
     "accessedDate": "2026-06-01",
-    "updateSummary": "新增核验状态；按官方规格页优先核验 DOBOT、AUBO、JAKA、Elite、AgileX、Husarion、Clearpath、Robotnik 等一批市场初筛候选，并将符合条件型号提升为重点候选。",
+    "updateSummary": "继续按品牌批次核验：Universal Robots、MiR、PAL Robotics、Unitree、Boston Dynamics 等型号补充官方参数、SDK/ROS 口径，并升级可确认候选。",
     "scoringWeights": {
       "research": 50,
       "deployment": 50
@@ -12669,6 +12669,46 @@
       "type": "官网/规格书",
       "confidence": "medium",
       "notes": "Robotnik 规格资料说明 RB-KAIROS 开放 ROS 架构和移动操作平台定位。"
+    },
+    {
+      "id": "SRCV6001",
+      "title": "Universal Robots 产品规格页",
+      "url": "https://www.universal-robots.com/products/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方产品页确认 UR 系列型号、负载、臂展、重复定位精度、PolyScope/URScript/RTDE 等软件接口口径。"
+    },
+    {
+      "id": "SRCV6002",
+      "title": "MiR 自主移动机器人产品规格",
+      "url": "https://www.mobile-industrial-robots.com/solutions/robots/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "MiR 官方产品页确认 MiR100/MiR250/MiR600 等 AMR 负载分档、Fleet 管理和 REST API 生态。"
+    },
+    {
+      "id": "SRCV6003",
+      "title": "PAL Robotics 机器人产品资料",
+      "url": "https://pal-robotics.com/robots/",
+      "type": "官网/产品资料",
+      "confidence": "high",
+      "notes": "PAL 官方资料确认 TIAGo、TIAGo Pro、ARI、TALOS 等机器人系列和 ROS/科研平台定位。"
+    },
+    {
+      "id": "SRCV6004",
+      "title": "Unitree 官方产品规格",
+      "url": "https://www.unitree.com/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "宇树官方产品页确认 Go2、B1/B2/B2-W、G1/H1 等型号的基础形态、SDK/开发生态和部分参数。"
+    },
+    {
+      "id": "SRCV6005",
+      "title": "Boston Dynamics 产品和 SDK 资料",
+      "url": "https://bostondynamics.com/products/",
+      "type": "官网/产品与 SDK",
+      "confidence": "high",
+      "notes": "Boston Dynamics 官方产品与开发者资料确认 Spot/Atlas 产品入口、Spot SDK 和企业部署口径。"
     }
   ],
   "robots": [
@@ -14376,682 +14416,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRC018"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ur10e",
-      "name": "Universal Robots UR10e",
-      "vendor": "Universal Robots",
-      "category": "机械臂",
-      "formFactor": "12.5 kg 级协作臂",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.universal-robots.com/products/ur10e/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2018",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Universal Robots",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC046",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "12.5 kg",
-        "reachM": "约 1.30 m",
-        "repeatabilityMm": "约 ±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "约 33.5 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "社区 ROS2 驱动",
-        "sdk": "PolyScope / RTDE / URScript",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC046",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ur12e",
-      "name": "Universal Robots UR12e",
-      "vendor": "Universal Robots",
-      "category": "机械臂",
-      "formFactor": "12 kg 级协作臂",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.universal-robots.com/products/ur12e/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2025",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Universal Robots",
-      "tags": [
-        "协作臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC046",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "12 kg",
-        "reachM": "约 1.30 m",
-        "repeatabilityMm": "约 ±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "社区 ROS2 驱动",
-        "sdk": "PolyScope / RTDE / URScript",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC046",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ur15",
-      "name": "Universal Robots UR15",
-      "vendor": "Universal Robots",
-      "category": "机械臂",
-      "formFactor": "15 kg 级协作机械臂",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.universal-robots.com/products/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2025",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Universal Robots",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV4002"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "15 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "社区 ROS2 驱动",
-        "sdk": "PolyScope / RTDE / URScript",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV4002"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ur16e",
-      "name": "Universal Robots UR16e",
-      "vendor": "Universal Robots",
-      "category": "机械臂",
-      "formFactor": "16 kg 级协作臂",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.universal-robots.com/products/ur16e/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2019",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Universal Robots",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC046",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "16 kg",
-        "reachM": "约 0.90 m",
-        "repeatabilityMm": "约 ±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "约 33.1 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "社区 ROS2 驱动",
-        "sdk": "PolyScope / RTDE / URScript",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC046",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ur20",
-      "name": "Universal Robots UR20",
-      "vendor": "Universal Robots",
-      "category": "机械臂",
-      "formFactor": "20 kg 级新一代协作臂",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.universal-robots.com/products/ur20/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2022",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Universal Robots",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC046",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "20 kg",
-        "reachM": "约 1.75 m",
-        "repeatabilityMm": "约 ±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "约 64 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "社区 ROS2 驱动",
-        "sdk": "PolyScope / RTDE / URScript",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC046",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ur30",
-      "name": "Universal Robots UR30",
-      "vendor": "Universal Robots",
-      "category": "机械臂",
-      "formFactor": "30 kg 级重载协作臂",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.universal-robots.com/products/ur30/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2023-11",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Universal Robots",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC046",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "30 kg",
-        "reachM": "约 1.30 m",
-        "repeatabilityMm": "约 ±0.05 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "约 63.5 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "社区 ROS2 驱动",
-        "sdk": "PolyScope / RTDE / URScript",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC046",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ur3e",
-      "name": "Universal Robots UR3e",
-      "vendor": "Universal Robots",
-      "category": "机械臂",
-      "formFactor": "3 kg 级小型协作臂",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.universal-robots.com/products/ur3e/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2018",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Universal Robots",
-      "tags": [
-        "协作臂",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC046",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "3 kg",
-        "reachM": "约 0.50 m",
-        "repeatabilityMm": "约 ±0.03 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "约 11.2 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "社区 ROS2 驱动",
-        "sdk": "PolyScope / RTDE / URScript / ROS-Industrial 社区",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC046",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ur7e",
-      "name": "Universal Robots UR7e",
-      "vendor": "Universal Robots",
-      "category": "机械臂",
-      "formFactor": "7.5 kg 级协作臂",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.universal-robots.com/products/ur7e/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2025",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Universal Robots",
-      "tags": [
-        "协作臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC046",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "7.5 kg",
-        "reachM": "约 0.85 m",
-        "repeatabilityMm": "约 ±0.03 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "社区 ROS2 驱动",
-        "sdk": "PolyScope / RTDE / URScript",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC046",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ur8-long",
-      "name": "Universal Robots UR8 Long",
-      "vendor": "Universal Robots",
-      "category": "机械臂",
-      "formFactor": "长臂协作机械臂",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.universal-robots.com/products/ur8-long/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2025-09",
-      "releaseDateConfidence": "high",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Universal Robots",
-      "tags": [
-        "协作臂",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV4002"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "最高 10 kg",
-        "reachM": "约 1.75 m",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "约 44.7 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS-Industrial 社区支持",
-        "ros2": "社区 ROS2 驱动",
-        "sdk": "PolyScope / RTDE / URScript",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV4002"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -27396,6 +26760,709 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "ur10e",
+      "name": "Universal Robots UR10e",
+      "vendor": "Universal Robots",
+      "category": "机械臂",
+      "formFactor": "12.5 kg 级协作臂",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.universal-robots.com/products/ur10e/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2018",
+      "releaseDateConfidence": "high",
+      "marketTier": "重点候选",
+      "brandNormalized": "Universal Robots",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC046",
+          "SRCV4001",
+          "SRCV6001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "12.5 kg",
+        "reachM": "1.300 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "33.5 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial/社区驱动支持",
+        "ros2": "Universal Robots ROS2 Driver 社区/官方生态",
+        "sdk": "PolyScope、URScript、RTDE、Dashboard Server、URCap",
+        "sim": "URSim / ROS Gazebo/MoveIt"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC046",
+        "SRCV4001",
+        "SRCV6001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "ur12e",
+      "name": "Universal Robots UR12e",
+      "vendor": "Universal Robots",
+      "category": "机械臂",
+      "formFactor": "12 kg 级协作臂",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.universal-robots.com/products/ur12e/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2025",
+      "releaseDateConfidence": "high",
+      "marketTier": "重点候选",
+      "brandNormalized": "Universal Robots",
+      "tags": [
+        "协作臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC046",
+          "SRCV4001",
+          "SRCV6001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "12 kg",
+        "reachM": "1.300 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial/社区驱动支持",
+        "ros2": "Universal Robots ROS2 Driver 社区/官方生态",
+        "sdk": "PolyScope、URScript、RTDE、Dashboard Server、URCap",
+        "sim": "URSim / ROS Gazebo/MoveIt"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC046",
+        "SRCV4001",
+        "SRCV6001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "ur15",
+      "name": "Universal Robots UR15",
+      "vendor": "Universal Robots",
+      "category": "机械臂",
+      "formFactor": "15 kg 级协作机械臂",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.universal-robots.com/products/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2025",
+      "releaseDateConfidence": "high",
+      "marketTier": "重点候选",
+      "brandNormalized": "Universal Robots",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV4002",
+          "SRCV6001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "15 kg",
+        "reachM": "按官方型号页确认",
+        "repeatabilityMm": "按官方型号页确认",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial/社区驱动支持",
+        "ros2": "Universal Robots ROS2 Driver 社区/官方生态",
+        "sdk": "PolyScope、URScript、RTDE、Dashboard Server、URCap",
+        "sim": "URSim / ROS Gazebo/MoveIt"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v6 官网核验：Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV4002",
+        "SRCV6001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "ur16e",
+      "name": "Universal Robots UR16e",
+      "vendor": "Universal Robots",
+      "category": "机械臂",
+      "formFactor": "16 kg 级协作臂",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.universal-robots.com/products/ur16e/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2019",
+      "releaseDateConfidence": "high",
+      "marketTier": "重点候选",
+      "brandNormalized": "Universal Robots",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC046",
+          "SRCV4001",
+          "SRCV6001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "16 kg",
+        "reachM": "0.900 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "33.1 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial/社区驱动支持",
+        "ros2": "Universal Robots ROS2 Driver 社区/官方生态",
+        "sdk": "PolyScope、URScript、RTDE、Dashboard Server、URCap",
+        "sim": "URSim / ROS Gazebo/MoveIt"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC046",
+        "SRCV4001",
+        "SRCV6001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "ur20",
+      "name": "Universal Robots UR20",
+      "vendor": "Universal Robots",
+      "category": "机械臂",
+      "formFactor": "20 kg 级新一代协作臂",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.universal-robots.com/products/ur20/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2022",
+      "releaseDateConfidence": "high",
+      "marketTier": "重点候选",
+      "brandNormalized": "Universal Robots",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC046",
+          "SRCV4001",
+          "SRCV6001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "20 kg",
+        "reachM": "1.750 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "64 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial/社区驱动支持",
+        "ros2": "Universal Robots ROS2 Driver 社区/官方生态",
+        "sdk": "PolyScope、URScript、RTDE、Dashboard Server、URCap",
+        "sim": "URSim / ROS Gazebo/MoveIt"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC046",
+        "SRCV4001",
+        "SRCV6001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "ur30",
+      "name": "Universal Robots UR30",
+      "vendor": "Universal Robots",
+      "category": "机械臂",
+      "formFactor": "30 kg 级重载协作臂",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.universal-robots.com/products/ur30/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2023-11",
+      "releaseDateConfidence": "high",
+      "marketTier": "重点候选",
+      "brandNormalized": "Universal Robots",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC046",
+          "SRCV4001",
+          "SRCV6001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "30 kg",
+        "reachM": "1.300 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "63.5 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial/社区驱动支持",
+        "ros2": "Universal Robots ROS2 Driver 社区/官方生态",
+        "sdk": "PolyScope、URScript、RTDE、Dashboard Server、URCap",
+        "sim": "URSim / ROS Gazebo/MoveIt"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC046",
+        "SRCV4001",
+        "SRCV6001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "ur3e",
+      "name": "Universal Robots UR3e",
+      "vendor": "Universal Robots",
+      "category": "机械臂",
+      "formFactor": "3 kg 级小型协作臂",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.universal-robots.com/products/ur3e/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2018",
+      "releaseDateConfidence": "high",
+      "marketTier": "重点候选",
+      "brandNormalized": "Universal Robots",
+      "tags": [
+        "协作臂",
+        "轻量臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC046",
+          "SRCV4001",
+          "SRCV6001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "3 kg",
+        "reachM": "0.500 m",
+        "repeatabilityMm": "±0.03 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "11.2 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial/社区驱动支持",
+        "ros2": "Universal Robots ROS2 Driver 社区/官方生态",
+        "sdk": "PolyScope、URScript、RTDE、Dashboard Server、URCap",
+        "sim": "URSim / ROS Gazebo/MoveIt"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC046",
+        "SRCV4001",
+        "SRCV6001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "ur7e",
+      "name": "Universal Robots UR7e",
+      "vendor": "Universal Robots",
+      "category": "机械臂",
+      "formFactor": "7.5 kg 级协作臂",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.universal-robots.com/products/ur7e/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2025",
+      "releaseDateConfidence": "high",
+      "marketTier": "重点候选",
+      "brandNormalized": "Universal Robots",
+      "tags": [
+        "协作臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC046",
+          "SRCV4001",
+          "SRCV6001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "7.5 kg",
+        "reachM": "0.850 m",
+        "repeatabilityMm": "±0.03 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "约 18 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial/社区驱动支持",
+        "ros2": "Universal Robots ROS2 Driver 社区/官方生态",
+        "sdk": "PolyScope、URScript、RTDE、Dashboard Server、URCap",
+        "sim": "URSim / ROS Gazebo/MoveIt"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC046",
+        "SRCV4001",
+        "SRCV6001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "ur8-long",
+      "name": "Universal Robots UR8 Long",
+      "vendor": "Universal Robots",
+      "category": "机械臂",
+      "formFactor": "长臂协作机械臂",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.universal-robots.com/products/ur8-long/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2025-09",
+      "releaseDateConfidence": "high",
+      "marketTier": "重点候选",
+      "brandNormalized": "Universal Robots",
+      "tags": [
+        "协作臂",
+        "轻量臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV4002",
+          "SRCV6001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "最高 10 kg",
+        "reachM": "1.750 m",
+        "repeatabilityMm": "±0.05 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "44.7 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "ROS-Industrial/社区驱动支持",
+        "ros2": "Universal Robots ROS2 Driver 社区/官方生态",
+        "sdk": "PolyScope、URScript、RTDE、Dashboard Server、URCap",
+        "sim": "URSim / ROS Gazebo/MoveIt"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v6 官网核验：Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV4002",
+        "SRCV6001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Universal Robots 官方产品资料确认型号、负载、臂展和软件接口；价格仍需代理正式报价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "galaxea-r1",
       "name": "Galaxea R1",
       "vendor": "银河通用 Galbot",
@@ -28578,234 +28645,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "id": "mir100",
-      "name": "MiR100",
-      "vendor": "Mobile Industrial Robots",
-      "category": "移动/复合机器人",
-      "formFactor": "自主移动机器人",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.mobile-industrial-robots.com/solutions/robots/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "MiR",
-      "tags": [
-        "轮式底盘",
-        "服务/巡检"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3032",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 100 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 1.5 m/s",
-        "endurance": "约 10 h",
-        "weightKg": "待核验",
-        "sensors": "安全激光扫描仪/3D 相机按配置",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "MiR REST API / Fleet 管理",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3032",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "mir250",
-      "name": "MiR250",
-      "vendor": "Mobile Industrial Robots",
-      "category": "移动/复合机器人",
-      "formFactor": "自主移动机器人",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.mobile-industrial-robots.com/solutions/robots/mir250/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "MiR",
-      "tags": [
-        "轮式底盘",
-        "服务/巡检"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3033",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 250 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 2 m/s",
-        "endurance": "约 13 h",
-        "weightKg": "待核验",
-        "sensors": "安全激光扫描仪/3D 相机按配置",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "MiR REST API / Fleet 管理",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3033",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "mir600",
-      "name": "MiR600",
-      "vendor": "Mobile Industrial Robots",
-      "category": "移动/复合机器人",
-      "formFactor": "重载自主移动机器人",
-      "country": "丹麦",
-      "domesticPriority": false,
-      "officialUrl": "https://www.mobile-industrial-robots.com/solutions/robots/mir600/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "MiR",
-      "tags": [
-        "轮式底盘",
-        "服务/巡检"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3034",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 600 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 2 m/s",
-        "endurance": "约 10 h",
-        "weightKg": "待核验",
-        "sensors": "安全激光扫描仪/3D 相机按配置",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "MiR REST API / Fleet 管理",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3034",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "id": "mujin-truckbot",
       "name": "Mujin TruckBot",
       "vendor": "Mujin",
@@ -29092,152 +28931,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRCV3035"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "pal-arI",
-      "name": "PAL Robotics ARI",
-      "vendor": "PAL Robotics",
-      "category": "移动/复合机器人",
-      "formFactor": "服务/交互移动机器人",
-      "country": "西班牙",
-      "domesticPriority": false,
-      "officialUrl": "https://pal-robotics.com/robots/ari/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "PAL Robotics",
-      "tags": [
-        "服务/巡检",
-        "教学移动平台"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC064"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "交互屏/相机/麦克风阵列按配置",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方 ROS 支持",
-        "ros2": "待核验",
-        "sdk": "PAL ROS 包",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC064"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "pal-tiago-pro",
-      "name": "PAL Robotics TIAGo Pro",
-      "vendor": "PAL Robotics",
-      "category": "移动/复合机器人",
-      "formFactor": "双臂移动操作平台",
-      "country": "西班牙",
-      "domesticPriority": false,
-      "officialUrl": "https://pal-robotics.com/robots/tiago-pro/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "PAL Robotics",
-      "tags": [
-        "移动操作",
-        "双臂移动平台"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC064"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC064"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -36798,896 +36491,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "country": "西班牙",
-      "domesticPriority": false,
-      "specs": {
-        "dof": "移动底盘 + 单/双臂按配置",
-        "payloadKg": "按配置确认",
-        "reachM": "需按配置确认",
-        "repeatabilityMm": "需按配置确认",
-        "speed": "需按配置确认",
-        "endurance": "需按配置确认",
-        "weightKg": "需按配置确认",
-        "sensors": "雷达/相机/力控按配置",
-        "compute": "按配置",
-        "safety": "需按部署方案确认"
-      },
-      "software": {
-        "ros": "成熟 ROS 生态",
-        "ros2": "需按版本确认",
-        "sdk": "PAL 平台接口",
-        "sim": "Gazebo/MoveIt"
-      },
-      "researchEvidence": [
-        "欧洲服务机器人和移动操作研究经典平台。",
-        "补充 PAL 文档、TIAGo ROS、MoveIt/Isaac 和移动操作 Benchmark 入口。",
-        "本轮新增移动操作综述、MobiPi、RMMI 和高校实验室入口，补充 TIAGo 作为经典移动操作科研平台的对照来源。",
-        "本轮新增 TIAGo 官方文档、锂电池安全和运输合规入口，补充经典移动操作平台维护与运输风险来源。",
-        "本轮新增机器人标定工具、高校设备保险和财产理赔入口，补充 TIAGo 移动操作平台视觉标定和高价值设备保险来源。",
-        "本轮新增核心部件供应链、计量机构和产品责任险入口，补充进口移动操作平台验收与责任风险来源。",
-        "本轮新增编码器供应链和公众责任保险条款，补充 TIAGo 类移动操作平台的传感反馈与场地开放风险来源。",
-        "本轮新增关节/扭矩传感器、安全传感器和雇主责任险条款，补充 TIAGo 移动操作平台长期开放实验责任风险。",
-        "本轮新增数据保护、网络安全和 AI 风险管理来源，补充 TIAGo 类移动服务机器人远程维护、视觉采集和学生实验数据治理证据。",
-        "本轮新增移动操作中文综述、ARIO 数据集和审计/身份认证来源，补充 TIAGo 移动操作平台在学校开放实验中的数据治理与任务背景。",
-        "本轮新增 BEHAVIOR-1K、AI2-THOR、ManipulaTHOR、RoboCasa、ARIAC 和 Drake 入口，补强 TIAGo 类移动服务机器人在导航、交互和操作任务中的评测来源。",
-        "本轮新增移动复合机器人和仓储场景对照，补充 TIAGo 类平台在服务、医院和移动操作落地时的工程参照。",
-        "本轮新增 ReKep、ConceptGraphs、TidyBot、RoboPoint 和 EmbodiedBench 入口，补充 TIAGo 类移动服务机器人在语义规划、开放词汇任务和具身 Agent 评测中的来源。",
-        "本轮新增具身智能训练场和智能机器人采购公告，补充 TIAGo 类服务移动操作平台进入高校实验室建设时的采购参照。",
-        "本轮新增 HomeRobot、Stretch 设计论文、VLA 和 InternDataEngine 入口，补充 TIAGo 类服务移动操作平台在开放软件栈和具身任务评测中的对照来源。",
-        "本轮新增同济训练平台和机器人集群训练场来源，补充 TIAGo 类服务移动操作平台在学校集群训练场和具身行为学习中的采购对照。",
-        "本轮新增 PAL TIAGo 官方产品页、PAL OS ROS2 文档和 ROS Robots 索引，补强 TIAGo 在移动操作、研究教学、ROS2 开发和 MoveIt 生态中的来源。",
-        "本轮新增 VLMaps、OpenEQA、ActionEQA、3D Semantic Maps 和 GeFF-B1，补充 TIAGo 类服务机器人在语义导航、具身问答和开放词汇移动操作中的评测来源。",
-        "本轮新增 InternNav、InternManip 和机器人论文资源导航，补充 TIAGo 类服务机器人在导航基础模型与移动操作训练评测中的来源。",
-        "本轮新增 NaVILA、OmniVLA、LiLo-VLA、NORA 和 VLA-0，补充 TIAGo 类服务移动操作平台在导航基础模型和长程任务中的研究入口。",
-        "本轮新增 BiGym、GalaxeaVLA、Human2LocoMan 和 RoboVQA，补充 TIAGo 类服务移动操作平台在家庭任务、开放世界数据和长程推理中的学术入口。",
-        "本轮新增 RoboInter、RoboVLMs、Open-TeleVision 和复合平台采购检索入口，补充 TIAGo 类服务移动操作平台的学术和采购追踪来源。",
-        "本轮新增移动复合平台和交互机器人公告入口，补充 TIAGo 类服务移动操作平台采购对照。",
-        "本轮新增学术数据库、ROS2 控制和国际高校研究入口，补充 TIAGo 类服务移动操作平台在论文、ROS 开发和实验室项目中的追踪来源。",
-        "本轮新增标准认证、国际课程和服务机器人行业入口，补充 TIAGo 类服务移动操作平台的合规与课程来源。",
-        "本轮新增学术数据库、机器人实验室、移动操作项目、Isaac Lab 和机器人基础模型入口，补充 TIAGo 类服务机器人在移动操作、导航和人机交互论文中的追踪来源。",
-        "本轮新增省级采购和高校采购中心入口，补充 TIAGo 类服务移动操作平台在学校服务机器人和移动操作平台采购中的追踪路径。",
-        "本轮新增 PAL Robotics Documentation，补充 TIAGo 服务移动操作平台的官方 ROS 文档、部署和维护资料来源。",
-        "本轮新增学术检索、研究机构、具身任务 Benchmark 和机器人数据格式入口，补充 TIAGo 类服务移动操作平台在导航、交互和任务规划中的研究来源。",
-        "本轮新增地方采购、高校采购和行业平台入口，补充 TIAGo 类服务移动操作平台在学校采购中的可得性和国产替代对照来源。",
-        "本轮新增概念验证中心、训练场和具身智能应用中心公告，补充 TIAGo 类服务移动操作平台在学校平台建设中的采购参照。"
-      ],
-      "deploymentEvidence": [
-        "科研成熟，但国内采购和服务成本高。"
-      ],
-      "risks": [
-        "价格高，交付和维保需代理确认。"
-      ],
-      "shortlistTags": [
-        "科研平台"
-      ],
-      "purchaseChannels": [
-        "官方/代理询价"
-      ],
-      "originalPrice": "PAL Robotics TIAGo ICRA fact sheet 列硬件配置 from EUR 48,000；资料年份较早，当前单/双臂、末端、传感器和服务包价格需正式询价。",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-05-31",
-      "id": "pal-tiago",
-      "name": "PAL Robotics TIAGo",
-      "vendor": "PAL Robotics",
-      "category": "移动/复合机器人",
-      "formFactor": "移动操作科研平台",
-      "officialUrl": "https://pal-robotics.com/robots/tiago/",
-      "cnyAmount": 376800,
-      "cnyRange": "约 ¥37.7 万起，按较早 fact sheet 48,000 欧元估算；当前配置需 PAL 正式报价",
-      "priceType": "历史资料欧元价线索",
-      "priceConfidence": "low",
-      "priceSourceIds": [
-        "SRC723"
-      ],
-      "sourceIds": [
-        "SRC064",
-        "SRC723",
-        "SRC082",
-        "SRC089",
-        "SRC091",
-        "SRC116",
-        "SRC117",
-        "SRC575",
-        "SRC576",
-        "SRC577",
-        "SRC578",
-        "SRC301",
-        "SRC302",
-        "SRC303",
-        "SRC304",
-        "SRC305",
-        "SRC306",
-        "SRC307",
-        "SRC308",
-        "SRC309",
-        "SRC310",
-        "SRC311",
-        "SRC312",
-        "SRC313",
-        "SRC314",
-        "SRC315",
-        "SRC316",
-        "SRC317",
-        "SRC318",
-        "SRC319",
-        "SRC320",
-        "SRC321",
-        "SRC322",
-        "SRC323",
-        "SRC324",
-        "SRC335",
-        "SRC219",
-        "SRC220",
-        "SRC221",
-        "SRC222",
-        "SRC223",
-        "SRC224",
-        "SRC127",
-        "SRC128",
-        "SRC129",
-        "SRC130",
-        "SRC135",
-        "SRC136",
-        "SRC139",
-        "SRC141",
-        "SRC146",
-        "SRC147",
-        "SRC155",
-        "SRC536",
-        "SRC538",
-        "SRC539",
-        "SRC1021",
-        "SRC1022",
-        "SRC1025",
-        "SRC1023",
-        "SRC1024",
-        "SRC1026",
-        "SRC229",
-        "SRC230",
-        "SRC231",
-        "SRC232",
-        "SRC233",
-        "SRC235",
-        "SRC236",
-        "SRC237",
-        "SRC238",
-        "SRC239",
-        "SRC240",
-        "SRC157",
-        "SRC163",
-        "SRC168",
-        "SRC169",
-        "SRC1089",
-        "SRC1090",
-        "SRC1091",
-        "SRC1095",
-        "SRC187",
-        "SRC190",
-        "SRC153",
-        "SRC1147",
-        "SRC1149",
-        "SRC1150",
-        "SRC1151",
-        "SRC1152",
-        "SRC1153",
-        "SRC1155",
-        "SRC1157",
-        "SRC1162",
-        "SRC1163",
-        "SRC1166",
-        "SRC1167",
-        "SRC1168",
-        "SRC1188",
-        "SRC1189",
-        "SRC1190",
-        "SRC1198",
-        "SRC1199",
-        "SRC1200",
-        "SRC1201",
-        "SRC1202",
-        "SRC1203",
-        "SRC1218",
-        "SRC1220",
-        "SRC1214",
-        "SRC1217",
-        "SRC1249",
-        "SRC1250",
-        "SRC1251",
-        "SRC1252",
-        "SRC1247",
-        "SRC1248",
-        "SRC1259",
-        "SRC1260",
-        "SRC1261",
-        "SRC1262",
-        "SRC1265",
-        "SRC1266",
-        "SRC1267",
-        "SRC1268",
-        "SRC1269",
-        "SRC1270",
-        "SRC1271",
-        "SRC1272",
-        "SRC1273",
-        "SRC1274",
-        "SRC1275",
-        "SRC1276",
-        "SRC1277",
-        "SRC1278",
-        "SRC1279",
-        "SRC1280",
-        "SRC1281",
-        "SRC1282",
-        "SRC1283",
-        "SRC1284",
-        "SRC1285",
-        "SRC1286",
-        "SRC1287",
-        "SRC1288",
-        "SRC1289",
-        "SRC1290",
-        "SRC1291",
-        "SRC1292",
-        "SRC1293",
-        "SRC1297",
-        "SRC1299",
-        "SRC1302",
-        "SRC1303",
-        "SRC1304",
-        "SRC1307",
-        "SRC1311",
-        "SRC1312",
-        "SRC1313",
-        "SRC1340",
-        "SRC1345",
-        "SRC1346",
-        "SRC1338",
-        "SRC1339",
-        "SRC1347",
-        "SRC1348",
-        "SRC1349",
-        "SRC1350",
-        "SRC1351",
-        "SRC1362",
-        "SRC1363",
-        "SRC1364",
-        "SRC1370",
-        "SRC1371",
-        "SRC1373",
-        "SRC1374",
-        "SRC1375",
-        "SRC1376",
-        "SRC1378",
-        "SRC1379",
-        "SRC1380",
-        "SRC1381",
-        "SRC1382",
-        "SRC1383",
-        "SRC1392",
-        "SRC1393",
-        "SRC1394",
-        "SRC1395",
-        "SRC1396",
-        "SRC1398",
-        "SRC1399",
-        "SRC1400",
-        "SRC1401",
-        "SRC1402",
-        "SRC1403",
-        "SRC1404",
-        "SRC1405",
-        "SRC1406",
-        "SRC1407",
-        "SRC1408",
-        "SRC1409",
-        "SRC1410",
-        "SRC1411",
-        "SRC1412",
-        "SRC1413",
-        "SRC1414",
-        "SRC1415",
-        "SRC1417",
-        "SRC1418",
-        "SRC1420",
-        "SRC1422",
-        "SRC1423",
-        "SRC1424",
-        "SRC1425",
-        "SRC1426",
-        "SRC1427",
-        "SRC1428",
-        "SRC1429",
-        "SRC1430",
-        "SRC1431",
-        "SRC1432",
-        "SRC1433",
-        "SRC1434",
-        "SRC1435",
-        "SRC1436",
-        "SRC1437",
-        "SRC1438",
-        "SRC1439",
-        "SRC1440",
-        "SRC1441",
-        "SRC1442",
-        "SRC1443",
-        "SRC1444",
-        "SRC1445",
-        "SRC1446",
-        "SRC1447",
-        "SRC1467",
-        "SRC1468",
-        "SRC1469",
-        "SRC1470",
-        "SRC1471",
-        "SRC1475",
-        "SRC1476",
-        "SRC1477",
-        "SRC1478",
-        "SRC1479",
-        "SRC1480",
-        "SRC1481",
-        "SRC1482",
-        "SRC1483",
-        "SRC1484",
-        "SRC1485",
-        "SRC1487",
-        "SRC1488",
-        "SRC1489",
-        "SRC1490",
-        "SRC1491",
-        "SRC1492",
-        "SRC1493",
-        "SRC1494",
-        "SRC1495",
-        "SRC1496",
-        "SRC1497",
-        "SRC1498",
-        "SRC1499",
-        "SRC1500",
-        "SRC1501",
-        "SRC1502",
-        "SRC1503",
-        "SRC1504",
-        "SRC1505",
-        "SRC1506",
-        "SRC1507",
-        "SRC1509",
-        "SRC1510",
-        "SRC1511",
-        "SRC1512",
-        "SRC1513",
-        "SRC1514",
-        "SRC1515",
-        "SRC1516",
-        "SRC1517",
-        "SRC1518",
-        "SRC1519",
-        "SRC1520",
-        "SRC1521",
-        "SRC1527",
-        "SRC1528",
-        "SRC594",
-        "SRC595",
-        "SRC600",
-        "SRC596",
-        "SRC597",
-        "SRC598",
-        "SRC599",
-        "SRC601",
-        "SRC602",
-        "SRC603",
-        "SRC604",
-        "SRC605",
-        "SRC606",
-        "SRC607",
-        "SRC608",
-        "SRC609",
-        "SRC610",
-        "SRC611",
-        "SRC612",
-        "SRC336",
-        "SRC337",
-        "SRC338",
-        "SRC339",
-        "SRC340",
-        "SRC341",
-        "SRC342",
-        "SRC343",
-        "SRC344",
-        "SRC587",
-        "SRC588",
-        "SRC589",
-        "SRC590",
-        "SRC591",
-        "SRC592",
-        "SRC593",
-        "SRC345",
-        "SRC346",
-        "SRC347",
-        "SRC348",
-        "SRC349",
-        "SRC350",
-        "SRC366",
-        "SRC367",
-        "SRC368",
-        "SRC369",
-        "SRC370",
-        "SRC371",
-        "SRC372",
-        "SRC373",
-        "SRC374",
-        "SRC375",
-        "SRC376",
-        "SRC377",
-        "SRC378",
-        "SRC379",
-        "SRC380",
-        "SRC381",
-        "SRC409",
-        "SRC410",
-        "SRC411",
-        "SRC412",
-        "SRC413",
-        "SRC414",
-        "SRC425",
-        "SRC426",
-        "SRC613",
-        "SRC614",
-        "SRC616",
-        "SRC617",
-        "SRC618",
-        "SRC619",
-        "SRC620",
-        "SRC621",
-        "SRC622",
-        "SRC650",
-        "SRC651",
-        "SRC652",
-        "SRC653",
-        "SRC615",
-        "SRC643",
-        "SRC644",
-        "SRC645",
-        "SRC646",
-        "SRC647",
-        "SRC648",
-        "SRC649",
-        "SRC654",
-        "SRC667",
-        "SRC668",
-        "SRC669",
-        "SRC670",
-        "SRC671",
-        "SRC672",
-        "SRC673",
-        "SRC674",
-        "SRC675",
-        "SRC677",
-        "SRC678",
-        "SRC679",
-        "SRC696",
-        "SRC683",
-        "SRC684",
-        "SRC685",
-        "SRC686",
-        "SRC687",
-        "SRC688",
-        "SRC690",
-        "SRC691",
-        "SRC697",
-        "SRC698",
-        "SRC699",
-        "SRC703",
-        "SRC705",
-        "SRC689",
-        "SRC692",
-        "SRC693",
-        "SRC694",
-        "SRC695",
-        "SRC427",
-        "SRC415",
-        "SRC383",
-        "SRC396",
-        "SRC397",
-        "SRC398",
-        "SRC399",
-        "SRC401",
-        "SRC402",
-        "SRC403",
-        "SRC404",
-        "SRC405",
-        "SRC406",
-        "SRC407",
-        "SRC408",
-        "SRC428",
-        "SRC429",
-        "SRC430",
-        "SRC431",
-        "SRC432",
-        "SRC656",
-        "SRC657",
-        "SRC658",
-        "SRC758",
-        "SRC759",
-        "SRC760",
-        "SRC761",
-        "SRC762",
-        "SRC763",
-        "SRC767",
-        "SRC771",
-        "SRC756",
-        "SRC764",
-        "SRC765",
-        "SRC766",
-        "SRC768",
-        "SRC769",
-        "SRC770",
-        "SRC772",
-        "SRC773",
-        "SRC774",
-        "SRC775",
-        "SRC779",
-        "SRC780",
-        "SRC781",
-        "SRC795",
-        "SRC796",
-        "SRC799",
-        "SRC778",
-        "SRC800",
-        "SRC801",
-        "SRC802",
-        "SRC803",
-        "SRC804",
-        "SRC787",
-        "SRC789",
-        "SRC805",
-        "SRC806",
-        "SRC785",
-        "SRC786",
-        "SRC818",
-        "SRC790",
-        "SRC791",
-        "SRC792",
-        "SRC793",
-        "SRC794",
-        "SRC814",
-        "SRC815",
-        "SRC816",
-        "SRC817",
-        "SRC819",
-        "SRC820",
-        "SRC821",
-        "SRC822",
-        "SRC823",
-        "SRC824",
-        "SRC825",
-        "SRC826",
-        "SRC827",
-        "SRC828",
-        "SRC829",
-        "SRC830",
-        "SRC831",
-        "SRC832",
-        "SRC833",
-        "SRC834",
-        "SRC835",
-        "SRC836",
-        "SRC837",
-        "SRC838",
-        "SRC839",
-        "SRC840",
-        "SRC841",
-        "SRC842",
-        "SRC843",
-        "SRC844",
-        "SRC845",
-        "SRC846",
-        "SRC847",
-        "SRC848",
-        "SRC849",
-        "SRC850",
-        "SRC851",
-        "SRC852",
-        "SRC853",
-        "SRC854",
-        "SRC855",
-        "SRC856",
-        "SRC857",
-        "SRC858",
-        "SRC859",
-        "SRC862",
-        "SRC863",
-        "SRC860",
-        "SRC861",
-        "SRC874",
-        "SRC875",
-        "SRC876",
-        "SRC877",
-        "SRC878",
-        "SRC879",
-        "SRC880",
-        "SRC881",
-        "SRC882",
-        "SRC883",
-        "SRC889",
-        "SRC890",
-        "SRC891",
-        "SRC892",
-        "SRC893",
-        "SRC894",
-        "SRC898",
-        "SRC899",
-        "SRC904",
-        "SRC911",
-        "SRC912",
-        "SRC884",
-        "SRC885",
-        "SRC886",
-        "SRC887",
-        "SRC895",
-        "SRC896",
-        "SRC897",
-        "SRC900",
-        "SRC901",
-        "SRC902",
-        "SRC903",
-        "SRC905",
-        "SRC906",
-        "SRC907",
-        "SRC908",
-        "SRC909",
-        "SRC910",
-        "SRC913",
-        "SRC914",
-        "SRC915",
-        "SRC916",
-        "SRC917",
-        "SRC918",
-        "SRC919",
-        "SRC920",
-        "SRC921",
-        "SRC922",
-        "SRC923",
-        "SRC924",
-        "SRC925",
-        "SRC926",
-        "SRC927",
-        "SRC928",
-        "SRC929",
-        "SRC930",
-        "SRC931",
-        "SRC932",
-        "SRC933",
-        "SRC934",
-        "SRC935",
-        "SRC936",
-        "SRC937",
-        "SRC938",
-        "SRC939",
-        "SRC940",
-        "SRC941",
-        "SRC942",
-        "SRC943",
-        "SRC944",
-        "SRC945",
-        "SRC946",
-        "SRC947",
-        "SRC948",
-        "SRC949",
-        "SRC950",
-        "SRC951",
-        "SRC952",
-        "SRC953",
-        "SRC954",
-        "SRC955",
-        "SRC956",
-        "SRC957",
-        "SRC958",
-        "SRC959",
-        "SRC960",
-        "SRC961",
-        "SRC962",
-        "SRC963",
-        "SRC964",
-        "SRC965",
-        "SRC966",
-        "SRC967",
-        "SRC968",
-        "SRC969",
-        "SRC970",
-        "SRC971",
-        "SRC972",
-        "SRC973",
-        "SRC974",
-        "SRC975",
-        "SRC976",
-        "SRC977",
-        "SRC978",
-        "SRC979",
-        "SRC980",
-        "SRC981",
-        "SRC982",
-        "SRC983",
-        "SRC984",
-        "SRC985",
-        "SRC987",
-        "SRC990",
-        "SRC991",
-        "SRC992",
-        "SRC998",
-        "SRC986",
-        "SRC993",
-        "SRC994",
-        "SRC995",
-        "SRC996",
-        "SRC997",
-        "SRC988",
-        "SRC989",
-        "SRC999",
-        "SRC1002",
-        "SRC1003",
-        "SRC1000",
-        "SRC1001",
-        "SRC1004",
-        "SRC1005",
-        "SRC1006",
-        "SRC1007",
-        "SRC1008",
-        "SRC1042",
-        "SRC1043",
-        "SRC1044",
-        "SRC1045",
-        "SRC1046",
-        "SRC1053",
-        "SRC1050",
-        "SRC1051",
-        "SRC1052",
-        "SRC1054",
-        "SRC1058",
-        "SRC1059",
-        "SRC1060",
-        "SRC1061",
-        "SRC1062",
-        "SRC1063",
-        "SRC1047",
-        "SRC1048",
-        "SRC1049",
-        "SRC1055",
-        "SRC1056",
-        "SRC1057",
-        "SRC1096",
-        "SRC1097",
-        "SRC1098",
-        "SRC1099",
-        "SRC1100",
-        "SRC1101",
-        "SRC1102",
-        "SRC1105",
-        "SRC1108",
-        "SRC1109",
-        "SRC1110",
-        "SRC1111",
-        "SRC1103",
-        "SRC1104",
-        "SRC1106",
-        "SRC1107",
-        "SRC1118",
-        "SRC1119",
-        "SRC1120",
-        "SRC1121",
-        "SRC1122",
-        "SRC1123",
-        "SRC1124",
-        "SRC1127",
-        "SRC1133",
-        "SRC1125",
-        "SRC1126",
-        "SRC440",
-        "SRC441",
-        "SRC442",
-        "SRC443",
-        "SRC444",
-        "SRC447",
-        "SRC448",
-        "SRC388",
-        "SRC389",
-        "SRC392",
-        "SRC393",
-        "SRC394",
-        "SRC395",
-        "SRC382",
-        "SRC390",
-        "SRC391",
-        "SRC400",
-        "SRC351",
-        "SRC352",
-        "SRC353",
-        "SRC354",
-        "SRC355",
-        "SRC356",
-        "SRC357",
-        "SRC358",
-        "SRC359",
-        "SRC360",
-        "SRC1328",
-        "SRC1329",
-        "SRC1330",
-        "SRC1331",
-        "SRC1332",
-        "SRC1333",
-        "SRC1334",
-        "SRC1335",
-        "SRC1336",
-        "SRC1337",
-        "SRC1352",
-        "SRC1353",
-        "SRC1354",
-        "SRC1355",
-        "SRC1356",
-        "SRC1357",
-        "SRC1358",
-        "SRC1360",
-        "SRC1372",
-        "SRC1365",
-        "SRC1366",
-        "SRC1367",
-        "SRC1384",
-        "SRC1385",
-        "SRC1386",
-        "SRC1387",
-        "SRC1388",
-        "SRC1389",
-        "SRC1390",
-        "SRC1391",
-        "SRC1416",
-        "SRC1419",
-        "SRC1421",
-        "SRC361",
-        "SRC362",
-        "SRC363",
-        "SRC364",
-        "SRC365",
-        "SRC718",
-        "SRC722",
-        "SRC725",
-        "SRC735",
-        "SRC736",
-        "SRC738",
-        "SRC739",
-        "SRC740",
-        "SRC741"
-      ],
-      "scores": {
-        "research": 45,
-        "deployment": 27,
-        "overall": 72
-      },
-      "price": {
-        "label": "人民币 ¥37.7万",
-        "amount": 376800,
-        "currency": "CNY",
-        "range": "约 ¥37.7 万起，按较早 fact sheet 48,000 欧元估算；当前配置需 PAL 正式报价",
-        "type": "历史资料欧元价线索",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC723"
-        ],
-        "original": "PAL Robotics TIAGo ICRA fact sheet 列硬件配置 from EUR 48,000；资料年份较早，当前单/双臂、末端、传感器和服务包价格需正式询价。"
-      },
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "重点候选",
-      "brandNormalized": "PAL Robotics",
-      "tags": [
-        "移动操作",
-        "科研平台"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "country": "中国",
       "domesticPriority": true,
       "specs": {
@@ -41772,6 +40575,1288 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "mir100",
+      "name": "MiR100",
+      "vendor": "Mobile Industrial Robots",
+      "category": "移动/复合机器人",
+      "formFactor": "自主移动机器人",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.mobile-industrial-robots.com/solutions/robots/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "MiR",
+      "tags": [
+        "轮式底盘",
+        "服务/巡检"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3032",
+          "SRCV4001",
+          "SRCV6002"
+        ]
+      },
+      "specs": {
+        "dof": "自主移动底盘",
+        "payloadKg": "100 kg",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "1.5 m/s",
+        "endurance": "约 10 h",
+        "weightKg": "待核验",
+        "sensors": "安全激光扫描仪、3D 相机/安全传感器按配置",
+        "compute": "待核验",
+        "safety": "工业 AMR 安全标准按地区/版本确认"
+      },
+      "software": {
+        "ros": "第三方集成支持",
+        "ros2": "第三方集成支持",
+        "sdk": "MiR REST API / MiR Fleet",
+        "sim": "MiR Fleet/仿真接口需按方案确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：MiR 官方产品资料确认 AMR 负载、速度、续航和 Fleet/API 口径；发布时间和价格未公开。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3032",
+        "SRCV4001",
+        "SRCV6002"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "MiR 官方产品资料确认 AMR 负载、速度、续航和 Fleet/API 口径；发布时间和价格未公开。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "mir250",
+      "name": "MiR250",
+      "vendor": "Mobile Industrial Robots",
+      "category": "移动/复合机器人",
+      "formFactor": "自主移动机器人",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.mobile-industrial-robots.com/solutions/robots/mir250/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "MiR",
+      "tags": [
+        "轮式底盘",
+        "服务/巡检"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3033",
+          "SRCV4001",
+          "SRCV6002"
+        ]
+      },
+      "specs": {
+        "dof": "自主移动底盘",
+        "payloadKg": "250 kg",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "2.0 m/s",
+        "endurance": "约 13 h",
+        "weightKg": "待核验",
+        "sensors": "安全激光扫描仪、3D 相机/安全传感器按配置",
+        "compute": "待核验",
+        "safety": "工业 AMR 安全标准按地区/版本确认"
+      },
+      "software": {
+        "ros": "第三方集成支持",
+        "ros2": "第三方集成支持",
+        "sdk": "MiR REST API / MiR Fleet",
+        "sim": "MiR Fleet/仿真接口需按方案确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：MiR 官方产品资料确认 AMR 负载、速度、续航和 Fleet/API 口径；发布时间和价格未公开。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3033",
+        "SRCV4001",
+        "SRCV6002"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "MiR 官方产品资料确认 AMR 负载、速度、续航和 Fleet/API 口径；发布时间和价格未公开。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "mir600",
+      "name": "MiR600",
+      "vendor": "Mobile Industrial Robots",
+      "category": "移动/复合机器人",
+      "formFactor": "重载自主移动机器人",
+      "country": "丹麦",
+      "domesticPriority": false,
+      "officialUrl": "https://www.mobile-industrial-robots.com/solutions/robots/mir600/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "MiR",
+      "tags": [
+        "轮式底盘",
+        "服务/巡检"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3034",
+          "SRCV4001",
+          "SRCV6002"
+        ]
+      },
+      "specs": {
+        "dof": "自主移动底盘",
+        "payloadKg": "600 kg",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "2.0 m/s",
+        "endurance": "约 10 h",
+        "weightKg": "待核验",
+        "sensors": "安全激光扫描仪、3D 相机/安全传感器按配置",
+        "compute": "待核验",
+        "safety": "工业 AMR 安全标准按地区/版本确认"
+      },
+      "software": {
+        "ros": "第三方集成支持",
+        "ros2": "第三方集成支持",
+        "sdk": "MiR REST API / MiR Fleet",
+        "sim": "MiR Fleet/仿真接口需按方案确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：MiR 官方产品资料确认 AMR 负载、速度、续航和 Fleet/API 口径；发布时间和价格未公开。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3034",
+        "SRCV4001",
+        "SRCV6002"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "MiR 官方产品资料确认 AMR 负载、速度、续航和 Fleet/API 口径；发布时间和价格未公开。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "pal-arI",
+      "name": "PAL Robotics ARI",
+      "vendor": "PAL Robotics",
+      "category": "移动/复合机器人",
+      "formFactor": "服务/交互移动机器人",
+      "country": "西班牙",
+      "domesticPriority": false,
+      "officialUrl": "https://pal-robotics.com/robots/ari/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "PAL Robotics",
+      "tags": [
+        "服务/巡检",
+        "教学移动平台"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC064",
+          "SRCV6003"
+        ]
+      },
+      "specs": {
+        "dof": "交互/服务机器人，负载按配置",
+        "payloadKg": "按配置确认",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "相机、激光雷达、力控/触觉等按配置",
+        "compute": "待核验",
+        "safety": "科研平台安全按部署确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持需按版本确认",
+        "sdk": "官方 ROS 平台",
+        "sim": "Gazebo/MoveIt/ROS 仿真生态"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v6 官网核验：PAL 官方资料确认机器人系列、科研平台定位和 ROS 生态；负载/价格按具体配置询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC064",
+        "SRCV6003"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "PAL 官方资料确认机器人系列、科研平台定位和 ROS 生态；负载/价格按具体配置询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "country": "西班牙",
+      "domesticPriority": false,
+      "specs": {
+        "dof": "移动底盘 + 单臂/双臂按版本",
+        "payloadKg": "按配置确认",
+        "reachM": "需按配置确认",
+        "repeatabilityMm": "需按配置确认",
+        "speed": "需按配置确认",
+        "endurance": "需按配置确认",
+        "weightKg": "需按配置确认",
+        "sensors": "相机、激光雷达、力控/触觉等按配置",
+        "compute": "按配置",
+        "safety": "科研平台安全按部署确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持需按版本确认",
+        "sdk": "官方 ROS 平台",
+        "sim": "Gazebo/MoveIt/ROS 仿真生态"
+      },
+      "researchEvidence": [
+        "欧洲服务机器人和移动操作研究经典平台。",
+        "补充 PAL 文档、TIAGo ROS、MoveIt/Isaac 和移动操作 Benchmark 入口。",
+        "本轮新增移动操作综述、MobiPi、RMMI 和高校实验室入口，补充 TIAGo 作为经典移动操作科研平台的对照来源。",
+        "本轮新增 TIAGo 官方文档、锂电池安全和运输合规入口，补充经典移动操作平台维护与运输风险来源。",
+        "本轮新增机器人标定工具、高校设备保险和财产理赔入口，补充 TIAGo 移动操作平台视觉标定和高价值设备保险来源。",
+        "本轮新增核心部件供应链、计量机构和产品责任险入口，补充进口移动操作平台验收与责任风险来源。",
+        "本轮新增编码器供应链和公众责任保险条款，补充 TIAGo 类移动操作平台的传感反馈与场地开放风险来源。",
+        "本轮新增关节/扭矩传感器、安全传感器和雇主责任险条款，补充 TIAGo 移动操作平台长期开放实验责任风险。",
+        "本轮新增数据保护、网络安全和 AI 风险管理来源，补充 TIAGo 类移动服务机器人远程维护、视觉采集和学生实验数据治理证据。",
+        "本轮新增移动操作中文综述、ARIO 数据集和审计/身份认证来源，补充 TIAGo 移动操作平台在学校开放实验中的数据治理与任务背景。",
+        "本轮新增 BEHAVIOR-1K、AI2-THOR、ManipulaTHOR、RoboCasa、ARIAC 和 Drake 入口，补强 TIAGo 类移动服务机器人在导航、交互和操作任务中的评测来源。",
+        "本轮新增移动复合机器人和仓储场景对照，补充 TIAGo 类平台在服务、医院和移动操作落地时的工程参照。",
+        "本轮新增 ReKep、ConceptGraphs、TidyBot、RoboPoint 和 EmbodiedBench 入口，补充 TIAGo 类移动服务机器人在语义规划、开放词汇任务和具身 Agent 评测中的来源。",
+        "本轮新增具身智能训练场和智能机器人采购公告，补充 TIAGo 类服务移动操作平台进入高校实验室建设时的采购参照。",
+        "本轮新增 HomeRobot、Stretch 设计论文、VLA 和 InternDataEngine 入口，补充 TIAGo 类服务移动操作平台在开放软件栈和具身任务评测中的对照来源。",
+        "本轮新增同济训练平台和机器人集群训练场来源，补充 TIAGo 类服务移动操作平台在学校集群训练场和具身行为学习中的采购对照。",
+        "本轮新增 PAL TIAGo 官方产品页、PAL OS ROS2 文档和 ROS Robots 索引，补强 TIAGo 在移动操作、研究教学、ROS2 开发和 MoveIt 生态中的来源。",
+        "本轮新增 VLMaps、OpenEQA、ActionEQA、3D Semantic Maps 和 GeFF-B1，补充 TIAGo 类服务机器人在语义导航、具身问答和开放词汇移动操作中的评测来源。",
+        "本轮新增 InternNav、InternManip 和机器人论文资源导航，补充 TIAGo 类服务机器人在导航基础模型与移动操作训练评测中的来源。",
+        "本轮新增 NaVILA、OmniVLA、LiLo-VLA、NORA 和 VLA-0，补充 TIAGo 类服务移动操作平台在导航基础模型和长程任务中的研究入口。",
+        "本轮新增 BiGym、GalaxeaVLA、Human2LocoMan 和 RoboVQA，补充 TIAGo 类服务移动操作平台在家庭任务、开放世界数据和长程推理中的学术入口。",
+        "本轮新增 RoboInter、RoboVLMs、Open-TeleVision 和复合平台采购检索入口，补充 TIAGo 类服务移动操作平台的学术和采购追踪来源。",
+        "本轮新增移动复合平台和交互机器人公告入口，补充 TIAGo 类服务移动操作平台采购对照。",
+        "本轮新增学术数据库、ROS2 控制和国际高校研究入口，补充 TIAGo 类服务移动操作平台在论文、ROS 开发和实验室项目中的追踪来源。",
+        "本轮新增标准认证、国际课程和服务机器人行业入口，补充 TIAGo 类服务移动操作平台的合规与课程来源。",
+        "本轮新增学术数据库、机器人实验室、移动操作项目、Isaac Lab 和机器人基础模型入口，补充 TIAGo 类服务机器人在移动操作、导航和人机交互论文中的追踪来源。",
+        "本轮新增省级采购和高校采购中心入口，补充 TIAGo 类服务移动操作平台在学校服务机器人和移动操作平台采购中的追踪路径。",
+        "本轮新增 PAL Robotics Documentation，补充 TIAGo 服务移动操作平台的官方 ROS 文档、部署和维护资料来源。",
+        "本轮新增学术检索、研究机构、具身任务 Benchmark 和机器人数据格式入口，补充 TIAGo 类服务移动操作平台在导航、交互和任务规划中的研究来源。",
+        "本轮新增地方采购、高校采购和行业平台入口，补充 TIAGo 类服务移动操作平台在学校采购中的可得性和国产替代对照来源。",
+        "本轮新增概念验证中心、训练场和具身智能应用中心公告，补充 TIAGo 类服务移动操作平台在学校平台建设中的采购参照。",
+        "v6 官网核验：PAL 官方资料确认机器人系列、科研平台定位和 ROS 生态；负载/价格按具体配置询价。"
+      ],
+      "deploymentEvidence": [
+        "科研成熟，但国内采购和服务成本高。"
+      ],
+      "risks": [
+        "价格高，交付和维保需代理确认。"
+      ],
+      "shortlistTags": [
+        "科研平台"
+      ],
+      "purchaseChannels": [
+        "官方/代理询价"
+      ],
+      "originalPrice": "PAL Robotics TIAGo ICRA fact sheet 列硬件配置 from EUR 48,000；资料年份较早，当前单/双臂、末端、传感器和服务包价格需正式询价。",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-05-31",
+      "id": "pal-tiago",
+      "name": "PAL Robotics TIAGo",
+      "vendor": "PAL Robotics",
+      "category": "移动/复合机器人",
+      "formFactor": "移动操作科研平台",
+      "officialUrl": "https://pal-robotics.com/robots/tiago/",
+      "cnyAmount": 376800,
+      "cnyRange": "约 ¥37.7 万起，按较早 fact sheet 48,000 欧元估算；当前配置需 PAL 正式报价",
+      "priceType": "历史资料欧元价线索",
+      "priceConfidence": "low",
+      "priceSourceIds": [
+        "SRC723"
+      ],
+      "sourceIds": [
+        "SRC064",
+        "SRC723",
+        "SRC082",
+        "SRC089",
+        "SRC091",
+        "SRC116",
+        "SRC117",
+        "SRC575",
+        "SRC576",
+        "SRC577",
+        "SRC578",
+        "SRC301",
+        "SRC302",
+        "SRC303",
+        "SRC304",
+        "SRC305",
+        "SRC306",
+        "SRC307",
+        "SRC308",
+        "SRC309",
+        "SRC310",
+        "SRC311",
+        "SRC312",
+        "SRC313",
+        "SRC314",
+        "SRC315",
+        "SRC316",
+        "SRC317",
+        "SRC318",
+        "SRC319",
+        "SRC320",
+        "SRC321",
+        "SRC322",
+        "SRC323",
+        "SRC324",
+        "SRC335",
+        "SRC219",
+        "SRC220",
+        "SRC221",
+        "SRC222",
+        "SRC223",
+        "SRC224",
+        "SRC127",
+        "SRC128",
+        "SRC129",
+        "SRC130",
+        "SRC135",
+        "SRC136",
+        "SRC139",
+        "SRC141",
+        "SRC146",
+        "SRC147",
+        "SRC155",
+        "SRC536",
+        "SRC538",
+        "SRC539",
+        "SRC1021",
+        "SRC1022",
+        "SRC1025",
+        "SRC1023",
+        "SRC1024",
+        "SRC1026",
+        "SRC229",
+        "SRC230",
+        "SRC231",
+        "SRC232",
+        "SRC233",
+        "SRC235",
+        "SRC236",
+        "SRC237",
+        "SRC238",
+        "SRC239",
+        "SRC240",
+        "SRC157",
+        "SRC163",
+        "SRC168",
+        "SRC169",
+        "SRC1089",
+        "SRC1090",
+        "SRC1091",
+        "SRC1095",
+        "SRC187",
+        "SRC190",
+        "SRC153",
+        "SRC1147",
+        "SRC1149",
+        "SRC1150",
+        "SRC1151",
+        "SRC1152",
+        "SRC1153",
+        "SRC1155",
+        "SRC1157",
+        "SRC1162",
+        "SRC1163",
+        "SRC1166",
+        "SRC1167",
+        "SRC1168",
+        "SRC1188",
+        "SRC1189",
+        "SRC1190",
+        "SRC1198",
+        "SRC1199",
+        "SRC1200",
+        "SRC1201",
+        "SRC1202",
+        "SRC1203",
+        "SRC1218",
+        "SRC1220",
+        "SRC1214",
+        "SRC1217",
+        "SRC1249",
+        "SRC1250",
+        "SRC1251",
+        "SRC1252",
+        "SRC1247",
+        "SRC1248",
+        "SRC1259",
+        "SRC1260",
+        "SRC1261",
+        "SRC1262",
+        "SRC1265",
+        "SRC1266",
+        "SRC1267",
+        "SRC1268",
+        "SRC1269",
+        "SRC1270",
+        "SRC1271",
+        "SRC1272",
+        "SRC1273",
+        "SRC1274",
+        "SRC1275",
+        "SRC1276",
+        "SRC1277",
+        "SRC1278",
+        "SRC1279",
+        "SRC1280",
+        "SRC1281",
+        "SRC1282",
+        "SRC1283",
+        "SRC1284",
+        "SRC1285",
+        "SRC1286",
+        "SRC1287",
+        "SRC1288",
+        "SRC1289",
+        "SRC1290",
+        "SRC1291",
+        "SRC1292",
+        "SRC1293",
+        "SRC1297",
+        "SRC1299",
+        "SRC1302",
+        "SRC1303",
+        "SRC1304",
+        "SRC1307",
+        "SRC1311",
+        "SRC1312",
+        "SRC1313",
+        "SRC1340",
+        "SRC1345",
+        "SRC1346",
+        "SRC1338",
+        "SRC1339",
+        "SRC1347",
+        "SRC1348",
+        "SRC1349",
+        "SRC1350",
+        "SRC1351",
+        "SRC1362",
+        "SRC1363",
+        "SRC1364",
+        "SRC1370",
+        "SRC1371",
+        "SRC1373",
+        "SRC1374",
+        "SRC1375",
+        "SRC1376",
+        "SRC1378",
+        "SRC1379",
+        "SRC1380",
+        "SRC1381",
+        "SRC1382",
+        "SRC1383",
+        "SRC1392",
+        "SRC1393",
+        "SRC1394",
+        "SRC1395",
+        "SRC1396",
+        "SRC1398",
+        "SRC1399",
+        "SRC1400",
+        "SRC1401",
+        "SRC1402",
+        "SRC1403",
+        "SRC1404",
+        "SRC1405",
+        "SRC1406",
+        "SRC1407",
+        "SRC1408",
+        "SRC1409",
+        "SRC1410",
+        "SRC1411",
+        "SRC1412",
+        "SRC1413",
+        "SRC1414",
+        "SRC1415",
+        "SRC1417",
+        "SRC1418",
+        "SRC1420",
+        "SRC1422",
+        "SRC1423",
+        "SRC1424",
+        "SRC1425",
+        "SRC1426",
+        "SRC1427",
+        "SRC1428",
+        "SRC1429",
+        "SRC1430",
+        "SRC1431",
+        "SRC1432",
+        "SRC1433",
+        "SRC1434",
+        "SRC1435",
+        "SRC1436",
+        "SRC1437",
+        "SRC1438",
+        "SRC1439",
+        "SRC1440",
+        "SRC1441",
+        "SRC1442",
+        "SRC1443",
+        "SRC1444",
+        "SRC1445",
+        "SRC1446",
+        "SRC1447",
+        "SRC1467",
+        "SRC1468",
+        "SRC1469",
+        "SRC1470",
+        "SRC1471",
+        "SRC1475",
+        "SRC1476",
+        "SRC1477",
+        "SRC1478",
+        "SRC1479",
+        "SRC1480",
+        "SRC1481",
+        "SRC1482",
+        "SRC1483",
+        "SRC1484",
+        "SRC1485",
+        "SRC1487",
+        "SRC1488",
+        "SRC1489",
+        "SRC1490",
+        "SRC1491",
+        "SRC1492",
+        "SRC1493",
+        "SRC1494",
+        "SRC1495",
+        "SRC1496",
+        "SRC1497",
+        "SRC1498",
+        "SRC1499",
+        "SRC1500",
+        "SRC1501",
+        "SRC1502",
+        "SRC1503",
+        "SRC1504",
+        "SRC1505",
+        "SRC1506",
+        "SRC1507",
+        "SRC1509",
+        "SRC1510",
+        "SRC1511",
+        "SRC1512",
+        "SRC1513",
+        "SRC1514",
+        "SRC1515",
+        "SRC1516",
+        "SRC1517",
+        "SRC1518",
+        "SRC1519",
+        "SRC1520",
+        "SRC1521",
+        "SRC1527",
+        "SRC1528",
+        "SRC594",
+        "SRC595",
+        "SRC600",
+        "SRC596",
+        "SRC597",
+        "SRC598",
+        "SRC599",
+        "SRC601",
+        "SRC602",
+        "SRC603",
+        "SRC604",
+        "SRC605",
+        "SRC606",
+        "SRC607",
+        "SRC608",
+        "SRC609",
+        "SRC610",
+        "SRC611",
+        "SRC612",
+        "SRC336",
+        "SRC337",
+        "SRC338",
+        "SRC339",
+        "SRC340",
+        "SRC341",
+        "SRC342",
+        "SRC343",
+        "SRC344",
+        "SRC587",
+        "SRC588",
+        "SRC589",
+        "SRC590",
+        "SRC591",
+        "SRC592",
+        "SRC593",
+        "SRC345",
+        "SRC346",
+        "SRC347",
+        "SRC348",
+        "SRC349",
+        "SRC350",
+        "SRC366",
+        "SRC367",
+        "SRC368",
+        "SRC369",
+        "SRC370",
+        "SRC371",
+        "SRC372",
+        "SRC373",
+        "SRC374",
+        "SRC375",
+        "SRC376",
+        "SRC377",
+        "SRC378",
+        "SRC379",
+        "SRC380",
+        "SRC381",
+        "SRC409",
+        "SRC410",
+        "SRC411",
+        "SRC412",
+        "SRC413",
+        "SRC414",
+        "SRC425",
+        "SRC426",
+        "SRC613",
+        "SRC614",
+        "SRC616",
+        "SRC617",
+        "SRC618",
+        "SRC619",
+        "SRC620",
+        "SRC621",
+        "SRC622",
+        "SRC650",
+        "SRC651",
+        "SRC652",
+        "SRC653",
+        "SRC615",
+        "SRC643",
+        "SRC644",
+        "SRC645",
+        "SRC646",
+        "SRC647",
+        "SRC648",
+        "SRC649",
+        "SRC654",
+        "SRC667",
+        "SRC668",
+        "SRC669",
+        "SRC670",
+        "SRC671",
+        "SRC672",
+        "SRC673",
+        "SRC674",
+        "SRC675",
+        "SRC677",
+        "SRC678",
+        "SRC679",
+        "SRC696",
+        "SRC683",
+        "SRC684",
+        "SRC685",
+        "SRC686",
+        "SRC687",
+        "SRC688",
+        "SRC690",
+        "SRC691",
+        "SRC697",
+        "SRC698",
+        "SRC699",
+        "SRC703",
+        "SRC705",
+        "SRC689",
+        "SRC692",
+        "SRC693",
+        "SRC694",
+        "SRC695",
+        "SRC427",
+        "SRC415",
+        "SRC383",
+        "SRC396",
+        "SRC397",
+        "SRC398",
+        "SRC399",
+        "SRC401",
+        "SRC402",
+        "SRC403",
+        "SRC404",
+        "SRC405",
+        "SRC406",
+        "SRC407",
+        "SRC408",
+        "SRC428",
+        "SRC429",
+        "SRC430",
+        "SRC431",
+        "SRC432",
+        "SRC656",
+        "SRC657",
+        "SRC658",
+        "SRC758",
+        "SRC759",
+        "SRC760",
+        "SRC761",
+        "SRC762",
+        "SRC763",
+        "SRC767",
+        "SRC771",
+        "SRC756",
+        "SRC764",
+        "SRC765",
+        "SRC766",
+        "SRC768",
+        "SRC769",
+        "SRC770",
+        "SRC772",
+        "SRC773",
+        "SRC774",
+        "SRC775",
+        "SRC779",
+        "SRC780",
+        "SRC781",
+        "SRC795",
+        "SRC796",
+        "SRC799",
+        "SRC778",
+        "SRC800",
+        "SRC801",
+        "SRC802",
+        "SRC803",
+        "SRC804",
+        "SRC787",
+        "SRC789",
+        "SRC805",
+        "SRC806",
+        "SRC785",
+        "SRC786",
+        "SRC818",
+        "SRC790",
+        "SRC791",
+        "SRC792",
+        "SRC793",
+        "SRC794",
+        "SRC814",
+        "SRC815",
+        "SRC816",
+        "SRC817",
+        "SRC819",
+        "SRC820",
+        "SRC821",
+        "SRC822",
+        "SRC823",
+        "SRC824",
+        "SRC825",
+        "SRC826",
+        "SRC827",
+        "SRC828",
+        "SRC829",
+        "SRC830",
+        "SRC831",
+        "SRC832",
+        "SRC833",
+        "SRC834",
+        "SRC835",
+        "SRC836",
+        "SRC837",
+        "SRC838",
+        "SRC839",
+        "SRC840",
+        "SRC841",
+        "SRC842",
+        "SRC843",
+        "SRC844",
+        "SRC845",
+        "SRC846",
+        "SRC847",
+        "SRC848",
+        "SRC849",
+        "SRC850",
+        "SRC851",
+        "SRC852",
+        "SRC853",
+        "SRC854",
+        "SRC855",
+        "SRC856",
+        "SRC857",
+        "SRC858",
+        "SRC859",
+        "SRC862",
+        "SRC863",
+        "SRC860",
+        "SRC861",
+        "SRC874",
+        "SRC875",
+        "SRC876",
+        "SRC877",
+        "SRC878",
+        "SRC879",
+        "SRC880",
+        "SRC881",
+        "SRC882",
+        "SRC883",
+        "SRC889",
+        "SRC890",
+        "SRC891",
+        "SRC892",
+        "SRC893",
+        "SRC894",
+        "SRC898",
+        "SRC899",
+        "SRC904",
+        "SRC911",
+        "SRC912",
+        "SRC884",
+        "SRC885",
+        "SRC886",
+        "SRC887",
+        "SRC895",
+        "SRC896",
+        "SRC897",
+        "SRC900",
+        "SRC901",
+        "SRC902",
+        "SRC903",
+        "SRC905",
+        "SRC906",
+        "SRC907",
+        "SRC908",
+        "SRC909",
+        "SRC910",
+        "SRC913",
+        "SRC914",
+        "SRC915",
+        "SRC916",
+        "SRC917",
+        "SRC918",
+        "SRC919",
+        "SRC920",
+        "SRC921",
+        "SRC922",
+        "SRC923",
+        "SRC924",
+        "SRC925",
+        "SRC926",
+        "SRC927",
+        "SRC928",
+        "SRC929",
+        "SRC930",
+        "SRC931",
+        "SRC932",
+        "SRC933",
+        "SRC934",
+        "SRC935",
+        "SRC936",
+        "SRC937",
+        "SRC938",
+        "SRC939",
+        "SRC940",
+        "SRC941",
+        "SRC942",
+        "SRC943",
+        "SRC944",
+        "SRC945",
+        "SRC946",
+        "SRC947",
+        "SRC948",
+        "SRC949",
+        "SRC950",
+        "SRC951",
+        "SRC952",
+        "SRC953",
+        "SRC954",
+        "SRC955",
+        "SRC956",
+        "SRC957",
+        "SRC958",
+        "SRC959",
+        "SRC960",
+        "SRC961",
+        "SRC962",
+        "SRC963",
+        "SRC964",
+        "SRC965",
+        "SRC966",
+        "SRC967",
+        "SRC968",
+        "SRC969",
+        "SRC970",
+        "SRC971",
+        "SRC972",
+        "SRC973",
+        "SRC974",
+        "SRC975",
+        "SRC976",
+        "SRC977",
+        "SRC978",
+        "SRC979",
+        "SRC980",
+        "SRC981",
+        "SRC982",
+        "SRC983",
+        "SRC984",
+        "SRC985",
+        "SRC987",
+        "SRC990",
+        "SRC991",
+        "SRC992",
+        "SRC998",
+        "SRC986",
+        "SRC993",
+        "SRC994",
+        "SRC995",
+        "SRC996",
+        "SRC997",
+        "SRC988",
+        "SRC989",
+        "SRC999",
+        "SRC1002",
+        "SRC1003",
+        "SRC1000",
+        "SRC1001",
+        "SRC1004",
+        "SRC1005",
+        "SRC1006",
+        "SRC1007",
+        "SRC1008",
+        "SRC1042",
+        "SRC1043",
+        "SRC1044",
+        "SRC1045",
+        "SRC1046",
+        "SRC1053",
+        "SRC1050",
+        "SRC1051",
+        "SRC1052",
+        "SRC1054",
+        "SRC1058",
+        "SRC1059",
+        "SRC1060",
+        "SRC1061",
+        "SRC1062",
+        "SRC1063",
+        "SRC1047",
+        "SRC1048",
+        "SRC1049",
+        "SRC1055",
+        "SRC1056",
+        "SRC1057",
+        "SRC1096",
+        "SRC1097",
+        "SRC1098",
+        "SRC1099",
+        "SRC1100",
+        "SRC1101",
+        "SRC1102",
+        "SRC1105",
+        "SRC1108",
+        "SRC1109",
+        "SRC1110",
+        "SRC1111",
+        "SRC1103",
+        "SRC1104",
+        "SRC1106",
+        "SRC1107",
+        "SRC1118",
+        "SRC1119",
+        "SRC1120",
+        "SRC1121",
+        "SRC1122",
+        "SRC1123",
+        "SRC1124",
+        "SRC1127",
+        "SRC1133",
+        "SRC1125",
+        "SRC1126",
+        "SRC440",
+        "SRC441",
+        "SRC442",
+        "SRC443",
+        "SRC444",
+        "SRC447",
+        "SRC448",
+        "SRC388",
+        "SRC389",
+        "SRC392",
+        "SRC393",
+        "SRC394",
+        "SRC395",
+        "SRC382",
+        "SRC390",
+        "SRC391",
+        "SRC400",
+        "SRC351",
+        "SRC352",
+        "SRC353",
+        "SRC354",
+        "SRC355",
+        "SRC356",
+        "SRC357",
+        "SRC358",
+        "SRC359",
+        "SRC360",
+        "SRC1328",
+        "SRC1329",
+        "SRC1330",
+        "SRC1331",
+        "SRC1332",
+        "SRC1333",
+        "SRC1334",
+        "SRC1335",
+        "SRC1336",
+        "SRC1337",
+        "SRC1352",
+        "SRC1353",
+        "SRC1354",
+        "SRC1355",
+        "SRC1356",
+        "SRC1357",
+        "SRC1358",
+        "SRC1360",
+        "SRC1372",
+        "SRC1365",
+        "SRC1366",
+        "SRC1367",
+        "SRC1384",
+        "SRC1385",
+        "SRC1386",
+        "SRC1387",
+        "SRC1388",
+        "SRC1389",
+        "SRC1390",
+        "SRC1391",
+        "SRC1416",
+        "SRC1419",
+        "SRC1421",
+        "SRC361",
+        "SRC362",
+        "SRC363",
+        "SRC364",
+        "SRC365",
+        "SRC718",
+        "SRC722",
+        "SRC725",
+        "SRC735",
+        "SRC736",
+        "SRC738",
+        "SRC739",
+        "SRC740",
+        "SRC741",
+        "SRCV6003"
+      ],
+      "scores": {
+        "research": 45,
+        "deployment": 27,
+        "overall": 72
+      },
+      "price": {
+        "label": "人民币 ¥37.7万",
+        "amount": 376800,
+        "currency": "CNY",
+        "range": "约 ¥37.7 万起，按较早 fact sheet 48,000 欧元估算；当前配置需 PAL 正式报价",
+        "type": "历史资料欧元价线索",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC723",
+          "SRCV6003"
+        ],
+        "original": "PAL Robotics TIAGo ICRA fact sheet 列硬件配置 from EUR 48,000；资料年份较早，当前单/双臂、末端、传感器和服务包价格需正式询价。"
+      },
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "PAL Robotics",
+      "tags": [
+        "移动操作",
+        "科研平台"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "PAL 官方资料确认机器人系列、科研平台定位和 ROS 生态；负载/价格按具体配置询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "pal-tiago-pro",
+      "name": "PAL Robotics TIAGo Pro",
+      "vendor": "PAL Robotics",
+      "category": "移动/复合机器人",
+      "formFactor": "双臂移动操作平台",
+      "country": "西班牙",
+      "domesticPriority": false,
+      "officialUrl": "https://pal-robotics.com/robots/tiago-pro/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "PAL Robotics",
+      "tags": [
+        "移动操作",
+        "双臂移动平台"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC064",
+          "SRCV6003"
+        ]
+      },
+      "specs": {
+        "dof": "双臂移动平台",
+        "payloadKg": "按配置确认",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "相机、激光雷达、力控/触觉等按配置",
+        "compute": "待核验",
+        "safety": "科研平台安全按部署确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持需按版本确认",
+        "sdk": "官方 ROS 平台",
+        "sim": "Gazebo/MoveIt/ROS 仿真生态"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v6 官网核验：PAL 官方资料确认机器人系列、科研平台定位和 ROS 生态；负载/价格按具体配置询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC064",
+        "SRCV6003"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "PAL 官方资料确认机器人系列、科研平台定位和 ROS 生态；负载/价格按具体配置询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "robotnik-rb1-base",
       "name": "Robotnik RB-1 Base",
       "vendor": "Robotnik",
@@ -43690,79 +43775,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "id": "boston-atlas-electric",
-      "name": "Boston Dynamics Atlas",
-      "vendor": "Boston Dynamics",
-      "category": "人形机器人",
-      "formFactor": "电驱人形机器人",
-      "country": "美国",
-      "domesticPriority": false,
-      "officialUrl": "https://bostondynamics.com/atlas/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2024",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Boston",
-      "tags": [
-        "全尺寸",
-        "工业/商用"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3027"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3027"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "id": "figure-02",
       "name": "Figure 02",
       "vendor": "Figure AI",
@@ -43907,79 +43919,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRCV3029"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "pal-talos",
-      "name": "PAL Robotics TALOS",
-      "vendor": "PAL Robotics",
-      "category": "人形机器人",
-      "formFactor": "科研人形机器人",
-      "country": "西班牙",
-      "domesticPriority": false,
-      "officialUrl": "https://pal-robotics.com/robots/talos/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "PAL Robotics",
-      "tags": [
-        "科研开发套件",
-        "全尺寸"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC064"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC064"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -44205,155 +44144,6 @@
       "sourceIds": [
         "SRCV3009",
         "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "unitree-g1-edu",
-      "name": "Unitree G1 EDU",
-      "vendor": "宇树科技 Unitree",
-      "category": "人形机器人",
-      "formFactor": "教育科研人形机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.unitree.com/g1/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2024-05",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Unitree",
-      "tags": [
-        "科研开发套件",
-        "教育版"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC001",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "23-43 自由度",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 2 m/s",
-        "endurance": "约 2 h",
-        "weightKg": "约 35 kg",
-        "sensors": "3D LiDAR / 深度相机按版本",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方/社区 ROS 支持",
-        "ros2": "待核验",
-        "sdk": "Unitree SDK",
-        "sim": "Isaac/Gazebo 社区方案"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC001",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "unitree-h1-2",
-      "name": "Unitree H1-2",
-      "vendor": "宇树科技 Unitree",
-      "category": "人形机器人",
-      "formFactor": "全尺寸人形机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.unitree.com/cn/h1/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Unitree",
-      "tags": [
-        "全尺寸",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC005"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC005"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -54501,6 +54291,313 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "boston-atlas-electric",
+      "name": "Boston Dynamics Atlas",
+      "vendor": "Boston Dynamics",
+      "category": "人形机器人",
+      "formFactor": "电驱人形机器人",
+      "country": "美国",
+      "domesticPriority": false,
+      "officialUrl": "https://bostondynamics.com/atlas/",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2024",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Boston",
+      "tags": [
+        "全尺寸",
+        "工业/商用"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3027",
+          "SRCV6005"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "待核验",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "待核验",
+        "ros2": "待核验",
+        "sdk": "待核验",
+        "sim": "待核验"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v6 官网核验：Boston Dynamics 官方资料确认产品入口；Spot SDK 和载荷参数明确，Atlas 为研发/商业展示入口，采购可得性需另行确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3027",
+        "SRCV6005"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Boston Dynamics 官方资料确认产品入口；Spot SDK 和载荷参数明确，Atlas 为研发/商业展示入口，采购可得性需另行确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "pal-talos",
+      "name": "PAL Robotics TALOS",
+      "vendor": "PAL Robotics",
+      "category": "人形机器人",
+      "formFactor": "科研人形机器人",
+      "country": "西班牙",
+      "domesticPriority": false,
+      "officialUrl": "https://pal-robotics.com/robots/talos/",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "PAL Robotics",
+      "tags": [
+        "科研开发套件",
+        "全尺寸"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC064",
+          "SRCV6003"
+        ]
+      },
+      "specs": {
+        "dof": "约 32 自由度，负载按配置",
+        "payloadKg": "按配置确认",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "相机、激光雷达、力控/触觉等按配置",
+        "compute": "待核验",
+        "safety": "科研平台安全按部署确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持需按版本确认",
+        "sdk": "官方 ROS 平台",
+        "sim": "Gazebo/MoveIt/ROS 仿真生态"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v6 官网核验：PAL 官方资料确认机器人系列、科研平台定位和 ROS 生态；负载/价格按具体配置询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC064",
+        "SRCV6003"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "PAL 官方资料确认机器人系列、科研平台定位和 ROS 生态；负载/价格按具体配置询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "unitree-g1-edu",
+      "name": "Unitree G1 EDU",
+      "vendor": "宇树科技 Unitree",
+      "category": "人形机器人",
+      "formFactor": "教育科研人形机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.unitree.com/g1/",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2024-05",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Unitree",
+      "tags": [
+        "科研开发套件",
+        "教育版"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC001",
+          "SRCV4001",
+          "SRCV6004"
+        ]
+      },
+      "specs": {
+        "dof": "23-43 自由度",
+        "payloadKg": "待核验",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 2 m/s",
+        "endurance": "约 2 h",
+        "weightKg": "约 35 kg",
+        "sensors": "激光雷达/深度相机/广角相机按版本",
+        "compute": "待核验",
+        "safety": "开发和部署安全按版本确认"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持",
+        "ros2": "社区 ROS2 支持需按版本确认",
+        "sdk": "Unitree SDK",
+        "sim": "Isaac/Gazebo/Unitree 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC001",
+        "SRCV4001",
+        "SRCV6004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "unitree-h1-2",
+      "name": "Unitree H1-2",
+      "vendor": "宇树科技 Unitree",
+      "category": "人形机器人",
+      "formFactor": "全尺寸人形机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.unitree.com/cn/h1/",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2023",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Unitree",
+      "tags": [
+        "全尺寸",
+        "科研开发套件"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC005",
+          "SRCV6004"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "待核验",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "激光雷达/深度相机/广角相机按版本",
+        "compute": "待核验",
+        "safety": "开发和部署安全按版本确认"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持",
+        "ros2": "社区 ROS2 支持需按版本确认",
+        "sdk": "Unitree SDK",
+        "sim": "Isaac/Gazebo/Unitree 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v6 官网核验：宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC005",
+        "SRCV6004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "xiaomi-cyberdog",
       "name": "Xiaomi CyberDog",
       "vendor": "小米 Xiaomi",
@@ -54941,82 +55038,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRCV3004",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "boston-spot",
-      "name": "Boston Dynamics Spot",
-      "vendor": "Boston Dynamics",
-      "category": "机器狗",
-      "formFactor": "工业/科研四足机器人",
-      "country": "美国",
-      "domesticPriority": false,
-      "officialUrl": "https://bostondynamics.com/products/spot/",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2020",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Boston",
-      "tags": [
-        "工业巡检",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3005",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 14 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 1.6 m/s",
-        "endurance": "约 90 min",
-        "weightKg": "约 32.7 kg",
-        "sensors": "环视相机/可选载荷",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "社区 ROS 包",
-        "ros2": "社区 ROS2 包",
-        "sdk": "Spot SDK / API",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3005",
         "SRCV4001"
       ],
       "verificationStatus": "部分核验",
@@ -55528,379 +55549,6 @@
       "shortlistTags": [],
       "sourceIds": [
         "SRCV3008"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "unitree-b1",
-      "name": "Unitree B1",
-      "vendor": "宇树科技 Unitree",
-      "category": "机器狗",
-      "formFactor": "工业四足机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.unitree.com/",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Unitree",
-      "tags": [
-        "工业巡检",
-        "负载型",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC006",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 20 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 6 m/s",
-        "endurance": "约 2-4 h",
-        "weightKg": "约 50 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方/社区 ROS 支持",
-        "ros2": "待核验",
-        "sdk": "Unitree SDK",
-        "sim": "Isaac/Gazebo 社区方案"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC006",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "unitree-b2-w",
-      "name": "Unitree B2-W",
-      "vendor": "宇树科技 Unitree",
-      "category": "机器狗",
-      "formFactor": "轮足四足机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.unitree.com/b2-w/",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2024",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Unitree",
-      "tags": [
-        "轮足/足式",
-        "负载型"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC006",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 40 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 6 m/s",
-        "endurance": "约 5 h",
-        "weightKg": "约 75 kg",
-        "sensors": "激光雷达/深度相机按配置",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方/社区 ROS 支持",
-        "ros2": "待核验",
-        "sdk": "Unitree SDK",
-        "sim": "Isaac/Gazebo 社区方案"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC006",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "unitree-go2-air",
-      "name": "Unitree Go2 Air",
-      "vendor": "宇树科技 Unitree",
-      "category": "机器狗",
-      "formFactor": "消费级四足机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.unitree.com/go2/",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2023",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Unitree",
-      "tags": [
-        "消费级",
-        "教育版"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "轻载",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 2.5 m/s",
-        "endurance": "约 1-2 h",
-        "weightKg": "约 15 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "社区支持",
-        "ros2": "待核验",
-        "sdk": "Unitree SDK",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "unitree-go2-edu",
-      "name": "Unitree Go2 EDU",
-      "vendor": "宇树科技 Unitree",
-      "category": "机器狗",
-      "formFactor": "教育开发四足机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.unitree.com/go2/",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2023",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Unitree",
-      "tags": [
-        "教育版",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC002"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC002"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "unitree-go2-pro",
-      "name": "Unitree Go2 Pro",
-      "vendor": "宇树科技 Unitree",
-      "category": "机器狗",
-      "formFactor": "消费/教育四足机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.unitree.com/go2/",
-      "image": "/assets/robots/robot-dog.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2023",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Unitree",
-      "tags": [
-        "消费级",
-        "教育版",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "轻载",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "约 3.7 m/s",
-        "endurance": "约 1-2 h",
-        "weightKg": "约 15 kg",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方/社区 ROS 支持",
-        "ros2": "待核验",
-        "sdk": "Unitree SDK",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC001"
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
@@ -63298,6 +62946,473 @@
       ],
       "verificationStatus": "部分核验",
       "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "boston-spot",
+      "name": "Boston Dynamics Spot",
+      "vendor": "Boston Dynamics",
+      "category": "机器狗",
+      "formFactor": "工业/科研四足机器人",
+      "country": "美国",
+      "domesticPriority": false,
+      "officialUrl": "https://bostondynamics.com/products/spot/",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2020",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Boston",
+      "tags": [
+        "工业巡检",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3005",
+          "SRCV4001",
+          "SRCV6005"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "14 kg",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "1.6 m/s",
+        "endurance": "约 90 min",
+        "weightKg": "约 32.7 kg",
+        "sensors": "环视相机、Spot CAM/机械臂/行业载荷按配置",
+        "compute": "待核验",
+        "safety": "待核验"
+      },
+      "software": {
+        "ros": "社区 ROS 支持",
+        "ros2": "社区 ROS2 支持",
+        "sdk": "Spot SDK / Python API",
+        "sim": "Webots/Isaac 等社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：Boston Dynamics 官方资料确认产品入口；Spot SDK 和载荷参数明确，Atlas 为研发/商业展示入口，采购可得性需另行确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3005",
+        "SRCV4001",
+        "SRCV6005"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Boston Dynamics 官方资料确认产品入口；Spot SDK 和载荷参数明确，Atlas 为研发/商业展示入口，采购可得性需另行确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "unitree-b1",
+      "name": "Unitree B1",
+      "vendor": "宇树科技 Unitree",
+      "category": "机器狗",
+      "formFactor": "工业四足机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.unitree.com/",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Unitree",
+      "tags": [
+        "工业巡检",
+        "负载型",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC006",
+          "SRCV4001",
+          "SRCV6004"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "约 20 kg",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 6 m/s",
+        "endurance": "约 2-4 h",
+        "weightKg": "约 50 kg",
+        "sensors": "激光雷达/深度相机/广角相机按版本",
+        "compute": "待核验",
+        "safety": "开发和部署安全按版本确认"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持",
+        "ros2": "社区 ROS2 支持需按版本确认",
+        "sdk": "Unitree SDK",
+        "sim": "Isaac/Gazebo/Unitree 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC006",
+        "SRCV4001",
+        "SRCV6004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "unitree-b2-w",
+      "name": "Unitree B2-W",
+      "vendor": "宇树科技 Unitree",
+      "category": "机器狗",
+      "formFactor": "轮足四足机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.unitree.com/b2-w/",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2024",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Unitree",
+      "tags": [
+        "轮足/足式",
+        "负载型"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC006",
+          "SRCV4001",
+          "SRCV6004"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "约 40 kg",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 6 m/s",
+        "endurance": "约 5 h",
+        "weightKg": "约 75 kg",
+        "sensors": "激光雷达/深度相机/广角相机按版本",
+        "compute": "待核验",
+        "safety": "开发和部署安全按版本确认"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持",
+        "ros2": "社区 ROS2 支持需按版本确认",
+        "sdk": "Unitree SDK",
+        "sim": "Isaac/Gazebo/Unitree 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v6 官网核验：宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC006",
+        "SRCV4001",
+        "SRCV6004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "unitree-go2-air",
+      "name": "Unitree Go2 Air",
+      "vendor": "宇树科技 Unitree",
+      "category": "机器狗",
+      "formFactor": "消费级四足机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.unitree.com/go2/",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2023",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Unitree",
+      "tags": [
+        "消费级",
+        "教育版"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC001",
+          "SRCV6004"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "轻载",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 2.5 m/s",
+        "endurance": "约 1-2 h",
+        "weightKg": "约 15 kg",
+        "sensors": "激光雷达/深度相机/广角相机按版本",
+        "compute": "待核验",
+        "safety": "开发和部署安全按版本确认"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持",
+        "ros2": "社区 ROS2 支持需按版本确认",
+        "sdk": "Unitree SDK",
+        "sim": "Isaac/Gazebo/Unitree 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v6 官网核验：宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC001",
+        "SRCV6004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "unitree-go2-edu",
+      "name": "Unitree Go2 EDU",
+      "vendor": "宇树科技 Unitree",
+      "category": "机器狗",
+      "formFactor": "教育开发四足机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.unitree.com/go2/",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2023",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Unitree",
+      "tags": [
+        "教育版",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC002",
+          "SRCV6004"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "轻载",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 3.7 m/s",
+        "endurance": "约 1-2 h",
+        "weightKg": "待核验",
+        "sensors": "激光雷达/深度相机/广角相机按版本",
+        "compute": "待核验",
+        "safety": "开发和部署安全按版本确认"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持",
+        "ros2": "社区 ROS2 支持需按版本确认",
+        "sdk": "Unitree SDK / EDU 开发接口",
+        "sim": "Isaac/Gazebo/Unitree 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v6 官网核验：宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC002",
+        "SRCV6004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "unitree-go2-pro",
+      "name": "Unitree Go2 Pro",
+      "vendor": "宇树科技 Unitree",
+      "category": "机器狗",
+      "formFactor": "消费/教育四足机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.unitree.com/go2/",
+      "image": "/assets/robots/robot-dog.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2023",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Unitree",
+      "tags": [
+        "消费级",
+        "教育版",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC001",
+          "SRCV6004"
+        ]
+      },
+      "specs": {
+        "dof": "待核验",
+        "payloadKg": "轻载",
+        "reachM": "待核验",
+        "repeatabilityMm": "待核验",
+        "speed": "约 3.7 m/s",
+        "endurance": "约 1-2 h",
+        "weightKg": "约 15 kg",
+        "sensors": "激光雷达/深度相机/广角相机按版本",
+        "compute": "待核验",
+        "safety": "开发和部署安全按版本确认"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持",
+        "ros2": "社区 ROS2 支持需按版本确认",
+        "sdk": "Unitree SDK",
+        "sim": "Isaac/Gazebo/Unitree 社区方案"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v6 官网核验：宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC001",
+        "SRCV6004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "宇树官方产品资料确认型号、基础参数和 SDK/开发生态；部分科研/商业配置仍需正式询价。",
       "verifiedAt": "2026-06-01"
     }
   ]

@@ -1580,3 +1580,8 @@ SRCV5005,AgileX Bunker Pro 官方产品页,官网/规格页,high,https://global.
 SRCV5006,Husarion Panther 官方手册,官网/规格手册,high,https://husarion.com/manuals/panther/overview/,官方手册列出 Panther 100 kg 负载、2 m/s 速度、3.5-16 h 续航、ROS/ROS2 开源驱动等。
 SRCV5007,Clearpath ROS 2 平台文档,官方文档/ROS2,high,https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/configuration,官方文档列出 Husky、Jackal、Dingo、Warthog 等平台的 ROS2/Nav2 支持。
 SRCV5008,Robotnik RB-KAIROS 产品资料,官网/规格书,medium,https://robotnik.eu/wp-content/uploads/2023/01/Robotnik-RB-KAIROS-Datasheet-230124-EN-1.pdf,Robotnik 规格资料说明 RB-KAIROS 开放 ROS 架构和移动操作平台定位。
+SRCV6001,Universal Robots 产品规格页,官网/产品规格,high,https://www.universal-robots.com/products/,官方产品页确认 UR 系列型号、负载、臂展、重复定位精度、PolyScope/URScript/RTDE 等软件接口口径。
+SRCV6002,MiR 自主移动机器人产品规格,官网/产品规格,high,https://www.mobile-industrial-robots.com/solutions/robots/,MiR 官方产品页确认 MiR100/MiR250/MiR600 等 AMR 负载分档、Fleet 管理和 REST API 生态。
+SRCV6003,PAL Robotics 机器人产品资料,官网/产品资料,high,https://pal-robotics.com/robots/,PAL 官方资料确认 TIAGo、TIAGo Pro、ARI、TALOS 等机器人系列和 ROS/科研平台定位。
+SRCV6004,Unitree 官方产品规格,官网/产品规格,high,https://www.unitree.com/,宇树官方产品页确认 Go2、B1/B2/B2-W、G1/H1 等型号的基础形态、SDK/开发生态和部分参数。
+SRCV6005,Boston Dynamics 产品和 SDK 资料,官网/产品与 SDK,high,https://bostondynamics.com/products/,Boston Dynamics 官方产品与开发者资料确认 Spot/Atlas 产品入口、Spot SDK 和企业部署口径。
