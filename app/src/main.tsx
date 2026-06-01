@@ -592,7 +592,7 @@ function Header({
       </div>
       <div className="header-tools" aria-label="状态工具">
         <button aria-label="数据提醒"><Bell size={18} /></button>
-        <span className="data-badge">候选库 v3</span>
+        <span className="data-badge">候选库 {meta.version}</span>
       </div>
     </header>
   );
