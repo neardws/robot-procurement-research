@@ -1627,3 +1627,19 @@ SRCV9015,Mujin TruckBot 官方产品入口,官网/产品入口,high,https://muji
 SRCV9016,Neobotix MPO-700 官方产品页,官网/产品规格,high,https://www.neobotix-robots.com/mobile-robots/omnidirectional-robots/mpo-700,官方产品页核验 MPO-700 全向移动机器人、100 kg 级载荷、研究/工业移动平台和 ROS/导航接口口径。
 SRCV9017,Robotnik RB-THERON 官方产品页,官网/产品规格,high,https://robotnik.eu/products/mobile-robots/rb-theron/,官方产品页核验 RB-THERON 自主移动机器人、全向底盘、室内外导航、ROS/ROS2 和可扩展传感器/载荷接口。
 SRCV9018,Yahboom ROSMASTER X3 Plus 官方产品页,官网/产品规格/价格,high,https://category.yahboom.net/products/rosmaster-x3,官方产品页核验 ROSMASTER X3 Plus Jetson Orin Nano 版本、Mecanum/履带/阿克曼三底盘形态、ROS2/SLAM/导航教程和公开美元售价。
+SRCV10001,1X NEO 官方产品页,官网/产品规格/订购,high,https://www.1x.tech/neo,官方页核验 NEO 家用人形机器人、预订/订阅口径、重量、负载、续航、速度和远程/自主能力边界。
+SRCV10002,Kepler Forerunner 官方产品页,官网/产品入口,high,https://www.keplerrobotics.com/,官方入口核验 Kepler Forerunner 人形机器人产品线；详细采购规格和 SDK 需向厂商确认。
+SRCV10003,RobotEra 官方产品入口,官网/产品入口,high,https://www.robotera.com/,官方入口核验 RobotEra 人形机器人与灵巧操作产品线；XHand1 具体采购规格和接口需厂商确认。
+SRCV10004,UBTECH Walker 官方产品资料,官网/产品入口,high,https://www.ubtrobot.com/,优必选官网核验 Walker 系列人形机器人和商用/展示应用；Walker X 面向采购的量产规格、价格和 SDK 需询价。
+SRCV10005,AgiBot 官方产品入口,官网/产品入口,high,https://www.agibot.com/,智元官网核验 A2/A2-W 相关人形机器人产品线；详细规格、交付和开发接口需厂商确认。
+SRCV10006,Agility Digit 官方机器人页,官网/产品规格,high,https://agilityrobotics.com/robots,官方页核验 Digit 物流人形机器人、箱体搬运定位、企业部署和 Agility Arc 系统；价格和 SDK 需询价。
+SRCV10007,Apptronik Apollo 官方产品页,官网/产品规格,high,https://apptronik.com/apollo,官方页核验 Apollo 通用人形机器人、模块化电池、工业任务定位和企业合作路径；价格和 SDK 需询价。
+SRCV10008,Booster Robotics A1 官方产品页,官网/产品规格,high,https://www.boosterobotics.com/,官方页核验 Booster A1 开源/开发者人形平台和科研教育定位；公开价格和具体接口需按版本确认。
+SRCV10009,Figure 官方机器人页,官网/产品入口,high,https://www.figure.ai/,Figure 官网核验 Figure 02 / Figure 03 产品线、商业部署方向和 Helix 智能系统；开放采购与 SDK 未公开。
+SRCV10010,NEURA 4NE-1 官方产品页,官网/产品入口,high,https://www.neura-robotics.com/4ne1,NEURA 官方页核验 4NE-1 人形机器人产品线；详细规格、开放采购和 SDK 需询价。
+SRCV10011,ROBOTIS OP3 官方 e-Manual,官网/产品手册,high,https://emanual.robotis.com/docs/en/platform/op3/introduction/,官方 e-Manual 核验 OP3 小型开源人形机器人、ROS 包、硬件配置、教程和教育科研定位。
+SRCV10012,Sanctuary Phoenix 官方产品页,官网/产品入口,high,https://www.sanctuary.ai/phoenix,官方页核验 Phoenix 通用人形机器人和 Carbon AI 控制系统；公开采购规格、价格和 SDK 未完整披露。
+SRCV10013,Tesla AI 官方页面,官网/产品入口,medium,https://www.tesla.com/AI,Tesla 官方 AI 页面核验 Optimus 项目与招聘/演示口径；暂无学校采购、价格、SDK 或正式规格入口。
+SRCV10014,Rainbow Robotics 官方产品页,官网/产品入口,medium,https://www.rainbow-robotics.com/,Rainbow 官方入口核验四足/机器人产品线；RBQ/RBQ-10 当前公开规格和采购页需厂商确认。
+SRCV10015,Sony aibo 官方产品页,官网/产品规格/价格,high,https://us.aibo.com/,官方页核验 aibo ERS-1000 消费级机器狗、订购/配件、娱乐和教育展示边界；科研 SDK 和工业能力有限。
+SRCV10016,Unitree Laikago 官方历史资料,官网/产品入口,medium,https://www.unitree.com/,宇树官网当前主推 Go2/B2/A2 等新款，Laikago 作为早期历史平台需确认存量和支持状态。

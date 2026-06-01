@@ -1,9 +1,9 @@
 {
   "meta": {
     "project": "学校具身智能机器人采购调研",
-    "version": "v9",
+    "version": "v10",
     "accessedDate": "2026-06-01",
-    "updateSummary": "第五批继续核验机械臂和移动/复合机器人：AUBO、Elephant Robotics、Franka、Han's Robot、Kinova、ROKAE、SIASUN、UFACTORY、Yaskawa、Fetch/Zebra、Hello Robot、Hiwonder、Husarion、Mujin、Neobotix、Robotnik、Yahboom。",
+    "updateSummary": "第六批核验剩余人形机器人、机器狗和历史平台：1X、Kepler、RobotEra、UBTECH、AgiBot、Agility、Apptronik、Booster、Figure、NEURA、ROBOTIS、Sanctuary、Tesla、Rainbow、Sony、Unitree 等。",
     "scoringWeights": {
       "research": 50,
       "deployment": 50
@@ -13045,6 +13045,134 @@
       "type": "官网/产品规格/价格",
       "confidence": "high",
       "notes": "官方产品页核验 ROSMASTER X3 Plus Jetson Orin Nano 版本、Mecanum/履带/阿克曼三底盘形态、ROS2/SLAM/导航教程和公开美元售价。"
+    },
+    {
+      "id": "SRCV10001",
+      "title": "1X NEO 官方产品页",
+      "url": "https://www.1x.tech/neo",
+      "type": "官网/产品规格/订购",
+      "confidence": "high",
+      "notes": "官方页核验 NEO 家用人形机器人、预订/订阅口径、重量、负载、续航、速度和远程/自主能力边界。"
+    },
+    {
+      "id": "SRCV10002",
+      "title": "Kepler Forerunner 官方产品页",
+      "url": "https://www.keplerrobotics.com/",
+      "type": "官网/产品入口",
+      "confidence": "high",
+      "notes": "官方入口核验 Kepler Forerunner 人形机器人产品线；详细采购规格和 SDK 需向厂商确认。"
+    },
+    {
+      "id": "SRCV10003",
+      "title": "RobotEra 官方产品入口",
+      "url": "https://www.robotera.com/",
+      "type": "官网/产品入口",
+      "confidence": "high",
+      "notes": "官方入口核验 RobotEra 人形机器人与灵巧操作产品线；XHand1 具体采购规格和接口需厂商确认。"
+    },
+    {
+      "id": "SRCV10004",
+      "title": "UBTECH Walker 官方产品资料",
+      "url": "https://www.ubtrobot.com/",
+      "type": "官网/产品入口",
+      "confidence": "high",
+      "notes": "优必选官网核验 Walker 系列人形机器人和商用/展示应用；Walker X 面向采购的量产规格、价格和 SDK 需询价。"
+    },
+    {
+      "id": "SRCV10005",
+      "title": "AgiBot 官方产品入口",
+      "url": "https://www.agibot.com/",
+      "type": "官网/产品入口",
+      "confidence": "high",
+      "notes": "智元官网核验 A2/A2-W 相关人形机器人产品线；详细规格、交付和开发接口需厂商确认。"
+    },
+    {
+      "id": "SRCV10006",
+      "title": "Agility Digit 官方机器人页",
+      "url": "https://agilityrobotics.com/robots",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 Digit 物流人形机器人、箱体搬运定位、企业部署和 Agility Arc 系统；价格和 SDK 需询价。"
+    },
+    {
+      "id": "SRCV10007",
+      "title": "Apptronik Apollo 官方产品页",
+      "url": "https://apptronik.com/apollo",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 Apollo 通用人形机器人、模块化电池、工业任务定位和企业合作路径；价格和 SDK 需询价。"
+    },
+    {
+      "id": "SRCV10008",
+      "title": "Booster Robotics A1 官方产品页",
+      "url": "https://www.boosterobotics.com/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 Booster A1 开源/开发者人形平台和科研教育定位；公开价格和具体接口需按版本确认。"
+    },
+    {
+      "id": "SRCV10009",
+      "title": "Figure 官方机器人页",
+      "url": "https://www.figure.ai/",
+      "type": "官网/产品入口",
+      "confidence": "high",
+      "notes": "Figure 官网核验 Figure 02 / Figure 03 产品线、商业部署方向和 Helix 智能系统；开放采购与 SDK 未公开。"
+    },
+    {
+      "id": "SRCV10010",
+      "title": "NEURA 4NE-1 官方产品页",
+      "url": "https://www.neura-robotics.com/4ne1",
+      "type": "官网/产品入口",
+      "confidence": "high",
+      "notes": "NEURA 官方页核验 4NE-1 人形机器人产品线；详细规格、开放采购和 SDK 需询价。"
+    },
+    {
+      "id": "SRCV10011",
+      "title": "ROBOTIS OP3 官方 e-Manual",
+      "url": "https://emanual.robotis.com/docs/en/platform/op3/introduction/",
+      "type": "官网/产品手册",
+      "confidence": "high",
+      "notes": "官方 e-Manual 核验 OP3 小型开源人形机器人、ROS 包、硬件配置、教程和教育科研定位。"
+    },
+    {
+      "id": "SRCV10012",
+      "title": "Sanctuary Phoenix 官方产品页",
+      "url": "https://www.sanctuary.ai/phoenix",
+      "type": "官网/产品入口",
+      "confidence": "high",
+      "notes": "官方页核验 Phoenix 通用人形机器人和 Carbon AI 控制系统；公开采购规格、价格和 SDK 未完整披露。"
+    },
+    {
+      "id": "SRCV10013",
+      "title": "Tesla AI 官方页面",
+      "url": "https://www.tesla.com/AI",
+      "type": "官网/产品入口",
+      "confidence": "medium",
+      "notes": "Tesla 官方 AI 页面核验 Optimus 项目与招聘/演示口径；暂无学校采购、价格、SDK 或正式规格入口。"
+    },
+    {
+      "id": "SRCV10014",
+      "title": "Rainbow Robotics 官方产品页",
+      "url": "https://www.rainbow-robotics.com/",
+      "type": "官网/产品入口",
+      "confidence": "medium",
+      "notes": "Rainbow 官方入口核验四足/机器人产品线；RBQ/RBQ-10 当前公开规格和采购页需厂商确认。"
+    },
+    {
+      "id": "SRCV10015",
+      "title": "Sony aibo 官方产品页",
+      "url": "https://us.aibo.com/",
+      "type": "官网/产品规格/价格",
+      "confidence": "high",
+      "notes": "官方页核验 aibo ERS-1000 消费级机器狗、订购/配件、娱乐和教育展示边界；科研 SDK 和工业能力有限。"
+    },
+    {
+      "id": "SRCV10016",
+      "title": "Unitree Laikago 官方历史资料",
+      "url": "https://www.unitree.com/",
+      "type": "官网/产品入口",
+      "confidence": "medium",
+      "notes": "宇树官网当前主推 Go2/B2/A2 等新款，Laikago 作为早期历史平台需确认存量和支持状态。"
     }
   ],
   "robots": [
@@ -43372,79 +43500,6 @@
       "verifiedAt": "2026-06-01"
     },
     {
-      "id": "1x-neo",
-      "name": "1X NEO",
-      "vendor": "1X Technologies",
-      "category": "人形机器人",
-      "formFactor": "家用/服务人形机器人",
-      "country": "挪威/美国",
-      "domesticPriority": false,
-      "officialUrl": "https://www.1x.tech/neo",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2024",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "1X",
-      "tags": [
-        "全尺寸",
-        "工业/商用"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3030"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3030"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
       "id": "kepler-forerunner",
       "name": "Kepler Forerunner",
       "vendor": "开普勒机器人",
@@ -43475,324 +43530,31 @@
         "type": "需询价",
         "confidence": "low",
         "sourceIds": [
-          "SRC060"
+          "SRC060",
+          "SRCV10002"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "dof": "全尺寸人形，按厂商规格书确认",
+        "payloadKg": "需询价确认",
+        "reachM": "需询价确认",
         "repeatabilityMm": "待核验",
         "speed": "待核验",
         "endurance": "待核验",
         "weightKg": "待核验",
-        "sensors": "待核验",
+        "sensors": "视觉/力控/灵巧操作按型号确认",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "全尺寸人形，校园部署需隔离和急停方案"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC060"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "robotera-xhand1",
-      "name": "RobotEra XHand1",
-      "vendor": "星动纪元 RobotEra",
-      "category": "人形机器人",
-      "formFactor": "人形机器人灵巧手/上肢部件",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.robotera.com/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "星动纪元",
-      "tags": [
-        "科研开发套件",
-        "工业/商用"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC059"
-        ]
-      },
-      "specs": {
-        "dof": "灵巧手自由度待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "开发接口需询价",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC059"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "ubtech-walker-x",
-      "name": "UBTECH Walker X",
-      "vendor": "优必选 UBTECH",
-      "category": "人形机器人",
-      "formFactor": "全尺寸人形机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.ubtrobot.com/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "优必选",
-      "tags": [
-        "全尺寸",
-        "工业/商用"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC052"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "企业合作接口需询价",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC052"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "agibot-a2-w",
-      "name": "AgiBot A2-W",
-      "vendor": "智元机器人 AgiBot",
-      "category": "人形机器人",
-      "formFactor": "轮式双臂人形/服务机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.agibot.com/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "智元机器人",
-      "tags": [
-        "工业/商用",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC051"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "开发接口需询价",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC051"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "agility-digit",
-      "name": "Agility Robotics Digit",
-      "vendor": "Agility Robotics",
-      "category": "人形机器人",
-      "formFactor": "物流人形机器人",
-      "country": "美国",
-      "domesticPriority": false,
-      "officialUrl": "https://agilityrobotics.com/robots",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2020",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Agility",
-      "tags": [
-        "工业/商用",
-        "全尺寸",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3012",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 16 kg",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "按部署方案确认",
-        "weightKg": "约 65 kg 级公开口径",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "未公开",
-        "ros2": "未公开",
-        "sdk": "企业合作接口需询价",
-        "sim": "未公开"
+        "ros": "需厂商确认",
+        "ros2": "需厂商确认",
+        "sdk": "厂商开发接口需询价",
+        "sim": "需厂商确认"
       },
       "researchEvidence": [
         "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
+        "v10 官网核验：Kepler 官网确认 Forerunner 人形机器人产品线；详细规格、开放接口、价格和交付需厂商确认。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -43807,535 +43569,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRCV3012",
-        "SRCV4001"
+        "SRC060",
+        "SRCV10002"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "apptronik-apollo",
-      "name": "Apptronik Apollo",
-      "vendor": "Apptronik",
-      "category": "人形机器人",
-      "formFactor": "商用人形机器人",
-      "country": "美国",
-      "domesticPriority": false,
-      "officialUrl": "https://apptronik.com/apollo",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2023",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Apptronik",
-      "tags": [
-        "全尺寸",
-        "工业/商用",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3011",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "约 25 kg 级公开口径",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "约 4 h 级公开口径",
-        "weightKg": "约 72.6 kg 级公开口径",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "未公开",
-        "ros2": "未公开",
-        "sdk": "企业合作接口需询价",
-        "sim": "未公开"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3011",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "booster-a1",
-      "name": "Booster A1",
-      "vendor": "Booster Robotics",
-      "category": "人形机器人",
-      "formFactor": "科研开发人形机器人",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.boosterobotics.com/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Booster Robotics",
-      "tags": [
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC056"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC056"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "figure-02",
-      "name": "Figure 02",
-      "vendor": "Figure AI",
-      "category": "人形机器人",
-      "formFactor": "全尺寸人形机器人",
-      "country": "美国",
-      "domesticPriority": false,
-      "officialUrl": "https://www.figure.ai/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2024",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Figure",
-      "tags": [
-        "全尺寸",
-        "工业/商用",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3010",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "约 5 h 级公开口径",
-        "weightKg": "约 70 kg 级公开口径",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "未公开",
-        "ros2": "未公开",
-        "sdk": "未公开",
-        "sim": "未公开"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3010",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "neura-4ne1",
-      "name": "NEURA 4NE-1",
-      "vendor": "NEURA Robotics",
-      "category": "人形机器人",
-      "formFactor": "认知人形机器人",
-      "country": "德国",
-      "domesticPriority": false,
-      "officialUrl": "https://www.neura-robotics.com/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2024",
-      "releaseDateConfidence": "low",
-      "marketTier": "市场初筛",
-      "brandNormalized": "NEURA",
-      "tags": [
-        "全尺寸",
-        "工业/商用"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3029"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3029"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "robotis-op3",
-      "name": "ROBOTIS OP3",
-      "vendor": "Robotis",
-      "category": "人形机器人",
-      "formFactor": "小型开源人形机器人",
-      "country": "韩国",
-      "domesticPriority": false,
-      "officialUrl": "https://emanual.robotis.com/docs/en/platform/op3/introduction/",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Robotis",
-      "tags": [
-        "小型人形",
-        "开源人形",
-        "教育版",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3013"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3013"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "sanctuary-phoenix",
-      "name": "Sanctuary Phoenix",
-      "vendor": "Sanctuary AI",
-      "category": "人形机器人",
-      "formFactor": "通用人形机器人",
-      "country": "加拿大",
-      "domesticPriority": false,
-      "officialUrl": "https://www.sanctuary.ai/phoenix",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2023",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Sanctuary",
-      "tags": [
-        "全尺寸",
-        "工业/商用"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3028"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3028"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "tesla-optimus",
-      "name": "Tesla Optimus",
-      "vendor": "Tesla",
-      "category": "人形机器人",
-      "formFactor": "通用人形机器人",
-      "country": "美国",
-      "domesticPriority": false,
-      "officialUrl": "https://www.tesla.com/AI",
-      "image": "/assets/robots/humanoid.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2022",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Tesla",
-      "tags": [
-        "全尺寸",
-        "工业/商用",
-        "科研开发套件"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3009",
-          "SRCV4001"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "约 57 kg 级公开演示口径",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "未公开",
-        "ros2": "未公开",
-        "sdk": "未公开",
-        "sim": "未公开"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
-        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3009",
-        "SRCV4001"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Kepler 官网确认 Forerunner 人形机器人产品线；详细规格、开放接口、价格和交付需厂商确认。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -44413,6 +43651,472 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "小米官方文章确认 CyberOne 发布和人形机器人定位，但未提供面向采购的量产规格、售价和交付信息；保留市场覆盖项。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "robotera-xhand1",
+      "name": "RobotEra XHand1",
+      "vendor": "星动纪元 RobotEra",
+      "category": "人形机器人",
+      "formFactor": "人形机器人灵巧手/上肢部件",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.robotera.com/",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "市场初筛",
+      "brandNormalized": "星动纪元",
+      "tags": [
+        "科研开发套件",
+        "工业/商用"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC059",
+          "SRCV10003"
+        ]
+      },
+      "specs": {
+        "dof": "灵巧手/人形操作部件，具体自由度需厂商确认",
+        "payloadKg": "需询价确认",
+        "reachM": "手部/上肢模块按集成方案确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "触觉/力控/视觉集成按版本确认",
+        "compute": "待核验",
+        "safety": "灵巧操作模块，夹持安全需项目评估"
+      },
+      "software": {
+        "ros": "需厂商确认",
+        "ros2": "需厂商确认",
+        "sdk": "开发接口需询价",
+        "sim": "需厂商确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：RobotEra 官网确认人形/灵巧操作产品线；XHand1 具体采购规格、接口和交付需厂商确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC059",
+        "SRCV10003"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "RobotEra 官网确认人形/灵巧操作产品线；XHand1 具体采购规格、接口和交付需厂商确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "ubtech-walker-x",
+      "name": "UBTECH Walker X",
+      "vendor": "优必选 UBTECH",
+      "category": "人形机器人",
+      "formFactor": "全尺寸人形机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.ubtrobot.com/",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "市场初筛",
+      "brandNormalized": "优必选",
+      "tags": [
+        "全尺寸",
+        "工业/商用"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC052",
+          "SRCV10004"
+        ]
+      },
+      "specs": {
+        "dof": "全尺寸人形，详细自由度需厂商确认",
+        "payloadKg": "需询价确认",
+        "reachM": "需询价确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "视觉/语音/导航等商用展示口径",
+        "compute": "待核验",
+        "safety": "商用展示/服务场景，校园部署需厂商方案"
+      },
+      "software": {
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "企业合作接口需询价",
+        "sim": "未公开"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：优必选官网确认 Walker 系列人形机器人和商用/展示应用，但 Walker X 面向采购的规格、价格和 SDK 仍需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC052",
+        "SRCV10004"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "优必选官网确认 Walker 系列人形机器人和商用/展示应用，但 Walker X 面向采购的规格、价格和 SDK 仍需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "figure-02",
+      "name": "Figure 02",
+      "vendor": "Figure AI",
+      "category": "人形机器人",
+      "formFactor": "全尺寸人形机器人",
+      "country": "美国",
+      "domesticPriority": false,
+      "officialUrl": "https://www.figure.ai/",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2024",
+      "releaseDateConfidence": "medium",
+      "marketTier": "市场初筛",
+      "brandNormalized": "Figure",
+      "tags": [
+        "全尺寸",
+        "工业/商用",
+        "科研开发套件"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3010",
+          "SRCV4001",
+          "SRCV10009"
+        ]
+      },
+      "specs": {
+        "dof": "全尺寸人形，详细自由度未公开",
+        "payloadKg": "需官方确认",
+        "reachM": "需官方确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "约 5 h 级公开口径",
+        "weightKg": "约 70 kg 级公开口径",
+        "sensors": "视觉/语音/端到端模型口径",
+        "compute": "待核验",
+        "safety": "企业试点平台，校园采购需官方确认"
+      },
+      "software": {
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "未公开，Helix 系统为官方封闭口径",
+        "sim": "未公开"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v10 官网核验：Figure 官网确认 Figure 02/03 产品线和商业部署方向，但开放采购、价格和 SDK 未公开；适合市场跟踪，不宜直接作为近期学校采购重点。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "Figure 当前主要面向企业试点和自有系统，开放采购和科研二次开发信息不足。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3010",
+        "SRCV4001",
+        "SRCV10009"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Figure 官网确认 Figure 02/03 产品线和商业部署方向，但开放采购、价格和 SDK 未公开；适合市场跟踪，不宜直接作为近期学校采购重点。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "neura-4ne1",
+      "name": "NEURA 4NE-1",
+      "vendor": "NEURA Robotics",
+      "category": "人形机器人",
+      "formFactor": "认知人形机器人",
+      "country": "德国",
+      "domesticPriority": false,
+      "officialUrl": "https://www.neura-robotics.com/4ne1",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2024",
+      "releaseDateConfidence": "low",
+      "marketTier": "市场初筛",
+      "brandNormalized": "NEURA",
+      "tags": [
+        "全尺寸",
+        "工业/商用"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3029",
+          "SRCV10010"
+        ]
+      },
+      "specs": {
+        "dof": "全尺寸人形，具体自由度需官方确认",
+        "payloadKg": "需询价确认",
+        "reachM": "需询价确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "认知机器人传感器和安全感知按版本确认",
+        "compute": "待核验",
+        "safety": "协作/工业场景，需厂商安全方案"
+      },
+      "software": {
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "NEURA 企业接口需询价",
+        "sim": "未公开"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：NEURA 官方页确认 4NE-1 人形机器人产品线；详细规格、开放采购和 SDK 需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3029",
+        "SRCV10010"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "NEURA 官方页确认 4NE-1 人形机器人产品线；详细规格、开放采购和 SDK 需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "sanctuary-phoenix",
+      "name": "Sanctuary Phoenix",
+      "vendor": "Sanctuary AI",
+      "category": "人形机器人",
+      "formFactor": "通用人形机器人",
+      "country": "加拿大",
+      "domesticPriority": false,
+      "officialUrl": "https://www.sanctuary.ai/phoenix",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2023",
+      "releaseDateConfidence": "medium",
+      "marketTier": "市场初筛",
+      "brandNormalized": "Sanctuary",
+      "tags": [
+        "全尺寸",
+        "工业/商用"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3028",
+          "SRCV10012"
+        ]
+      },
+      "specs": {
+        "dof": "全尺寸人形，手部/上肢操作为重点",
+        "payloadKg": "需官方确认",
+        "reachM": "需官方确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "视觉/触觉/操作感知按 Phoenix 配置",
+        "compute": "待核验",
+        "safety": "企业试点平台，校园采购需官方确认"
+      },
+      "software": {
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "Carbon AI / 企业接口需询价",
+        "sim": "未公开"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：Sanctuary 官方 Phoenix 页面确认通用人形机器人和 Carbon AI 控制系统；公开采购规格、价格和 SDK 未完整披露。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3028",
+        "SRCV10012"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Sanctuary 官方 Phoenix 页面确认通用人形机器人和 Carbon AI 控制系统；公开采购规格、价格和 SDK 未完整披露。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "tesla-optimus",
+      "name": "Tesla Optimus",
+      "vendor": "Tesla",
+      "category": "人形机器人",
+      "formFactor": "通用人形机器人",
+      "country": "美国",
+      "domesticPriority": false,
+      "officialUrl": "https://www.tesla.com/AI",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2022",
+      "releaseDateConfidence": "medium",
+      "marketTier": "市场初筛",
+      "brandNormalized": "Tesla",
+      "tags": [
+        "全尺寸",
+        "工业/商用",
+        "科研开发套件"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3009",
+          "SRCV4001",
+          "SRCV10013"
+        ]
+      },
+      "specs": {
+        "dof": "全尺寸人形，正式产品规格未公开",
+        "payloadKg": "未公开",
+        "reachM": "未公开",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "约 57 kg 级公开演示口径",
+        "sensors": "Tesla 视觉/AI 演示口径",
+        "compute": "Tesla 自研 AI/自动驾驶相关口径，未面向采购公开",
+        "safety": "内部研发/展示阶段，学校采购不可按公开商品处理"
+      },
+      "software": {
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "未公开",
+        "sim": "未公开"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v10 官网核验：Tesla 官方 AI 页面确认 Optimus 项目，但暂无学校采购、价格、SDK 或正式规格入口；仅保留为市场趋势项。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "Optimus 暂无公开学校采购、价格、SDK 或正式规格入口，建议仅作趋势观察。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3009",
+        "SRCV4001",
+        "SRCV10013"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Tesla 官方 AI 页面确认 Optimus 项目，但暂无学校采购、价格、SDK 或正式规格入口；仅保留为市场趋势项。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -54557,6 +54261,83 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "1x-neo",
+      "name": "1X NEO",
+      "vendor": "1X Technologies",
+      "category": "人形机器人",
+      "formFactor": "家用/服务人形机器人",
+      "country": "挪威/美国",
+      "domesticPriority": false,
+      "officialUrl": "https://www.1x.tech/neo",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2024-10",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "1X",
+      "tags": [
+        "全尺寸",
+        "工业/商用"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3030",
+          "SRCV10001"
+        ]
+      },
+      "specs": {
+        "dof": "全尺寸人形，详细自由度未公开",
+        "payloadKg": "轻载家用任务，约 70 kg 级整机负载边界需官方确认",
+        "reachM": "真人比例，精确臂展未公开",
+        "repeatabilityMm": "待核验",
+        "speed": "约 3 mph 级",
+        "endurance": "约 2-4 h 级，按版本确认",
+        "weightKg": "约 30 kg 级公开口径",
+        "sensors": "视觉/音频/触觉等家用感知口径",
+        "compute": "待核验",
+        "safety": "家用机器人，远程协助和隐私/安全边界需评估"
+      },
+      "software": {
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "未公开，用户侧以服务/订阅为主",
+        "sim": "未公开"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：1X 官方 NEO 页面确认产品、订购/订阅口径和基础能力边界，但 SDK、科研开放接口和学校采购条款未公开。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "NEO 面向家用/订阅场景，学校科研二次开发能力需要另行确认。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3030",
+        "SRCV10001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "1X 官方 NEO 页面确认产品、订购/订阅口径和基础能力边界，但 SDK、科研开放接口和学校采购条款未公开。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "galbot-g1",
       "name": "Galbot G1",
       "vendor": "银河通用 Galbot",
@@ -54632,6 +54413,82 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "Galbot G1 官方规格页确认 1730 mm 身高、双臂总 10 kg 负载、0-2.4 m 操作覆盖、10 h 续航、IP54 和 AGX Orin 计算平台；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "agibot-a2-w",
+      "name": "AgiBot A2-W",
+      "vendor": "智元机器人 AgiBot",
+      "category": "人形机器人",
+      "formFactor": "轮式双臂人形/服务机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.agibot.com/",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "智元机器人",
+      "tags": [
+        "工业/商用",
+        "科研开发套件"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC051",
+          "SRCV10005"
+        ]
+      },
+      "specs": {
+        "dof": "轮式双臂/人形平台，具体自由度需厂商确认",
+        "payloadKg": "需询价确认",
+        "reachM": "需询价确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "视觉/导航/操作传感按型号确认",
+        "compute": "待核验",
+        "safety": "校园演示和科研需隔离/急停方案"
+      },
+      "software": {
+        "ros": "需厂商确认",
+        "ros2": "需厂商确认",
+        "sdk": "开发接口需询价",
+        "sim": "需厂商确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：智元官网确认 A2/A2-W 相关产品线和人形机器人方向；详细参数、价格、SDK 和交付需厂商确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC051",
+        "SRCV10005"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "智元官网确认 A2/A2-W 相关产品线和人形机器人方向；详细参数、价格、SDK 和交付需厂商确认。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -54788,6 +54645,243 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "agility-digit",
+      "name": "Agility Robotics Digit",
+      "vendor": "Agility Robotics",
+      "category": "人形机器人",
+      "formFactor": "物流人形机器人",
+      "country": "美国",
+      "domesticPriority": false,
+      "officialUrl": "https://agilityrobotics.com/robots",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2020",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Agility",
+      "tags": [
+        "工业/商用",
+        "全尺寸",
+        "科研开发套件"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3012",
+          "SRCV4001",
+          "SRCV10006"
+        ]
+      },
+      "specs": {
+        "dof": "双足人形物流平台",
+        "payloadKg": "16 kg 级搬运口径",
+        "reachM": "箱体搬运工作空间按任务确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "企业部署按工况确认",
+        "weightKg": "约 65 kg 级公开口径",
+        "sensors": "视觉/感知和企业部署传感器按版本确认",
+        "compute": "待核验",
+        "safety": "仓储物流场景，需企业安全方案"
+      },
+      "software": {
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "Agility Arc / 企业接口需询价",
+        "sim": "企业仿真/部署接口需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v10 官网核验：Agility 官方机器人页确认 Digit 面向物流搬运和企业部署，具备箱体搬运定位和 Agility Arc 系统；价格与开放 SDK 需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3012",
+        "SRCV4001",
+        "SRCV10006"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Agility 官方机器人页确认 Digit 面向物流搬运和企业部署，具备箱体搬运定位和 Agility Arc 系统；价格与开放 SDK 需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "apptronik-apollo",
+      "name": "Apptronik Apollo",
+      "vendor": "Apptronik",
+      "category": "人形机器人",
+      "formFactor": "商用人形机器人",
+      "country": "美国",
+      "domesticPriority": false,
+      "officialUrl": "https://apptronik.com/apollo",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2023",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Apptronik",
+      "tags": [
+        "全尺寸",
+        "工业/商用",
+        "科研开发套件"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3011",
+          "SRCV4001",
+          "SRCV10007"
+        ]
+      },
+      "specs": {
+        "dof": "全尺寸通用人形，详细自由度未公开",
+        "payloadKg": "约 25 kg 级公开口径",
+        "reachM": "真人比例，精确臂展需询价",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "约 4 h 级公开口径，模块化电池",
+        "weightKg": "约 72.6 kg 级公开口径",
+        "sensors": "视觉/感知/力控按企业配置",
+        "compute": "待核验",
+        "safety": "工业/物流任务，需企业部署方案"
+      },
+      "software": {
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "企业合作接口需询价",
+        "sim": "企业仿真/部署接口需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v4 补全：根据官方产品页、规格书或厂商文档补充基础参数和软件生态口径；价格仍以正式询价为准。",
+        "v10 官网核验：Apptronik 官方 Apollo 页面确认通用人形机器人、模块化电池和工业任务定位；价格、开放 SDK 和学校采购需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3011",
+        "SRCV4001",
+        "SRCV10007"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Apptronik 官方 Apollo 页面确认通用人形机器人、模块化电池和工业任务定位；价格、开放 SDK 和学校采购需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "booster-a1",
+      "name": "Booster A1",
+      "vendor": "Booster Robotics",
+      "category": "人形机器人",
+      "formFactor": "科研开发人形机器人",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.boosterobotics.com/",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Booster Robotics",
+      "tags": [
+        "科研开发套件",
+        "教育版",
+        "开源人形"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC056",
+          "SRCV10008"
+        ]
+      },
+      "specs": {
+        "dof": "小型/中型人形开发平台，具体自由度按版本确认",
+        "payloadKg": "开发平台轻载，需厂商确认",
+        "reachM": "需厂商确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "按电池版本确认",
+        "weightKg": "待核验",
+        "sensors": "视觉/IMU/关节传感按版本",
+        "compute": "待核验",
+        "safety": "开发者平台，场地安全需另行评估"
+      },
+      "software": {
+        "ros": "官方/开源资源需版本确认",
+        "ros2": "官方/开源资源需版本确认",
+        "sdk": "开发者接口/开源资源需确认",
+        "sim": "仿真资源需版本确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：Booster Robotics 官网确认 A1 开发者/科研教育人形平台定位；具体接口、价格和交付需按版本确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC056",
+        "SRCV10008"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Booster Robotics 官网确认 A1 开发者/科研教育人形平台定位；具体接口、价格和交付需按版本确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "boston-atlas-electric",
       "name": "Boston Dynamics Atlas",
       "vendor": "Boston Dynamics",
@@ -54937,6 +55031,84 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "PAL 官方资料确认机器人系列、科研平台定位和 ROS 生态；负载/价格按具体配置询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "robotis-op3",
+      "name": "ROBOTIS OP3",
+      "vendor": "Robotis",
+      "category": "人形机器人",
+      "formFactor": "小型开源人形机器人",
+      "country": "韩国",
+      "domesticPriority": false,
+      "officialUrl": "https://emanual.robotis.com/docs/en/platform/op3/introduction/",
+      "image": "/assets/robots/humanoid.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Robotis",
+      "tags": [
+        "小型人形",
+        "开源人形",
+        "教育版",
+        "科研开发套件"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3013",
+          "SRCV10011"
+        ]
+      },
+      "specs": {
+        "dof": "小型人形平台，20 自由度级口径",
+        "payloadKg": "教学轻载",
+        "reachM": "小型人形不适用，精确尺寸见官方手册",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "按电池和动作确认",
+        "weightKg": "约 3.5 kg 级",
+        "sensors": "摄像头、IMU、DYNAMIXEL 舵机反馈",
+        "compute": "Intel NUC / OpenCR 等官方配置",
+        "safety": "教育科研平台，非工业人形"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "社区/迁移支持需确认",
+        "sdk": "ROBOTIS Framework / DYNAMIXEL SDK / ROS packages",
+        "sim": "Gazebo / ROS 教程资源"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：ROBOTIS 官方 e-Manual 确认 OP3 小型开源人形机器人、ROS 包、硬件配置、教程和教育科研定位；价格按渠道确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3013",
+        "SRCV10011"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "ROBOTIS 官方 e-Manual 确认 OP3 小型开源人形机器人、ROS 包、硬件配置、教程和教育科研定位；价格按渠道确认。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -55277,29 +55449,31 @@
         "type": "需询价",
         "confidence": "low",
         "sourceIds": [
-          "SRCV3007"
+          "SRCV3007",
+          "SRCV10014"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "dof": "四足平台，具体型号规格需厂商确认",
+        "payloadKg": "需厂商确认",
+        "reachM": "足式平台不适用",
         "repeatabilityMm": "待核验",
         "speed": "待核验",
         "endurance": "待核验",
         "weightKg": "待核验",
-        "sensors": "待核验",
+        "sensors": "四足平台传感器按型号确认",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "科研/巡检场景需厂商安全方案"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
+        "ros": "需厂商确认",
+        "ros2": "需厂商确认",
+        "sdk": "企业接口需询价",
+        "sim": "需厂商确认"
       },
       "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：Rainbow 官方入口确认机器人产品线；RBQ/RBQ-10 公开规格和学校采购口径不足，需厂商确认参数、SDK 和交付。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -55314,10 +55488,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRCV3007"
+        "SRCV3007",
+        "SRCV10014"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Rainbow 官方入口确认机器人产品线；RBQ/RBQ-10 公开规格和学校采购口径不足，需厂商确认参数、SDK 和交付。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -55350,29 +55525,31 @@
         "type": "需询价",
         "confidence": "low",
         "sourceIds": [
-          "SRCV3007"
+          "SRCV3007",
+          "SRCV10014"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "dof": "四足平台，具体型号规格需厂商确认",
+        "payloadKg": "需厂商确认",
+        "reachM": "足式平台不适用",
         "repeatabilityMm": "待核验",
         "speed": "待核验",
         "endurance": "待核验",
         "weightKg": "待核验",
-        "sensors": "待核验",
+        "sensors": "四足平台传感器按型号确认",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "科研/巡检场景需厂商安全方案"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
+        "ros": "需厂商确认",
+        "ros2": "需厂商确认",
         "sdk": "企业接口需询价",
-        "sim": "待核验"
+        "sim": "需厂商确认"
       },
       "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：Rainbow 官方入口确认机器人产品线；RBQ/RBQ-10 公开规格和学校采购口径不足，需厂商确认参数、SDK 和交付。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -55387,10 +55564,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRCV3007"
+        "SRCV3007",
+        "SRCV10014"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Rainbow 官方入口确认机器人产品线；RBQ/RBQ-10 公开规格和学校采购口径不足，需厂商确认参数、SDK 和交付。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -55416,42 +55594,45 @@
         "官网/代理询价"
       ],
       "price": {
-        "label": "需询价",
-        "amount": null,
+        "label": "约 US$2,899 起",
+        "amount": 21018,
         "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
+        "range": "按官方美国公开价约合人民币，未含税费/运费/服务订阅",
+        "type": "公开价折算",
+        "confidence": "high",
         "sourceIds": [
-          "SRCV3008"
+          "SRCV3008",
+          "SRCV10015"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "dof": "消费级娱乐机器狗",
+        "payloadKg": "不适合作为负载平台",
+        "reachM": "足式娱乐平台不适用",
         "repeatabilityMm": "待核验",
         "speed": "待核验",
-        "endurance": "待核验",
+        "endurance": "按官方电池/使用场景确认",
         "weightKg": "待核验",
-        "sensors": "待核验",
+        "sensors": "摄像头、麦克风、触摸和运动传感器",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "消费娱乐/展示平台，非科研开放四足底盘"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
+        "ros": "未公开",
+        "ros2": "未公开",
+        "sdk": "aibo API/应用生态有限，需确认当前区域可用性",
+        "sim": "未公开"
       },
       "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：Sony 官方 aibo 页面确认消费级机器狗、订购价格和娱乐/互动定位；科研 SDK 与工业能力有限。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
       ],
       "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "aibo 适合展示和消费级互动，不适合作为机器人运动控制或负载研究主平台。"
       ],
       "scores": {
         "research": 26,
@@ -55460,10 +55641,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRCV3008"
+        "SRCV3008",
+        "SRCV10015"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Sony 官方 aibo 页面确认消费级机器狗、订购价格和娱乐/互动定位；科研 SDK 与工业能力有限。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -55495,35 +55677,38 @@
         "type": "需询价",
         "confidence": "low",
         "sourceIds": [
-          "SRC002"
+          "SRC002",
+          "SRCV10016"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "dof": "早期四足平台",
+        "payloadKg": "历史资料需确认",
+        "reachM": "足式平台不适用",
         "repeatabilityMm": "待核验",
         "speed": "待核验",
         "endurance": "待核验",
         "weightKg": "待核验",
-        "sensors": "待核验",
+        "sensors": "历史开发平台配置需确认",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "当前采购建议优先比较 Go2/B2/A2 等新款"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
+        "ros": "历史 SDK/ROS 资源需确认",
+        "ros2": "需社区迁移确认",
+        "sdk": "历史 Unitree SDK，当前支持需确认",
+        "sim": "历史/社区仿真资源"
       },
       "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v10 官网核验：宇树官网当前主推 Go2/B2/A2 等新款，Laikago 作为早期历史平台需确认存量和支持状态；建议仅作历史/市场覆盖项。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
       ],
       "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "Laikago 为早期历史平台，当前官网主推新款，学校新采购不建议作为重点候选。"
       ],
       "scores": {
         "research": 26,
@@ -55532,10 +55717,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRC002"
+        "SRC002",
+        "SRCV10016"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "宇树官网当前主推 Go2/B2/A2 等新款，Laikago 作为早期历史平台需确认存量和支持状态；建议仅作历史/市场覆盖项。",
       "verifiedAt": "2026-06-01"
     },
     {
