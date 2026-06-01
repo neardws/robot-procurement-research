@@ -1,9 +1,9 @@
 {
   "meta": {
     "project": "学校具身智能机器人采购调研",
-    "version": "v8",
+    "version": "v9",
     "accessedDate": "2026-06-01",
-    "updateSummary": "第四批继续核验 DOBOT、RealMan、OMRON、TurtleBot、LimX、Ghost、Xiaomi、EngineAI、Galbot/Galaxea 等剩余市场初筛；能由官网规格确认的升级为重点候选，旧款或采购信息不足的保留市场初筛并写明缺口。",
+    "updateSummary": "第五批继续核验机械臂和移动/复合机器人：AUBO、Elephant Robotics、Franka、Han's Robot、Kinova、ROKAE、SIASUN、UFACTORY、Yaskawa、Fetch/Zebra、Hello Robot、Hiwonder、Husarion、Mujin、Neobotix、Robotnik、Yahboom。",
     "scoringWeights": {
       "research": 50,
       "deployment": 50
@@ -12901,229 +12901,153 @@
       "type": "官网/产品文档",
       "confidence": "high",
       "notes": "官方文档核验 Galaxea R1 Pro 26 自由度、双臂移动平台、3.5 kg 额定单臂负载、5 kg 最大单臂负载、1680 Wh 电池和科研平台适用边界。"
+    },
+    {
+      "id": "SRCV9001",
+      "title": "AUBO i7 官方产品页",
+      "url": "https://www.aubo-cobot.com/products/aubo-i7",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方产品页核验 AUBO i7 协作臂型号、7 kg 负载、约 917 mm 工作半径、±0.02 mm 重复定位精度和 AUBOPE 软件生态。"
+    },
+    {
+      "id": "SRCV9002",
+      "title": "Elephant Robotics myCobot Pro 600 官方产品页",
+      "url": "https://www.elephantrobotics.com/en/mycobot-pro-600-en/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方产品页核验 myCobot Pro 600 为 6 自由度协作臂，约 2 kg 负载、600 mm 工作半径、拖动示教和 ROS/MoveIt/Python/C++ 支持口径。"
+    },
+    {
+      "id": "SRCV9003",
+      "title": "Franka Research 3 官方规格页",
+      "url": "https://franka.de/research",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 Franka Research 3 7 自由度、3 kg 负载、855 mm 工作空间半径、力矩传感和 Franka Control Interface / ROS2 资源。"
+    },
+    {
+      "id": "SRCV9004",
+      "title": "Franka Panda 官方历史资料",
+      "url": "https://franka.de/",
+      "type": "官网/产品入口",
+      "confidence": "medium",
+      "notes": "Franka 当前官网主推 Research 3；Panda 作为历史科研平台仍有生态资料，但当前采购应以 FR3 为主并向厂商确认可供货性。"
+    },
+    {
+      "id": "SRCV9005",
+      "title": "Han's Robot Elfin E5 官方产品资料",
+      "url": "https://www.hansrobot.net/products/elfin-collaborative-robot.html",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方产品资料核验 Elfin 系列双关节模组协作臂，E5 为 5 kg 级、约 800 mm 工作半径和 6 轴协作平台。"
+    },
+    {
+      "id": "SRCV9006",
+      "title": "Kinova Gen3 Lite 官方产品页",
+      "url": "https://www.kinovarobotics.com/product/gen3-lite-robots",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 Gen3 Lite 6 自由度、约 0.5 kg 载荷、约 760 mm 伸展距离、Kortex API、ROS 和 MoveIt 生态。"
+    },
+    {
+      "id": "SRCV9007",
+      "title": "ROKAE xMate CR7 官方产品资料",
+      "url": "https://www.rokae.com/en/collaborative-robots",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方资料核验 xMate CR7 为 7 kg 级协作臂，支持柔性拖动、力控和工业协作应用；详细参数以官方规格书/销售确认为准。"
+    },
+    {
+      "id": "SRCV9008",
+      "title": "SIASUN GCR 系列官方产品资料",
+      "url": "https://www.siasun.com/",
+      "type": "官网/产品入口",
+      "confidence": "medium",
+      "notes": "新松官网可核验 GCR 系列协作机器人产品线；GCR5 具体参数需以厂商规格书确认。"
+    },
+    {
+      "id": "SRCV9009",
+      "title": "UFACTORY xArm 官方规格页",
+      "url": "https://www.ufactory.cc/xarm-collaborative-robot/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方页核验 xArm 5 为 5 自由度轻量协作臂，3 kg 负载、700 mm 工作半径、±0.1 mm 重复定位精度、ROS/ROS2 和 SDK 生态。"
+    },
+    {
+      "id": "SRCV9010",
+      "title": "Yaskawa HC10DT 官方产品资料",
+      "url": "https://www.motoman.com/en-us/products/robots/industrial/collaborative/hc10dt",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方资料核验 HC10DT 10 kg 负载、约 1200 mm 水平伸展、协作安全、YRC1000micro 控制器和工业机器人生态。"
+    },
+    {
+      "id": "SRCV9011",
+      "title": "Fetch Robotics / Zebra 官方产品入口",
+      "url": "https://www.zebra.com/us/en/products/autonomous-mobile-robots.html",
+      "type": "官网/产品入口",
+      "confidence": "medium",
+      "notes": "Fetch 已并入 Zebra，当前官网主推 AMR 产品组合；Fetch Mobile Manipulator 作为历史科研平台需确认二手/存量和支持状态。"
+    },
+    {
+      "id": "SRCV9012",
+      "title": "Hello Robot Stretch 2 官方产品资料",
+      "url": "https://hello-robot.com/stretch-2",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方产品资料核验 Stretch 2 家庭/研究移动操作平台、伸缩臂、ROS/ROS2、Python API 和研究生态；当前采购需按新版 Stretch 型号确认。"
+    },
+    {
+      "id": "SRCV9013",
+      "title": "Hiwonder JetAuto Pro 官方产品页",
+      "url": "https://www.hiwonder.com/products/jetauto-pro",
+      "type": "官网/产品规格/价格",
+      "confidence": "high",
+      "notes": "官方产品页核验 JetAuto Pro ROS 机器人开发平台、Jetson Orin Nano、视觉/雷达配置、ROS/ROS2 教程和公开美元售价。"
+    },
+    {
+      "id": "SRCV9014",
+      "title": "Husarion LYNX 官方手册",
+      "url": "https://husarion.com/manuals/lynx/",
+      "type": "官网/产品手册",
+      "confidence": "high",
+      "notes": "官方手册核验 LYNX 户外/室内 ROS 2 移动平台、IP54、速度、负载、传感器接口和 ROS 2 软件栈。"
+    },
+    {
+      "id": "SRCV9015",
+      "title": "Mujin TruckBot 官方产品入口",
+      "url": "https://mujin-corp.com/products/truckbot/",
+      "type": "官网/产品入口",
+      "confidence": "high",
+      "notes": "官方产品入口核验 TruckBot 物流卸货移动机器人和 Mujin Controller 智能机器人系统；详细规格和采购交付需询价。"
+    },
+    {
+      "id": "SRCV9016",
+      "title": "Neobotix MPO-700 官方产品页",
+      "url": "https://www.neobotix-robots.com/mobile-robots/omnidirectional-robots/mpo-700",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方产品页核验 MPO-700 全向移动机器人、100 kg 级载荷、研究/工业移动平台和 ROS/导航接口口径。"
+    },
+    {
+      "id": "SRCV9017",
+      "title": "Robotnik RB-THERON 官方产品页",
+      "url": "https://robotnik.eu/products/mobile-robots/rb-theron/",
+      "type": "官网/产品规格",
+      "confidence": "high",
+      "notes": "官方产品页核验 RB-THERON 自主移动机器人、全向底盘、室内外导航、ROS/ROS2 和可扩展传感器/载荷接口。"
+    },
+    {
+      "id": "SRCV9018",
+      "title": "Yahboom ROSMASTER X3 Plus 官方产品页",
+      "url": "https://category.yahboom.net/products/rosmaster-x3",
+      "type": "官网/产品规格/价格",
+      "confidence": "high",
+      "notes": "官方产品页核验 ROSMASTER X3 Plus Jetson Orin Nano 版本、Mecanum/履带/阿克曼三底盘形态、ROS2/SLAM/导航教程和公开美元售价。"
     }
   ],
   "robots": [
-    {
-      "id": "aubo-i7",
-      "name": "AUBO i7",
-      "vendor": "遨博 AUBO",
-      "category": "机械臂",
-      "formFactor": "7 kg 协作机械臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.aubo-robotics.cn/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "AUBO",
-      "tags": [
-        "协作臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC025"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC025"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "mycobot-pro-600",
-      "name": "myCobot Pro 600",
-      "vendor": "大象机器人 Elephant Robotics",
-      "category": "机械臂",
-      "formFactor": "教育/轻工业机械臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.elephantrobotics.com/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Elephant Robotics",
-      "tags": [
-        "桌面机械臂",
-        "教学",
-        "协作臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC030"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC030"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "franka-fr3",
-      "name": "Franka Research 3",
-      "vendor": "Franka Robotics",
-      "category": "机械臂",
-      "formFactor": "7 自由度科研机械臂",
-      "country": "德国",
-      "domesticPriority": false,
-      "officialUrl": "https://franka.de/research",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "2022",
-      "releaseDateConfidence": "medium",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Franka",
-      "tags": [
-        "协作臂",
-        "科研开发",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC044"
-        ]
-      },
-      "specs": {
-        "dof": "7 轴",
-        "payloadKg": "3 kg",
-        "reachM": "约 0.855 m",
-        "repeatabilityMm": "约 ±0.1 mm",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方/社区 ROS 支持",
-        "ros2": "官方 Franka ROS2",
-        "sdk": "libfranka / Franka Control Interface",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC044"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
     {
       "id": "franka-panda",
       "name": "Franka Emika Panda",
@@ -13154,35 +13078,38 @@
         "type": "需询价",
         "confidence": "low",
         "sourceIds": [
-          "SRC044"
+          "SRC044",
+          "SRCV9004"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
+        "dof": "7 轴",
+        "payloadKg": "3 kg 级历史科研平台",
+        "reachM": "约 0.855 m 级",
+        "repeatabilityMm": "约 ±0.1 mm 级",
         "speed": "待核验",
         "endurance": "待核验",
         "weightKg": "待核验",
-        "sensors": "待核验",
+        "sensors": "关节力矩传感，按历史资料确认",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "历史科研平台，采购应确认可供货和维保"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
+        "ros": "Franka ROS / 社区生态",
+        "ros2": "社区/迁移支持需确认",
+        "sdk": "libfranka / Franka Control Interface",
+        "sim": "广泛科研仿真生态"
       },
       "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Franka 当前官网主推 Research 3；Panda 作为历史科研生态型号可确认，但新采购需确认可供货、维保和替代型号。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
       ],
       "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "Panda 已不是 Franka 当前主推型号，学校新采购建议优先比较 Franka Research 3。"
       ],
       "scores": {
         "research": 26,
@@ -13191,448 +13118,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRC044"
+        "SRC044",
+        "SRCV9004"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "hans-elfin-e5",
-      "name": "Han's Robot Elfin E5",
-      "vendor": "大族机器人 Han's Robot",
-      "category": "机械臂",
-      "formFactor": "5 kg 级协作臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.hansrobot.net/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Han's Robot",
-      "tags": [
-        "协作臂",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3024"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3024"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "kinova-gen3-lite",
-      "name": "Kinova Gen3 Lite",
-      "vendor": "Kinova",
-      "category": "机械臂",
-      "formFactor": "轻量科研机械臂",
-      "country": "加拿大",
-      "domesticPriority": false,
-      "officialUrl": "https://www.kinovarobotics.com/product/gen3-lite-robots",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Kinova",
-      "tags": [
-        "轻量臂",
-        "科研开发"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV4003"
-        ]
-      },
-      "specs": {
-        "dof": "6 轴",
-        "payloadKg": "约 0.5 kg",
-        "reachM": "约 0.76 m",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方 ROS 支持",
-        "ros2": "官方/社区支持",
-        "sdk": "Kortex API",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV4003"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "rokae-xmate-cr7",
-      "name": "ROKAE xMate CR7",
-      "vendor": "珞石 ROKAE",
-      "category": "机械臂",
-      "formFactor": "7 kg 协作机械臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.rokae.com/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "ROKAE",
-      "tags": [
-        "协作臂",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3023"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3023"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "siasun-gcr5",
-      "name": "SIASUN GCR5",
-      "vendor": "新松机器人 SIASUN",
-      "category": "机械臂",
-      "formFactor": "5 kg 级协作臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.siasun.com/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "SIASUN",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3025"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3025"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "xarm-5",
-      "name": "xArm 5",
-      "vendor": "UFACTORY",
-      "category": "机械臂",
-      "formFactor": "5 自由度轻量机械臂",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.ufactory.cc/xarm-collaborative-robot/",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "UFACTORY",
-      "tags": [
-        "协作臂",
-        "轻量臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC018"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC018"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "yaskawa-hc10dt",
-      "name": "Yaskawa HC10DT",
-      "vendor": "Yaskawa Motoman",
-      "category": "机械臂",
-      "formFactor": "10 kg 级协作臂",
-      "country": "日本",
-      "domesticPriority": false,
-      "officialUrl": "https://www.motoman.com/en-us/products/robots/industrial/collaborative",
-      "image": "/assets/robots/robot-arm.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Yaskawa",
-      "tags": [
-        "协作臂",
-        "工业臂"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3020"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3020"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Franka 当前官网主推 Research 3；Panda 作为历史科研生态型号可确认，但新采购需确认可供货、维保和替代型号。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -23006,6 +22496,81 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "aubo-i7",
+      "name": "AUBO i7",
+      "vendor": "遨博 AUBO",
+      "category": "机械臂",
+      "formFactor": "7 kg 协作机械臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.aubo-cobot.com/products/aubo-i7",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "AUBO",
+      "tags": [
+        "协作臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC025",
+          "SRCV9001"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "7 kg",
+        "reachM": "约 0.917 m",
+        "repeatabilityMm": "±0.02 mm",
+        "speed": "关节最高速度按轴不同",
+        "endurance": "待核验",
+        "weightKg": "约 24 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "协作安全功能，具体认证按版本确认"
+      },
+      "software": {
+        "ros": "官方/社区 ROS 支持需项目确认",
+        "ros2": "官方/社区 ROS2 支持需项目确认",
+        "sdk": "AUBOPE / SDK / 工业接口",
+        "sim": "AUBOPE 仿真/离线编程需版本确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：AUBO 官方产品页确认 i7 型号、7 kg 负载、约 917 mm 工作半径、±0.02 mm 重复定位精度和软件生态；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC025",
+        "SRCV9001"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "AUBO 官方产品页确认 i7 型号、7 kg 负载、约 917 mm 工作半径、±0.02 mm 重复定位精度和软件生态；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "dobot-cr10",
       "name": "DOBOT CR10",
       "vendor": "越疆 DOBOT",
@@ -24452,6 +24017,84 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "mycobot-pro-600",
+      "name": "myCobot Pro 600",
+      "vendor": "大象机器人 Elephant Robotics",
+      "category": "机械臂",
+      "formFactor": "教育/轻工业机械臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.elephantrobotics.com/en/mycobot-pro-600-en/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Elephant Robotics",
+      "tags": [
+        "桌面机械臂",
+        "教学",
+        "协作臂",
+        "开源/低成本"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC030",
+          "SRCV9002"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "2 kg 级",
+        "reachM": "0.6 m",
+        "repeatabilityMm": "约 ±0.5 mm 级，按官方版本确认",
+        "speed": "关节速度按轴确认",
+        "endurance": "待核验",
+        "weightKg": "约 33 kg 级，按版本确认",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "桌面/轻协作教学平台，工业安全需另评估"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持需项目确认",
+        "sdk": "Python / C++ / C# / JavaScript / MoveIt / API",
+        "sim": "ROS MoveIt / 仿真教程"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Elephant Robotics 官方产品页确认 myCobot Pro 600 为 6 自由度、600 mm 工作半径、2 kg 级负载的教学/轻协作平台，并提供 ROS/MoveIt/Python/C++ 等开发资源；价格需按版本确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC030",
+        "SRCV9002"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Elephant Robotics 官方产品页确认 myCobot Pro 600 为 6 自由度、600 mm 工作半径、2 kg 级负载的教学/轻协作平台，并提供 ROS/MoveIt/Python/C++ 等开发资源；价格需按版本确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "country": "中国",
       "domesticPriority": true,
       "specs": {
@@ -25529,6 +25172,159 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "franka-fr3",
+      "name": "Franka Research 3",
+      "vendor": "Franka Robotics",
+      "category": "机械臂",
+      "formFactor": "7 自由度科研机械臂",
+      "country": "德国",
+      "domesticPriority": false,
+      "officialUrl": "https://franka.de/research",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "2022",
+      "releaseDateConfidence": "medium",
+      "marketTier": "重点候选",
+      "brandNormalized": "Franka",
+      "tags": [
+        "协作臂",
+        "科研开发",
+        "轻量臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC044",
+          "SRCV9003"
+        ]
+      },
+      "specs": {
+        "dof": "7 轴",
+        "payloadKg": "3 kg",
+        "reachM": "0.855 m",
+        "repeatabilityMm": "约 ±0.1 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "全关节力矩传感",
+        "compute": "待核验",
+        "safety": "科研协作臂，力控安全按官方控制器配置"
+      },
+      "software": {
+        "ros": "Franka ROS / 社区支持",
+        "ros2": "官方 Franka ROS2",
+        "sdk": "libfranka / Franka Control Interface",
+        "sim": "MuJoCo / Isaac / ROS 社区仿真资源"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Franka 官方 Research 3 页面确认 7 自由度、3 kg 负载、855 mm 工作空间、关节力矩传感和 Franka Control Interface / ROS2 生态；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC044",
+        "SRCV9003"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Franka 官方 Research 3 页面确认 7 自由度、3 kg 负载、855 mm 工作空间、关节力矩传感和 Franka Control Interface / ROS2 生态；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "hans-elfin-e5",
+      "name": "Han's Robot Elfin E5",
+      "vendor": "大族机器人 Han's Robot",
+      "category": "机械臂",
+      "formFactor": "5 kg 级协作臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.hansrobot.net/products/elfin-collaborative-robot.html",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Han's Robot",
+      "tags": [
+        "协作臂",
+        "轻量臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3024",
+          "SRCV9005"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "5 kg",
+        "reachM": "约 0.8 m",
+        "repeatabilityMm": "约 ±0.02 mm，按规格书确认",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "协作安全功能，具体认证按版本确认"
+      },
+      "software": {
+        "ros": "官方/社区资源需项目确认",
+        "ros2": "官方/社区资源需项目确认",
+        "sdk": "Han's Robot 控制软件 / 工业接口",
+        "sim": "离线编程/仿真需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Han's Robot 官方 Elfin 系列资料确认 E5 为 5 kg 级、约 800 mm 工作半径的 6 轴协作臂；价格和教育采购需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3024",
+        "SRCV9005"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Han's Robot 官方 Elfin 系列资料确认 E5 为 5 kg 级、约 800 mm 工作半径的 6 轴协作臂；价格和教育采购需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "jaka-mini",
       "name": "JAKA MiniCobo",
       "vendor": "节卡 JAKA",
@@ -26529,6 +26325,82 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "kinova-gen3-lite",
+      "name": "Kinova Gen3 Lite",
+      "vendor": "Kinova",
+      "category": "机械臂",
+      "formFactor": "轻量科研机械臂",
+      "country": "加拿大",
+      "domesticPriority": false,
+      "officialUrl": "https://www.kinovarobotics.com/product/gen3-lite-robots",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Kinova",
+      "tags": [
+        "轻量臂",
+        "科研开发"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV4003",
+          "SRCV9006"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "约 0.5 kg",
+        "reachM": "约 0.76 m",
+        "repeatabilityMm": "按官方规格书确认",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "可配 2D/3D 视觉和末端执行器",
+        "compute": "待核验",
+        "safety": "轻量科研/教育平台"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方/社区 ROS2 支持",
+        "sdk": "Kortex API / Python / C++ / MATLAB",
+        "sim": "Gazebo / MoveIt / MATLAB 等生态"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Kinova 官方产品页确认 Gen3 Lite 6 自由度、约 0.5 kg 载荷、约 760 mm 伸展距离、Kortex API、ROS 和 MoveIt 生态；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV4003",
+        "SRCV9006"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Kinova 官方产品页确认 Gen3 Lite 6 自由度、约 0.5 kg 载荷、约 760 mm 伸展距离、Kortex API、ROS 和 MoveIt 生态；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "kuka-lbr-iisy",
       "name": "KUKA LBR iisy",
       "vendor": "KUKA",
@@ -26840,6 +26712,158 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "rokae-xmate-cr7",
+      "name": "ROKAE xMate CR7",
+      "vendor": "珞石 ROKAE",
+      "category": "机械臂",
+      "formFactor": "7 kg 协作机械臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.rokae.com/en/collaborative-robots",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "ROKAE",
+      "tags": [
+        "协作臂",
+        "轻量臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3023",
+          "SRCV9007"
+        ]
+      },
+      "specs": {
+        "dof": "6/7 轴协作系列，CR7 具体轴数按规格书确认",
+        "payloadKg": "7 kg 级",
+        "reachM": "约 0.8-0.9 m 级，需规格书确认",
+        "repeatabilityMm": "高精度协作臂，具体值按规格书确认",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "柔性拖动、力控和协作安全功能"
+      },
+      "software": {
+        "ros": "官方/社区资源需项目确认",
+        "ros2": "官方/社区资源需项目确认",
+        "sdk": "ROKAE 控制软件 / 工业接口",
+        "sim": "离线编程/仿真需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：ROKAE 官方协作机器人资料确认 xMate CR7 为 7 kg 级协作臂产品线，支持柔性拖动、力控和工业协作应用；详细规格和价格需厂商确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3023",
+        "SRCV9007"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "ROKAE 官方协作机器人资料确认 xMate CR7 为 7 kg 级协作臂产品线，支持柔性拖动、力控和工业协作应用；详细规格和价格需厂商确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "siasun-gcr5",
+      "name": "SIASUN GCR5",
+      "vendor": "新松机器人 SIASUN",
+      "category": "机械臂",
+      "formFactor": "5 kg 级协作臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.siasun.com/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "SIASUN",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3025",
+          "SRCV9008"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴协作臂，具体规格需厂商确认",
+        "payloadKg": "5 kg 级",
+        "reachM": "需规格书确认",
+        "repeatabilityMm": "需规格书确认",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "协作机器人安全配置需厂商确认"
+      },
+      "software": {
+        "ros": "需厂商确认",
+        "ros2": "需厂商确认",
+        "sdk": "新松控制软件 / 工业接口需询价",
+        "sim": "离线编程/仿真需询价"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：新松官网可确认 GCR 系列协作机器人产品线和国产厂商入口；GCR5 详细参数、价格和开发接口需厂商规格书确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3025",
+        "SRCV9008"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "新松官网可确认 GCR 系列协作机器人产品线和国产厂商入口；GCR5 详细参数、价格和开发接口需厂商规格书确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "techman-tm12",
       "name": "Techman TM12",
       "vendor": "达明 Techman Robot",
@@ -26995,6 +27019,82 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "Techman 官方规格资料确认 TM5/TM12 负载、臂展、TMflow、SDK 与 ROS 驱动口径。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "xarm-5",
+      "name": "xArm 5",
+      "vendor": "UFACTORY",
+      "category": "机械臂",
+      "formFactor": "5 自由度轻量机械臂",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.ufactory.cc/xarm-collaborative-robot/",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "UFACTORY",
+      "tags": [
+        "协作臂",
+        "轻量臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC018",
+          "SRCV9009"
+        ]
+      },
+      "specs": {
+        "dof": "5 轴",
+        "payloadKg": "3 kg",
+        "reachM": "0.7 m",
+        "repeatabilityMm": "±0.1 mm",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "约 11.2 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "轻量协作臂，安全配置按版本确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方 ROS2 支持",
+        "sdk": "Python / C++ / ROS / ROS2 / Modbus TCP / SDK",
+        "sim": "MoveIt / Gazebo / Web 控制和仿真资源"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：UFACTORY 官方页确认 xArm 5 为 5 自由度、3 kg 负载、700 mm 工作半径、±0.1 mm 重复定位精度，并提供 ROS/ROS2/SDK 生态；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC018",
+        "SRCV9009"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "UFACTORY 官方页确认 xArm 5 为 5 自由度、3 kg 负载、700 mm 工作半径、±0.1 mm 重复定位精度，并提供 ROS/ROS2/SDK 生态；价格需询价。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -27701,6 +27801,82 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "yaskawa-hc10dt",
+      "name": "Yaskawa HC10DT",
+      "vendor": "Yaskawa Motoman",
+      "category": "机械臂",
+      "formFactor": "10 kg 级协作臂",
+      "country": "日本",
+      "domesticPriority": false,
+      "officialUrl": "https://www.motoman.com/en-us/products/robots/industrial/collaborative/hc10dt",
+      "image": "/assets/robots/robot-arm.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Yaskawa",
+      "tags": [
+        "协作臂",
+        "工业臂"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3020",
+          "SRCV9010"
+        ]
+      },
+      "specs": {
+        "dof": "6 轴",
+        "payloadKg": "10 kg",
+        "reachM": "约 1.2 m",
+        "repeatabilityMm": "约 ±0.1 mm，按规格书确认",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "约 48 kg",
+        "sensors": "待核验",
+        "compute": "待核验",
+        "safety": "协作安全设计，YRC1000micro 控制器"
+      },
+      "software": {
+        "ros": "工业接口/集成商支持",
+        "ros2": "工业接口/集成商支持",
+        "sdk": "Yaskawa Motoman 控制器 / MotoSim / 工业通信接口",
+        "sim": "MotoSim / 工业仿真"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Yaskawa Motoman 官方资料确认 HC10DT 10 kg 负载、约 1200 mm 水平伸展、协作安全和工业控制器生态；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3020",
+        "SRCV9010"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Yaskawa Motoman 官方资料确认 HC10DT 10 kg 负载、约 1200 mm 水平伸展、协作安全和工业控制器生态；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "limx-w1",
       "name": "LimX Dynamics W1",
       "vendor": "逐际动力 LimX Dynamics",
@@ -27786,7 +27962,7 @@
       "formFactor": "经典移动操作平台",
       "country": "美国",
       "domesticPriority": false,
-      "officialUrl": "https://fetchrobotics.com/",
+      "officialUrl": "https://www.zebra.com/us/en/products/autonomous-mobile-robots.html",
       "image": "/assets/robots/mobile-manipulator.png",
       "lastChecked": "2026-06-01",
       "releaseDate": "官网未披露",
@@ -27807,35 +27983,38 @@
         "type": "需询价",
         "confidence": "low",
         "sourceIds": [
-          "SRCV3014"
+          "SRCV3014",
+          "SRCV9011"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "dof": "历史移动操作平台",
+        "payloadKg": "需确认存量/二手配置",
+        "reachM": "需确认",
         "repeatabilityMm": "待核验",
         "speed": "待核验",
         "endurance": "待核验",
         "weightKg": "待核验",
-        "sensors": "待核验",
+        "sensors": "历史 Fetch Research Base / Freight 生态",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "已并入 Zebra AMR 产品线，采购支持需确认"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
+        "ros": "历史 ROS 生态",
+        "ros2": "需社区迁移确认",
+        "sdk": "Fetch ROS packages / Zebra AMR 接口按当前产品确认",
+        "sim": "历史仿真资源"
       },
       "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Fetch 已并入 Zebra，当前官网主推 AMR 产品组合；Fetch Mobile Manipulator 可作为历史科研生态项保留，但新采购支持和供货需确认。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
       ],
       "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。",
+        "Fetch Mobile Manipulator 是历史科研平台，当前新采购应确认 Zebra 是否仍提供支持，或作为二手/存量设备比较。"
       ],
       "scores": {
         "research": 26,
@@ -27844,230 +28023,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRCV3014"
+        "SRCV3014",
+        "SRCV9011"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "stretch-2",
-      "name": "Hello Robot Stretch 2",
-      "vendor": "Hello Robot",
-      "category": "移动/复合机器人",
-      "formFactor": "移动操作科研平台",
-      "country": "美国",
-      "domesticPriority": false,
-      "officialUrl": "https://hello-robot.com/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Hello Robot",
-      "tags": [
-        "移动操作",
-        "教学移动平台"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC061"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC061"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "hiwonder-jetauto",
-      "name": "Hiwonder JetAuto",
-      "vendor": "幻尔 Hiwonder",
-      "category": "移动/复合机器人",
-      "formFactor": "ROS 教学移动平台",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://www.hiwonder.com/products/jetauto-pro",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Hiwonder",
-      "tags": [
-        "教学移动平台",
-        "轮式底盘",
-        "移动操作"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC040"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC040"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "husarion-lynx",
-      "name": "Husarion LYNX",
-      "vendor": "Husarion",
-      "category": "移动/复合机器人",
-      "formFactor": "ROS2 UGV",
-      "country": "波兰",
-      "domesticPriority": false,
-      "officialUrl": "https://husarion.com/manuals/lynx/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Husarion",
-      "tags": [
-        "轮式底盘",
-        "教学移动平台"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV4007"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "ROS 生态",
-        "ros2": "官方 ROS2 支持",
-        "sdk": "Husarion ROS2 包",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV4007"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Fetch 已并入 Zebra，当前官网主推 AMR 产品组合；Fetch Mobile Manipulator 可作为历史科研生态项保留，但新采购支持和供货需确认。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -28078,7 +28038,7 @@
       "formFactor": "物流装卸移动机器人",
       "country": "日本/美国",
       "domesticPriority": false,
-      "officialUrl": "https://mujin-corp.com/",
+      "officialUrl": "https://mujin-corp.com/products/truckbot/",
       "image": "/assets/robots/mobile-manipulator.png",
       "lastChecked": "2026-06-01",
       "releaseDate": "官网未披露",
@@ -28100,29 +28060,31 @@
         "type": "需询价",
         "confidence": "low",
         "sourceIds": [
-          "SRCV4009"
+          "SRCV4009",
+          "SRCV9015"
         ]
       },
       "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
+        "dof": "物流卸货移动机器人",
+        "payloadKg": "包裹/箱体处理按系统配置",
+        "reachM": "移动平台 + 物流执行机构，按项目配置",
         "repeatabilityMm": "待核验",
         "speed": "待核验",
         "endurance": "待核验",
         "weightKg": "待核验",
-        "sensors": "视觉/移动平台按配置",
+        "sensors": "视觉/感知系统按 Mujin Controller 配置",
         "compute": "待核验",
-        "safety": "待核验"
+        "safety": "仓储物流系统安全需项目评估"
       },
       "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "企业接口需询价",
-        "sim": "待核验"
+        "ros": "企业系统，ROS 支持未公开",
+        "ros2": "企业系统，ROS2 支持未公开",
+        "sdk": "Mujin Controller / 企业接口需询价",
+        "sim": "企业仿真/部署工具需询价"
       },
       "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Mujin 官方产品入口确认 TruckBot 物流卸货移动机器人和 Mujin Controller 系统；具体规格、价格和学校适配性需询价。"
       ],
       "deploymentEvidence": [
         "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
@@ -28137,230 +28099,11 @@
       },
       "shortlistTags": [],
       "sourceIds": [
-        "SRCV4009"
+        "SRCV4009",
+        "SRCV9015"
       ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "neobotix-mpo-700",
-      "name": "Neobotix MPO-700",
-      "vendor": "Neobotix",
-      "category": "移动/复合机器人",
-      "formFactor": "全向移动机器人",
-      "country": "德国",
-      "domesticPriority": false,
-      "officialUrl": "https://www.neobotix-robots.com/mobile-robots/omnidirectional-robots/mpo-700",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Neobotix",
-      "tags": [
-        "轮式底盘",
-        "教学移动平台"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRCV3037"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRCV3037"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "robotnik-rb-theron",
-      "name": "Robotnik RB-THERON",
-      "vendor": "Robotnik",
-      "category": "移动/复合机器人",
-      "formFactor": "移动底盘/AMR",
-      "country": "西班牙",
-      "domesticPriority": false,
-      "officialUrl": "https://robotnik.eu/products/mobile-robots/",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Robotnik",
-      "tags": [
-        "轮式底盘",
-        "服务/巡检"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC118"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "官方 ROS 支持",
-        "ros2": "待核验",
-        "sdk": "Robotnik ROS 包",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 27,
-        "deployment": 27,
-        "overall": 54
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC118"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
-      "verifiedAt": "2026-06-01"
-    },
-    {
-      "id": "yahboom-rosmaster-x3-plus",
-      "name": "Yahboom ROSMASTER X3 Plus",
-      "vendor": "亚博智能 Yahboom",
-      "category": "移动/复合机器人",
-      "formFactor": "ROS 教学移动平台",
-      "country": "中国",
-      "domesticPriority": true,
-      "officialUrl": "https://category.yahboom.net/products/rosmaster-x3",
-      "image": "/assets/robots/mobile-manipulator.png",
-      "lastChecked": "2026-06-01",
-      "releaseDate": "官网未披露",
-      "releaseDateConfidence": "unknown",
-      "marketTier": "市场初筛",
-      "brandNormalized": "Yahboom",
-      "tags": [
-        "教学移动平台",
-        "轮式底盘",
-        "移动操作"
-      ],
-      "purchaseChannels": [
-        "官网/代理询价"
-      ],
-      "price": {
-        "label": "需询价",
-        "amount": null,
-        "currency": "CNY",
-        "range": "市场初筛候选，价格需向官网或授权代理核验",
-        "type": "需询价",
-        "confidence": "low",
-        "sourceIds": [
-          "SRC043"
-        ]
-      },
-      "specs": {
-        "dof": "待核验",
-        "payloadKg": "待核验",
-        "reachM": "待核验",
-        "repeatabilityMm": "待核验",
-        "speed": "待核验",
-        "endurance": "待核验",
-        "weightKg": "待核验",
-        "sensors": "待核验",
-        "compute": "待核验",
-        "safety": "待核验"
-      },
-      "software": {
-        "ros": "待核验",
-        "ros2": "待核验",
-        "sdk": "待核验",
-        "sim": "待核验"
-      },
-      "researchEvidence": [
-        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。"
-      ],
-      "deploymentEvidence": [
-        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
-      ],
-      "risks": [
-        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
-      ],
-      "scores": {
-        "research": 26,
-        "deployment": 26,
-        "overall": 52
-      },
-      "shortlistTags": [],
-      "sourceIds": [
-        "SRC043"
-      ],
-      "verificationStatus": "部分核验",
-      "verificationNotes": "已记录官网或产品入口；核心参数、价格或发布时间仍需继续核验。",
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Mujin 官方产品入口确认 TruckBot 物流卸货移动机器人和 Mujin Controller 系统；具体规格、价格和学校适配性需询价。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -40552,6 +40295,235 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "stretch-2",
+      "name": "Hello Robot Stretch 2",
+      "vendor": "Hello Robot",
+      "category": "移动/复合机器人",
+      "formFactor": "移动操作科研平台",
+      "country": "美国",
+      "domesticPriority": false,
+      "officialUrl": "https://hello-robot.com/stretch-2",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Hello Robot",
+      "tags": [
+        "移动操作",
+        "教学移动平台"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC061",
+          "SRCV9012"
+        ]
+      },
+      "specs": {
+        "dof": "移动底盘 + 升降/伸缩臂 + 腕部/夹爪",
+        "payloadKg": "轻载家庭/研究操作，按官方规格确认",
+        "reachM": "垂直升降和水平伸缩臂，具体值按规格确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "头部相机、深度相机、LiDAR/IMU 按版本",
+        "compute": "Intel NUC / 版本配置",
+        "safety": "研究平台，非工业安全移动操作"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方 ROS2 支持",
+        "sdk": "Stretch Body Python API / ROS / ROS2 / Open-source examples",
+        "sim": "Gazebo / Isaac / 社区仿真资源"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Hello Robot 官方资料确认 Stretch 2 移动操作平台、ROS/ROS2、Python API 和研究生态；当前采购需按新版 Stretch 型号与厂商确认。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC061",
+        "SRCV9012"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Hello Robot 官方资料确认 Stretch 2 移动操作平台、ROS/ROS2、Python API 和研究生态；当前采购需按新版 Stretch 型号与厂商确认。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "hiwonder-jetauto",
+      "name": "Hiwonder JetAuto",
+      "vendor": "幻尔 Hiwonder",
+      "category": "移动/复合机器人",
+      "formFactor": "ROS 教学移动平台",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://www.hiwonder.com/products/jetauto-pro",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Hiwonder",
+      "tags": [
+        "教学移动平台",
+        "轮式底盘",
+        "移动操作"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "约 US$1,099 起",
+        "amount": 7968,
+        "currency": "CNY",
+        "range": "按官方美元公开价约合人民币，未含税费/运费/汇率波动",
+        "type": "公开价折算",
+        "confidence": "high",
+        "sourceIds": [
+          "SRC040",
+          "SRCV9013"
+        ]
+      },
+      "specs": {
+        "dof": "Mecanum 轮移动底盘 + 可选机械臂/视觉套件",
+        "payloadKg": "教学轻载，按套件确认",
+        "reachM": "按机械臂套件确认",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "深度相机/激光雷达/视觉模块按版本",
+        "compute": "Jetson Orin Nano 8GB",
+        "safety": "教学开发平台，非工业安全 AMR"
+      },
+      "software": {
+        "ros": "ROS 教程支持",
+        "ros2": "ROS2 教程支持",
+        "sdk": "Python / OpenCV / SLAM / Nav2 / 课程例程",
+        "sim": "Gazebo / RViz / 教程资源"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Hiwonder 官方产品页确认 JetAuto Pro 为 Jetson Orin Nano 教学移动机器人，提供 ROS/ROS2、SLAM/导航和视觉课程，并有公开美元售价；税费运费另计。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC040",
+        "SRCV9013"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Hiwonder 官方产品页确认 JetAuto Pro 为 Jetson Orin Nano 教学移动机器人，提供 ROS/ROS2、SLAM/导航和视觉课程，并有公开美元售价；税费运费另计。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "husarion-lynx",
+      "name": "Husarion LYNX",
+      "vendor": "Husarion",
+      "category": "移动/复合机器人",
+      "formFactor": "ROS2 UGV",
+      "country": "波兰",
+      "domesticPriority": false,
+      "officialUrl": "https://husarion.com/manuals/lynx/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Husarion",
+      "tags": [
+        "轮式底盘",
+        "教学移动平台"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV4007",
+          "SRCV9014"
+        ]
+      },
+      "specs": {
+        "dof": "四轮差速/户外移动平台",
+        "payloadKg": "约 60 kg 级，按官方手册确认",
+        "reachM": "移动平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "约 1.5 m/s 级",
+        "endurance": "按电池和负载确认",
+        "weightKg": "待核验",
+        "sensors": "IMU、轮编码器、可扩展 LiDAR/相机/GPS",
+        "compute": "ROS 2 控制计算平台",
+        "safety": "IP54，户外平台安全按任务确认"
+      },
+      "software": {
+        "ros": "ROS 生态",
+        "ros2": "官方 ROS2 支持",
+        "sdk": "Husarion ROS2 包 / Docker / Web UI",
+        "sim": "Gazebo / RViz / Nav2 教程"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Husarion 官方手册确认 LYNX 为 ROS 2 移动平台，具备户外/室内运行、IP54、可扩展传感器和 ROS 2 软件栈；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV4007",
+        "SRCV9014"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Husarion 官方手册确认 LYNX 为 ROS 2 移动平台，具备户外/室内运行、IP54、可扩展传感器和 ROS 2 软件栈；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "husarion-panther",
       "name": "Husarion Panther",
       "vendor": "Husarion",
@@ -40938,6 +40910,82 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "MiR 官方产品资料确认 AMR 负载、速度、续航和 Fleet/API 口径；发布时间和价格未公开。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "neobotix-mpo-700",
+      "name": "Neobotix MPO-700",
+      "vendor": "Neobotix",
+      "category": "移动/复合机器人",
+      "formFactor": "全向移动机器人",
+      "country": "德国",
+      "domesticPriority": false,
+      "officialUrl": "https://www.neobotix-robots.com/mobile-robots/omnidirectional-robots/mpo-700",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Neobotix",
+      "tags": [
+        "轮式底盘",
+        "教学移动平台"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRCV3037",
+          "SRCV9016"
+        ]
+      },
+      "specs": {
+        "dof": "全向移动平台",
+        "payloadKg": "100 kg 级",
+        "reachM": "移动平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "约 1.0 m/s 级，按配置确认",
+        "endurance": "按电池配置确认",
+        "weightKg": "待核验",
+        "sensors": "安全激光/导航传感器/可扩展载荷",
+        "compute": "待核验",
+        "safety": "研究/工业移动平台，安全认证按配置确认"
+      },
+      "software": {
+        "ros": "ROS 支持",
+        "ros2": "ROS2/导航支持需版本确认",
+        "sdk": "Neobotix ROS packages / 导航接口",
+        "sim": "ROS/Gazebo 生态需项目确认"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Neobotix 官方产品页确认 MPO-700 全向移动机器人、100 kg 级载荷、研究/工业移动平台定位和 ROS/导航接口；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRCV3037",
+        "SRCV9016"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Neobotix 官方产品页确认 MPO-700 全向移动机器人、100 kg 级载荷、研究/工业移动平台定位和 ROS/导航接口；价格需询价。",
       "verifiedAt": "2026-06-01"
     },
     {
@@ -43094,6 +43142,82 @@
       "verifiedAt": "2026-06-01"
     },
     {
+      "id": "robotnik-rb-theron",
+      "name": "Robotnik RB-THERON",
+      "vendor": "Robotnik",
+      "category": "移动/复合机器人",
+      "formFactor": "移动底盘/AMR",
+      "country": "西班牙",
+      "domesticPriority": false,
+      "officialUrl": "https://robotnik.eu/products/mobile-robots/rb-theron/",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Robotnik",
+      "tags": [
+        "轮式底盘",
+        "服务/巡检"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "需询价",
+        "amount": null,
+        "currency": "CNY",
+        "range": "市场初筛候选，价格需向官网或授权代理核验",
+        "type": "需询价",
+        "confidence": "low",
+        "sourceIds": [
+          "SRC118",
+          "SRCV9017"
+        ]
+      },
+      "specs": {
+        "dof": "全向移动平台",
+        "payloadKg": "载荷按配置确认",
+        "reachM": "移动平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "按配置确认",
+        "endurance": "按电池和任务确认",
+        "weightKg": "待核验",
+        "sensors": "LiDAR、RGB-D、GPS/IMU 等可选",
+        "compute": "待核验",
+        "safety": "室内外移动平台，安全配置按项目确认"
+      },
+      "software": {
+        "ros": "官方 ROS 支持",
+        "ros2": "官方 ROS2 支持",
+        "sdk": "Robotnik ROS/ROS2 packages / API",
+        "sim": "Gazebo / ROS 仿真资源"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Robotnik 官方产品页确认 RB-THERON 自主移动机器人、全向底盘、室内外导航、ROS/ROS2 和可扩展传感器/载荷接口；价格需询价。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 27,
+        "deployment": 27,
+        "overall": 54
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC118",
+        "SRCV9017"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Robotnik 官方产品页确认 RB-THERON 自主移动机器人、全向底盘、室内外导航、ROS/ROS2 和可扩展传感器/载荷接口；价格需询价。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
       "id": "robotnik-summit-xl",
       "name": "Robotnik SUMMIT-XL",
       "vendor": "Robotnik",
@@ -43168,6 +43292,83 @@
       ],
       "verificationStatus": "官网核验",
       "verificationNotes": "Robotnik 产品资料确认开放 ROS 架构和移动平台/移动操作定位；具体载荷按型号数据表复核。",
+      "verifiedAt": "2026-06-01"
+    },
+    {
+      "id": "yahboom-rosmaster-x3-plus",
+      "name": "Yahboom ROSMASTER X3 Plus",
+      "vendor": "亚博智能 Yahboom",
+      "category": "移动/复合机器人",
+      "formFactor": "ROS 教学移动平台",
+      "country": "中国",
+      "domesticPriority": true,
+      "officialUrl": "https://category.yahboom.net/products/rosmaster-x3",
+      "image": "/assets/robots/mobile-manipulator.png",
+      "lastChecked": "2026-06-01",
+      "releaseDate": "官网未披露",
+      "releaseDateConfidence": "unknown",
+      "marketTier": "重点候选",
+      "brandNormalized": "Yahboom",
+      "tags": [
+        "教学移动平台",
+        "轮式底盘",
+        "移动操作"
+      ],
+      "purchaseChannels": [
+        "官网/代理询价"
+      ],
+      "price": {
+        "label": "约 US$1,499 起",
+        "amount": 10868,
+        "currency": "CNY",
+        "range": "按官方美元公开价约合人民币，未含税费/运费/汇率波动",
+        "type": "公开价折算",
+        "confidence": "high",
+        "sourceIds": [
+          "SRC043",
+          "SRCV9018"
+        ]
+      },
+      "specs": {
+        "dof": "三形态可换底盘：麦克纳姆/履带/阿克曼",
+        "payloadKg": "教学轻载，按套件确认",
+        "reachM": "移动平台不适用",
+        "repeatabilityMm": "待核验",
+        "speed": "待核验",
+        "endurance": "待核验",
+        "weightKg": "待核验",
+        "sensors": "深度相机、激光雷达、IMU、视觉传感器按套件",
+        "compute": "Jetson Orin Nano 8GB",
+        "safety": "教学开发平台，非工业安全 AMR"
+      },
+      "software": {
+        "ros": "ROS 教程支持",
+        "ros2": "ROS2 / Nav2 / SLAM 教程支持",
+        "sdk": "Python / OpenCV / MediaPipe / 课程例程",
+        "sim": "Gazebo / RViz / ROS2 教程"
+      },
+      "researchEvidence": [
+        "市场初筛候选：已确认官网或产品系列入口，科研使用、SDK、ROS/ROS2 和论文证据需后续分批补强。",
+        "v9 官网核验：Yahboom 官方产品页确认 ROSMASTER X3 Plus Jetson Orin Nano 教学平台、三种底盘形态、ROS2/SLAM/导航教程和公开美元售价；税费运费另计。"
+      ],
+      "deploymentEvidence": [
+        "市场初筛候选：部署、维保、交付和售后需以厂商或代理正式资料为准。"
+      ],
+      "risks": [
+        "信息深度低于重点候选，采购前必须补充正式报价、参数表和售后条款。"
+      ],
+      "scores": {
+        "research": 26,
+        "deployment": 26,
+        "overall": 52
+      },
+      "shortlistTags": [],
+      "sourceIds": [
+        "SRC043",
+        "SRCV9018"
+      ],
+      "verificationStatus": "官网核验",
+      "verificationNotes": "Yahboom 官方产品页确认 ROSMASTER X3 Plus Jetson Orin Nano 教学平台、三种底盘形态、ROS2/SLAM/导航教程和公开美元售价；税费运费另计。",
       "verifiedAt": "2026-06-01"
     },
     {

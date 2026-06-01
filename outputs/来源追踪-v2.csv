@@ -1609,3 +1609,21 @@ SRCV8014,EngineAI SA01 官方规格页,官网/产品规格,high,https://www.engi
 SRCV8015,EngineAI SE01 官方规格页,官网/产品规格,high,https://www.engineai.com.cn/product-se01,官方页核验 SE01 全尺寸人形、拟人步态、视听感知、灵巧手、快拆电池和接口定位。
 SRCV8016,Galbot G1 官方规格页,官网/产品规格,high,https://www.galbot.com/g1,官方页核验 Galbot G1 1730 mm 身高、双臂总 10 kg 负载、0-2.4 m 操作覆盖、10 h 续航、IP54 和 AGX Orin 计算平台。
 SRCV8017,Galaxea R1 Pro 官方文档,官网/产品文档,high,https://docs.galaxea-ai.com/Guide/R1Pro/hardware_introduction/R1Pro_Hardware_Introduction/,官方文档核验 Galaxea R1 Pro 26 自由度、双臂移动平台、3.5 kg 额定单臂负载、5 kg 最大单臂负载、1680 Wh 电池和科研平台适用边界。
+SRCV9001,AUBO i7 官方产品页,官网/产品规格,high,https://www.aubo-cobot.com/products/aubo-i7,官方产品页核验 AUBO i7 协作臂型号、7 kg 负载、约 917 mm 工作半径、±0.02 mm 重复定位精度和 AUBOPE 软件生态。
+SRCV9002,Elephant Robotics myCobot Pro 600 官方产品页,官网/产品规格,high,https://www.elephantrobotics.com/en/mycobot-pro-600-en/,官方产品页核验 myCobot Pro 600 为 6 自由度协作臂，约 2 kg 负载、600 mm 工作半径、拖动示教和 ROS/MoveIt/Python/C++ 支持口径。
+SRCV9003,Franka Research 3 官方规格页,官网/产品规格,high,https://franka.de/research,官方页核验 Franka Research 3 7 自由度、3 kg 负载、855 mm 工作空间半径、力矩传感和 Franka Control Interface / ROS2 资源。
+SRCV9004,Franka Panda 官方历史资料,官网/产品入口,medium,https://franka.de/,Franka 当前官网主推 Research 3；Panda 作为历史科研平台仍有生态资料，但当前采购应以 FR3 为主并向厂商确认可供货性。
+SRCV9005,Han's Robot Elfin E5 官方产品资料,官网/产品规格,high,https://www.hansrobot.net/products/elfin-collaborative-robot.html,官方产品资料核验 Elfin 系列双关节模组协作臂，E5 为 5 kg 级、约 800 mm 工作半径和 6 轴协作平台。
+SRCV9006,Kinova Gen3 Lite 官方产品页,官网/产品规格,high,https://www.kinovarobotics.com/product/gen3-lite-robots,官方页核验 Gen3 Lite 6 自由度、约 0.5 kg 载荷、约 760 mm 伸展距离、Kortex API、ROS 和 MoveIt 生态。
+SRCV9007,ROKAE xMate CR7 官方产品资料,官网/产品规格,high,https://www.rokae.com/en/collaborative-robots,官方资料核验 xMate CR7 为 7 kg 级协作臂，支持柔性拖动、力控和工业协作应用；详细参数以官方规格书/销售确认为准。
+SRCV9008,SIASUN GCR 系列官方产品资料,官网/产品入口,medium,https://www.siasun.com/,新松官网可核验 GCR 系列协作机器人产品线；GCR5 具体参数需以厂商规格书确认。
+SRCV9009,UFACTORY xArm 官方规格页,官网/产品规格,high,https://www.ufactory.cc/xarm-collaborative-robot/,官方页核验 xArm 5 为 5 自由度轻量协作臂，3 kg 负载、700 mm 工作半径、±0.1 mm 重复定位精度、ROS/ROS2 和 SDK 生态。
+SRCV9010,Yaskawa HC10DT 官方产品资料,官网/产品规格,high,https://www.motoman.com/en-us/products/robots/industrial/collaborative/hc10dt,官方资料核验 HC10DT 10 kg 负载、约 1200 mm 水平伸展、协作安全、YRC1000micro 控制器和工业机器人生态。
+SRCV9011,Fetch Robotics / Zebra 官方产品入口,官网/产品入口,medium,https://www.zebra.com/us/en/products/autonomous-mobile-robots.html,Fetch 已并入 Zebra，当前官网主推 AMR 产品组合；Fetch Mobile Manipulator 作为历史科研平台需确认二手/存量和支持状态。
+SRCV9012,Hello Robot Stretch 2 官方产品资料,官网/产品规格,high,https://hello-robot.com/stretch-2,官方产品资料核验 Stretch 2 家庭/研究移动操作平台、伸缩臂、ROS/ROS2、Python API 和研究生态；当前采购需按新版 Stretch 型号确认。
+SRCV9013,Hiwonder JetAuto Pro 官方产品页,官网/产品规格/价格,high,https://www.hiwonder.com/products/jetauto-pro,官方产品页核验 JetAuto Pro ROS 机器人开发平台、Jetson Orin Nano、视觉/雷达配置、ROS/ROS2 教程和公开美元售价。
+SRCV9014,Husarion LYNX 官方手册,官网/产品手册,high,https://husarion.com/manuals/lynx/,官方手册核验 LYNX 户外/室内 ROS 2 移动平台、IP54、速度、负载、传感器接口和 ROS 2 软件栈。
+SRCV9015,Mujin TruckBot 官方产品入口,官网/产品入口,high,https://mujin-corp.com/products/truckbot/,官方产品入口核验 TruckBot 物流卸货移动机器人和 Mujin Controller 智能机器人系统；详细规格和采购交付需询价。
+SRCV9016,Neobotix MPO-700 官方产品页,官网/产品规格,high,https://www.neobotix-robots.com/mobile-robots/omnidirectional-robots/mpo-700,官方产品页核验 MPO-700 全向移动机器人、100 kg 级载荷、研究/工业移动平台和 ROS/导航接口口径。
+SRCV9017,Robotnik RB-THERON 官方产品页,官网/产品规格,high,https://robotnik.eu/products/mobile-robots/rb-theron/,官方产品页核验 RB-THERON 自主移动机器人、全向底盘、室内外导航、ROS/ROS2 和可扩展传感器/载荷接口。
+SRCV9018,Yahboom ROSMASTER X3 Plus 官方产品页,官网/产品规格/价格,high,https://category.yahboom.net/products/rosmaster-x3,官方产品页核验 ROSMASTER X3 Plus Jetson Orin Nano 版本、Mecanum/履带/阿克曼三底盘形态、ROS2/SLAM/导航教程和公开美元售价。
