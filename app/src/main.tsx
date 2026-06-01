@@ -20,7 +20,7 @@ import "./styles.css";
 
 type Confidence = "high" | "medium" | "low";
 type ReleaseConfidence = Confidence | "unknown";
-type Tab = "overview" | "compare" | "report" | "sources";
+type Tab = "overview" | "rankings" | "compare" | "report" | "sources";
 type SourceFilter = "官网" | "电商" | "GitHub" | "论文" | "招投标";
 type OriginFilter = "全部" | "国产" | "进口";
 type PriceBand = "全部" | "10万以下" | "10-30万" | "30-80万" | "80万以上" | "正式报价";
@@ -102,6 +102,7 @@ type CategoryStat = {
 
 const robots = data.robots as Robot[];
 const sources = data.sources as Source[];
+const sourceById = new Map(sources.map((source) => [source.id, source]));
 const meta = data.meta as {
   version: string;
   accessedDate: string;
@@ -193,6 +194,13 @@ function releaseYear(robot: Robot) {
   return match ? Number(match[0]) : null;
 }
 
+function releaseSortValue(robot: Robot) {
+  if (robot.releaseDateConfidence === "unknown" || robot.releaseDate === "官网未披露") return null;
+  const match = robot.releaseDate?.match(/(\d{4})(?:-(\d{1,2}))?/);
+  if (!match) return null;
+  return Number(match[1]) * 100 + Number(match[2] || "1");
+}
+
 function matchesReleaseFilter(robot: Robot, filter: ReleaseFilter) {
   if (filter === "全部") return true;
   const year = releaseYear(robot);
@@ -233,6 +241,27 @@ function sourceMatchesType(source: Source, filter: SourceFilter) {
   if (filter === "GitHub") return /GitHub|开源|SDK|ROS/.test(text);
   if (filter === "论文") return /论文|学术|项目|科研/.test(text);
   return /招投标|政府采购|采购网/.test(text);
+}
+
+function paperSourceCount(robot: Robot) {
+  return robot.sourceIds
+    .map((id) => sourceById.get(id))
+    .filter((source): source is Source => Boolean(source))
+    .filter((source) => /论文|学术|paper|arxiv|ICRA|IROS|IEEE|项目/i.test(`${source.type} ${source.title} ${source.notes}`))
+    .length;
+}
+
+function openSourceCount(robot: Robot) {
+  return robot.sourceIds
+    .map((id) => sourceById.get(id))
+    .filter((source): source is Source => Boolean(source))
+    .filter((source) => /GitHub|ROS|ROS2|SDK|开源|代码|仿真/i.test(`${source.type} ${source.title} ${source.notes} ${source.url}`))
+    .length;
+}
+
+function valueScore(robot: Robot) {
+  if (robot.price.amount === null || robot.price.amount <= 0) return null;
+  return robot.scores.overall / (robot.price.amount / 10000);
 }
 
 function sourceFilterCounts() {
@@ -589,6 +618,10 @@ function App() {
             </>
           )}
 
+          {activeTab === "rankings" && (
+            <RankingCenter robots={filteredRobots} selectedIds={selectedIds} onToggle={toggleSelected} onOpenDetail={setDetailRobotId} />
+          )}
+
           {activeTab === "compare" && (
             <section className="compare-panel">
               <div className="panel-head">
@@ -649,6 +682,7 @@ function Header({
       <div className="product-title">高校机器人采购研究平台</div>
       <nav className="top-nav" aria-label="主导航">
         <button className={activeTab === "overview" ? "active" : ""} onClick={() => setActiveTab("overview")}>概览</button>
+        <button className={activeTab === "rankings" ? "active" : ""} onClick={() => setActiveTab("rankings")}>排行榜</button>
         <button className={activeTab === "compare" ? "active" : ""} onClick={() => setActiveTab("compare")}>对比分析</button>
         <button className={activeTab === "report" ? "active" : ""} onClick={() => setActiveTab("report")}>报告中心</button>
         <button className={activeTab === "sources" ? "active" : ""} onClick={() => setActiveTab("sources")}>数据源</button>
@@ -871,6 +905,185 @@ function CategoryOverview({ stats, onCategory }: { stats: CategoryStat[]; onCate
         </button>
       ))}
     </section>
+  );
+}
+
+type RankingConfig = {
+  id: string;
+  title: string;
+  subtitle: string;
+  empty: string;
+  getValue: (robot: Robot) => number | null;
+  formatValue: (value: number, robot: Robot) => string;
+};
+
+function RankingCenter({
+  robots,
+  selectedIds,
+  onToggle,
+  onOpenDetail
+}: {
+  robots: Robot[];
+  selectedIds: string[];
+  onToggle: (id: string) => void;
+  onOpenDetail: (id: string) => void;
+}) {
+  const rankingConfigs: RankingConfig[] = [
+    {
+      id: "paper",
+      title: "论文/学术使用热度",
+      subtitle: "按现有来源库中的论文、学术和项目类来源数量排序",
+      empty: "当前筛选下没有论文/学术来源记录，请放宽类别、品牌或来源筛选。",
+      getValue: paperSourceCount,
+      formatValue: (value) => `${value} 条论文/学术来源`
+    },
+    {
+      id: "open",
+      title: "GitHub/开源生态",
+      subtitle: "按 GitHub、ROS/ROS2、SDK、代码和仿真类来源数量排序",
+      empty: "当前筛选下没有开源生态来源记录，请放宽筛选条件。",
+      getValue: openSourceCount,
+      formatValue: (value) => `${value} 条开源/生态来源`
+    },
+    {
+      id: "overall",
+      title: "综合推荐",
+      subtitle: "按综合评分排序，兼顾科研和落地适配",
+      empty: "当前筛选下没有候选可排行。",
+      getValue: (robot) => robot.scores.overall,
+      formatValue: (value) => `${value}/100`
+    },
+    {
+      id: "research",
+      title: "科研适配",
+      subtitle: "按科研评分排序，优先展示适合实验室和课程研发的型号",
+      empty: "当前筛选下没有候选可排行。",
+      getValue: (robot) => robot.scores.research * 2,
+      formatValue: (value) => `${value}/100`
+    },
+    {
+      id: "deployment",
+      title: "落地适配",
+      subtitle: "按落地评分排序，优先展示部署、维护和场景适配更稳的型号",
+      empty: "当前筛选下没有候选可排行。",
+      getValue: (robot) => robot.scores.deployment * 2,
+      formatValue: (value) => `${value}/100`
+    },
+    {
+      id: "value",
+      title: "性价比",
+      subtitle: "仅统计已收录公开价或估算价的型号，按每万元综合分排序",
+      empty: "当前筛选下没有可计算价格的型号，请切换价格筛选或放宽品牌/类别。",
+      getValue: valueScore,
+      formatValue: (value) => `${value.toFixed(1)} 每万元综合分`
+    },
+    {
+      id: "new",
+      title: "近年发布新品",
+      subtitle: "按已核验发布时间从新到旧排序，排除官网未披露",
+      empty: "当前筛选下没有明确发布时间的型号，请选择全部或放宽类别/品牌。",
+      getValue: releaseSortValue,
+      formatValue: (_value, robot) => robot.releaseDate
+    }
+  ];
+
+  const totalPaperSources = robots.reduce((sum, robot) => sum + paperSourceCount(robot), 0);
+  const totalOpenSources = robots.reduce((sum, robot) => sum + openSourceCount(robot), 0);
+  const valueReadyCount = robots.filter((robot) => valueScore(robot) !== null).length;
+
+  function rankingItems(config: RankingConfig) {
+    return robots
+      .map((robot) => ({ robot, value: config.getValue(robot) }))
+      .filter((item): item is { robot: Robot; value: number } => item.value !== null && item.value > 0)
+      .sort((a, b) => b.value - a.value || b.robot.scores.overall - a.robot.scores.overall || b.robot.sourceIds.length - a.robot.sourceIds.length)
+      .slice(0, 10);
+  }
+
+  return (
+    <section className="ranking-panel">
+      <div className="panel-head">
+        <div>
+          <h2>排行榜</h2>
+          <span>基于当前筛选条件动态生成，论文热度不是全网引用次数</span>
+        </div>
+      </div>
+      <div className="ranking-summary">
+        <MetricCard label="当前筛选候选" value={String(robots.length)} detail={`全库 ${data.robots.length} 个`} />
+        <MetricCard label="论文/学术来源" value={String(totalPaperSources)} detail="按候选关联来源累计" />
+        <MetricCard label="GitHub/开源来源" value={String(totalOpenSources)} detail="含 ROS/SDK/代码/仿真" />
+        <MetricCard label="可算性价比" value={String(valueReadyCount)} detail="有公开价或估算价" />
+      </div>
+      {robots.length === 0 ? (
+        <EmptyState title="当前筛选下没有候选" body="请减少品牌、价格、发布时间、标签或来源筛选条件后再查看排行榜。" />
+      ) : (
+        <div className="ranking-grid">
+          {rankingConfigs.map((config) => (
+            <RankingCard
+              key={config.id}
+              config={config}
+              items={rankingItems(config)}
+              selectedIds={selectedIds}
+              onToggle={onToggle}
+              onOpenDetail={onOpenDetail}
+            />
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
+function RankingCard({
+  config,
+  items,
+  selectedIds,
+  onToggle,
+  onOpenDetail
+}: {
+  config: RankingConfig;
+  items: Array<{ robot: Robot; value: number }>;
+  selectedIds: string[];
+  onToggle: (id: string) => void;
+  onOpenDetail: (id: string) => void;
+}) {
+  return (
+    <article className="ranking-card">
+      <div className="ranking-card-head">
+        <div>
+          <h3>{config.title}</h3>
+          <p>{config.subtitle}</p>
+        </div>
+        <span>Top {Math.min(items.length, 10)}</span>
+      </div>
+      {items.length === 0 ? (
+        <EmptyState title="暂无排行结果" body={config.empty} />
+      ) : (
+        <ol className="ranking-list">
+          {items.map(({ robot, value }, index) => {
+            const selected = selectedIds.includes(robot.id);
+            return (
+              <li key={robot.id}>
+                <span className="rank-number">{index + 1}</span>
+                <CategoryThumb category={robot.category} compact />
+                <div className="ranking-main">
+                  <strong>{robot.name}</strong>
+                  <p>{brandLabel(robot)} · {brandPlace(robot)} · {robot.category}</p>
+                  <div>
+                    <em>{config.formatValue(value, robot)}</em>
+                    <em>{robot.marketTier}</em>
+                    <em>{robot.price.type}</em>
+                  </div>
+                </div>
+                <div className="ranking-actions">
+                  <button onClick={() => onOpenDetail(robot.id)}><Info size={13} />详情</button>
+                  <button className={selected ? "selected" : ""} onClick={() => onToggle(robot.id)}>{selected ? "已选" : "加入对比"}</button>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+      )}
+    </article>
   );
 }
 

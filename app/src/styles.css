@@ -462,6 +462,7 @@ a {
 .table-panel,
 .compare-panel,
 .source-panel,
+.ranking-panel,
 .report-panel {
   margin-top: 14px;
   overflow: hidden;
@@ -1069,6 +1070,176 @@ th {
   gap: 5px;
 }
 
+.ranking-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.ranking-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  padding: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ranking-summary .metric-card {
+  min-height: 104px;
+  padding: 14px 12px;
+}
+
+.ranking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 14px;
+}
+
+.ranking-card {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fbfdff;
+  overflow: hidden;
+}
+
+.ranking-card-head {
+  min-height: 86px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.ranking-card-head h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.ranking-card-head p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.ranking-card-head span {
+  border: 1px solid #c9e4e1;
+  border-radius: 999px;
+  background: var(--teal-soft);
+  color: var(--teal);
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.ranking-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ranking-list li {
+  display: grid;
+  grid-template-columns: 28px 34px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.ranking-list li:last-child {
+  border-bottom: 0;
+}
+
+.rank-number {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  background: var(--teal-soft);
+  color: var(--teal-strong);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.ranking-main {
+  min-width: 0;
+}
+
+.ranking-main strong,
+.ranking-main p {
+  display: block;
+}
+
+.ranking-main strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.ranking-main p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.ranking-main div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.ranking-main em {
+  border-radius: 4px;
+  background: #eef2f5;
+  color: #4d5b68;
+  padding: 2px 6px;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.ranking-main em:first-child {
+  background: var(--blue-soft);
+  color: #2563aa;
+  font-weight: 800;
+}
+
+.ranking-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ranking-actions button {
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  color: #344052;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.ranking-actions button.selected {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+  color: var(--teal-strong);
+}
+
 .confidence {
   display: inline-flex;
   min-width: 24px;
@@ -1383,7 +1554,9 @@ th {
   }
 
   .report-grid,
-  .report-lists {
+  .report-lists,
+  .ranking-grid,
+  .ranking-summary {
     grid-template-columns: 1fr;
   }
 }
@@ -1438,6 +1611,8 @@ th {
 
   .summary-grid,
   .category-overview,
+  .ranking-grid,
+  .ranking-summary,
   .right-panel {
     grid-template-columns: 1fr;
   }
@@ -1464,6 +1639,15 @@ th {
 
   .table-actions {
     flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .ranking-list li {
+    grid-template-columns: 28px 34px minmax(0, 1fr);
+  }
+
+  .ranking-actions {
+    grid-column: 3;
     justify-content: flex-start;
   }
 
