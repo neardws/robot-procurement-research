@@ -1090,6 +1090,27 @@ th {
   padding: 14px 12px;
 }
 
+.ranking-note {
+  margin: 0 14px 14px;
+  border: 1px solid #d5e8e6;
+  border-radius: 6px;
+  background: #f4fbfa;
+  padding: 12px 14px;
+}
+
+.ranking-note strong {
+  display: block;
+  color: var(--teal-strong);
+  font-size: 13px;
+}
+
+.ranking-note p {
+  margin: 5px 0 0;
+  color: #536170;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
 .ranking-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1190,6 +1211,14 @@ th {
   font-size: 12px;
 }
 
+.ranking-main small {
+  display: block;
+  margin-top: 6px;
+  color: #7a8794;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
 .ranking-main div {
   display: flex;
   flex-wrap: wrap;
@@ -1210,6 +1239,18 @@ th {
 .ranking-main em:first-child {
   background: var(--blue-soft);
   color: #2563aa;
+  font-weight: 800;
+}
+
+.ranking-main em.metric-ok {
+  background: var(--green-soft);
+  color: var(--green);
+  font-weight: 800;
+}
+
+.ranking-main em.metric-review {
+  background: var(--amber-soft);
+  color: var(--amber);
   font-weight: 800;
 }
 

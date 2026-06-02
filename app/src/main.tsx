@@ -28,6 +28,7 @@ type ReleaseFilter = "全部" | "近1年" | "近3年" | "2020年以后" | "官�
 type MarketTier = "重点候选" | "市场初筛";
 type VerificationStatus = "官网核验" | "部分核验" | "未核验";
 type ColumnKey = "formFactor" | "country" | "priceType" | "software" | "risk" | "sources" | "releaseDate" | "marketTier" | "verification" | "tags";
+type CoverageTier = "主流在售" | "科研常用" | "教育/低成本" | "开源/组合方案" | "历史/供货待确认";
 
 type Robot = {
   id: string;
@@ -43,6 +44,7 @@ type Robot = {
   releaseDate: string;
   releaseDateConfidence: ReleaseConfidence;
   marketTier: MarketTier;
+  coverageTier?: CoverageTier;
   verificationStatus?: VerificationStatus;
   verificationNotes?: string;
   verifiedAt?: string;
@@ -78,6 +80,26 @@ type Robot = {
   };
   shortlistTags: string[];
   sourceIds: string[];
+  academicMetrics?: {
+    paperCount: number;
+    citationCount: number;
+    recentPaperCount: number;
+    academicScore: number;
+    topPaperTitles: string[];
+    academicMetricSource: string;
+    academicConfidence: Confidence | "unknown";
+  };
+  openSourceMetrics?: {
+    repoCount: number;
+    stars: number;
+    forks: number;
+    recentlyUpdatedRepos: number;
+    officialRepoCount: number;
+    openSourceScore: number;
+    topRepos: string[];
+    openSourceMetricSource: string;
+    openSourceConfidence: Confidence | "unknown";
+  };
 };
 
 type Source = {
@@ -251,12 +273,39 @@ function paperSourceCount(robot: Robot) {
     .length;
 }
 
+function academicScore(robot: Robot) {
+  return robot.academicMetrics?.academicScore || null;
+}
+
+function academicLabel(robot: Robot) {
+  const metrics = robot.academicMetrics;
+  if (!metrics || metrics.paperCount === 0) return "未匹配";
+  return `${metrics.academicScore}/100 · ${metrics.paperCount} 篇 · 引用 ${metrics.citationCount} · 近三年 ${metrics.recentPaperCount}`;
+}
+
 function openSourceCount(robot: Robot) {
   return robot.sourceIds
     .map((id) => sourceById.get(id))
     .filter((source): source is Source => Boolean(source))
     .filter((source) => /GitHub|ROS|ROS2|SDK|开源|代码|仿真/i.test(`${source.type} ${source.title} ${source.notes} ${source.url}`))
     .length;
+}
+
+function openSourceScore(robot: Robot) {
+  return robot.openSourceMetrics?.openSourceScore || null;
+}
+
+function openSourceLabel(robot: Robot) {
+  const metrics = robot.openSourceMetrics;
+  if (!metrics || metrics.repoCount === 0) return "未匹配";
+  return `${metrics.openSourceScore}/100 · ${metrics.repoCount} 库 · ${metrics.stars} stars · ${metrics.forks} forks`;
+}
+
+function metricConfidenceLabel(confidence: Confidence | "unknown" | undefined) {
+  if (confidence === "high") return "高置信";
+  if (confidence === "medium") return "中置信";
+  if (confidence === "low") return "低置信";
+  return "未匹配";
 }
 
 function valueScore(robot: Robot) {
@@ -915,6 +964,8 @@ type RankingConfig = {
   empty: string;
   getValue: (robot: Robot) => number | null;
   formatValue: (value: number, robot: Robot) => string;
+  confidence?: (robot: Robot) => Confidence | "unknown" | undefined;
+  sourceNote?: (robot: Robot) => string;
 };
 
 function RankingCenter({
@@ -932,18 +983,22 @@ function RankingCenter({
     {
       id: "paper",
       title: "论文/学术使用热度",
-      subtitle: "按现有来源库中的论文、学术和项目类来源数量排序",
-      empty: "当前筛选下没有论文/学术来源记录，请放宽类别、品牌或来源筛选。",
-      getValue: paperSourceCount,
-      formatValue: (value) => `${value} 条论文/学术来源`
+      subtitle: "按外部论文检索的论文数、引用数和近三年论文数综合排序",
+      empty: "当前筛选下没有可靠学术指标匹配，请放宽类别/品牌或后续补充论文检索。",
+      getValue: academicScore,
+      formatValue: (_value, robot) => academicLabel(robot),
+      confidence: (robot) => robot.academicMetrics?.academicConfidence,
+      sourceNote: (robot) => robot.academicMetrics?.academicMetricSource || "未匹配"
     },
     {
       id: "open",
       title: "GitHub/开源生态",
-      subtitle: "按 GitHub、ROS/ROS2、SDK、代码和仿真类来源数量排序",
-      empty: "当前筛选下没有开源生态来源记录，请放宽筛选条件。",
-      getValue: openSourceCount,
-      formatValue: (value) => `${value} 条开源/生态来源`
+      subtitle: "按明确 GitHub 仓库的 stars、forks、最近更新和官方/社区属性综合排序",
+      empty: "当前筛选下没有可靠开源指标匹配，请放宽筛选或补充官方/ROS 仓库。",
+      getValue: openSourceScore,
+      formatValue: (_value, robot) => openSourceLabel(robot),
+      confidence: (robot) => robot.openSourceMetrics?.openSourceConfidence,
+      sourceNote: (robot) => robot.openSourceMetrics?.openSourceMetricSource || "未匹配"
     },
     {
       id: "overall",
@@ -987,9 +1042,10 @@ function RankingCenter({
     }
   ];
 
-  const totalPaperSources = robots.reduce((sum, robot) => sum + paperSourceCount(robot), 0);
-  const totalOpenSources = robots.reduce((sum, robot) => sum + openSourceCount(robot), 0);
+  const academicMatched = robots.filter((robot) => (robot.academicMetrics?.paperCount || 0) > 0).length;
+  const openSourceMatched = robots.filter((robot) => (robot.openSourceMetrics?.repoCount || 0) > 0).length;
   const valueReadyCount = robots.filter((robot) => valueScore(robot) !== null).length;
+  const coverageText = [...new Set(robots.map((robot) => robot.coverageTier).filter(Boolean))].slice(0, 3).join(" / ") || "未标注";
 
   function rankingItems(config: RankingConfig) {
     return robots
@@ -1004,14 +1060,18 @@ function RankingCenter({
       <div className="panel-head">
         <div>
           <h2>排行榜</h2>
-          <span>基于当前筛选条件动态生成，论文热度不是全网引用次数</span>
+          <span>外部热度指标优先；库内来源数量仅作为证据覆盖说明</span>
         </div>
       </div>
       <div className="ranking-summary">
         <MetricCard label="当前筛选候选" value={String(robots.length)} detail={`全库 ${data.robots.length} 个`} />
-        <MetricCard label="论文/学术来源" value={String(totalPaperSources)} detail="按候选关联来源累计" />
-        <MetricCard label="GitHub/开源来源" value={String(totalOpenSources)} detail="含 ROS/SDK/代码/仿真" />
+        <MetricCard label="学术指标匹配" value={String(academicMatched)} detail="OpenAlex/Semantic Scholar 口径" />
+        <MetricCard label="开源指标匹配" value={String(openSourceMatched)} detail="GitHub 仓库 API 口径" />
         <MetricCard label="可算性价比" value={String(valueReadyCount)} detail="有公开价或估算价" />
+      </div>
+      <div className="ranking-note">
+        <strong>数据口径说明</strong>
+        <p>当前筛选覆盖层级：{coverageText}。论文/开源榜只使用可复核外部指标；未匹配候选不填假数，低置信结果显示“需复核”。</p>
       </div>
       {robots.length === 0 ? (
         <EmptyState title="当前筛选下没有候选" body="请减少品牌、价格、发布时间、标签或来源筛选条件后再查看排行榜。" />
@@ -1071,8 +1131,11 @@ function RankingCard({
                   <div>
                     <em>{config.formatValue(value, robot)}</em>
                     <em>{robot.marketTier}</em>
+                    {robot.coverageTier && <em>{robot.coverageTier}</em>}
                     <em>{robot.price.type}</em>
+                    {config.confidence && <em className={config.confidence(robot) === "high" ? "metric-ok" : "metric-review"}>{metricConfidenceLabel(config.confidence(robot))}{config.confidence(robot) !== "high" ? " · 需复核" : ""}</em>}
                   </div>
+                  {config.sourceNote && <small>{config.sourceNote(robot)}</small>}
                 </div>
                 <div className="ranking-actions">
                   <button onClick={() => onOpenDetail(robot.id)}><Info size={13} />详情</button>

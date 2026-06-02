@@ -1630,13 +1630,13 @@ SRCV9018,Yahboom ROSMASTER X3 Plus 官方产品页,官网/产品规格/价格,hi
 SRCV10001,1X NEO 官方产品页,官网/产品规格/订购,high,https://www.1x.tech/neo,官方页核验 NEO 家用人形机器人、预订/订阅口径、重量、负载、续航、速度和远程/自主能力边界。
 SRCV10002,Kepler Forerunner 官方产品页,官网/产品入口,high,https://www.keplerrobotics.com/,官方入口核验 Kepler Forerunner 人形机器人产品线；详细采购规格和 SDK 需向厂商确认。
 SRCV10003,RobotEra 官方产品入口,官网/产品入口,high,https://www.robotera.com/,官方入口核验 RobotEra 人形机器人与灵巧操作产品线；XHand1 具体采购规格和接口需厂商确认。
-SRCV10004,UBTECH Walker 官方产品资料,官网/产品入口,high,https://www.ubtrobot.com/,优必选官网核验 Walker 系列人形机器人和商用/展示应用；Walker X 面向采购的量产规格、价格和 SDK 需厂商确认。
+SRCV10004,UBTECH Walker 官方产品资料,官网/产品入口,high,https://www.ubtrobot.com/,优必选官网核验 Walker 系列人形机器人和商用/展示应用；Walker X 面向采购的量产规格、价格需厂商正式报价，SDK 需厂商确认。
 SRCV10005,AgiBot 官方产品入口,官网/产品入口,high,https://www.agibot.com/,智元官网核验 A2/A2-W 相关人形机器人产品线；详细规格、交付和开发接口需厂商确认。
-SRCV10006,Agility Digit 官方机器人页,官网/产品规格,high,https://agilityrobotics.com/robots,官方页核验 Digit 物流人形机器人、箱体搬运定位、企业部署和 Agility Arc 系统；价格和 SDK 需厂商确认。
-SRCV10007,Apptronik Apollo 官方产品页,官网/产品规格,high,https://apptronik.com/apollo,官方页核验 Apollo 通用人形机器人、模块化电池、工业任务定位和企业合作路径；价格和 SDK 需厂商确认。
+SRCV10006,Agility Digit 官方机器人页,官网/产品规格,high,https://agilityrobotics.com/robots,官方页核验 Digit 物流人形机器人、箱体搬运定位、企业部署和 Agility Arc 系统；价格需厂商正式报价，SDK 需厂商确认。
+SRCV10007,Apptronik Apollo 官方产品页,官网/产品规格,high,https://apptronik.com/apollo,官方页核验 Apollo 通用人形机器人、模块化电池、工业任务定位和企业合作路径；价格需厂商正式报价，SDK 需厂商确认。
 SRCV10008,Booster Robotics A1 官方产品页,官网/产品规格,high,https://www.boosterobotics.com/,官方页核验 Booster A1 开源/开发者人形平台和科研教育定位；公开价格和具体接口需按版本确认。
 SRCV10009,Figure 官方机器人页,官网/产品入口,high,https://www.figure.ai/,Figure 官网核验 Figure 02 / Figure 03 产品线、商业部署方向和 Helix 智能系统；开放采购与 SDK 未公开。
-SRCV10010,NEURA 4NE-1 官方产品页,官网/产品入口,high,https://www.neura-robotics.com/4ne1,NEURA 官方页核验 4NE-1 人形机器人产品线；详细规格、开放采购和 SDK 需厂商确认。
+SRCV10010,NEURA 4NE-1 官方产品页,官网/产品入口,high,https://www.neura-robotics.com/4ne1,NEURA 官方页核验 4NE-1 人形机器人产品线；详细规格、开放采购需厂商正式报价，SDK 需厂商确认。
 SRCV10011,ROBOTIS OP3 官方 e-Manual,官网/产品手册,high,https://emanual.robotis.com/docs/en/platform/op3/introduction/,官方 e-Manual 核验 OP3 小型开源人形机器人、ROS 包、硬件配置、教程和教育科研定位。
 SRCV10012,Sanctuary Phoenix 官方产品页,官网/产品入口,high,https://www.sanctuary.ai/phoenix,官方页核验 Phoenix 通用人形机器人和 Carbon AI 控制系统；公开采购规格、价格和 SDK 未完整披露。
 SRCV10013,Tesla AI 官方页面,官网/产品入口,medium,https://www.tesla.com/AI,Tesla 官方 AI 页面核验 Optimus 项目与招聘/演示口径；暂无学校采购、价格、SDK 或正式规格入口。
@@ -1653,3 +1653,125 @@ SRCV13001,Robotnik RB-1 Base 官方产品页,官网/产品规格,high,https://ro
 SRCV13002,Robotnik SUMMIT-XL 官方产品页,官网/产品规格,high,https://robotnik.eu/products/mobile-robots/summit-xl/,官方产品页核验 SUMMIT-XL 户外移动平台、载荷、ROS/ROS2 和传感器扩展接口。
 SRCV13003,Unitree H1 官方规格页,中文官网/产品规格,high,https://www.unitree.com/cn/h1/,宇树 H1 官方页披露 H1-2 系列自由度、重量、续航、电池和运动性能，商业采购需正式报价。
 SRCV13004,Boston Dynamics Atlas 官方页,官网/研发产品入口,high,https://bostondynamics.com/atlas/,Boston Dynamics 官方 Atlas 页面核验电动 Atlas 项目入口，但未披露学校采购型负载、SDK、价格和供货参数。
+SRCV150001,ABB 协作和工业机器人官方产品入口,官网/品牌产品目录,medium,https://new.abb.com/products/robotics/robots/collaborative-robots,v15 广覆盖扩库来源：用于核验 ABB GoFa CRB 15000-5 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150002,ABB 协作和工业机器人官方产品入口,官网/品牌产品目录,medium,https://new.abb.com/products/robotics/robots/collaborative-robots,v15 广覆盖扩库来源：用于核验 ABB GoFa CRB 15000-10 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150003,ABB 协作和工业机器人官方产品入口,官网/品牌产品目录,medium,https://new.abb.com/products/robotics/robots/collaborative-robots,v15 广覆盖扩库来源：用于核验 ABB SWIFTI CRB 1100 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150004,ABB 协作和工业机器人官方产品入口,官网/品牌产品目录,medium,https://new.abb.com/products/robotics/robots/collaborative-robots,v15 广覆盖扩库来源：用于核验 ABB YuMi IRB 14000 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150005,ABB 协作和工业机器人官方产品入口,官网/品牌产品目录,medium,https://new.abb.com/products/robotics/robots/collaborative-robots,v15 广覆盖扩库来源：用于核验 ABB IRB 1200 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150006,ABB 协作和工业机器人官方产品入口,官网/品牌产品目录,medium,https://new.abb.com/products/robotics/robots/collaborative-robots,v15 广覆盖扩库来源：用于核验 ABB IRB 1300 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150007,ABB 协作和工业机器人官方产品入口,官网/品牌产品目录,medium,https://new.abb.com/products/robotics/robots/collaborative-robots,v15 广覆盖扩库来源：用于核验 ABB IRB 1600 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150008,KUKA 工业机器人官方产品入口,官网/品牌产品目录,medium,https://www.kuka.com/en-us/products/robotics-systems/industrial-robots,v15 广覆盖扩库来源：用于核验 KUKA LBR iisy 3 R760 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150009,KUKA 工业机器人官方产品入口,官网/品牌产品目录,medium,https://www.kuka.com/en-us/products/robotics-systems/industrial-robots,v15 广覆盖扩库来源：用于核验 KUKA LBR iisy 11 R1300 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150010,KUKA 工业机器人官方产品入口,官网/品牌产品目录,medium,https://www.kuka.com/en-us/products/robotics-systems/industrial-robots,v15 广覆盖扩库来源：用于核验 KUKA LBR iisy 15 R930 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150011,KUKA 工业机器人官方产品入口,官网/品牌产品目录,medium,https://www.kuka.com/en-us/products/robotics-systems/industrial-robots,v15 广覆盖扩库来源：用于核验 KUKA LBR iiwa 7 R800 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150012,KUKA 工业机器人官方产品入口,官网/品牌产品目录,medium,https://www.kuka.com/en-us/products/robotics-systems/industrial-robots,v15 广覆盖扩库来源：用于核验 KUKA LBR iiwa 14 R820 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150013,KUKA 工业机器人官方产品入口,官网/品牌产品目录,medium,https://www.kuka.com/en-us/products/robotics-systems/industrial-robots,v15 广覆盖扩库来源：用于核验 KUKA KR AGILUS 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150014,FANUC 机器人官方产品入口,官网/品牌产品目录,medium,https://www.fanucamerica.com/products/robots,v15 广覆盖扩库来源：用于核验 FANUC CRX-5iA 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150015,FANUC 机器人官方产品入口,官网/品牌产品目录,medium,https://www.fanucamerica.com/products/robots,v15 广覆盖扩库来源：用于核验 FANUC CRX-10iA 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150016,FANUC 机器人官方产品入口,官网/品牌产品目录,medium,https://www.fanucamerica.com/products/robots,v15 广覆盖扩库来源：用于核验 FANUC CRX-20iA 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150017,FANUC 机器人官方产品入口,官网/品牌产品目录,medium,https://www.fanucamerica.com/products/robots,v15 广覆盖扩库来源：用于核验 FANUC CR-35iA 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150018,FANUC 机器人官方产品入口,官网/品牌产品目录,medium,https://www.fanucamerica.com/products/robots,v15 广覆盖扩库来源：用于核验 FANUC LR Mate 200iD 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150019,Yaskawa Motoman 机器人官方产品入口,官网/品牌产品目录,medium,https://www.motoman.com/en-us/products/robots,v15 广覆盖扩库来源：用于核验 Yaskawa Motoman HC10DTP 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150020,Yaskawa Motoman 机器人官方产品入口,官网/品牌产品目录,medium,https://www.motoman.com/en-us/products/robots,v15 广覆盖扩库来源：用于核验 Yaskawa Motoman HC20DTP 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150021,Yaskawa Motoman 机器人官方产品入口,官网/品牌产品目录,medium,https://www.motoman.com/en-us/products/robots,v15 广覆盖扩库来源：用于核验 Yaskawa Motoman HC30PL 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150022,Yaskawa Motoman 机器人官方产品入口,官网/品牌产品目录,medium,https://www.motoman.com/en-us/products/robots,v15 广覆盖扩库来源：用于核验 Yaskawa Motoman GP7 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150023,Yaskawa Motoman 机器人官方产品入口,官网/品牌产品目录,medium,https://www.motoman.com/en-us/products/robots,v15 广覆盖扩库来源：用于核验 Yaskawa Motoman GP12 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150024,Kawasaki Robotics 官方产品入口,官网/品牌产品目录,medium,https://robotics.kawasaki.com/en1/products/robots/,v15 广覆盖扩库来源：用于核验 Kawasaki duAro 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150025,Kawasaki Robotics 官方产品入口,官网/品牌产品目录,medium,https://robotics.kawasaki.com/en1/products/robots/,v15 广覆盖扩库来源：用于核验 Kawasaki CL Series 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150026,Kawasaki Robotics 官方产品入口,官网/品牌产品目录,medium,https://robotics.kawasaki.com/en1/products/robots/,v15 广覆盖扩库来源：用于核验 Kawasaki RS007N 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150027,Kawasaki Robotics 官方产品入口,官网/品牌产品目录,medium,https://robotics.kawasaki.com/en1/products/robots/,v15 广覆盖扩库来源：用于核验 Kawasaki RS013N 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150028,Nachi Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.nachirobotics.com/robotics/,v15 广覆盖扩库来源：用于核验 Nachi CZ10 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150029,Nachi Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.nachirobotics.com/robotics/,v15 广覆盖扩库来源：用于核验 Nachi MZ07 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150030,Techman Robot 官方产品入口,官网/品牌产品目录,medium,https://www.tm-robot.com/en/,v15 广覆盖扩库来源：用于核验 Techman TM20 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150031,Doosan Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.doosanrobotics.com/en/products,v15 广覆盖扩库来源：用于核验 Doosan M0609 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150032,Doosan Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.doosanrobotics.com/en/products,v15 广覆盖扩库来源：用于核验 Doosan H2017 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150033,Doosan Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.doosanrobotics.com/en/products,v15 广覆盖扩库来源：用于核验 Doosan A0509 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150034,Comau 机器人官方产品入口,官网/品牌产品目录,medium,https://www.comau.com/en/competencies/robotics-automation/robot-team/,v15 广覆盖扩库来源：用于核验 Comau Racer-5 Cobot 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150035,Hanwha Robotics 协作机器人官方产品入口,官网/品牌产品目录,medium,https://www.hanwharobotics.com/en/products/collaborative-robot,v15 广覆盖扩库来源：用于核验 Hanwha HCR-5 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150036,Rethink Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.rethinkrobotics.com/,v15 广覆盖扩库来源：用于核验 Rethink Robotics Sawyer 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150037,igus 低成本机器人官方产品入口,官网/品牌产品目录,medium,https://www.igus.eu/automation/robotics,v15 广覆盖扩库来源：用于核验 igus ReBeL 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150038,大象机器人官方产品入口,官网/品牌产品目录,medium,https://www.elephantrobotics.com/en/,v15 广覆盖扩库来源：用于核验 myBuddy 280 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150039,UFACTORY 官方产品入口,官网/品牌产品目录,medium,https://www.ufactory.cc/,v15 广覆盖扩库来源：用于核验 xArm Lite 6 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150040,越疆机器人官方产品入口,官网/品牌产品目录,medium,https://www.dobot-robots.com/products.html,v15 广覆盖扩库来源：用于核验 DOBOT Magician E6 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150041,越疆机器人官方产品入口,官网/品牌产品目录,medium,https://www.dobot-robots.com/products.html,v15 广覆盖扩库来源：用于核验 DOBOT CR3A 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150042,越疆机器人官方产品入口,官网/品牌产品目录,medium,https://www.dobot-robots.com/products.html,v15 广覆盖扩库来源：用于核验 DOBOT CR10A 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150043,遨博机器人官方产品入口,官网/品牌产品目录,medium,https://www.aubo-robotics.cn/,v15 广覆盖扩库来源：用于核验 AUBO i16 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150044,睿尔曼智能官方产品入口,官网/品牌产品目录,medium,https://www.realman-robotics.com/,v15 广覆盖扩库来源：用于核验 RealMan RML63 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150045,新松机器人官方产品入口,官网/品牌产品目录,medium,https://www.siasun.com/,v15 广覆盖扩库来源：用于核验 SIASUN GCR14 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150046,MiR 移动机器人官方产品入口,官网/品牌产品目录,medium,https://mobile-industrial-robots.com/products/,v15 广覆盖扩库来源：用于核验 MiR1350 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150047,OTTO Motors 官方产品入口,官网/品牌产品目录,medium,https://ottomotors.com/,v15 广覆盖扩库来源：用于核验 OTTO 100 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150048,OTTO Motors 官方产品入口,官网/品牌产品目录,medium,https://ottomotors.com/,v15 广覆盖扩库来源：用于核验 OTTO 600 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150049,OTTO Motors 官方产品入口,官网/品牌产品目录,medium,https://ottomotors.com/,v15 广覆盖扩库来源：用于核验 OTTO 1500 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150050,Locus Robotics 官方产品入口,官网/品牌产品目录,medium,https://locusrobotics.com/,v15 广覆盖扩库来源：用于核验 Locus Origin 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150051,Locus Robotics 官方产品入口,官网/品牌产品目录,medium,https://locusrobotics.com/,v15 广覆盖扩库来源：用于核验 Locus Vector 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150052,Fetch Robotics 官方产品入口,官网/品牌产品目录,medium,https://fetchrobotics.com/,v15 广覆盖扩库来源：用于核验 Fetch Freight100 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150053,Fetch Robotics 官方产品入口,官网/品牌产品目录,medium,https://fetchrobotics.com/,v15 广覆盖扩库来源：用于核验 Fetch Freight1500 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150054,Robotnik 官方产品入口,官网/品牌产品目录,medium,https://robotnik.eu/products/,v15 广覆盖扩库来源：用于核验 Robotnik RB-VOGUI 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150055,PAL Robotics 官方产品入口,官网/品牌产品目录,medium,https://pal-robotics.com/robots/,v15 广覆盖扩库来源：用于核验 PAL TIAGo Base 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150056,PAL Robotics 官方产品入口,官网/品牌产品目录,medium,https://pal-robotics.com/robots/,v15 广覆盖扩库来源：用于核验 PAL ARI 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150057,Neobotix 官方产品入口,官网/品牌产品目录,medium,https://www.neobotix-robots.com/,v15 广覆盖扩库来源：用于核验 Neobotix MMO-700 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150058,斯坦德机器人官方产品入口,官网/品牌产品目录,medium,https://www.standard-robots.com/,v15 广覆盖扩库来源：用于核验 Standard Robots Oasis 600 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150059,斯坦德机器人官方产品入口,官网/品牌产品目录,medium,https://www.standard-robots.com/,v15 广覆盖扩库来源：用于核验 Standard Robots Oasis 300C 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150060,极智嘉官方产品入口,官网/品牌产品目录,medium,https://www.geekplus.com/,v15 广覆盖扩库来源：用于核验 Geek+ P800 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150061,极智嘉官方产品入口,官网/品牌产品目录,medium,https://www.geekplus.com/,v15 广覆盖扩库来源：用于核验 Geek+ RS8 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150062,亚博智能官方产品入口,官网/品牌产品目录,medium,https://www.yahboom.net/,v15 广覆盖扩库来源：用于核验 Yahboom ROSMASTER R2 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150063,亚博智能官方产品入口,官网/品牌产品目录,medium,https://www.yahboom.net/,v15 广覆盖扩库来源：用于核验 Yahboom ROSMASTER X1 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150064,幻尔科技官方产品入口,官网/品牌产品目录,medium,https://www.hiwonder.com/,v15 广覆盖扩库来源：用于核验 Hiwonder TonyPi Pro 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150065,ROBOTIS 官方产品入口,官网/品牌产品目录,medium,https://www.robotis.us/,v15 广覆盖扩库来源：用于核验 ROBOTIS MINI 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150066,SoftBank Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.softbankrobotics.com/,v15 广覆盖扩库来源：用于核验 SoftBank NAO V6 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150067,SoftBank Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.softbankrobotics.com/,v15 广覆盖扩库来源：用于核验 SoftBank Pepper 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150068,优必选官方产品入口,官网/品牌产品目录,medium,https://www.ubtrobot.com/,v15 广覆盖扩库来源：用于核验 UBTECH Walker S 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150069,逐际动力官方产品入口,官网/品牌产品目录,medium,https://www.limxdynamics.com/,v15 广覆盖扩库来源：用于核验 LimX Dynamics CL-1 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150070,PNDbotics 官方产品入口,官网/品牌产品目录,medium,https://www.pndbotics.com/,v15 广覆盖扩库来源：用于核验 PNDbotics Adam 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150071,宇树科技官方产品入口,官网/品牌产品目录,medium,https://www.unitree.com/,v15 广覆盖扩库来源：用于核验 Unitree A1 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150072,宇树科技官方产品入口,官网/品牌产品目录,medium,https://www.unitree.com/,v15 广覆盖扩库来源：用于核验 Unitree Aliengo 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150073,云深处科技官方产品入口,官网/品牌产品目录,medium,https://www.deeprobotics.cn/,v15 广覆盖扩库来源：用于核验 DEEP Robotics Jueying Lite2 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV150074,Boston Dynamics 官方产品入口,官网/品牌产品目录,medium,https://bostondynamics.com/,v15 广覆盖扩库来源：用于核验 Boston Dynamics Spot Arm 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160001,OMRON TM 协作机器人官方入口,官网/品牌产品目录,medium,https://automation.omron.com/en/us/products/family/TM-Collaborative-Robots,v16 广覆盖扩库来源：用于核验 OMRON TM5-700 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160002,OMRON TM 协作机器人官方入口,官网/品牌产品目录,medium,https://automation.omron.com/en/us/products/family/TM-Collaborative-Robots,v16 广覆盖扩库来源：用于核验 OMRON TM12 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160003,OMRON TM 协作机器人官方入口,官网/品牌产品目录,medium,https://automation.omron.com/en/us/products/family/TM-Collaborative-Robots,v16 广覆盖扩库来源：用于核验 OMRON TM14 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160004,珞石机器人官方产品入口,官网/品牌产品目录,medium,https://www.rokae.com/,v16 广覆盖扩库来源：用于核验 ROKAE xMate ER3 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160005,珞石机器人官方产品入口,官网/品牌产品目录,medium,https://www.rokae.com/,v16 广覆盖扩库来源：用于核验 ROKAE xMate ER7 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160006,珞石机器人官方产品入口,官网/品牌产品目录,medium,https://www.rokae.com/,v16 广覆盖扩库来源：用于核验 ROKAE XB7 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160007,法奥机器人官方产品入口,官网/品牌产品目录,medium,https://www.fairino.com/,v16 广覆盖扩库来源：用于核验 FAIRINO FR3 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160008,法奥机器人官方产品入口,官网/品牌产品目录,medium,https://www.fairino.com/,v16 广覆盖扩库来源：用于核验 FAIRINO FR5 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160009,法奥机器人官方产品入口,官网/品牌产品目录,medium,https://www.fairino.com/,v16 广覆盖扩库来源：用于核验 FAIRINO FR10 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160010,法奥机器人官方产品入口,官网/品牌产品目录,medium,https://www.fairino.com/,v16 广覆盖扩库来源：用于核验 FAIRINO FR16 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160011,大族机器人官方产品入口,官网/品牌产品目录,medium,https://www.hansrobot.com/,v16 广覆盖扩库来源：用于核验 Hans Robot Elfin E05 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160012,大族机器人官方产品入口,官网/品牌产品目录,medium,https://www.hansrobot.com/,v16 广覆盖扩库来源：用于核验 Hans Robot Elfin E10 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160013,大族机器人官方产品入口,官网/品牌产品目录,medium,https://www.hansrobot.com/,v16 广覆盖扩库来源：用于核验 Hans Robot S Series 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160014,Mecademic 官方产品入口,官网/品牌产品目录,medium,https://www.mecademic.com/,v16 广覆盖扩库来源：用于核验 Mecademic Meca500 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160015,Mecademic 官方产品入口,官网/品牌产品目录,medium,https://www.mecademic.com/,v16 广覆盖扩库来源：用于核验 Mecademic MCS500 SCARA 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160016,DENSO Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.densorobotics.com/,v16 广覆盖扩库来源：用于核验 DENSO COBOTTA 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160017,DENSO Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.densorobotics.com/,v16 广覆盖扩库来源：用于核验 DENSO COBOTTA PRO 900 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160018,Epson Robots 官方产品入口,官网/品牌产品目录,medium,https://epson.com/For-Work/Robots/c/w150,v16 广覆盖扩库来源：用于核验 Epson VT6L 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160019,Epson Robots 官方产品入口,官网/品牌产品目录,medium,https://epson.com/For-Work/Robots/c/w150,v16 广覆盖扩库来源：用于核验 Epson LS3 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160020,Staubli Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.staubli.com/global/en/robotics.html,v16 广覆盖扩库来源：用于核验 Staubli TX2-60 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160021,Staubli Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.staubli.com/global/en/robotics.html,v16 广覆盖扩库来源：用于核验 Staubli TS2-60 SCARA 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160022,Niryo 官方产品入口,官网/品牌产品目录,medium,https://niryo.com/,v16 广覆盖扩库来源：用于核验 Niryo Ned2 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160023,Trossen Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.trossenrobotics.com/,v16 广覆盖扩库来源：用于核验 Trossen WidowX 250s 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160024,Trossen Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.trossenrobotics.com/,v16 广覆盖扩库来源：用于核验 ALOHA Stationary 双臂 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160025,Clearpath Robotics 官方产品入口,官网/品牌产品目录,medium,https://clearpathrobotics.com/robots/,v16 广覆盖扩库来源：用于核验 Clearpath TurtleBot 4 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160026,Robotnik 官方产品目录,官网/品牌产品目录,medium,https://robotnik.eu/products/,v16 广覆盖扩库来源：用于核验 Robotnik RB-1 BASE 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160027,Robotnik 官方产品目录,官网/品牌产品目录,medium,https://robotnik.eu/products/,v16 广覆盖扩库来源：用于核验 Robotnik RB-1 Mobile Manipulator 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160028,PAL Robotics 官方产品目录,官网/品牌产品目录,medium,https://pal-robotics.com/robots/,v16 广覆盖扩库来源：用于核验 PAL StockBot 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160029,擎朗智能官方产品入口,官网/品牌产品目录,medium,https://www.keenon.com/,v16 广覆盖扩库来源：用于核验 Keenon T8 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160030,擎朗智能官方产品入口,官网/品牌产品目录,medium,https://www.keenon.com/,v16 广覆盖扩库来源：用于核验 Keenon T10 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160031,擎朗智能官方产品入口,官网/品牌产品目录,medium,https://www.keenon.com/,v16 广覆盖扩库来源：用于核验 Keenon Butlerbot W3 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160032,普渡机器人官方产品入口,官网/品牌产品目录,medium,https://www.pudurobotics.com/,v16 广覆盖扩库来源：用于核验 Pudu BellaBot 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160033,普渡机器人官方产品入口,官网/品牌产品目录,medium,https://www.pudurobotics.com/,v16 广覆盖扩库来源：用于核验 Pudu KettyBot 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160034,普渡机器人官方产品入口,官网/品牌产品目录,medium,https://www.pudurobotics.com/,v16 广覆盖扩库来源：用于核验 Pudu CC1 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160035,高仙机器人官方产品入口,官网/品牌产品目录,medium,https://www.gs-robot.com/,v16 广覆盖扩库来源：用于核验 Gaussian Scrubber 75 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160036,高仙机器人官方产品入口,官网/品牌产品目录,medium,https://www.gs-robot.com/,v16 广覆盖扩库来源：用于核验 Gaussian Vacuum 40 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160037,思岚科技官方产品入口,官网/品牌产品目录,medium,https://www.slamtec.com/,v16 广覆盖扩库来源：用于核验 Slamtec Athena 2.0 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160038,Segway Robotics 官方产品入口,官网/品牌产品目录,medium,https://robotics.segway.com/,v16 广覆盖扩库来源：用于核验 Segway RMP Lite 220 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160039,Open Robotics 官方入口,官网/品牌产品目录,medium,https://www.openrobotics.org/,v16 广覆盖扩库来源：用于核验 TurtleBot3 Burger 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160040,Open Robotics 官方入口,官网/品牌产品目录,medium,https://www.openrobotics.org/,v16 广覆盖扩库来源：用于核验 TurtleBot3 Waffle Pi 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160041,傅利叶智能官方产品入口,官网/品牌产品目录,medium,https://www.fftai.com/,v16 广覆盖扩库来源：用于核验 Fourier GR-1 T2 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160042,NEURA Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.neura-robotics.com/,v16 广覆盖扩库来源：用于核验 NEURA MiPA 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160043,1X Technologies 官方产品入口,官网/品牌产品目录,medium,https://www.1x.tech/,v16 广覆盖扩库来源：用于核验 1X EVE 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160044,Hanson Robotics 官方产品入口,官网/品牌产品目录,medium,https://www.hansonrobotics.com/,v16 广覆盖扩库来源：用于核验 Hanson Robotics Sophia 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160045,云深处科技官方产品入口,官网/品牌产品目录,medium,https://www.deeprobotics.cn/,v16 广覆盖扩库来源：用于核验 DEEP Robotics Lynx 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160046,Boston Dynamics 官方产品入口,官网/品牌产品目录,medium,https://bostondynamics.com/,v16 广覆盖扩库来源：用于核验 Boston Dynamics Spot Enterprise 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160047,RAIBO 官方产品入口,官网/品牌产品目录,medium,https://www.raibot.com/,v16 广覆盖扩库来源：用于核验 RAIBO2 所属品牌/产品线入口；型号级采购参数需后续专项核验。
+SRCV160048,Open Robotics 官方入口,官网/品牌产品目录,medium,https://www.openrobotics.org/,v16 广覆盖扩库来源：用于核验 ROBOTIS DARwIn-OP 所属品牌/产品线入口；型号级采购参数需后续专项核验。
