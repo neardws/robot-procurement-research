@@ -1,9 +1,9 @@
 {
   "meta": {
     "project": "学校具身智能机器人采购调研",
-    "version": "v16",
+    "version": "v17",
     "accessedDate": "2026-06-02",
-    "updateSummary": "候选库扩展到 300+，补充更多机械臂、移动机器人、人形机器人和机器狗；开源生态指标改用明确 GitHub 仓库 API 指标，排行榜不再依赖库内证据数量。",
+    "updateSummary": "完成第二轮来源可访问性抽查，保留 300 款广覆盖候选；对官网/品牌目录、OpenAlex、GitHub 和关键来源进行 URL 级核查，并标记需复核条目。",
     "scoringWeights": {
       "research": 50,
       "deployment": 50
@@ -24,6 +24,107 @@
       "academic": "按类别归一化：论文命中数、引用数和近三年论文数综合；未可靠匹配则标记未匹配。",
       "openSource": "按类别归一化：明确 GitHub 仓库的 stars、forks、最近更新和官方/社区属性综合；未可靠匹配则标记未匹配。",
       "note": "库内来源数量仅作为证据覆盖说明，不作为客观热度排名主指标。"
+    },
+    "sourceVerificationSummary": {
+      "checked": 80,
+      "ok": 68,
+      "review": 12,
+      "checkedAt": "2026-06-02",
+      "reviewItems": [
+        {
+          "id": "SRC019",
+          "title": "UFACTORY 官方商店",
+          "url": "https://store.ufactory.cc/",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC026",
+          "title": "艾利特机器人中文官网",
+          "url": "https://www.elibot.cn/",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC027",
+          "title": "节卡机器人中文官网",
+          "url": "https://www.jaka.com.cn/",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC030",
+          "title": "大象机器人 myCobot 280 官方页",
+          "url": "https://www.elephantrobotics.com/en/mycobot-280/",
+          "status": null,
+          "ok": false,
+          "error": "TypeError"
+        },
+        {
+          "id": "SRC051",
+          "title": "智元机器人官网",
+          "url": "https://www.agibot.com/",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC052",
+          "title": "优必选官网",
+          "url": "https://www.ubtrobot.com/",
+          "status": 404,
+          "ok": false
+        },
+        {
+          "id": "SRC055",
+          "title": "Kuavo 开源项目",
+          "url": "https://github.com/kuavo-robot",
+          "status": 404,
+          "ok": false
+        },
+        {
+          "id": "SRC061",
+          "title": "Hello Robot Stretch 3 官方页",
+          "url": "https://hello-robot.com/stretch-3-product",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC062",
+          "title": "Hello Robot Stretch 3 购买页",
+          "url": "https://hello-robot.com/stretch-3-shop",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC064",
+          "title": "PAL Robotics TIAGo 官方页",
+          "url": "https://pal-robotics.com/robots/tiago/",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC078",
+          "title": "Interbotix ViperX 官方页",
+          "url": "https://www.trossenrobotics.com/viperx-300-robot-arm-6dof.aspx",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC079",
+          "title": "Robotis TurtleBot4 官方页",
+          "url": "https://www.robotis.us/turtlebot-4/",
+          "status": 404,
+          "ok": false
+        }
+      ]
     }
   },
   "sources": [
@@ -14327,16 +14428,19 @@
         "academicRawScore": 0
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
-        "recentlyUpdatedRepos": 0,
-        "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "repoCount": 2,
+        "stars": 889,
+        "forks": 599,
+        "recentlyUpdatedRepos": 2,
+        "officialRepoCount": 2,
+        "openSourceScore": 94,
+        "topRepos": [
+          "frankarobotics/franka_ros (474 stars, 359 forks)",
+          "frankarobotics/libfranka (415 stars, 240 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository API: frankarobotics/franka_ros, frankarobotics/libfranka",
+        "openSourceConfidence": "high",
+        "openSourceRawScore": 176
       }
     },
     {
@@ -19677,16 +19781,19 @@
         "academicRawScore": 1380
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
-        "recentlyUpdatedRepos": 0,
-        "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "repoCount": 2,
+        "stars": 752,
+        "forks": 478,
+        "recentlyUpdatedRepos": 2,
+        "officialRepoCount": 2,
+        "openSourceScore": 91,
+        "topRepos": [
+          "frankarobotics/franka_ros2 (337 stars, 238 forks)",
+          "frankarobotics/libfranka (415 stars, 240 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository API: frankarobotics/franka_ros2, frankarobotics/libfranka",
+        "openSourceConfidence": "high",
+        "openSourceRawScore": 171
       }
     },
     {
@@ -21265,16 +21372,19 @@
         "academicRawScore": 0
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
-        "recentlyUpdatedRepos": 0,
-        "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "repoCount": 2,
+        "stars": 544,
+        "forks": 358,
+        "recentlyUpdatedRepos": 2,
+        "officialRepoCount": 2,
+        "openSourceScore": 88,
+        "topRepos": [
+          "xArm-Developer/xarm_ros (293 stars, 176 forks)",
+          "xArm-Developer/xarm_ros2 (251 stars, 182 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository API: xArm-Developer/xarm_ros, xArm-Developer/xarm_ros2",
+        "openSourceConfidence": "high",
+        "openSourceRawScore": 164
       }
     },
     {
@@ -22089,16 +22199,19 @@
         "academicRawScore": 212
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
-        "recentlyUpdatedRepos": 0,
-        "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "repoCount": 2,
+        "stars": 544,
+        "forks": 358,
+        "recentlyUpdatedRepos": 2,
+        "officialRepoCount": 2,
+        "openSourceScore": 88,
+        "topRepos": [
+          "xArm-Developer/xarm_ros (293 stars, 176 forks)",
+          "xArm-Developer/xarm_ros2 (251 stars, 182 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository API: xArm-Developer/xarm_ros, xArm-Developer/xarm_ros2",
+        "openSourceConfidence": "high",
+        "openSourceRawScore": 164
       }
     },
     {
@@ -22904,16 +23017,19 @@
         "academicRawScore": 348
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
-        "recentlyUpdatedRepos": 0,
-        "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "repoCount": 2,
+        "stars": 1659,
+        "forks": 759,
+        "recentlyUpdatedRepos": 2,
+        "officialRepoCount": 2,
+        "openSourceScore": 100,
+        "topRepos": [
+          "UniversalRobots/Universal_Robots_ROS_Driver (881 stars, 423 forks)",
+          "UniversalRobots/Universal_Robots_ROS2_Driver (778 stars, 336 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository API: UniversalRobots/Universal_Robots_ROS_Driver, UniversalRobots/Universal_Robots_ROS2_Driver",
+        "openSourceConfidence": "high",
+        "openSourceRawScore": 187
       }
     },
     {
@@ -29715,16 +29831,19 @@
         "academicRawScore": 0
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
-        "recentlyUpdatedRepos": 0,
-        "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "repoCount": 2,
+        "stars": 1659,
+        "forks": 759,
+        "recentlyUpdatedRepos": 2,
+        "officialRepoCount": 2,
+        "openSourceScore": 100,
+        "topRepos": [
+          "UniversalRobots/Universal_Robots_ROS_Driver (881 stars, 423 forks)",
+          "UniversalRobots/Universal_Robots_ROS2_Driver (778 stars, 336 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository API: UniversalRobots/Universal_Robots_ROS_Driver, UniversalRobots/Universal_Robots_ROS2_Driver",
+        "openSourceConfidence": "high",
+        "openSourceRawScore": 187
       }
     },
     {
@@ -33676,16 +33795,20 @@
         "academicRawScore": 709
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
+        "repoCount": 4,
+        "stars": 20,
+        "forks": 8,
         "recentlyUpdatedRepos": 0,
         "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "openSourceScore": 41,
+        "topRepos": [
+          "mobile-aloha/mobile-aloha.github.io (20 stars, 6 forks)",
+          "adatechschool/projet-collectif---mobile-front-alohawaves (0 stars, 2 forks)",
+          "tylere5/alohaclothing_project1 (0 stars, 0 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository search: Mobile ALOHA GitHub",
+        "openSourceConfidence": "medium",
+        "openSourceRawScore": 67
       }
     },
     {
@@ -36577,16 +36700,20 @@
         "academicRawScore": 0
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
-        "recentlyUpdatedRepos": 0,
-        "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "repoCount": 11,
+        "stars": 3,
+        "forks": 3,
+        "recentlyUpdatedRepos": 2,
+        "officialRepoCount": 2,
+        "openSourceScore": 33,
+        "topRepos": [
+          "zebiriabderrahim/ROS-Autonomous-SLAM-AgileX-LIMO (1 stars, 1 forks)",
+          "binadiegha/agileX_limo_10_ws (1 stars, 1 forks)",
+          "Birry2001/limo-pro-multimodal-locomotion (1 stars, 1 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository search: AgileX LIMO ROS",
+        "openSourceConfidence": "medium",
+        "openSourceRawScore": 54
       }
     },
     {
@@ -41393,16 +41520,20 @@
         "academicRawScore": 671
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
-        "recentlyUpdatedRepos": 0,
-        "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "repoCount": 11,
+        "stars": 319,
+        "forks": 162,
+        "recentlyUpdatedRepos": 3,
+        "officialRepoCount": 2,
+        "openSourceScore": 94,
+        "topRepos": [
+          "hello-robot/stretch_ros (188 stars, 95 forks)",
+          "hello-robot/stretch_ros2 (122 stars, 67 forks)",
+          "NhiNguyencmt8/StretchMapping (6 stars, 0 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository search: Hello Robot Stretch ROS",
+        "openSourceConfidence": "medium",
+        "openSourceRawScore": 155
       }
     },
     {
@@ -43611,16 +43742,20 @@
         "academicRawScore": 295
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
+        "repoCount": 40,
+        "stars": 168,
+        "forks": 61,
         "recentlyUpdatedRepos": 0,
         "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "openSourceScore": 79,
+        "topRepos": [
+          "idincern/idincern-husky (95 stars, 31 forks)",
+          "Tinker-Twins/Husky (35 stars, 12 forks)",
+          "wilselby/formulapi_ROS_simulator (15 stars, 9 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository search: Clearpath Husky ROS",
+        "openSourceConfidence": "medium",
+        "openSourceRawScore": 130
       }
     },
     {
@@ -43720,16 +43855,20 @@
         "academicRawScore": 263
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
+        "repoCount": 32,
+        "stars": 103,
+        "forks": 22,
         "recentlyUpdatedRepos": 0,
         "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "openSourceScore": 67,
+        "topRepos": [
+          "AUVSL/UWB-Jackal-World (40 stars, 13 forks)",
+          "WolfeTyler/ROS-Localization-Navigation-AMCL (19 stars, 3 forks)",
+          "gavincangan/bayesian-robotics (19 stars, 5 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository search: Clearpath Jackal ROS",
+        "openSourceConfidence": "medium",
+        "openSourceRawScore": 111
       }
     },
     {
@@ -46078,16 +46217,20 @@
         "academicRawScore": 286
       },
       "openSourceMetrics": {
-        "repoCount": 0,
-        "stars": 0,
-        "forks": 0,
-        "recentlyUpdatedRepos": 0,
-        "officialRepoCount": 0,
-        "openSourceScore": 0,
-        "topRepos": [],
-        "openSourceMetricSource": "未匹配：未找到足够可靠的型号级 GitHub/ROS/SDK 仓库匹配",
-        "openSourceConfidence": "unknown",
-        "openSourceRawScore": 0
+        "repoCount": 55,
+        "stars": 203,
+        "forks": 100,
+        "recentlyUpdatedRepos": 3,
+        "officialRepoCount": 3,
+        "openSourceScore": 100,
+        "topRepos": [
+          "pal-robotics/tiago_tutorials (87 stars, 44 forks)",
+          "pal-robotics/tiago_robot (67 stars, 47 forks)",
+          "KiaRational/Tiago_Object_Manipulation_ROS (26 stars, 5 forks)"
+        ],
+        "openSourceMetricSource": "GitHub repository search: TIAGo robot ROS",
+        "openSourceConfidence": "medium",
+        "openSourceRawScore": 165
       }
     },
     {

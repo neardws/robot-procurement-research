@@ -1,9 +1,9 @@
 {
   "meta": {
     "project": "学校具身智能机器人采购调研",
-    "version": "v16",
+    "version": "v17",
     "accessedDate": "2026-06-02",
-    "updateSummary": "候选库扩展到 300+，补充更多机械臂、移动机器人、人形机器人和机器狗；开源生态指标改用明确 GitHub 仓库 API 指标，排行榜不再依赖库内证据数量。",
+    "updateSummary": "完成第二轮来源可访问性抽查，保留 300 款广覆盖候选；对官网/品牌目录、OpenAlex、GitHub 和关键来源进行 URL 级核查，并标记需复核条目。",
     "scoringWeights": {
       "research": 50,
       "deployment": 50
@@ -24,6 +24,107 @@
       "academic": "按类别归一化：论文命中数、引用数和近三年论文数综合；未可靠匹配则标记未匹配。",
       "openSource": "按类别归一化：明确 GitHub 仓库的 stars、forks、最近更新和官方/社区属性综合；未可靠匹配则标记未匹配。",
       "note": "库内来源数量仅作为证据覆盖说明，不作为客观热度排名主指标。"
+    },
+    "sourceVerificationSummary": {
+      "checked": 80,
+      "ok": 68,
+      "review": 12,
+      "checkedAt": "2026-06-02",
+      "reviewItems": [
+        {
+          "id": "SRC019",
+          "title": "UFACTORY 官方商店",
+          "url": "https://store.ufactory.cc/",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC026",
+          "title": "艾利特机器人中文官网",
+          "url": "https://www.elibot.cn/",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC027",
+          "title": "节卡机器人中文官网",
+          "url": "https://www.jaka.com.cn/",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC030",
+          "title": "大象机器人 myCobot 280 官方页",
+          "url": "https://www.elephantrobotics.com/en/mycobot-280/",
+          "status": null,
+          "ok": false,
+          "error": "TypeError"
+        },
+        {
+          "id": "SRC051",
+          "title": "智元机器人官网",
+          "url": "https://www.agibot.com/",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC052",
+          "title": "优必选官网",
+          "url": "https://www.ubtrobot.com/",
+          "status": 404,
+          "ok": false
+        },
+        {
+          "id": "SRC055",
+          "title": "Kuavo 开源项目",
+          "url": "https://github.com/kuavo-robot",
+          "status": 404,
+          "ok": false
+        },
+        {
+          "id": "SRC061",
+          "title": "Hello Robot Stretch 3 官方页",
+          "url": "https://hello-robot.com/stretch-3-product",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC062",
+          "title": "Hello Robot Stretch 3 购买页",
+          "url": "https://hello-robot.com/stretch-3-shop",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC064",
+          "title": "PAL Robotics TIAGo 官方页",
+          "url": "https://pal-robotics.com/robots/tiago/",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC078",
+          "title": "Interbotix ViperX 官方页",
+          "url": "https://www.trossenrobotics.com/viperx-300-robot-arm-6dof.aspx",
+          "status": null,
+          "ok": false,
+          "error": "AbortError"
+        },
+        {
+          "id": "SRC079",
+          "title": "Robotis TurtleBot4 官方页",
+          "url": "https://www.robotis.us/turtlebot-4/",
+          "status": 404,
+          "ok": false
+        }
+      ]
     }
   },
   "sources": [

@@ -130,6 +130,12 @@ const meta = data.meta as {
   accessedDate: string;
   updateSummary: string;
   exchangeRates?: Record<string, string | number>;
+  sourceVerificationSummary?: {
+    checked: number;
+    ok: number;
+    review: number;
+    checkedAt: string;
+  };
 };
 
 const categories = ["机械臂", "移动/复合机器人", "人形机器人", "机器狗"];
@@ -1046,6 +1052,9 @@ function RankingCenter({
   const openSourceMatched = robots.filter((robot) => (robot.openSourceMetrics?.repoCount || 0) > 0).length;
   const valueReadyCount = robots.filter((robot) => valueScore(robot) !== null).length;
   const coverageText = [...new Set(robots.map((robot) => robot.coverageTier).filter(Boolean))].slice(0, 3).join(" / ") || "未标注";
+  const sourceVerificationText = meta.sourceVerificationSummary
+    ? `来源可访问抽查 ${meta.sourceVerificationSummary.checked} 条，成功 ${meta.sourceVerificationSummary.ok} 条，需复核 ${meta.sourceVerificationSummary.review} 条`
+    : "来源可访问抽查尚未记录";
 
   function rankingItems(config: RankingConfig) {
     return robots
@@ -1071,7 +1080,7 @@ function RankingCenter({
       </div>
       <div className="ranking-note">
         <strong>数据口径说明</strong>
-        <p>当前筛选覆盖层级：{coverageText}。论文/开源榜只使用可复核外部指标；未匹配候选不填假数，低置信结果显示“需复核”。</p>
+        <p>当前筛选覆盖层级：{coverageText}。论文/开源榜只使用可复核外部指标；未匹配候选不填假数，低置信结果显示“需复核”。{sourceVerificationText}。</p>
       </div>
       {robots.length === 0 ? (
         <EmptyState title="当前筛选下没有候选" body="请减少品牌、价格、发布时间、标签或来源筛选条件后再查看排行榜。" />
