@@ -7,20 +7,30 @@ import {
   ChevronRight,
   CircleHelp,
   Columns3,
+  CreditCard,
   Database,
   Download,
   ExternalLink,
   Info,
+  PackageCheck,
   RefreshCw,
   Search,
+  ShoppingCart,
+  Store,
   X
 } from "lucide-react";
 import data from "./robotResearchData.json";
 import "./styles.css";
 
+declare global {
+  interface Window {
+    __robotResearchRoot?: ReturnType<typeof createRoot>;
+  }
+}
+
 type Confidence = "high" | "medium" | "low";
 type ReleaseConfidence = Confidence | "unknown";
-type Tab = "overview" | "rankings" | "compare" | "report" | "sources";
+type Tab = "overview" | "rankings" | "compare" | "report" | "retail" | "sources";
 type SourceFilter = "官网" | "电商" | "GitHub" | "论文" | "招投标";
 type OriginFilter = "全部" | "国产" | "进口";
 type PriceBand = "全部" | "10万以下" | "10-30万" | "30-80万" | "80万以上" | "正式报价";
@@ -122,6 +132,119 @@ type CategoryStat = {
   best?: Robot;
 };
 
+type RetailSource = {
+  id: string;
+  title: string;
+  url: string;
+  type: string;
+  confidence: Confidence;
+  notes: string;
+};
+
+type RetailOption = {
+  name: string;
+  tier: string;
+  form: string;
+  role: string;
+  maturity: string;
+  procurement: string;
+  price: string;
+  fit: string;
+  limits: string[];
+  evidenceIds: string[];
+};
+
+type RetailCoverageRow = {
+  scope: string;
+  covered: string;
+  conclusion: string;
+  action: string;
+};
+
+type RetailOptionGroup = {
+  title: string;
+  subtitle: string;
+  tiers: string[];
+};
+
+type RetailZone = {
+  zone: string;
+  area: string;
+  setup: string;
+  notes: string;
+};
+
+type RetailRoadmap = {
+  phase: string;
+  duration: string;
+  work: string;
+  gate: string;
+};
+
+type RetailNavItem = {
+  id: string;
+  label: string;
+  kicker: string;
+};
+
+type RetailSpec = {
+  label: string;
+  value: string;
+  detail: string;
+};
+
+type RetailShelfPlan = {
+  item: string;
+  spec: string;
+  detail: string;
+};
+
+type RetailSkuPlan = {
+  type: string;
+  examples: string;
+  quantity: string;
+  handling: string;
+  avoid: string;
+};
+
+type RetailArchitectureItem = {
+  module: string;
+  responsibility: string;
+  interface: string;
+};
+
+type RetailProcessStep = {
+  step: string;
+  owner: string;
+  action: string;
+  output: string;
+};
+
+type RetailExceptionPlan = {
+  scenario: string;
+  systemAction: string;
+  manualAction: string;
+};
+
+type RetailProcurementItem = {
+  category: string;
+  spec: string;
+  phase: string;
+  note: string;
+};
+
+type RetailBudgetRow = {
+  item: string;
+  range: string;
+  note: string;
+};
+
+type RetailAcceptanceMetric = {
+  metric: string;
+  target: string;
+  method: string;
+};
+
 const robots = data.robots as Robot[];
 const sources = data.sources as Source[];
 const sourceById = new Map(sources.map((source) => [source.id, source]));
@@ -171,6 +294,676 @@ const sortOptions = [
   { value: "release", label: "发布时间" },
   { value: "sources", label: "证据数量" }
 ];
+
+const retailRoute = "#/retail";
+
+function getInitialTab(): Tab {
+  return window.location.hash === retailRoute || window.location.hash.startsWith("#retail-") ? "retail" : "overview";
+}
+
+const retailSources: RetailSource[] = [
+  {
+    id: "R01",
+    title: "Galbot G1 官方产品页",
+    url: "https://www.galbot.com/g1",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "官网将 Commercial & Retail 场景描述为精确拣选、配送、24/7 库存管理和补货，并披露 0-2.4 m 覆盖、IP54 等关键信息。"
+  },
+  {
+    id: "R02",
+    title: "TELEXISTENCE 官方网站",
+    url: "https://tx-inc.com/en/",
+    type: "厂商官网/商业案例",
+    confidence: "high",
+    notes: "官网说明 2021 年与 FamilyMart 合作，并将机器人部署到 300 家门店；同页还展示便利店结账台抓取演示和饮料补货机器人数据平台。"
+  },
+  {
+    id: "R03",
+    title: "Simbe Tally 平台页",
+    url: "https://www.simberobotics.com/platform/",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "Tally 定位为货架扫描和库存机器人，可多次扫描通道并识别缺货、价格错误和陈列偏差；不承担货架抓取。"
+  },
+  {
+    id: "R04",
+    title: "Amazon Just Walk Out 官方说明",
+    url: "https://justwalkout.com/",
+    type: "结账技术",
+    confidence: "high",
+    notes: "官方说明该技术组合 AI、计算机视觉、传感器融合和 RFID，在顾客离店时自动汇总和支付。"
+  },
+  {
+    id: "R05",
+    title: "2010 ADA Standards for Accessible Design",
+    url: "https://www.ada.gov/law-and-regs/design-standards/2010-stds/",
+    type: "场地/无障碍",
+    confidence: "high",
+    notes: "用于确定最低无障碍通行和收银服务台等公共空间约束；机器人通道应在此基础上预留更大安全宽度。"
+  },
+  {
+    id: "R06",
+    title: "ISO 13482:2014 personal care robots",
+    url: "https://www.iso.org/standard/53820.html",
+    type: "安全标准",
+    confidence: "medium",
+    notes: "面向服务/个人护理机器人安全要求，可作为公共零售空间内人机共处风险评估参考。"
+  },
+  {
+    id: "R07",
+    title: "ISO 3691-4 driverless industrial trucks",
+    url: "https://www.iso.org/standard/70660.html",
+    type: "安全标准",
+    confidence: "medium",
+    notes: "覆盖 AGV/AMR 等自动行驶车辆的安全要求和运行区域准备；零售场景应结合 ISO 13482 和本地法规使用。"
+  },
+  {
+    id: "R08",
+    title: "PUDU FlashBot Arm 官方产品页",
+    url: "https://www.pudurobotics.com/en/products/flashbot-arm",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "FlashBot Arm 定位为半人形具身智能服务机器人，组合配送能力和双手操作，可按电梯、刷卡、开门并具备动态环境感知。"
+  },
+  {
+    id: "R09",
+    title: "Badger Technologies Digital Teammate",
+    url: "https://www.badger-technologies.com/platform/robots.html",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "Badger 官方说明其机器人用于扫描货架、发现缺货、空货架、价格差异、陈列不一致，并支持零售环境自导航和系统集成。"
+  },
+  {
+    id: "R10",
+    title: "Brain Corp inventory management",
+    url: "https://www.braincorp.com/inventory-management",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "BrainOS Sense Suite/ShelfOptix 提供机器人货架智能、库存可见性、RFID 和货架到销售洞察；现阶段更偏库存感知层。"
+  },
+  {
+    id: "R11",
+    title: "Locus Array 官方产品页",
+    url: "https://locusrobotics.com/locusone/fleet/locus-array",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "Locus Array 是面向仓储履约的移动操作机器人，直接在货架通道内执行 picking、putaway、induction、drop-off 和 slotting。"
+  },
+  {
+    id: "R12",
+    title: "Brightpick Autopicker 官方发布",
+    url: "https://brightpick.ai/brightpick-announces-brightpick-autopicker-the-worlds-first-commercially-available-autonomous-mobile-picking-robot-for-order-fulfillment/",
+    type: "厂商官网/发布",
+    confidence: "high",
+    notes: "Brightpick Autopicker 面向电商和食品杂货履约，可在仓库通道中自主拣选并合单，适合暗店或后场微履约。"
+  },
+  {
+    id: "R13",
+    title: "Geek+ 机器人履约系统",
+    url: "https://www.geekplus.com/en",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "Geek+ 提供 Shelf-to-Person、Tote-to-Person、Robot Arm Picking Station 等履约方案，偏仓储/暗店而非顾客前台货架。"
+  },
+  {
+    id: "R14",
+    title: "ForwardX Flex Series",
+    url: "https://www.forwardx.com/flex-series/",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "ForwardX Flex 面向仓储和链式门店配送仓的辅助拣选，JD chain store warehouse 案例用于改善拣选效率和成本。"
+  },
+  {
+    id: "R15",
+    title: "Ocado Intelligent Automation OCADEX/Pick",
+    url: "https://ocadointelligentautomation.com/systems/on-grid-robotic-pick",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "OCADEX/Pick 是 Ocado OSRS 网格系统上的机器人拣选臂，可从料箱中识别、拣选和装袋，适合大型食品杂货履约中心。"
+  },
+  {
+    id: "R16",
+    title: "Pio by AutoStore",
+    url: "https://www.autostoresystem.com/pio-created-by-autostore",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "Pio 是 AutoStore 面向较小仓库空间和中小型电商/3PL 的紧凑自动化存储系统，适合后场库存和订单履约。"
+  },
+  {
+    id: "R17",
+    title: "RightHand Robotics RightPick",
+    url: "https://righthandrobotics.com/products",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "RightPick 是面向订单履约的机器人拣选系统，适合料箱、输送线和工作站式拣选，不适合直接在开放前台货架中移动取货。"
+  },
+  {
+    id: "R18",
+    title: "Berkshire Grey Robotic Picking",
+    url: "https://www.berkshiregrey.com/solutions/core-robotic-picking-system/",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "Berkshire Grey 提供机器人拣选、分拣和履约自动化，适合配送中心、零售补货和退货处理等后场流程。"
+  },
+  {
+    id: "R19",
+    title: "Covariant robotic picking",
+    url: "https://covariant.ai/",
+    type: "厂商官网",
+    confidence: "high",
+    notes: "Covariant 面向仓库拣选和物流自动化提供机器人基础模型和拣选能力，可作为后场抓取技术供应商观察对象。"
+  },
+  {
+    id: "R20",
+    title: "Takeoff Technologies micro fulfillment",
+    url: "https://takeoff.com/",
+    type: "微履约方案",
+    confidence: "medium",
+    notes: "Takeoff 聚焦食品杂货微履约中心，适合把门店后场改造成自动化履约节点，而不是前台顾客货架抓取。"
+  },
+  {
+    id: "R21",
+    title: "Galbot 香港 24/7 机器人便利店报道",
+    url: "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3356255/hong-kong-open-first-convenience-store-operated-humanoid-robot-ai-push",
+    type: "最新市场动态",
+    confidence: "medium",
+    notes: "2026 年 6 月报道显示 Galbot G1/Xiao Gai 进入香港 9 m² 胶囊便利店场景，覆盖补货、取物和结账展示；仍需以厂商 PoC 和合同能力为准。"
+  },
+  {
+    id: "R22",
+    title: "From Pixels to Shelf: supermarket stocking research",
+    url: "https://arxiv.org/abs/2509.11740",
+    type: "科研验证",
+    confidence: "medium",
+    notes: "2025 年研究用商用硬件复现超市场景货架上货/前移，实验成功率高，但也指出当前系统成本效益仍弱于人工，适合作为 PoC 风险参考。"
+  }
+];
+
+const retailOptions: RetailOption[] = [
+  {
+    name: "Galbot G1 / Galaxea R1",
+    tier: "前台主抓取",
+    form: "轮式双臂移动操作平台",
+    role: "首选验证线：完成货架识别、商品抓取、暂存交付和补货演示",
+    maturity: "需要厂商 PoC / 方案集成",
+    procurement: "向银河通用索取智慧零售场景报价、SKU 约束、成功率测试方案和售后条款；优先做 4-6 组货架样机验证。",
+    price: "厂商正式报价；现有候选库中 G1/R1 未公开价格",
+    fit: "官网已明确覆盖商业零售、高密货架操作、精确拣选和库存补货，是当前最贴近目标闭环的采购方向。",
+    limits: ["必须限制首期 SKU 形态，先做瓶装、盒装、规则包装", "需要确认结账系统接口、远程运维、失败抓取回退和人机混行安全", "价格、交期和现场改造费用需厂商正式报价"],
+    evidenceIds: ["R01", "R21"]
+  },
+  {
+    name: "TELEXISTENCE Ghost / TX 系列",
+    tier: "成熟补货案例",
+    form: "便利店补货/固定化货架操作机器人",
+    role: "成熟案例参考：饮料冷柜补货、便利店商品抓取和结账台演示",
+    maturity: "商业部署案例成熟",
+    procurement: "作为成熟零售机器人案例询价或对标，不把它默认等同为国内可直接采购整店方案。",
+    price: "需正式商务沟通",
+    fit: "FamilyMart 300 店部署说明其在真实便利店环境中具备规模化运营经验，适合作为补货和高频 SKU 作业标杆。",
+    limits: ["公开资料偏案例，国内采购、开放接口和本地售后需单独确认", "更适合标准化冷柜/货架补货，不一定覆盖顾客下单后的全品类取货", "如要复现结账台抓取，需要明确是否是产品化能力还是展示演示"],
+    evidenceIds: ["R02"]
+  },
+  {
+    name: "Hello Robot Stretch 3",
+    tier: "低成本原型",
+    form: "轻量移动操作科研平台",
+    role: "低成本原型：验证识别、导航、抓取策略和任务编排",
+    maturity: "科研/教学验证",
+    procurement: "采购 1 台做算法和货架结构验证；不建议作为无人零售正式运营主机。",
+    price: "现有候选库估算约 ¥18.1 万起",
+    fit: "预算低、改造空间大，适合先跑通软件闭环和 SKU 数据采集。",
+    limits: ["轻载、速度和可靠性不适合直接承担连续商业运营", "货架高度、臂展和夹爪能力需要按 SKU 实测", "进口采购、交期和维保需确认"],
+    evidenceIds: ["R01"]
+  },
+  {
+    name: "AgileX Cobot Magic / xArm + 底盘组合",
+    tier: "工程样机",
+    form: "轮式复合机器人二次开发组合",
+    role: "工程样机：用成熟底盘加机械臂搭建可控试点",
+    maturity: "需要二次开发集成",
+    procurement: "若预算或国产供应链优先，可采购底盘、协作臂、夹爪、视觉和调度系统进行集成。",
+    price: "现有候选库估算约 30-60 万级，需按配置正式报价",
+    fit: "工程可控、可替换部件多，适合学校或实验室团队掌握二次开发。",
+    limits: ["需要团队承担抓取算法、安全联锁、支付接口和整机认证", "对真实货架鲁棒性弱于专用零售方案", "首期要把现场限定成半结构化环境"],
+    evidenceIds: ["R06", "R07", "R22"]
+  },
+  {
+    name: "PUDU FlashBot Arm",
+    tier: "服务交互/试验",
+    form: "半人形双臂服务机器人",
+    role: "服务交互：可验证顾客交互、按钮/门禁/取放动作和封闭仓配送",
+    maturity: "商用服务机器人新品",
+    procurement: "作为二期交互和配送演示候选，不建议替代主抓取机器人；需要向普渡确认零售货架抓取 SDK、夹爪能力和价格。",
+    price: "厂商正式报价；第三方价格线索需复核",
+    fit: "官方定位包含配送和人形操作能力，适合作为门店服务机器人形态观察对象。",
+    limits: ["公开资料没有证明其能稳定完成高密货架商品拣选", "更适合电梯、门禁、配送和交互，前台货架取货需专项 PoC", "需要确认双臂负载、抓取库、远程运维和商用安全责任"],
+    evidenceIds: ["R08"]
+  },
+  {
+    name: "Simbe Tally / 同类库存巡检机器人",
+    tier: "库存巡检",
+    form: "货架扫描机器人",
+    role: "辅助系统：盘点、缺货识别、价格错误和陈列偏差检测",
+    maturity: "商用成熟但不抓取",
+    procurement: "可作为库存感知层或后续扩展模块，不应替代主抓取机器人采购。",
+    price: "厂商正式报价",
+    fit: "解决库存可见性和货位纠错，对机器人抓取成功率和补货效率有帮助。",
+    limits: ["不能从货架上抓取商品", "需要与 POS/库存系统对接", "适合较大门店或多门店，不一定适合首个小样板间"],
+    evidenceIds: ["R03"]
+  },
+  {
+    name: "Badger Digital Teammate / Marty",
+    tier: "库存巡检",
+    form: "零售货架扫描机器人",
+    role: "辅助系统：货架扫描、顶部库存、价格差异和陈列合规",
+    maturity: "商用成熟但不抓取",
+    procurement: "如果试点门店 SKU 多、人工盘点压力大，可与主抓取机器人分阶段组合；小样板间可先不采购。",
+    price: "厂商正式报价",
+    fit: "官方明确面向零售环境扫描货架，适合构建库存真实状态和补货任务列表。",
+    limits: ["不能抓取商品", "价值依赖 POS/库存/陈列系统对接", "若门店很小，人工盘点可能更经济"],
+    evidenceIds: ["R09"]
+  },
+  {
+    name: "BrainOS Sense Suite / ShelfOptix",
+    tier: "库存巡检",
+    form: "机器人库存智能平台",
+    role: "辅助系统：货架智能、RFID/视觉库存、货架到销售洞察",
+    maturity: "商用库存感知平台",
+    procurement: "作为连锁化或多门店阶段的库存层候选；首期样板间只需保留接口兼容性。",
+    price: "服务/机器人正式报价",
+    fit: "适合把货架状态数字化，提升机器人找货、缺货判断和补货优先级。",
+    limits: ["不是货架抓取主机", "需和品牌、零售商、门店系统共同定义数据闭环", "采购形态可能是服务而不是单台机器人"],
+    evidenceIds: ["R10"]
+  },
+  {
+    name: "Pudu / Keenon / 送餐配送底盘",
+    tier: "配送交互",
+    form: "轮式配送/交互机器人",
+    role: "末端交付：把已取商品送到顾客或结账区",
+    maturity: "配送成熟，抓取不足",
+    procurement: "只有在主抓取机器人与顾客动线分离时才考虑采购；第一期可先用固定取货台替代。",
+    price: "厂商正式报价",
+    fit: "导航、避障、语音/屏幕交互和商用维护成熟，可降低顾客交付环节难度。",
+    limits: ["无法独立完成货架取货", "会增加多机器人调度复杂度", "如果场地小，固定交付台更简单"],
+    evidenceIds: ["R06", "R07"]
+  },
+  {
+    name: "Locus Array",
+    tier: "暗店/仓储履约",
+    form: "仓储通道内移动操作机器人",
+    role: "后场履约：在货架通道内自主拣选、投放、上架和合单",
+    maturity: "生产级履约方案",
+    procurement: "如果智慧零售场景改为后场暗店或微履约中心，应进入正式 RFI；不建议放在顾客混行前台。",
+    price: "RaaS/正式报价",
+    fit: "官方定位是机器人到货物的通道内自主履约，SKU 覆盖和吞吐更强，适合后场自动化。",
+    limits: ["面向仓储/履约中心，不是开放零售前台", "需要标准料箱、货架和 WMS/OMS 集成", "对 80-120 m² 展示样板间可能过重"],
+    evidenceIds: ["R11"]
+  },
+  {
+    name: "Brightpick Autopicker",
+    tier: "暗店/仓储履约",
+    form: "移动拣选与合单机器人",
+    role: "后场履约：食品杂货/电商订单自动拣选和合单",
+    maturity: "商业履约机器人",
+    procurement: "适合评估暗店、校内小型电商履约或后场无人仓；若坚持前台货架取货则只作对标。",
+    price: "RaaS/正式报价",
+    fit: "官方明确面向 grocery order fulfillment，并能在仓库通道中自主拣选和合单。",
+    limits: ["需要仓储货架和料箱式作业，不是开放式顾客货架", "对支付/顾客交互没有直接覆盖", "需要看国内交付和售后可得性"],
+    evidenceIds: ["R12"]
+  },
+  {
+    name: "Geek+ Shelf-to-Person / Robot Arm Picking Station",
+    tier: "暗店/仓储履约",
+    form: "货架到人/料箱到人 + 机器人拣选站",
+    role: "后场履约：移动货架、机器人拣选站、排序和内部物流",
+    maturity: "成熟仓储自动化",
+    procurement: "适合较大后场或校内供应链实验室；前台智慧零售样板间只保留为规模化后场方案。",
+    price: "正式方案报价",
+    fit: "系统成熟、部署案例多，适合高 SKU 和高订单量场景。",
+    limits: ["通常需要专门仓储区和 WMS，不是顾客可见货架抓取", "前期投入和场地要求高", "对小型展示店过重"],
+    evidenceIds: ["R13"]
+  },
+  {
+    name: "ForwardX Flex Series",
+    tier: "辅助拣选/仓储",
+    form: "视觉 AMR 辅助拣选车",
+    role: "后场辅助：人机协同拣选、称重复核和门店配送仓搬运",
+    maturity: "成熟 AMR，但通常人机协同",
+    procurement: "如果保留人工拣货员，可作为低风险提升效率方案；不适合作为无人抓取主机。",
+    price: "正式报价",
+    fit: "链式门店仓案例能解决拣选效率和成本问题，可服务智慧零售后场补货。",
+    limits: ["多数流程仍需人工拿取商品", "不是机械臂抓货架商品", "前台展示价值低于真正移动操作机器人"],
+    evidenceIds: ["R14"]
+  },
+  {
+    name: "Ocado OCADEX/Pick / OSRS",
+    tier: "大型履约中心",
+    form: "网格仓储 + 机器人拣选臂",
+    role: "大型食品杂货履约：从料箱中识别、拣选和装袋",
+    maturity: "大型系统成熟",
+    procurement: "作为远期规模化食品杂货履约标杆，不进入首期智慧零售样板间采购。",
+    price: "大型系统方案报价",
+    fit: "食品杂货自动拣选能力强，可作为成熟上限案例。",
+    limits: ["不是开放货架前台取货", "需要 Ocado OSRS 网格系统和大规模履约中心", "预算、面积、建设周期都超出首期场景"],
+    evidenceIds: ["R15"]
+  },
+  {
+    name: "Pio by AutoStore",
+    tier: "后场微履约",
+    form: "紧凑立库存储自动化",
+    role: "后场库存：把前台货架转为后场料箱存储和人工/半自动拣选",
+    maturity: "紧凑仓储系统",
+    procurement: "如果目标从机器人前台抓货转为稳定履约，可作为小空间后场方案；不满足“从货架抓取”的展示目标。",
+    price: "正式系统报价",
+    fit: "适合小空间、高库存准确率和订单履约效率。",
+    limits: ["不是机器人手臂从开放货架取货", "展示感弱，但运营稳定性可能更好", "需要重构货架和补货流程"],
+    evidenceIds: ["R16"]
+  },
+  {
+    name: "RightHand Robotics RightPick",
+    tier: "固定拣选工作站",
+    form: "固定式机器人拣选单元",
+    role: "后场拣选：从料箱/输送线抓取商品并完成订单履约",
+    maturity: "成熟履约组件",
+    procurement: "若把货架取货改为后场料箱履约，可纳入 RFI；不作为前台移动机器人采购。",
+    price: "正式方案报价",
+    fit: "适合 SKU 包装差异较大的订单履约场景，可补足移动机器人抓取成功率不足的问题。",
+    limits: ["需要后场工作站、料箱和输送/暂存流程", "不能在开放货架区自主移动取货", "顾客交互和结账仍需独立系统"],
+    evidenceIds: ["R17"]
+  },
+  {
+    name: "Berkshire Grey Robotic Picking",
+    tier: "固定拣选工作站",
+    form: "后场机器人拣选/分拣系统",
+    role: "后场履约：订单拣选、补货分拣和退货处理",
+    maturity: "生产级自动化系统",
+    procurement: "适合作为连锁零售后场或配送中心升级方案；首期门店样板间只做技术对标。",
+    price: "大型系统方案报价",
+    fit: "覆盖零售履约的多个高吞吐环节，能提升后场自动化稳定性。",
+    limits: ["场地和集成复杂度高", "不是顾客可见货架取货方案", "更适合集中式履约而非单店展示"],
+    evidenceIds: ["R18"]
+  },
+  {
+    name: "Covariant robotic picking",
+    tier: "固定拣选工作站",
+    form: "AI 拣选模型 + 工业机器人工作站",
+    role: "后场抓取：提升复杂商品拣选泛化能力",
+    maturity: "产业化技术供应商",
+    procurement: "作为高泛化抓取技术供应商观察；若要做后场工作站，可与系统集成商共同评估。",
+    price: "正式方案报价",
+    fit: "通用抓取能力与零售 SKU 多样性相关，适合评估为后场拣选核心技术。",
+    limits: ["不是整店移动取货产品", "落地依赖集成商、末端执行器和后场流程", "国内交付、数据合规和售后需确认"],
+    evidenceIds: ["R19"]
+  },
+  {
+    name: "Takeoff micro fulfillment",
+    tier: "后场微履约",
+    form: "食品杂货微履约中心",
+    role: "后场履约：把门店订单转入自动化库存和拣选流程",
+    maturity: "成熟方案但偏系统工程",
+    procurement: "若项目目标从展示机器人取货转向稳定经营，可评估微履约路线；不满足前台抓取展示诉求。",
+    price: "项目制正式报价",
+    fit: "食品杂货场景贴合度高，适合将门店后场做成高效率履约节点。",
+    limits: ["场景会从开放货架转为后场履约", "需要库存、订单、补货和门店改造整体投入", "机器人可见性和展示效果弱"],
+    evidenceIds: ["R20"]
+  },
+  {
+    name: "Unitree G1 / Go2 + Z1 等足式路线",
+    tier: "展示/科研",
+    form: "人形/四足加机械臂",
+    role: "展示或科研：提升展演效果，验证非结构化移动",
+    maturity: "展示/科研优先",
+    procurement: "不建议作为首期智慧零售主采购路线；可作为二期展项或开放研究平台。",
+    price: "公开价和组合价差异大，需按配置报价",
+    fit: "形象展示强，适合科研传播和复杂地形研究。",
+    limits: ["货架通道内稳定性、安全边界和抓取效率需大量实测", "与轮式平台相比维护和安全风险更高", "普通零售场地没有足式运动的必要性"],
+    evidenceIds: ["R06", "R07"]
+  }
+];
+
+const retailCoverageRows: RetailCoverageRow[] = [
+  {
+    scope: "前台开放货架抓取",
+    covered: "Galbot G1/R1、Galbot 香港胶囊店动态、TELEXISTENCE 前台演示方向、工程组合样机",
+    conclusion: "候选少，商业成熟度仍需 PoC；这是最贴近原始目标但风险最高的采购层。",
+    action: "优先约厂商做限定 SKU 实测，不先签大额整店采购。"
+  },
+  {
+    scope: "便利店冷柜/高频补货",
+    covered: "TELEXISTENCE TX Ghost",
+    conclusion: "真实零售场景经验最强，但偏补货和后场/冷柜作业，不等同于顾客下单全品类取货。",
+    action: "作为成熟案例对标，重点询问国内交付、接口和可采购形态。"
+  },
+  {
+    scope: "库存巡检与缺货识别",
+    covered: "Simbe Tally、Badger Digital Teammate、BrainOS Sense/ShelfOptix",
+    conclusion: "成熟度高，但只解决“看见货架”，不能替代机械臂抓取。",
+    action: "二期或多门店阶段采购；首期保留数据接口即可。"
+  },
+  {
+    scope: "顾客交互和末端配送",
+    covered: "PUDU FlashBot Arm、Pudu/Keenon 配送底盘",
+    conclusion: "导航、交互和配送成熟度较好，货架抓取能力不足。",
+    action: "只在主抓取机器人与顾客动线分离时采购。"
+  },
+  {
+    scope: "暗店/后场自动履约",
+    covered: "Locus Array、Brightpick Autopicker、Geek+、ForwardX、Ocado、Pio、Takeoff",
+    conclusion: "可用方案明显更多，也更成熟；但场景会从“前台货架取货”转为仓储/微履约。",
+    action: "如果项目目标偏稳定运营而非展示前台抓取，应单独开后场方案线。"
+  },
+  {
+    scope: "固定拣选工作站",
+    covered: "RightHand Robotics、Berkshire Grey、Covariant",
+    conclusion: "适合后场料箱、输送线和工作站，不适合开放货架移动取货。",
+    action: "作为后场抓取备选技术纳入 RFI，不进入第一期前台主机。"
+  },
+  {
+    scope: "足式/通用人形展示",
+    covered: "Unitree、Fourier、UBTECH 等通用平台",
+    conclusion: "展示和科研价值高，普通零售通道没有足式移动刚需。",
+    action: "不列为首期主采购；可作为二期科普展示或算法平台。"
+  }
+];
+
+const retailOptionGroups: RetailOptionGroup[] = [
+  {
+    title: "前台抓取与补货主线",
+    subtitle: "最贴近“机器人到货架取货”的路线，但商业成熟候选少，必须先做限定 SKU PoC。",
+    tiers: ["前台主抓取", "成熟补货案例", "工程样机", "低成本原型", "服务交互/试验"]
+  },
+  {
+    title: "库存巡检与配送辅助",
+    subtitle: "能补强库存准确率、顾客交付和交互，但不能替代主抓取机器人。",
+    tiers: ["库存巡检", "配送交互"]
+  },
+  {
+    title: "暗店/后场履约路线",
+    subtitle: "成熟方案更多，适合稳定运营；代价是场景从开放前台货架转向后场仓储/微履约。",
+    tiers: ["暗店/仓储履约", "辅助拣选/仓储", "大型履约中心", "后场微履约"]
+  },
+  {
+    title: "固定拣选工作站",
+    subtitle: "适合料箱、输送线和工作站式订单履约，是后场抓取的替代路径。",
+    tiers: ["固定拣选工作站"]
+  },
+  {
+    title: "展示/科研路线",
+    subtitle: "适合展演和科研传播，不作为首期商业闭环的主采购。",
+    tiers: ["展示/科研"]
+  }
+];
+
+const retailNavItems: RetailNavItem[] = [
+  { id: "retail-scope", label: "方案边界", kicker: "30-40㎡" },
+  { id: "retail-layout", label: "场地布局", kicker: "动线" },
+  { id: "retail-shelves", label: "货架与 SKU", kicker: "商品池" },
+  { id: "retail-architecture", label: "系统架构", kicker: "模块" },
+  { id: "retail-flow", label: "业务流程", kicker: "闭环" },
+  { id: "retail-exceptions", label: "异常处理", kicker: "兜底" },
+  { id: "retail-procurement", label: "采购清单", kicker: "设备" },
+  { id: "retail-budget", label: "预算框架", kicker: "成本" },
+  { id: "retail-acceptance", label: "验收指标", kicker: "KPI" },
+  { id: "retail-robots", label: "机器人路线", kicker: "选型" },
+  { id: "retail-sources", label: "来源依据", kicker: "证据" }
+];
+
+const retailCoreSpecs: RetailSpec[] = [
+  { label: "样板间面积", value: "30-40 m²", detail: "首期按单机器人、半结构化环境设计，不按完整便利店面积展开。" },
+  { label: "货架数量", value: "4-6 组", detail: "每组 3-4 层，首期只开放中低层可抓区。" },
+  { label: "SKU 数量", value: "30-60 个", detail: "以规则包装商品为主，每个 SKU 建立货位、重量和抓取参数。" },
+  { label: "首期机器人", value: "1 台主机", detail: "轮式移动操作机器人承担取货；配送/巡检机器人暂不混入首期闭环。" },
+  { label: "顾客动线", value: "不进货架区", detail: "顾客在入口下单和取货，机器人在货架通道内工作，减少混行风险。" },
+  { label: "验收目标", value: "可演示可复测", detail: "重点验收限定 SKU 的抓取成功率、错拿率、单单时长和人工介入率。" }
+];
+
+const retailShelfPlans: RetailShelfPlan[] = [
+  { item: "货架数量", spec: "4 组标准货架 + 1 组演示/补货架", detail: "30 m² 用 4 组；40 m² 可扩到 6 组。每组建议宽 900-1200 mm、深 350-450 mm。" },
+  { item: "层板设置", spec: "每组 3-4 层", detail: "可抓层控制在 0.45-1.45 m；1.45 m 以上只做展示或人工补货，不纳入首期抓取。" },
+  { item: "货位数量", spec: "60-90 个货位", detail: "每层 4-6 个货位，每个货位只放 1 个 SKU，前沿线固定，避免机器人在深堆商品中搜索。" },
+  { item: "通道宽度", spec: "1.15-1.30 m", detail: "只允许单机器人作业；顾客不进入货架通道。若必须人机混行，通道需扩到 1.5 m 以上。" },
+  { item: "视觉标记", spec: "货架码 + 货位码 + SKU 标签", detail: "每组货架有编号，每个货位有二维码/AprilTag/色块标记，用于定位和异常复核。" },
+  { item: "补货规则", spec: "前沿 1 件可抓 + 后排库存", detail: "机器人只抓前沿位商品；后排库存由人工每日前移，避免机械臂伸入货架深处。" }
+];
+
+const retailSkuPlans: RetailSkuPlan[] = [
+  { type: "瓶装饮料", examples: "330-550 ml 水、茶饮、功能饮料", quantity: "10-16 SKU", handling: "夹爪或抱夹；按瓶身中段抓取，称重复核", avoid: "玻璃瓶、外壁严重反光或易滚落陈列" },
+  { type: "盒装零食", examples: "饼干盒、巧克力盒、纸盒彩糖", quantity: "8-14 SKU", handling: "夹爪从两侧取出；视觉识别正面包装", avoid: "软塌纸盒、开口包装、尺寸过薄商品" },
+  { type: "罐装/杯装商品", examples: "咖啡罐、坚果罐、杯装冲饮", quantity: "6-10 SKU", handling: "夹爪夹取柱面或顶部，货位加防滚挡边", avoid: "堆叠罐、过重金属罐、易变形杯盖" },
+  { type: "规则塑料包装", examples: "洗手液、小瓶日化、硬壳小物", quantity: "4-8 SKU", handling: "按轮廓抓取，必要时货位加限位框", avoid: "软袋、挂装、不规则透明包装" },
+  { type: "展示但暂缓抓取", examples: "薯片袋、玻璃杯、散装小件、反光袋装", quantity: "只展示", handling: "用于解释二期扩展边界", avoid: "不纳入首期订单，不参与验收指标" }
+];
+
+const retailArchitectureItems: RetailArchitectureItem[] = [
+  { module: "下单前端", responsibility: "顾客扫码或触屏选择 SKU、数量和取货方式", interface: "写入订单号、SKU 列表、支付状态和取货码" },
+  { module: "SKU/货位库", responsibility: "维护 SKU 尺寸、重量、图片、可抓姿态、货架/层/列位置", interface: "给机器人返回货位坐标、抓取策略和复核阈值" },
+  { module: "机器人调度", responsibility: "按订单拆分任务，规划货架访问顺序和失败重试策略", interface: "对接移动底盘、机械臂、夹爪和任务日志" },
+  { module: "视觉识别", responsibility: "确认货架编号、货位、商品正面和抓取点", interface: "输出目标位姿、置信度和错位/缺货标记" },
+  { module: "抓取控制", responsibility: "执行靠近、对准、抓取、退回和放入暂存篮", interface: "记录成功/失败、失败原因和图像快照" },
+  { module: "暂存复核", responsibility: "通过称重、RFID 或二次视觉确认商品是否正确", interface: "把复核结果回写订单；失败时锁定取货并提示人工" },
+  { module: "支付/POS", responsibility: "完成支付确认、退款、取消和交易记录", interface: "订单状态必须与暂存复核结果一致后才允许取货" },
+  { module: "运维后台", responsibility: "人工接管、补货、异常处理、日志导出和 KPI 看板", interface: "给采购验收提供可追溯数据" }
+];
+
+const retailProcessSteps: RetailProcessStep[] = [
+  { step: "1", owner: "顾客", action: "在入口屏或手机端选择 1-3 件商品", output: "生成订单和取货码" },
+  { step: "2", owner: "系统", action: "校验库存、货位、机器人电量和通道状态", output: "可执行任务或缺货提示" },
+  { step: "3", owner: "机器人", action: "移动到第一组货架，读取货架码和货位码", output: "确认目标货位" },
+  { step: "4", owner: "视觉/机械臂", action: "识别目标商品并执行抓取，失败最多重试 2 次", output: "商品进入暂存篮或转人工" },
+  { step: "5", owner: "复核模块", action: "称重/RFID/视觉复核暂存篮内容", output: "通过、错拿、缺货或需人工确认" },
+  { step: "6", owner: "顾客", action: "扫码支付或确认已支付订单", output: "取货门/取货台放行" },
+  { step: "7", owner: "后台", action: "记录任务耗时、抓取结果、异常和人工介入", output: "形成验收数据和补货任务" }
+];
+
+const retailExceptionPlans: RetailExceptionPlan[] = [
+  { scenario: "抓取失败", systemAction: "同一货位最多重试 2 次，换抓取姿态；仍失败则标记失败原因", manualAction: "工作人员从补货口取出商品或取消该 SKU" },
+  { scenario: "商品缺货/错位", systemAction: "视觉置信度不足或货位为空时停止抓取，更新库存疑似异常", manualAction: "人工确认货位并补货，后台修正库存" },
+  { scenario: "抓错商品", systemAction: "暂存复核不通过，订单锁定，不允许顾客取货", manualAction: "人工取出错品，重新下发任务或退款" },
+  { scenario: "商品掉落", systemAction: "机器人急停当前任务并拍照记录掉落位置", manualAction: "人工清理通道后恢复任务" },
+  { scenario: "顾客取消/支付失败", systemAction: "未支付订单不放行取货；已抓商品进入退回或人工回收流程", manualAction: "人工回架并核销订单" },
+  { scenario: "通道被挡", systemAction: "机器人等待 30 秒并语音/屏幕提示；超时转人工", manualAction: "现场移除障碍或切换演示任务" },
+  { scenario: "机器人低电量", systemAction: "低于阈值不接新单，完成当前任务后返回充电", manualAction: "暂停演示或切换备用人工取货" },
+  { scenario: "系统接口失败", systemAction: "订单进入待处理队列，不继续执行抓取", manualAction: "后台重试接口或人工完成订单" }
+];
+
+const retailProcurementItems: RetailProcurementItem[] = [
+  { category: "主机器人", spec: "轮式移动操作机器人 1 台，含机械臂、夹爪/吸盘、视觉、调度 SDK", phase: "P1 必采", note: "合同写明限定 SKU PoC、接口开放、售后响应和失败日志。" },
+  { category: "标准货架", spec: "4-6 组，900-1200 mm 宽，3-4 层，可贴货位码", phase: "P0 必采", note: "优先买可调层板和挡边货架，避免定制成本过高。" },
+  { category: "货位标记", spec: "货架码、货位码、SKU 标签、前沿定位线", phase: "P0 必采", note: "这是降低识别和定位难度的关键，不应省略。" },
+  { category: "下单终端", spec: "触屏一体机 1 台或扫码 H5 页面", phase: "P1 必采", note: "第一期用扫码/H5 更轻，触屏可作为展示增强。" },
+  { category: "暂存复核", spec: "暂存篮 + 电子秤；RFID/二次视觉可选", phase: "P1 必采", note: "先用称重做低成本复核，RFID 用于高价值或多件订单。" },
+  { category: "支付接口", spec: "二维码支付、订单状态回调、退款/取消接口", phase: "P1 必采", note: "无需一开始做复杂无人结账，先保证闭环可验收。" },
+  { category: "安全与运维", spec: "急停按钮、围挡/地贴、摄像头、充电位、运维后台", phase: "P1 必采", note: "顾客不进货架通道，降低安全和保险风险。" },
+  { category: "库存巡检/配送", spec: "Simbe/Badger/PUDU 等辅助机器人", phase: "二期可选", note: "首期不采购，避免多机器人调度把项目复杂化。" }
+];
+
+const retailBudgetRows: RetailBudgetRow[] = [
+  { item: "主机器人与 PoC", range: "60-180 万", note: "取决于是否采购成熟移动操作平台、是否包含现场集成和售后。" },
+  { item: "货架与场地搭建", range: "3-10 万", note: "包含货架、挡边、地贴、围挡、取货台、照明和基础装修。" },
+  { item: "下单/支付/后台软件", range: "8-25 万", note: "H5 下单、订单管理、SKU/货位库、支付回调和后台日志。" },
+  { item: "视觉/复核设备", range: "3-15 万", note: "称重最低成本；RFID 和多相机复核会增加成本。" },
+  { item: "系统集成与调试", range: "15-50 万", note: "真实工作量集中在 SKU 标定、抓取策略、异常处理和验收日志。" },
+  { item: "运维和风险预留", range: "10-20%", note: "用于备件、培训、二次改造和厂商现场支持。" }
+];
+
+const retailAcceptanceMetrics: RetailAcceptanceMetric[] = [
+  { metric: "SKU 覆盖", target: "首期 30-60 个，至少 80% 可连续演示", method: "按 SKU 清单逐项记录可抓/不可抓原因" },
+  { metric: "抓取成功率", target: "限定 SKU >=85%，核心 SKU >=90%", method: "每个核心 SKU 至少 20 次测试，记录失败原因" },
+  { metric: "错拿率", target: "<=2%", method: "暂存复核和人工抽检双重记录" },
+  { metric: "单单完成时间", target: "1 件订单 2-4 分钟；3 件订单 5-8 分钟", method: "从下单到取货放行全链路计时" },
+  { metric: "人工介入率", target: "<=15%", method: "后台记录每次介入类型：抓取、库存、支付、通道、安全" },
+  { metric: "连续运行", target: "每日演示 2 小时无致命故障", method: "连续订单压测和异常恢复记录" },
+  { metric: "支付闭环", target: "订单、支付、复核、取货状态 100% 对账", method: "导出订单日志和支付回调日志核对" }
+];
+
+const retailZones: RetailZone[] = [
+  {
+    zone: "入口/取单区",
+    area: "4-6 m²",
+    setup: "二维码/触屏下单、取货码、顾客等待线和异常服务台",
+    notes: "顾客只在入口和取货台交互，不进入机器人货架通道。"
+  },
+  {
+    zone: "商品货架区",
+    area: "14-18 m²",
+    setup: "4-6 组标准货架，3-4 层，60-90 个货位，首期 30-60 个 SKU",
+    notes: "可抓高度 0.45-1.45 m；每个货位只放 1 个 SKU，前沿位置固定。"
+  },
+  {
+    zone: "机器人作业通道",
+    area: "1.15-1.30 m 净宽",
+    setup: "单机器人作业通道、货架定位标记、禁入地贴和急停覆盖",
+    notes: "首期不做人机混行；如果顾客进入通道，宽度和安全成本都会明显上升。"
+  },
+  {
+    zone: "暂存/结账区",
+    area: "4-6 m²",
+    setup: "暂存篮、电子秤/RFID/二次视觉复核、扫码支付和取货台",
+    notes: "第一期先用扫码支付 + 复核放行；无人结账作为二期。"
+  },
+  {
+    zone: "补货/维护区",
+    area: "4-6 m²",
+    setup: "充电位、人工补货台、备品备件、小型运维工位",
+    notes: "所有失败抓取、缺货、支付异常都从这里人工接管。"
+  }
+];
+
+const retailRoadmap: RetailRoadmap[] = [
+  {
+    phase: "P0 场景定义",
+    duration: "1 周",
+    work: "确定 30-40 m² 平面、4-6 组货架、30-60 个 SKU、顾客不进货架区的安全边界；向 2-3 家主线厂商发 PoC 问询。",
+    gate: "形成 SKU/货架/货位/接口规格书，明确哪些商品首期不抓。"
+  },
+  {
+    phase: "P1 最小闭环",
+    duration: "2-4 周",
+    work: "先搭 2 组货架、10-15 个核心 SKU，跑通下单、导航、识别、抓取、暂存复核和支付确认。",
+    gate: "核心 SKU 抓取成功率 >=90%，错拿率 <=2%，每个异常都有人工接管路径。"
+  },
+  {
+    phase: "P2 完整样板间",
+    duration: "5-8 周",
+    work: "扩到 4-6 组货架和 30-60 个 SKU，接入 SKU/货位库、库存、支付和日志看板。",
+    gate: "完成 100 单试运行，统计单单时长、抓取失败、错拿、缺货和人工介入。"
+  },
+  {
+    phase: "P3 采购固化",
+    duration: "9-12 周",
+    work: "根据样板间数据确定主机器人、复核硬件、软件接口、售后 SLA 和二期扩展预算。",
+    gate: "签订正式报价、交期、培训、备件、远程运维、接口开放和安全责任边界。"
+  }
+];
+
+const retailDecisionRows = [
+  ["买什么机器人", "首期只买 1 台轮式移动操作主机做货架取货 PoC；库存巡检、配送、人形展示和后场履约系统都不进入首期主采购。"],
+  ["场地怎么搭", "按 30-40 m² 半结构化样板间搭建，4-6 组货架、1.15-1.30 m 机器人通道，顾客不进入货架区。"],
+  ["方案如何落地", "先用 30-60 个规则包装 SKU 跑通下单、抓取、暂存复核、扫码支付和人工接管，再根据数据决定扩容。"]
+];
+const retailSourceById = new Map(retailSources.map((source) => [source.id, source]));
 
 function rankedShortlist(tag: string, limit = 5) {
   return robots
@@ -419,7 +1212,7 @@ function App() {
   const [scoreBand, setScoreBand] = useState("全部");
   const [sortBy, setSortBy] = useState("overall");
   const [selectedIds, setSelectedIds] = useState<string[]>(() => rankedShortlist("科研平台", 4).map((robot) => robot.id));
-  const [activeTab, setActiveTab] = useState<Tab>("overview");
+  const [activeTab, setActiveTabState] = useState<Tab>(getInitialTab);
   const [rightListTag, setRightListTag] = useState("科研平台");
   const [enabledSourceFilters, setEnabledSourceFilters] = useState<SourceFilter[]>(sourceFilters);
   const [visibleColumns, setVisibleColumns] = useState<ColumnKey[]>(["formFactor", "releaseDate", "marketTier", "verification", "priceType", "software", "risk", "sources"]);
@@ -436,6 +1229,25 @@ function App() {
     document.addEventListener("mousedown", closeOnOutside);
     return () => document.removeEventListener("mousedown", closeOnOutside);
   }, []);
+
+  useEffect(() => {
+    function syncTabFromHash() {
+      setActiveTabState(getInitialTab());
+    }
+    window.addEventListener("hashchange", syncTabFromHash);
+    return () => window.removeEventListener("hashchange", syncTabFromHash);
+  }, []);
+
+  function setActiveTab(tab: Tab) {
+    setActiveTabState(tab);
+    if (tab === "retail") {
+      if (window.location.hash !== retailRoute) window.history.pushState(null, "", retailRoute);
+      return;
+    }
+    if (window.location.hash === retailRoute) {
+      window.history.pushState(null, "", window.location.pathname + window.location.search);
+    }
+  }
 
   const countsBySourceType = useMemo(sourceFilterCounts, []);
   const brandOptions = useMemo(() => {
@@ -545,6 +1357,7 @@ function App() {
   const rightShortlist = rankedShortlist(rightListTag);
   const knownReleaseCount = robots.filter((robot) => robot.releaseDateConfidence !== "unknown" && robot.releaseDate !== "官网未披露").length;
   const undisclosedReleaseCount = robots.filter((robot) => robot.releaseDateConfidence === "unknown" || robot.releaseDate === "官网未披露").length;
+  const isRetailPage = activeTab === "retail";
 
   function toggleSelected(id: string) {
     setSelectedIds((current) => {
@@ -594,39 +1407,41 @@ function App() {
   return (
     <div className="app-shell">
       <Header query={query} setQuery={setQuery} activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div className="layout-grid">
-        <FilterSidebar
-          category={category}
-          setCategory={setCategory}
-          shortlist={shortlist}
-          setShortlist={setShortlist}
-          brandOptions={brandOptions}
-          selectedBrands={selectedBrands}
-          toggleBrand={toggleBrand}
-          originFilter={originFilter}
-          setOriginFilter={setOriginFilter}
-          priceBand={priceBand}
-          setPriceBand={setPriceBand}
-          releaseFilter={releaseFilter}
-          setReleaseFilter={setReleaseFilter}
-          marketTier={marketTier}
-          setMarketTier={setMarketTier}
-          selectedTags={selectedTags}
-          toggleTag={toggleTag}
-          visibleTagOptions={visibleTagOptions}
-          rosOnly={rosOnly}
-          setRosOnly={setRosOnly}
-          knownPriceOnly={knownPriceOnly}
-          setKnownPriceOnly={setKnownPriceOnly}
-          scoreBand={scoreBand}
-          setScoreBand={setScoreBand}
-          categoryStats={categoryStats}
-          enabledSourceFilters={enabledSourceFilters}
-          toggleSourceFilter={toggleSourceFilter}
-          countsBySourceType={countsBySourceType}
-          resetFilters={resetFilters}
-        />
-        <main className="dashboard-main">
+      <div className={isRetailPage ? "retail-page-layout" : "layout-grid"}>
+        {!isRetailPage && (
+          <FilterSidebar
+            category={category}
+            setCategory={setCategory}
+            shortlist={shortlist}
+            setShortlist={setShortlist}
+            brandOptions={brandOptions}
+            selectedBrands={selectedBrands}
+            toggleBrand={toggleBrand}
+            originFilter={originFilter}
+            setOriginFilter={setOriginFilter}
+            priceBand={priceBand}
+            setPriceBand={setPriceBand}
+            releaseFilter={releaseFilter}
+            setReleaseFilter={setReleaseFilter}
+            marketTier={marketTier}
+            setMarketTier={setMarketTier}
+            selectedTags={selectedTags}
+            toggleTag={toggleTag}
+            visibleTagOptions={visibleTagOptions}
+            rosOnly={rosOnly}
+            setRosOnly={setRosOnly}
+            knownPriceOnly={knownPriceOnly}
+            setKnownPriceOnly={setKnownPriceOnly}
+            scoreBand={scoreBand}
+            setScoreBand={setScoreBand}
+            categoryStats={categoryStats}
+            enabledSourceFilters={enabledSourceFilters}
+            toggleSourceFilter={toggleSourceFilter}
+            countsBySourceType={countsBySourceType}
+            resetFilters={resetFilters}
+          />
+        )}
+        <main className={isRetailPage ? "dashboard-main retail-page-main" : "dashboard-main"}>
           {activeTab === "overview" && (
             <>
               <div className="data-stamp">
@@ -692,6 +1507,8 @@ function App() {
 
           {activeTab === "report" && <ReportCenter selectedRobots={selectedRobots} setActiveTab={setActiveTab} />}
 
+          {activeTab === "retail" && <RetailScenarioPage setActiveTab={setActiveTab} />}
+
           {activeTab === "sources" && (
             <section className="source-panel">
               <div className="panel-head">
@@ -705,16 +1522,18 @@ function App() {
             </section>
           )}
         </main>
-        <RightPanel
-          rightListTag={rightListTag}
-          setRightListTag={setRightListTag}
-          shortlist={rightShortlist}
-          selectedRobots={selectedRobots}
-          filteredSourceIds={filteredSourceIds}
-          enabledSourceFilters={enabledSourceFilters}
-          toggleSourceFilter={toggleSourceFilter}
-          setActiveTab={setActiveTab}
-        />
+        {!isRetailPage && (
+          <RightPanel
+            rightListTag={rightListTag}
+            setRightListTag={setRightListTag}
+            shortlist={rightShortlist}
+            selectedRobots={selectedRobots}
+            filteredSourceIds={filteredSourceIds}
+            enabledSourceFilters={enabledSourceFilters}
+            toggleSourceFilter={toggleSourceFilter}
+            setActiveTab={setActiveTab}
+          />
+        )}
       </div>
       {detailRobot && <RobotDetail robot={detailRobot} onClose={() => setDetailRobotId(null)} />}
     </div>
@@ -740,6 +1559,7 @@ function Header({
         <button className={activeTab === "rankings" ? "active" : ""} onClick={() => setActiveTab("rankings")}>排行榜</button>
         <button className={activeTab === "compare" ? "active" : ""} onClick={() => setActiveTab("compare")}>对比分析</button>
         <button className={activeTab === "report" ? "active" : ""} onClick={() => setActiveTab("report")}>报告中心</button>
+        <button className={activeTab === "retail" ? "active" : ""} onClick={() => setActiveTab("retail")}>智能零售</button>
         <button className={activeTab === "sources" ? "active" : ""} onClick={() => setActiveTab("sources")}>数据源</button>
       </nav>
       <div className="header-search">
@@ -1485,6 +2305,411 @@ function ReportCenter({ selectedRobots, setActiveTab }: { selectedRobots: Robot[
   );
 }
 
+function RetailScenarioPage({ setActiveTab }: { setActiveTab: (tab: Tab) => void }) {
+  const optionGroups = retailOptionGroups.map((group) => ({
+    ...group,
+    items: retailOptions.filter((option) => group.tiers.includes(option.tier))
+  })).filter((group) => group.items.length > 0);
+
+  return (
+    <section className="retail-panel">
+      <aside className="retail-toc" aria-label="智能零售方案目录">
+        <strong>落地目录</strong>
+        <nav>
+          {retailNavItems.map((item) => (
+            <a href={`#${item.id}`} key={item.id}>
+              <span>{item.kicker}</span>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </aside>
+
+      <div className="retail-content">
+        <div className="retail-hero" id="retail-scope">
+          <div className="retail-hero-copy">
+            <span className="retail-eyebrow">30-40 m² 单机器人样板间</span>
+            <h1>智能零售机器人落地方案</h1>
+            <p>首期不是做完整无人便利店，而是做一个可采购、可演示、可验收的半结构化样板间：顾客在入口下单，机器人在封闭货架通道内取货，暂存复核后完成支付和取货。</p>
+            <div className="retail-hero-actions">
+              <button className="panel-button" onClick={() => downloadText("智能零售机器人落地方案.md", buildRetailMarkdown(), "text/markdown;charset=utf-8")}><Download size={15} />导出方案</button>
+              <button className="panel-button" onClick={() => setActiveTab("sources")}><Database size={15} />通用候选库</button>
+            </div>
+          </div>
+          <div className="retail-flow" aria-label="智能零售任务链路">
+            {[
+              [ShoppingCart, "下单", "扫码/触屏选择 1-3 件商品"],
+              [Store, "取货", "机器人按货位抓取前沿商品"],
+              [PackageCheck, "复核", "称重/RFID/视觉确认暂存篮"],
+              [CreditCard, "放行", "支付成功后顾客取货"]
+            ].map(([Icon, title, body]) => (
+              <div className="retail-flow-step" key={String(title)}>
+                {React.createElement(Icon as typeof ShoppingCart, { size: 20 })}
+                <strong>{title as string}</strong>
+                <span>{body as string}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="retail-spec-grid">
+          {retailCoreSpecs.map((item) => (
+            <article key={item.label}>
+              <span>{item.label}</span>
+              <strong>{item.value}</strong>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+
+        <section className="retail-section">
+          <div className="panel-head">
+            <div>
+              <h2>三项落地判断</h2>
+              <span>把场景先收窄到能在 30-40 m² 内稳定复测的范围</span>
+            </div>
+          </div>
+          <div className="retail-decision-grid">
+            {retailDecisionRows.map(([title, body]) => (
+              <article key={title}>
+                <strong>{title}</strong>
+                <p>{body}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="retail-section" id="retail-layout">
+          <div className="panel-head">
+            <div>
+              <h2>场地布局</h2>
+              <span>30 m² 做最小闭环，40 m² 做完整展示；顾客不进入机器人货架通道</span>
+            </div>
+          </div>
+          <div className="retail-layout-grid">
+            <div className="retail-plan-diagram compact-plan" aria-label="30-40 平米智能零售样板间布局示意">
+              <div className="zone zone-entry">入口/下单<br />4-6 m²</div>
+              <div className="zone zone-shelves-a">货架 A-B<br />规则包装</div>
+              <div className="zone zone-aisle">机器人通道<br />1.15-1.30 m</div>
+              <div className="zone zone-shelves-b">货架 C-F<br />30-60 SKU</div>
+              <div className="zone zone-checkout">暂存/支付/取货<br />4-6 m²</div>
+              <div className="zone zone-service">补货/维护/充电<br />4-6 m²</div>
+            </div>
+            <div className="retail-zone-list">
+              {retailZones.map((zone) => (
+                <article key={zone.zone}>
+                  <div>
+                    <strong>{zone.zone}</strong>
+                    <span>{zone.area}</span>
+                  </div>
+                  <p>{zone.setup}</p>
+                  <small>{zone.notes}</small>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="retail-section" id="retail-shelves">
+          <div className="panel-head">
+            <div>
+              <h2>货架与 SKU 规划</h2>
+              <span>首期不是 SKU 越多越好，而是每个 SKU 都能定义抓取、复核和异常策略</span>
+            </div>
+          </div>
+          <div className="retail-detail-grid">
+            {retailShelfPlans.map((item) => (
+              <article key={item.item}>
+                <strong>{item.item}</strong>
+                <b>{item.spec}</b>
+                <p>{item.detail}</p>
+              </article>
+            ))}
+          </div>
+          <div className="table-scroll">
+            <table className="source-table retail-plan-table">
+              <thead>
+                <tr>
+                  <th>SKU 类别</th>
+                  <th>示例</th>
+                  <th>数量</th>
+                  <th>抓取/复核</th>
+                  <th>首期暂缓</th>
+                </tr>
+              </thead>
+              <tbody>
+                {retailSkuPlans.map((item) => (
+                  <tr key={item.type}>
+                    <td>{item.type}</td>
+                    <td>{item.examples}</td>
+                    <td>{item.quantity}</td>
+                    <td>{item.handling}</td>
+                    <td>{item.avoid}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="retail-section" id="retail-architecture">
+          <div className="panel-head">
+            <div>
+              <h2>系统架构</h2>
+              <span>下单、货位、机器人、复核、支付和人工接管必须形成同一条数据链</span>
+            </div>
+          </div>
+          <div className="retail-architecture">
+            {retailArchitectureItems.map((item) => (
+              <article key={item.module}>
+                <strong>{item.module}</strong>
+                <p>{item.responsibility}</p>
+                <small>{item.interface}</small>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="retail-section" id="retail-flow">
+          <div className="panel-head">
+            <div>
+              <h2>业务流程</h2>
+              <span>每一步都要有输入、执行者和可记录输出，方便采购验收</span>
+            </div>
+          </div>
+          <div className="retail-process">
+            {retailProcessSteps.map((item) => (
+              <article key={item.step}>
+                <span>{item.step}</span>
+                <div>
+                  <strong>{item.owner}</strong>
+                  <p>{item.action}</p>
+                  <small>{item.output}</small>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="retail-section" id="retail-exceptions">
+          <div className="panel-head">
+            <div>
+              <h2>异常处理</h2>
+              <span>样板间能不能落地，关键看失败时能否稳定兜底</span>
+            </div>
+          </div>
+          <div className="retail-exception-grid">
+            {retailExceptionPlans.map((item) => (
+              <article key={item.scenario}>
+                <strong>{item.scenario}</strong>
+                <p>{item.systemAction}</p>
+                <small>{item.manualAction}</small>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="retail-section" id="retail-procurement">
+          <div className="panel-head">
+            <div>
+              <h2>采购清单</h2>
+              <span>首期只买支撑闭环的设备，巡检/配送/展示类机器人放到二期</span>
+            </div>
+          </div>
+          <div className="table-scroll">
+            <table className="source-table retail-plan-table">
+              <thead>
+                <tr>
+                  <th>采购项</th>
+                  <th>规格</th>
+                  <th>阶段</th>
+                  <th>备注</th>
+                </tr>
+              </thead>
+              <tbody>
+                {retailProcurementItems.map((item) => (
+                  <tr key={item.category}>
+                    <td>{item.category}</td>
+                    <td>{item.spec}</td>
+                    <td>{item.phase}</td>
+                    <td>{item.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="retail-section" id="retail-budget">
+          <div className="panel-head">
+            <div>
+              <h2>预算框架</h2>
+              <span>先按样板间预算拆项，正式采购前再向厂商拿精确报价</span>
+            </div>
+          </div>
+          <div className="retail-budget-grid">
+            {retailBudgetRows.map((item) => (
+              <article key={item.item}>
+                <span>{item.item}</span>
+                <strong>{item.range}</strong>
+                <p>{item.note}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="retail-section" id="retail-acceptance">
+          <div className="panel-head">
+            <div>
+              <h2>实施路径与验收</h2>
+              <span>每个阶段都要留下可复测数据，而不是只看一次演示效果</span>
+            </div>
+          </div>
+          <div className="retail-roadmap">
+            {retailRoadmap.map((item, index) => (
+              <article key={item.phase}>
+                <span>{index + 1}</span>
+                <div>
+                  <strong>{item.phase}</strong>
+                  <time>{item.duration}</time>
+                  <p>{item.work}</p>
+                  <small>{item.gate}</small>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="table-scroll">
+            <table className="source-table retail-plan-table">
+              <thead>
+                <tr>
+                  <th>指标</th>
+                  <th>目标</th>
+                  <th>验证方法</th>
+                </tr>
+              </thead>
+              <tbody>
+                {retailAcceptanceMetrics.map((item) => (
+                  <tr key={item.metric}>
+                    <td>{item.metric}</td>
+                    <td>{item.target}</td>
+                    <td>{item.method}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="retail-section" id="retail-robots">
+          <div className="panel-head">
+            <div>
+              <h2>机器人采购路线</h2>
+              <span>按前台抓取、巡检配送、后场履约、固定拣选和展示科研分层，不把配送或盘点机器人误当作抓取主机</span>
+            </div>
+          </div>
+          <div className="retail-coverage-grid">
+            {retailCoverageRows.map((row) => (
+              <article key={row.scope}>
+                <strong>{row.scope}</strong>
+                <p>{row.covered}</p>
+                <small>{row.conclusion}</small>
+                <em>{row.action}</em>
+              </article>
+            ))}
+          </div>
+          <div className="retail-option-groups">
+            {optionGroups.map((group, index) => (
+              <div className="retail-option-group" key={group.title}>
+                <div className="retail-option-group-head">
+                  <div>
+                    <h3>{group.title}</h3>
+                    <p>{group.subtitle}</p>
+                  </div>
+                  <span>{group.items.length} 类候选</span>
+                </div>
+                <div className={index === 0 ? "retail-option-grid" : "retail-support-grid"}>
+                  {group.items.map((option) => <RetailOptionCard key={option.name} option={option} compact={index !== 0} />)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="retail-section" id="retail-sources">
+          <div className="panel-head">
+            <div>
+              <h2>来源与不确定项</h2>
+              <span>关键判断来自厂商官网、公开案例、结账技术和安全/无障碍约束；估算项已明确标注</span>
+            </div>
+          </div>
+          <RetailSourceTable />
+        </section>
+      </div>
+    </section>
+  );
+}
+
+function RetailOptionCard({ option, compact = false }: { option: RetailOption; compact?: boolean }) {
+  return (
+    <article className={compact ? "retail-option compact" : "retail-option"}>
+      <div className="retail-option-head">
+        <div>
+          <h3>{option.name}</h3>
+          <p>{option.form}</p>
+        </div>
+        <div className="retail-option-badges">
+          <span>{option.tier}</span>
+          <span>{option.maturity}</span>
+        </div>
+      </div>
+      <strong>{option.role}</strong>
+      <p>{option.fit}</p>
+      <dl>
+        <div><dt>采购动作</dt><dd>{option.procurement}</dd></div>
+        <div><dt>价格口径</dt><dd>{option.price}</dd></div>
+      </dl>
+      <ul>
+        {option.limits.map((item) => <li key={item}>{item}</li>)}
+      </ul>
+      <div className="retail-evidence">
+        {option.evidenceIds.map((id) => {
+          const source = retailSourceById.get(id);
+          return source ? <a key={id} href={source.url} target="_blank" rel="noreferrer">{id}<ExternalLink size={12} /></a> : <span key={id}>{id}</span>;
+        })}
+      </div>
+    </article>
+  );
+}
+
+function RetailSourceTable() {
+  return (
+    <div className="table-scroll">
+      <table className="source-table retail-source-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>来源</th>
+            <th>类型</th>
+            <th>置信度</th>
+            <th>用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          {retailSources.map((source) => (
+            <tr key={source.id}>
+              <td>{source.id}</td>
+              <td><a href={source.url} target="_blank" rel="noreferrer">{source.title}<ExternalLink size={13} /></a></td>
+              <td>{source.type}</td>
+              <td><span className={`confidence ${source.confidence}`}>{confidenceLabel(source.confidence)}</span></td>
+              <td>{source.notes}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function SourceTable({ enabledSourceFilters, filteredSourceIds }: { enabledSourceFilters: SourceFilter[]; filteredSourceIds: Set<string> }) {
   const [sourceQuery, setSourceQuery] = useState("");
   const [confidence, setConfidence] = useState("全部");
@@ -1565,6 +2790,69 @@ function buildMarkdownReport() {
     "",
     "## 价格口径",
     "页面主价格统一为人民币；低置信电商线索和外币估算不作为正式报价。无公开价格的型号已经进入正式报价清单或供货确认清单。"
+  ];
+  return lines.join("\n");
+}
+
+function buildRetailMarkdown() {
+  const lines = [
+    "# 智能零售机器人落地方案",
+    "",
+    "## 方案边界",
+    "首期建设 30-40 m² 单机器人样板间，顾客不进入货架作业区。目标是可采购、可演示、可复测，不追求完整无人便利店。",
+    ...retailCoreSpecs.map((item) => `- ${item.label}：${item.value}。${item.detail}`),
+    "",
+    "## 核心判断",
+    ...retailDecisionRows.map(([title, body]) => `- ${title}：${body}`),
+    "",
+    "## 场地布局",
+    ...retailZones.map((zone) => `- ${zone.zone}（${zone.area}）：${zone.setup}。${zone.notes}`),
+    "",
+    "## 货架规划",
+    ...retailShelfPlans.map((item) => `- ${item.item}：${item.spec}。${item.detail}`),
+    "",
+    "## SKU 规划",
+    ...retailSkuPlans.map((item) => `- ${item.type}：${item.examples}；数量 ${item.quantity}；抓取/复核：${item.handling}；暂缓：${item.avoid}`),
+    "",
+    "## 系统架构",
+    ...retailArchitectureItems.map((item) => `- ${item.module}：${item.responsibility}。接口：${item.interface}`),
+    "",
+    "## 业务流程",
+    ...retailProcessSteps.map((item) => `- ${item.step}. ${item.owner}：${item.action}。输出：${item.output}`),
+    "",
+    "## 异常处理",
+    ...retailExceptionPlans.map((item) => `- ${item.scenario}：系统处理：${item.systemAction}；人工兜底：${item.manualAction}`),
+    "",
+    "## 采购清单",
+    ...retailProcurementItems.map((item) => `- ${item.category}：${item.spec}；阶段：${item.phase}；备注：${item.note}`),
+    "",
+    "## 预算框架",
+    ...retailBudgetRows.map((item) => `- ${item.item}：${item.range}。${item.note}`),
+    "",
+    "## 实施路径",
+    ...retailRoadmap.map((item) => `- ${item.phase}（${item.duration}）：${item.work} 验收：${item.gate}`),
+    "",
+    "## 验收指标",
+    ...retailAcceptanceMetrics.map((item) => `- ${item.metric}：目标 ${item.target}；验证方法：${item.method}`),
+    "",
+    "## 机器人采购路线",
+    ...retailCoverageRows.map((row) => `- ${row.scope}：已覆盖 ${row.covered}。结论：${row.conclusion} 动作：${row.action}`),
+    ...retailOptions.flatMap((option) => [
+      "",
+      `### ${option.name}`,
+      `- 层级：${option.tier}`,
+      `- 形态：${option.form}`,
+      `- 角色：${option.role}`,
+      `- 成熟度：${option.maturity}`,
+      `- 采购动作：${option.procurement}`,
+      `- 价格口径：${option.price}`,
+      `- 适配理由：${option.fit}`,
+      `- 限制：${option.limits.join("；")}`,
+      `- 来源：${option.evidenceIds.join("、")}`
+    ]),
+    "",
+    "## 来源",
+    ...retailSources.map((source) => `- ${source.id} ${source.title}：${source.url}`)
   ];
   return lines.join("\n");
 }
@@ -1678,4 +2966,7 @@ function CategoryThumb({ category, compact = false }: { category: string; compac
   return <img className={compact ? "robot-thumb compact" : "robot-thumb"} src={src} alt={category} />;
 }
 
-createRoot(document.getElementById("root")!).render(<App />);
+const rootElement = document.getElementById("root")!;
+const root = window.__robotResearchRoot ?? createRoot(rootElement);
+window.__robotResearchRoot = root;
+root.render(<App />);
